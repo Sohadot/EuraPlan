@@ -210,7 +210,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/netherlands/", "/country/france/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — GTAI, BMWK, BfDI, BSI, Unternehmensregister, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
@@ -224,7 +224,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/france/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — RVO, business.gov.nl, KVK, AP, NCSC-NL, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
