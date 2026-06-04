@@ -46,23 +46,55 @@
   </div>
 </header>
 
-<main>
+<main class="control-room-shell">
 
-  <section class="hero" aria-labelledby="hero-heading">
-    <img src="/assets/brand/logo-mark-gold.svg" alt="" class="brand-mark brand-mark--hero" width="56" height="56" decoding="async" aria-hidden="true">
-    <span class="hero-label">Category: European Regulatory Entry Planning</span>
-    <h1 class="hero-thesis" id="hero-heading">
+  <div class="telemetry-strip" role="group" aria-label="Control room telemetry">
+    <dl class="telemetry-grid">
+      <div class="telemetry-cell"><dt>Route</dt><dd>EP-SYS-ROOT</dd></div>
+      <div class="telemetry-cell"><dt>Interface</dt><dd class="telemetry-value--signal">European Entry Control Room</dd></div>
+      <div class="telemetry-cell"><dt>Audience</dt><dd>Non-EU companies planning European market entry</dd></div>
+      <div class="telemetry-cell"><dt>Decision Problem</dt><dd>How do we enter Europe without regulatory failure?</dd></div>
+      <div class="telemetry-cell"><dt>Source Requirement</dt><dd>Tier 1 for all regulatory claims</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+    </dl>
+  </div>
+
+  <section class="control-room-hero" aria-labelledby="hero-heading">
+    <div class="control-room-hero-mark">
+      <img src="/assets/brand/logo-mark-gold.svg" alt="" class="brand-mark brand-mark--hero" width="64" height="64" decoding="async" aria-hidden="true">
+    </div>
+    <span class="control-room-hero-label">Category: European Regulatory Entry Planning</span>
+    <h1 class="control-room-hero-title" id="hero-heading">
       Europe punishes absence.<br>
-      <em>Europe rewards planning.</em>
+      <em style="font-style: normal; color: var(--grey-light);">Europe rewards planning.</em>
     </h1>
-    <p class="hero-sub">
+    <p class="control-room-hero-thesis">
       EuraPlan produces structured, governed planning intelligence for non-EU companies
       that need to enter, fund, comply, and scale across Europe —
       without being destroyed by the complexity they did not map in advance.
     </p>
-    <div class="hero-actions">
+    <div class="control-room-hero-actions">
       <a href="/enter/" class="btn btn-primary">Begin Entry Planning</a>
       <a href="/standard/eers/" class="btn btn-secondary">Entry Readiness Standard</a>
+    </div>
+  </section>
+
+  <section class="page-section" aria-labelledby="system-status-heading">
+    <div class="system-panel">
+      <div class="system-panel-header">
+        <span class="system-panel-id">SYS-LAYER-01</span>
+        <h2 class="system-panel-title" id="system-status-heading">Entry Intelligence Layer — Planning System Status</h2>
+      </div>
+      <p class="system-panel-body" style="margin-bottom: 16px;">
+        The control room coordinates regulatory clocks, entry gates, readiness layers, and planning pathways.
+        Phase 1 operates as a static, source-governed reference system — no diagnostic engine, no combinatorial URLs.
+      </p>
+      <dl class="system-panel-grid">
+        <div class="system-panel-cell"><dt>Regulatory Clock</dt><dd>Active — established EU phase dates on <a href="/clock/">/clock/</a></dd></div>
+        <div class="system-panel-cell"><dt>Entry Gates</dt><dd>Four gateway decisions framed at <a href="/enter/">/enter/</a></dd></div>
+        <div class="system-panel-cell"><dt>Readiness Layer</dt><dd>EERS standard — dimensions unassessed until protocol run</dd></div>
+        <div class="system-panel-cell"><dt>Planning Pathway</dt><dd>12-step protocol — <a href="/protocol/">/protocol/</a></dd></div>
+      </dl>
     </div>
   </section>
 
@@ -71,50 +103,120 @@
   <section class="page-section" aria-labelledby="outputs-heading">
     <div class="section-header">
       <span class="section-eyebrow">Intelligence Production</span>
-      <h2 class="section-title" id="outputs-heading">What EuraPlan Produces</h2>
+      <h2 class="section-title" id="outputs-heading">Intelligence Output Panels</h2>
       <p class="section-body">
         EuraPlan does not produce articles. It produces governed planning intelligence outputs —
         each structured around the EuraPlan Entry Planning Protocol and source-governed
         against official EU regulation texts, European Commission guidance, and institutional references.
       </p>
     </div>
-    <div class="intel-grid" role="list">
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-01</div>
-        <h3 class="intel-card-title">Regulatory Entry Clock</h3>
-        <p class="intel-card-desc">Maps the timeline of applicable EU regulations by company type, sector, and product. Identifies enforcement phases, compliance gates, and planning deadlines before a non-EU company makes its first irreversible entry move.</p>
-        <a href="/clock/" class="intel-card-link">View the Clock &rarr;</a>
+    <div class="control-panel-grid" role="list">
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-01</span>
+        <span class="control-panel-card-function">Regulatory Clock</span>
+        <h3 class="control-panel-card-title">Regulatory Entry Clock</h3>
+        <p class="control-panel-card-use">Maps applicable EU regulations by entity type, sector, and product. Surfaces enforcement phases and planning deadlines before the first irreversible entry move.</p>
+        <a href="/clock/" class="control-panel-card-route">Route: /clock/ &rarr;</a>
+      </article>
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-02</span>
+        <span class="control-panel-card-function">Planning Pathway</span>
+        <h3 class="control-panel-card-title">30/90/180-Day Entry Plan</h3>
+        <p class="control-panel-card-use">Sequenced entry plan for a specific EU country and sector — regulatory, legal, funding, and execution steps via the twelve-step protocol.</p>
+        <a href="/protocol/" class="control-panel-card-route">Route: /protocol/ &rarr;</a>
+      </article>
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-03</span>
+        <span class="control-panel-card-function">Funding Layer</span>
+        <h3 class="control-panel-card-title">Funding Readiness Score</h3>
+        <p class="control-panel-card-use">Assesses readiness for EU funding programmes by sector, target country, and entity type — framed at the entry gateway.</p>
+        <a href="/enter/" class="control-panel-card-route">Route: /enter/ &rarr;</a>
+      </article>
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-04</span>
+        <span class="control-panel-card-function">Matrix Snippet</span>
+        <h3 class="control-panel-card-title">Country-Sector-Regulation Matrix</h3>
+        <p class="control-panel-card-use">Cross-reference of country × sector × regulation. Full matrix unpublished; planning implications routed through the entry gateway.</p>
+        <a href="/enter/" class="control-panel-card-route">Route: /enter/ &rarr;</a>
+      </article>
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-05</span>
+        <span class="control-panel-card-function">Readiness Layer</span>
+        <h3 class="control-panel-card-title">European Entry Readiness Standard</h3>
+        <p class="control-panel-card-use">Eight-dimension standard for genuine entry readiness. Dimensions display as unassessed until a company-specific protocol run exists.</p>
+        <a href="/standard/eers/" class="control-panel-card-route">Route: /standard/eers/ &rarr;</a>
+      </article>
+      <article class="control-panel-card" role="listitem">
+        <span class="control-panel-card-id">EP-OUT-06</span>
+        <span class="control-panel-card-function">Origin Brief</span>
+        <h3 class="control-panel-card-title">Non-EU Entry Brief</h3>
+        <p class="control-panel-card-use">Origin-specific entry intelligence for US, GCC, UK, Asia, MENA, and Africa — regulatory exposure and planning sequence by origin region.</p>
+        <a href="/enter/" class="control-panel-card-route">Route: /enter/ &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="page-section" aria-labelledby="clock-preview-heading">
+    <div class="section-header">
+      <span class="section-eyebrow">Regulatory Clock — Preview</span>
+      <h2 class="section-title" id="clock-preview-heading">Enforcement Phase Lanes (Source-Confirmed)</h2>
+      <p class="section-body">Preview of established EU regulation timelines from official texts. Full clock at <a href="/clock/">/clock/</a>.</p>
+      <div class="badge-row">
+        <span class="source-confidence-badge source-confidence-badge--verified">Source: Verified</span>
+        <span class="claim-risk-badge claim-risk-badge--medium">Claim risk: Medium — regulatory dates</span>
       </div>
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-02</div>
-        <h3 class="intel-card-title">30/90/180-Day Entry Plan</h3>
-        <p class="intel-card-desc">Structured planning sequence for entering a specific EU country and sector. Produced through the EuraPlan Entry Planning Protocol, sequencing regulatory, legal, funding, and execution steps.</p>
-        <a href="/protocol/" class="intel-card-link">View the Protocol &rarr;</a>
+    </div>
+    <div class="regulatory-clock-preview" role="region" aria-label="Regulatory timeline preview 2024–2027">
+      <div class="clock-preview-header">
+        <span class="clock-preview-title">Regulatory Entry Clock — Phase Lanes</span>
+        <span class="clock-preview-note">Axis: 2024 → 2027 · Dates from /clock/ source citations</span>
       </div>
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-03</div>
-        <h3 class="intel-card-title">Funding Readiness Score</h3>
-        <p class="intel-card-desc">Assessment of a non-EU company's readiness to access EU funding programmes, grants, and procurement opportunities — by sector, target country, and entity type.</p>
-        <a href="/enter/" class="intel-card-link">Entry Planning Gateway &rarr;</a>
+      <div class="clock-preview-axis" aria-hidden="true">
+        <span>Regulation</span><span>2024</span><span>2025</span><span>2026</span><span>2027</span>
       </div>
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-04</div>
-        <h3 class="intel-card-title">Country-Sector-Regulation Matrix</h3>
-        <p class="intel-card-desc">Cross-referenced map of target EU country × sector × applicable regulations. Identifies overlapping obligations and sequencing priority for non-EU companies with multi-country or multi-regulation exposure.</p>
-        <a href="/enter/" class="intel-card-link">Entry Planning Gateway &rarr;</a>
+      <div class="clock-lane">
+        <div class="clock-lane-label">EU AI Act<small>2024/1689</small></div>
+        <div class="clock-lane-track" aria-label="EU AI Act enforcement phases">
+          <span class="clock-marker" style="left: 2%;" title="Entry into force August 1, 2024">Aug 2024</span>
+          <span class="clock-marker clock-marker--signal" style="left: 18%;" title="February 2, 2025 — Art. 113.1">Feb 2025</span>
+          <span class="clock-marker clock-marker--signal" style="left: 38%;" title="August 2, 2025 — Art. 113.2">Aug 2025</span>
+          <span class="clock-marker clock-marker--signal" style="left: 62%;" title="August 2, 2026 — Art. 113.3">Aug 2026</span>
+          <span class="clock-marker clock-marker--signal" style="left: 88%;" title="August 2, 2027 — Art. 113.4">Aug 2027</span>
+        </div>
       </div>
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-05</div>
-        <h3 class="intel-card-title">European Entry Readiness Standard</h3>
-        <p class="intel-card-desc">EuraPlan's proprietary eight-dimension standard defining the minimum conditions for a non-EU company to be considered genuinely ready to enter the European market.</p>
-        <a href="/standard/eers/" class="intel-card-link">View the Standard &rarr;</a>
+      <div class="clock-lane">
+        <div class="clock-lane-label">EU Data Act<small>2023/2854</small></div>
+        <div class="clock-lane-track" aria-label="EU Data Act enforcement phases">
+          <span class="clock-marker" style="left: 2%;" title="Entry into force January 11, 2024">Jan 2024</span>
+          <span class="clock-marker clock-marker--signal" style="left: 48%;" title="September 12, 2025 — Art. 50">Sep 2025</span>
+        </div>
       </div>
-      <div class="intel-card" role="listitem">
-        <div class="intel-card-id">EP-OUT-06</div>
-        <h3 class="intel-card-title">Non-EU Entry Brief</h3>
-        <p class="intel-card-desc">Origin-specific entry guide for non-EU companies — US, GCC, UK, Asia, MENA, Africa — mapping the specific regulatory exposure, market context, and planning sequence of their entry path into Europe.</p>
-        <a href="/enter/" class="intel-card-link">Entry Planning Gateway &rarr;</a>
-      </div>
+    </div>
+    <p style="margin-top: 12px; font-size: 0.72rem; color: var(--grey-mid);">GDPR (May 25, 2018, ongoing) and Cyber Resilience Act phases shown on the <a href="/clock/">full Regulatory Entry Clock</a>.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="page-section" aria-labelledby="matrix-preview-heading">
+    <div class="section-header">
+      <span class="section-eyebrow">Matrix Snippet — Illustrative</span>
+      <h2 class="section-title" id="matrix-preview-heading">Country × Sector × Regulation (General Structure)</h2>
+      <p class="section-body">Structured cross-reference preview. The full Country-Sector-Regulation Matrix is not yet published at /matrix/.</p>
+    </div>
+    <div class="matrix-snippet-wrap">
+      <table class="matrix-snippet">
+        <caption>Illustrative planning cross-reference — not company-specific</caption>
+        <thead>
+          <tr><th scope="col">Regulation</th><th scope="col">Entity type</th><th scope="col">Market</th><th scope="col">Planning implication</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>EU AI Act</td><td>AI provider / deployer</td><td>EU market access</td><td>Map role-specific obligations and phase dates before first EU deployment</td></tr>
+          <tr><td>GDPR</td><td>Data controller</td><td>EU residents' data</td><td>Establish lawful basis and processing architecture before EU customer contracts</td></tr>
+          <tr><td>Cyber Resilience Act</td><td>Manufacturer (connected products)</td><td>EU distribution</td><td>Sequence conformity and reporting obligations against CRA phase dates</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -122,31 +224,27 @@
 
   <section class="page-section" aria-labelledby="tensions-heading">
     <div class="section-header">
-      <span class="section-eyebrow">Why EuraPlan Exists</span>
-      <h2 class="section-title" id="tensions-heading">Europe Is a Planning System. Not a Market.</h2>
-      <p class="section-body">
-        Europe is 27 national execution realities, cross-referenced by EU-level regulations,
-        sector-specific compliance gates, and funding channels.
-        These structural tensions explain why non-EU companies fail at the entry stage —
-        and why planning intelligence is not optional.
-      </p>
+      <span class="section-eyebrow">System Tension — Control Panel</span>
+      <h2 class="section-title" id="tensions-heading">Penalty vs Opportunity</h2>
     </div>
-    <ul class="tension-list">
-      <li class="tension-item">
-        <span class="tension-label">Penalty vs Opportunity</span>
-        <span class="tension-desc">Europe penalises companies that enter unprepared. The same regulatory architecture that punishes absence creates structural advantages for companies that plan before the first move. Entry readiness is a competitive position.</span>
-      </li>
-      <li class="tension-item">
-        <span class="tension-label">Absence vs Planning</span>
-        <span class="tension-desc">Not planning is not a neutral position. Every day a non-EU company operates in Europe without a regulatory map is a day of compounding liability. Absence is a risk state, not a default.</span>
-      </li>
+    <div class="tension-panel" role="group" aria-labelledby="tensions-heading">
+      <div class="tension-panel-side tension-panel-side--signal">
+        <span class="tension-panel-label">Penalty — Absence</span>
+        <p class="tension-panel-text">Europe penalises companies that enter unprepared. Every day without a regulatory map is compounding liability. Absence is a risk state, not a neutral default.</p>
+      </div>
+      <div class="tension-panel-side">
+        <span class="tension-panel-label">Opportunity — Planning</span>
+        <p class="tension-panel-text">The same regulatory architecture that punishes absence creates structural advantage for companies that plan before the first move. Entry readiness is a competitive position.</p>
+      </div>
+    </div>
+    <ul class="tension-list" style="margin-top: 20px;">
       <li class="tension-item">
         <span class="tension-label">Rules vs Execution</span>
-        <span class="tension-desc">Europe has rules. But rules without an execution plan are noise. The distance between knowing a regulation exists and having a plan to comply with it is exactly where most non-EU market entries fail.</span>
+        <span class="tension-desc">Europe has rules. Rules without an execution plan are noise. The distance between knowing a regulation exists and having a plan to comply is where most non-EU entries fail.</span>
       </li>
       <li class="tension-item">
         <span class="tension-label">Europe as System, not Market</span>
-        <span class="tension-desc">Europe is not one market to enter. It is a layered planning system requiring regulatory mapping, country selection, entity setup, compliance sequencing, and funding readiness — before a product reaches its first EU customer.</span>
+        <span class="tension-desc">Europe is a layered planning system — regulatory mapping, country selection, entity setup, compliance sequencing, and funding readiness — before the first EU customer.</span>
       </li>
     </ul>
   </section>

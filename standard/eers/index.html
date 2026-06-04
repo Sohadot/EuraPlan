@@ -45,24 +45,34 @@
   </div>
 </header>
 
-<main>
+<main class="control-room-shell">
 
-  <div class="page-hero">
-    <span class="page-hero-label">EP-OUT-05 — Proprietary Standard</span>
-    <h1 class="page-hero-title">European Entry Readiness Standard</h1>
-    <p class="page-hero-thesis">
-      EERS is EuraPlan's proprietary eight-dimension standard defining the minimum conditions
-      for a non-EU company to be considered genuinely ready to enter the European market.
-      A company may be ambitious, funded, and product-ready — and still fail to meet
-      the readiness threshold that the European market requires.
-    </p>
-    <div class="page-meta">
-      <div class="page-meta-item">Standard Type <span>Proprietary — EuraPlan</span></div>
-      <div class="page-meta-item">Audience <span>Non-EU companies assessing entry readiness across all company types and sectors</span></div>
-      <div class="page-meta-item">Decision Problem <span>Are we actually ready to enter Europe, or only ready to try?</span></div>
-      <div class="page-meta-item">Last Updated <span>June 2026</span></div>
-    </div>
+  <div class="telemetry-strip" role="group" aria-label="Control room telemetry">
+    <dl class="telemetry-grid">
+      <div class="telemetry-cell"><dt>Route</dt><dd>EP-OUT-05</dd></div>
+      <div class="telemetry-cell"><dt>Audience</dt><dd>Non-EU companies assessing entry readiness</dd></div>
+      <div class="telemetry-cell"><dt>Decision Problem</dt><dd>Are we entry-ready or only ready to try?</dd></div>
+      <div class="telemetry-cell"><dt>Source Requirement</dt><dd>Framework standard — company scores require protocol</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+    </dl>
   </div>
+
+  <section class="control-room-hero" aria-labelledby="eers-heading">
+    <div class="control-room-hero-mark">
+      <img src="/assets/brand/logo-mark-gold.svg" alt="" class="brand-mark brand-mark--hero" width="64" height="64" decoding="async" aria-hidden="true">
+    </div>
+    <span class="control-room-hero-label">EP-OUT-05 — Proprietary Standard</span>
+    <h1 class="control-room-hero-title" id="eers-heading">European Entry Readiness Standard</h1>
+    <p class="control-room-hero-thesis">
+      EERS defines the minimum conditions for a non-EU company to be genuinely ready to enter the European market.
+      No company-specific scores are shown on this reference page — all dimensions are unassessed until a protocol run.
+    </p>
+    <div class="control-room-hero-actions">
+      <a href="/enter/" class="btn btn-primary">Entry Gateway</a>
+      <a href="/protocol/" class="btn btn-secondary">Planning Protocol</a>
+      <a href="/clock/" class="btn btn-secondary">Regulatory Clock</a>
+    </div>
+  </section>
 
   <section class="page-section" aria-labelledby="readiness-definition-heading">
     <div class="section-header">
@@ -86,8 +96,71 @@
 
   <section class="page-section" aria-labelledby="dimensions-heading">
     <div class="section-header">
-      <span class="section-eyebrow">The Eight Dimensions</span>
-      <h2 class="section-title" id="dimensions-heading">EERS Readiness Dimensions</h2>
+      <span class="section-eyebrow">Readiness State Layer — Eight Dimensions</span>
+      <h2 class="section-title" id="dimensions-heading">EERS Readiness Grid</h2>
+      <p class="section-body">Each dimension is a controlled gate in the readiness layer. State: <strong>Unassessed</strong> (standard reference — no company input on this page).</p>
+      <div class="badge-row">
+        <span class="claim-risk-badge claim-risk-badge--low">Claim risk: Low — framework definition</span>
+      </div>
+    </div>
+    <div class="readiness-grid" role="list" aria-label="Eight EERS readiness dimensions">
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-01</span>
+        <h3 class="readiness-dimension-title">Regulatory Mapping</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">All applicable EU regulations identified for entity type, product, sector, and role.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-02</span>
+        <h3 class="readiness-dimension-title">Compliance Timeline</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">Enforcement dates known per obligation — Regulatory Entry Clock applied.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-03</span>
+        <h3 class="readiness-dimension-title">Country Selection</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">Target EU entry country selected with documented evidence — not preference alone.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-04</span>
+        <h3 class="readiness-dimension-title">Entity &amp; Legal Structure</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">EU legal structure defined — branch, subsidiary, representative office, or entity.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-05</span>
+        <h3 class="readiness-dimension-title">Funding Awareness</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">EU funding eligibility mapped for sector and entry country.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-06</span>
+        <h3 class="readiness-dimension-title">Product Compliance</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">Product mapped against EU requirements — AI Act, CRA, MDR, PSD3 as applicable.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-07</span>
+        <h3 class="readiness-dimension-title">Risk Classification</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">Regulatory, market, and execution risks identified and categorised.</p>
+      </article>
+      <article class="readiness-dimension" role="listitem">
+        <span class="readiness-dimension-num">DIM-08</span>
+        <h3 class="readiness-dimension-title">Execution Plan</h3>
+        <span class="readiness-dimension-state readiness-dimension-state--unassessed">Unassessed</span>
+        <p class="readiness-dimension-desc">30/90/180-day entry plan with sequenced steps and owners.</p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="page-section" aria-labelledby="dimensions-detail-heading">
+    <div class="section-header">
+      <span class="section-eyebrow">Dimension Reference — Text Detail</span>
+      <h2 class="section-title" id="dimensions-detail-heading">Standard Dimension Definitions</h2>
     </div>
     <ol class="eers-list">
       <li class="eers-item">
