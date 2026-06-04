@@ -67,6 +67,7 @@ This is a category signal, not a technical limitation. A sovereign intelligence 
 /
 ├── index.html
 ├── assets/
+│   ├── brand/   (approved logos, favicon, og-default; _pending/ for unreleased files)
 │   ├── css/main.css
 │   └── js/  (Phase 2+ only, when approved)
 ├── enter/index.html

@@ -1,8 +1,8 @@
 # INTERFACE_COMPONENT_POLICY.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
-**Last Updated:** June 2026
+**Last Updated:** June 2026 (Sprint 1B — Brand Asset Integration)
 **Governed by:** GOVERNANCE_CHARTER.md, VISUAL_SYSTEM_GOVERNANCE.md, TECHNICAL_STANDARD.md
 
 ---
@@ -43,6 +43,8 @@ Every component must embody the intelligence it represents. A Regulatory Clock c
 **When not to use:**
 - On pages where a static text timeline in a table is sufficient
 - When source capture for the displayed regulations is incomplete
+
+**Brand mark (Sprint 1B+):** When a compact visual identity is shown on Clock surfaces (e.g., page hero or export header), use the clock + pillars mark (`assets/brand/logo-mark-gold.svg` on dark backgrounds). Brand Gold only — not European Yellow. The mark supplements text; it does not replace regulatory dates or citations.
 
 ---
 
@@ -205,6 +207,7 @@ Every component must embody the intelligence it represents. A Regulatory Clock c
 - Referenced: grey-light with text
 - Pending: yellow with text (signals that publication should be blocked)
 - Deprecated: red-adjacent with text
+- Optional micro-mark: clock + pillars at badge scale only when a brand anchor is required; must not replace the text classification label
 
 **Accessibility requirement:**
 - Badge text must fully convey the state — no colour-only state
@@ -262,6 +265,42 @@ Every component must embody the intelligence it represents. A Regulatory Clock c
 **When not to use:**
 - On pages that already have comprehensive internal links in the body content
 - On governance and source pages where navigation context is less relevant
+
+---
+
+## 11. Component: Governance Badge
+
+**Purpose:** Identifies governed intelligence outputs, routes, or editorial layers that meet EuraPlan governance requirements before publication.
+
+**Visual:**
+- Text-first badge (e.g., "Governed," "Source-Governed," "Route-Governed")
+- May include the clock + pillars mark at small scale (`logo-mark-gold.svg` on dark UI) when shown on governance or source surfaces
+- Brand Gold for mark; European Yellow reserved for signal states only — not for the governance badge frame
+
+**Accessibility requirement:**
+- Governance state conveyed in text; mark is decorative (`aria-hidden="true"`) when adjacent to a text label
+
+**When not to use:**
+- As a substitute for source citations or claim risk classification
+- On pages where governance is not the subject
+
+---
+
+## 12. Brief and Report Cover Identity
+
+**Purpose:** Visual identity block for Phase 2+ briefs and planning reports (on-demand outputs).
+
+**Visual:**
+- Primary: clock + pillars mark + `EuraPlan` wordmark (text or `logo-wordmark-*.svg` on approved backgrounds)
+- Strategic tagline on institutional covers: European Regulatory Entry & Expansion Planning Intelligence
+- Interface tagline on in-product covers: European Entry Control Room
+- Full composite logos (`logo-full-dark-bg.png`, `logo-full-light-bg.png`) only on approved export/print backgrounds
+
+**Accessibility requirement:**
+- Cover title and report type remain HTML text or accessible PDF text — mark does not replace the document title
+
+**When not to use:**
+- On static reference corpus pages in Phase 1 (use header mark only)
 
 ---
 
