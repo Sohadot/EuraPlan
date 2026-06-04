@@ -1224,43 +1224,38 @@ main { flex: 1; }
 
 @media (max-width: 520px) {
 
-  /* Telemetry strip: compact single-column label | value rows */
+  /* Telemetry strip: compact stacked mini-panels (label above, value below) */
   .telemetry-strip {
     padding: 8px 20px;
   }
   .telemetry-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .telemetry-cell {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 8px;
-    padding: 5px 8px;
-    align-items: baseline;
+    display: block;
+    padding: 7px 9px;
     min-width: 0;
   }
   .telemetry-cell dt {
-    font-size: 0.5rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 0;
-    white-space: nowrap;
+    font-size: 0.48rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 4px;
+    white-space: normal;
+    line-height: 1.2;
   }
   .telemetry-cell dd {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
     font-family: var(--font-mono);
-    line-height: 1.3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
     word-break: normal;
   }
   .telemetry-cell dd.telemetry-value--signal {
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-family: var(--font-ui);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   /* Control-room hero: compact for small screens */
