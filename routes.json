@@ -242,6 +242,20 @@
       "source_requirement": "Tier 1 official / official institutional — Business France, formalites.entreprises.gouv.fr, CNIL, ANSSI/cyber.gouv.fr, Service-Public, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
+    },
+    {
+      "route_id": "EP-SECTOR-001",
+      "path": "/sector/ai-saas/",
+      "title": "AI/SaaS Europe Entry Planning Reference",
+      "purpose": "Sovereign sector reference ontology page for AI/SaaS. Maps AI-enabled SaaS as a regulatory exposure category for non-EU companies — four-regulation stack contextualization, role mapping, Wave 1 country trio sequencing, EERS dimensions, planning gates, and Tier 1 official sources.",
+      "ontology_role": "sector_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/country/germany/", "/country/netherlands/", "/country/france/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official / official institutional",
+      "content_status": "complete",
+      "publication_status": "published"
     }
   ]
 }
