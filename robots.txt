@@ -9,6 +9,7 @@ Allow: /$
 Allow: /enter/$
 Allow: /clock/$
 Allow: /regulation/
+Allow: /country/
 Allow: /standard/eers/$
 Allow: /protocol/$
 Allow: /sources/$

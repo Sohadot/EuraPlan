@@ -28,7 +28,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/"],
+      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/", "/country/germany/"],
       "source_requirement": "Low to Medium — framing content. No specific regulatory deadline claims requiring Tier 1 citation.",
       "content_status": "complete",
       "publication_status": "published"
@@ -198,6 +198,20 @@
       "sitemap": true,
       "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official — EUR-Lex CRA text, European Commission Cyber Resilience Act and digital strategy materials",
+      "content_status": "complete",
+      "publication_status": "published"
+    },
+    {
+      "route_id": "EP-COUNTRY-001",
+      "path": "/country/germany/",
+      "title": "Germany Entry Planning Reference",
+      "purpose": "Sovereign country reference ontology page for Germany. Maps Germany as a country execution environment for non-EU technology companies — EU regulatory stack in national context, institution mapping, entry structure planning, EERS relevance, and Tier 1 institutional sources.",
+      "ontology_role": "country_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official / official institutional — GTAI, BMWK, BfDI, BSI, Unternehmensregister, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
     }
