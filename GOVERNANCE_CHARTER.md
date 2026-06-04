@@ -1,5 +1,5 @@
 # GOVERNANCE_CHARTER.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
@@ -60,6 +60,8 @@ EuraPlan produces the following governed intelligence outputs. No output may be 
 
 ## 5. Governing Documents
 
+### Core Governing Documents
+
 | Document | Governs |
 |---|---|
 | EURAPLAN_CATEGORY_INTELLIGENCE_FACTORY_PLAN.md | Master constitution |
@@ -70,8 +72,30 @@ EuraPlan produces the following governed intelligence outputs. No output may be 
 | INTERNAL_LINK_POLICY.md | Internal linking structure and requirements |
 | MONETIZATION_BOUNDARY.md | Permitted and prohibited revenue channels |
 | BUYER_LOGIC.md | Acquisition thesis and strategic positioning |
-| FIRST_PUBLIC_RELEASE_PLAN.md | Sprint 0A/0B scope and delivery |
+| FIRST_PUBLIC_RELEASE_PLAN.md | Sprint delivery scope and release sequencing |
 | ACCEPTANCE_CRITERIA.md | Pass/fail rules for all future additions |
+
+### Companion Operating Documents
+
+Created in Sprint 1 (Sovereign Operating Governance Layer). These documents govern the technical, quality, and operational dimensions of all future corpus expansion. Every page published from Sprint 2 onwards must pass the relevant companion documents before publication.
+
+| Document | Governs |
+|---|---|
+| TECHNICAL_STANDARD.md | HTML architecture, file structure, build standards |
+| SECURITY_POLICY.md | Repository security, third-party scripts, privacy, security headers |
+| SEO_GOVERNANCE.md | Indexation discipline, title standards, route admission, AI agent readability |
+| CONTENT_QUALITY_STANDARD.md | Required page elements, prohibited patterns, audience-layer markers |
+| REFERENCE_CORPUS_GOVERNANCE.md | Corpus layer architecture, page lifecycle, expansion wave sequencing |
+| PAGE_BLUEPRINT_STANDARD.md | Required fields, internal links, and source requirements per page type |
+| STRUCTURED_DATA_POLICY.md | JSON-LD schema types, OG tags, internal ontology data attributes |
+| AGENT_READABILITY_POLICY.md | Heading hierarchy, lead summaries, machine-extractable content structure |
+| PERFORMANCE_BUDGET.md | Core Web Vitals targets, page weight budgets, font and image rules |
+| ACCESSIBILITY_STANDARD.md | WCAG 2.1 AA compliance, keyboard navigation, colour contrast, reduced motion |
+| VISUAL_SYSTEM_GOVERNANCE.md | Colour tokens, typography scale, prohibited visual directions |
+| INTERFACE_COMPONENT_POLICY.md | Specifications for 10 governed interface components |
+| MULTILINGUAL_GOVERNANCE.md | Language release gates, hreflang, RTL requirements, translation standards |
+| ANALYTICS_AND_INDEXATION_POLICY.md | GSC, privacy-respecting analytics, indexation monitoring |
+| SCALING_AND_AUTOMATION_POLICY.md | Automation boundaries, publication gates, rollback rules |
 
 ---
 

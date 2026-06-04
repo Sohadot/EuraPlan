@@ -1,5 +1,5 @@
 # ACCEPTANCE_CRITERIA.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
 **Last Updated:** June 2026
@@ -127,6 +127,27 @@ An interface component may be added when:
 - It does not require external UI frameworks not already in the build system
 - It is static-first or progressively enhanced
 - It does not implement WebGL, 3D, or animation-first interaction in Phase 1
+
+---
+
+## 10. Operating Policy Compliance
+
+Every page published from Sprint 2 onwards must be verified against all relevant Companion Operating Documents listed in GOVERNANCE_CHARTER.md Section 5. Failure of any applicable policy blocks publication.
+
+| Policy | Applies To |
+|---|---|
+| TECHNICAL_STANDARD.md | All pages |
+| SEO_GOVERNANCE.md | All indexable pages |
+| CONTENT_QUALITY_STANDARD.md | All content pages |
+| ACCESSIBILITY_STANDARD.md | All pages |
+| PERFORMANCE_BUDGET.md | All pages |
+| STRUCTURED_DATA_POLICY.md | All pages |
+| PAGE_BLUEPRINT_STANDARD.md | All reference, brief, and matrix pages |
+| VISUAL_SYSTEM_GOVERNANCE.md | All pages |
+| AGENT_READABILITY_POLICY.md | All pages |
+| SCALING_AND_AUTOMATION_POLICY.md | Any page produced with automation assistance |
+
+The publication gate checklist in SCALING_AND_AUTOMATION_POLICY.md must be completed for every page before publication_status is changed to `published` in routes.json.
 
 ---
 
