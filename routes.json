@@ -42,9 +42,9 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/enter/", "/standard/eers/", "/protocol/", "/sources/", "/regulation/eu-ai-act/"],
-      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. EU AI Act deep reference at /regulation/eu-ai-act/.",
-      "content_status": "complete — framework and key established dates; EU AI Act regulation reference published Sprint 2A",
+      "required_internal_links": ["/enter/", "/standard/eers/", "/protocol/", "/sources/", "/regulation/eu-ai-act/", "/regulation/gdpr/"],
+      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. Regulation references at /regulation/eu-ai-act/ and /regulation/gdpr/.",
+      "content_status": "complete — framework and key established dates; EU AI Act and GDPR regulation references published",
       "publication_status": "published"
     },
     {
@@ -154,8 +154,22 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/standard/eers/", "/protocol/", "/sources/", "/governance/", "/regulation/gdpr/"],
       "source_requirement": "Tier 1 official — EUR-Lex regulation text, EU AI Act Service Desk, European Commission official AI framework materials",
+      "content_status": "complete",
+      "publication_status": "published"
+    },
+    {
+      "route_id": "EP-REG-002",
+      "path": "/regulation/gdpr/",
+      "title": "GDPR Entry Planning Reference",
+      "purpose": "Sovereign regulation reference ontology page for Regulation (EU) 2016/679. Maps GDPR data-protection roles, baseline obligations, data-flow planning layers, EERS relevance, AI Act coordination, and Tier 1 sources for non-EU companies planning European market entry.",
+      "ontology_role": "regulation_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official — EUR-Lex GDPR text, European Commission data protection pages, EDPB guidance where context requires",
       "content_status": "complete",
       "publication_status": "published"
     }
