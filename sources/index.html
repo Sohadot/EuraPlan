@@ -45,23 +45,46 @@
   </div>
 </header>
 
-<main>
+<main class="control-room-shell">
 
-  <div class="page-hero">
-    <span class="page-hero-label">EP-R-007 — Source Governance</span>
-    <h1 class="page-hero-title">How EuraPlan Sources Its Intelligence</h1>
-    <p class="page-hero-thesis">
-      EuraPlan produces planning intelligence that influences real business decisions.
-      Every regulatory claim, timeline, threshold, and funding reference must be traceable
-      to an authoritative source before it is published. This page describes how that standard
-      is maintained.
-    </p>
-    <div class="page-meta">
-      <div class="page-meta-item">Type <span>Source Governance Transparency Note</span></div>
-      <div class="page-meta-item">Audience <span>All EuraPlan users; institutional and professional users requiring source traceability</span></div>
-      <div class="page-meta-item">Last Updated <span>June 2026</span></div>
-    </div>
+  <div class="telemetry-strip" role="group" aria-label="Control room telemetry">
+    <dl class="telemetry-grid">
+      <div class="telemetry-cell"><dt>Route</dt><dd>EP-R-007</dd></div>
+      <div class="telemetry-cell"><dt>Audience</dt><dd>Users requiring source traceability</dd></div>
+      <div class="telemetry-cell"><dt>Decision Problem</dt><dd>Can this intelligence claim be trusted?</dd></div>
+      <div class="telemetry-cell"><dt>Source Requirement</dt><dd>Defines Tier 1–3 acceptance rules</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+    </dl>
   </div>
+
+  <section class="control-room-hero" aria-labelledby="sources-heading">
+    <div class="control-room-hero-mark">
+      <img src="/assets/brand/logo-mark-gold.svg" alt="" class="brand-mark brand-mark--hero" width="64" height="64" decoding="async" aria-hidden="true">
+    </div>
+    <span class="control-room-hero-label">EP-R-007 — Source Governance</span>
+    <h1 class="control-room-hero-title" id="sources-heading">How EuraPlan Sources Its Intelligence</h1>
+    <p class="control-room-hero-thesis">
+      Every regulatory claim, timeline, and funding reference must be traceable to an authoritative source before publication.
+      Source confidence is an operational control — not a marketing label.
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="tier1-importance-heading">
+    <div class="system-panel">
+      <div class="system-panel-header">
+        <span class="system-panel-id">SRC-CTRL-01</span>
+        <h2 class="system-panel-title" id="tier1-importance-heading">Why Tier 1 Matters</h2>
+      </div>
+      <p class="system-panel-body">
+        No regulatory deadline or compliance obligation may be published without a Tier 1 source — official EU legislation (EUR-Lex), Commission guidance, or official national authority publications.
+        Tier 2 and Tier 3 cannot substitute for Tier 1 on regulatory claims. A company acting on uncited regulatory intelligence bears the planning risk; EuraPlan blocks Pending claims from publication.
+      </p>
+      <div class="badge-row">
+        <span class="source-confidence-badge source-confidence-badge--tier1">Tier 1 — Primary Authoritative</span>
+        <span class="claim-risk-badge claim-risk-badge--high">High risk without Tier 1</span>
+      </div>
+    </div>
+  </section>
 
   <section class="page-section" aria-labelledby="why-sources-heading">
     <div class="section-header">
@@ -85,9 +108,13 @@
       <h2 class="section-title" id="source-tiers-heading">Accepted Source Tiers</h2>
     </div>
 
-    <div class="source-tier">
-      <span class="source-tier-label">Tier 1 — Primary Authoritative</span>
-      <p class="source-tier-desc">Required for all regulatory, legal, and compliance claims. No regulatory deadline or compliance obligation may be published without a Tier 1 source.</p>
+    <div class="source-tier-panel">
+      <div class="source-tier-panel-header">
+        <span class="source-confidence-badge source-confidence-badge--tier1">Tier 1 — Primary Authoritative</span>
+        <h3 class="source-tier-panel-title">Official EU &amp; National Sources</h3>
+      </div>
+      <div class="source-tier-panel-body">
+      <p class="source-tier-desc">Required for all regulatory, legal, and compliance claims. Includes official national government sources (e.g. CNIL, BMDV) within Tier 1.</p>
       <ul class="source-list">
         <li>Official EU legislation — EUR-Lex (eur-lex.europa.eu)</li>
         <li>Regulation texts and official recitals as published in the Official Journal of the European Union</li>
@@ -98,10 +125,15 @@
         <li>Official national government sources (e.g., Germany's BMDV, France's CNIL, Netherlands' ACM)</li>
         <li>Official EU funding programme documentation: Horizon Europe, EIC, ERDF, InvestEU portals</li>
       </ul>
+      </div>
     </div>
 
-    <div class="source-tier">
-      <span class="source-tier-label">Tier 2 — Institutional Reference</span>
+    <div class="source-tier-panel">
+      <div class="source-tier-panel-header">
+        <span class="source-confidence-badge source-confidence-badge--tier2">Tier 2 — Institutional Reference</span>
+        <h3 class="source-tier-panel-title">Institutional &amp; Multilateral Official</h3>
+      </div>
+      <div class="source-tier-panel-body">
       <p class="source-tier-desc">Supporting context and interpretation. Not valid as the sole source for regulatory deadline or compliance obligation claims.</p>
       <ul class="source-list">
         <li>Enterprise Europe Network official publications</li>
@@ -111,20 +143,30 @@
         <li>IMF official data on EU economies</li>
         <li>World Bank official data</li>
       </ul>
+      </div>
     </div>
 
-    <div class="source-tier">
-      <span class="source-tier-label">Tier 3 — Professional Reference</span>
+    <div class="source-tier-panel">
+      <div class="source-tier-panel-header">
+        <span class="source-confidence-badge source-confidence-badge--tier3">Tier 3 — Professional Reference</span>
+        <h3 class="source-tier-panel-title">Named Professional Secondary</h3>
+      </div>
+      <div class="source-tier-panel-body">
       <p class="source-tier-desc">Contextual framing only. Not valid for regulatory or compliance claims. Must be named, dated, and attributed.</p>
       <ul class="source-list">
         <li>Named, dated international law firm regulatory alerts</li>
         <li>Named, dated Big Four regulatory briefings</li>
         <li>Named, dated official industry association regulatory updates</li>
       </ul>
+      </div>
     </div>
 
-    <div class="source-tier">
-      <span class="source-tier-label">Rejected Sources — Not Accepted</span>
+    <div class="source-tier-panel">
+      <div class="source-tier-panel-header">
+        <span class="source-confidence-badge source-confidence-badge--rejected">Rejected — Not Accepted</span>
+        <h3 class="source-tier-panel-title">Prohibited Source Types</h3>
+      </div>
+      <div class="source-tier-panel-body">
       <p class="source-tier-desc">The following are not accepted as supporting sources for any regulatory, compliance, or funding claim under any circumstances:</p>
       <ul class="source-list">
         <li>Anonymous or unnamed web content</li>
@@ -133,6 +175,7 @@
         <li>Undated consulting firm marketing materials</li>
         <li>Social media posts or forum discussions</li>
       </ul>
+      </div>
     </div>
   </section>
 
@@ -140,32 +183,38 @@
 
   <section class="page-section" aria-labelledby="confidence-heading">
     <div class="section-header">
-      <span class="section-eyebrow">Confidence Classification</span>
+      <span class="section-eyebrow">Source Confidence Classification</span>
       <h2 class="section-title" id="confidence-heading">How Claims Are Classified</h2>
-      <p class="section-body">Every sourced claim published by EuraPlan carries an internal confidence classification. This classification determines whether a claim may be published and under what conditions it must be reviewed.</p>
+      <p class="section-body">Every sourced claim carries a confidence classification that determines publication eligibility.</p>
+      <div class="badge-row">
+        <span class="source-confidence-badge source-confidence-badge--verified">Verified</span>
+        <span class="source-confidence-badge source-confidence-badge--referenced">Referenced</span>
+        <span class="source-confidence-badge source-confidence-badge--pending">Pending</span>
+        <span class="source-confidence-badge source-confidence-badge--referenced">Deprecated</span>
+      </div>
     </div>
     <table class="ep-table">
       <thead>
-        <tr><th>Level</th><th>Definition</th><th>Action</th></tr>
+        <tr><th scope="col">Level</th><th scope="col">Definition</th><th scope="col">Action</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>Verified</td>
+          <td><span class="source-confidence-badge source-confidence-badge--verified">Verified</span></td>
           <td>Directly supported by a Tier 1 or Tier 2 source, cited inline</td>
           <td>May be published</td>
         </tr>
         <tr>
-          <td>Referenced</td>
+          <td><span class="source-confidence-badge source-confidence-badge--referenced">Referenced</span></td>
           <td>Supported by a Tier 3 professional reference, disclosed</td>
           <td>May be published with disclosure</td>
         </tr>
         <tr>
-          <td>Pending</td>
+          <td><span class="source-confidence-badge source-confidence-badge--pending">Pending</span></td>
           <td>Source required — not yet captured</td>
           <td>Must not be published until source is captured and verified</td>
         </tr>
         <tr>
-          <td>Deprecated</td>
+          <td><span class="source-confidence-badge source-confidence-badge--referenced">Deprecated</span></td>
           <td>Source outdated or superseded by a newer official version</td>
           <td>Must be updated or removed within 30 days</td>
         </tr>

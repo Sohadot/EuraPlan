@@ -45,23 +45,68 @@
   </div>
 </header>
 
-<main>
+<main class="control-room-shell">
 
-  <div class="page-hero">
-    <span class="page-hero-label">EP-R-008 — Governance Note</span>
-    <h1 class="page-hero-title">EuraPlan Governance Architecture</h1>
-    <p class="page-hero-thesis">
-      EuraPlan is a Category Intelligence Factory, not a content website.
-      Every intelligence output, public page, route, claim, and monetization channel
-      is governed by a documented decision layer before it is built or published.
-      This page describes that architecture for users, institutional readers, and potential acquirers.
-    </p>
-    <div class="page-meta">
-      <div class="page-meta-item">Type <span>Governance Transparency Note</span></div>
-      <div class="page-meta-item">Audience <span>All EuraPlan users, institutional readers, potential strategic buyers</span></div>
-      <div class="page-meta-item">Last Updated <span>June 2026</span></div>
-    </div>
+  <div class="telemetry-strip" role="group" aria-label="Control room telemetry">
+    <dl class="telemetry-grid">
+      <div class="telemetry-cell"><dt>Route</dt><dd>EP-R-008</dd></div>
+      <div class="telemetry-cell"><dt>Audience</dt><dd>Users, institutional readers, strategic buyers</dd></div>
+      <div class="telemetry-cell"><dt>Decision Problem</dt><dd>How is intelligence governed before publication?</dd></div>
+      <div class="telemetry-cell"><dt>Source Requirement</dt><dd>Governance transparency — meta</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+    </dl>
   </div>
+
+  <section class="control-room-hero" aria-labelledby="gov-heading">
+    <div class="control-room-hero-mark">
+      <img src="/assets/brand/logo-mark-gold.svg" alt="" class="brand-mark brand-mark--hero" width="64" height="64" decoding="async" aria-hidden="true">
+    </div>
+    <span class="control-room-hero-label">EP-R-008 — Governance Note</span>
+    <h1 class="control-room-hero-title" id="gov-heading">EuraPlan Governance Architecture</h1>
+    <p class="control-room-hero-thesis">
+      EuraPlan is a Category Intelligence Factory. Every output, route, claim, and monetization channel
+      passes a documented governing layer before publication.
+    </p>
+    <div class="badge-row">
+      <span class="source-confidence-badge source-confidence-badge--verified">Governed publication</span>
+      <span class="claim-risk-badge claim-risk-badge--low">Claim risk: Low — architecture description</span>
+    </div>
+  </section>
+
+  <section class="page-section" aria-labelledby="gov-map-heading">
+    <div class="section-header">
+      <span class="section-eyebrow">Governance Architecture Map</span>
+      <h2 class="section-title" id="gov-map-heading">Operational Control Nodes</h2>
+    </div>
+    <div class="governance-map" role="list">
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Source Policy <span class="source-confidence-badge source-confidence-badge--tier1">Tier control</span></h3>
+        <p class="governance-map-node-desc">All claims trace to Tier 1–3 sources. Regulatory claims require Tier 1. See <a href="/sources/">/sources/</a>.</p>
+      </article>
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Claim Policy <span class="claim-risk-badge claim-risk-badge--medium">Risk classify</span></h3>
+        <p class="governance-map-node-desc">Low / Medium / High / Blocked classification before publication. Blocked claims never publish.</p>
+      </article>
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Route Governance</h3>
+        <p class="governance-map-node-desc">No combinatorial URLs. No diagnostic query states in indexable routes. Matrix unpublished until governed.</p>
+      </article>
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Entry Planning Protocol</h3>
+        <p class="governance-map-node-desc">Twelve-step sequence governs intelligence production. <a href="/protocol/">/protocol/</a></p>
+      </article>
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Acceptance Criteria</h3>
+        <p class="governance-map-node-desc">Pass/fail rules for pages, routes, claims, and outputs before any corpus expansion.</p>
+      </article>
+      <article class="governance-map-node" role="listitem">
+        <h3 class="governance-map-node-title">Monetization Boundary</h3>
+        <p class="governance-map-node-desc">Permitted revenue channels defined. No advertising dependency. No undocumented partnerships.</p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="section-divider">
 
   <section class="page-section" aria-labelledby="what-euraplan-is-heading">
     <div class="section-header">
@@ -144,15 +189,37 @@
 
   <section class="page-section" aria-labelledby="interface-doctrine-heading">
     <div class="section-header">
-      <span class="section-eyebrow">Interface Doctrine</span>
-      <h2 class="section-title" id="interface-doctrine-heading">The Interface Must Embody the Asset Thesis</h2>
+      <span class="section-eyebrow">Interface Doctrine — Sprint 1C</span>
+      <h2 class="section-title" id="interface-doctrine-heading">European Entry Control Room — Active</h2>
       <p class="section-body">
-        The future EuraPlan interface direction is a European entry control room: regulatory clocks,
-        compliance gates, country matrices, planning pathways, and readiness state layers.
-        This direction is preserved and will be implemented in later phases.
-        The Phase 1 foundation is static-first, accessible, and structurally aligned
-        with the intelligence architecture — not a visual decoration of it.
+        The public interface now expresses the asset thesis: telemetry strips, regulatory clock lanes,
+        entry gates, planning pathways, readiness grids, matrix snippets, and source confidence controls.
+        Static-first, zero heavy JavaScript, HTML-first intelligence content.
+        Diagnostic engine and full matrix publication remain future phases.
       </p>
+    </div>
+    <div class="control-panel-grid">
+      <article class="control-panel-card">
+        <span class="control-panel-card-id">UI-CLK</span>
+        <span class="control-panel-card-function">Regulatory Clock</span>
+        <h3 class="control-panel-card-title">Clock Lanes</h3>
+        <p class="control-panel-card-use">Timeline lanes with source-confirmed enforcement markers.</p>
+        <a href="/clock/" class="control-panel-card-route">/clock/ &rarr;</a>
+      </article>
+      <article class="control-panel-card">
+        <span class="control-panel-card-id">UI-GATE</span>
+        <span class="control-panel-card-function">Entry Gates</span>
+        <h3 class="control-panel-card-title">Four Gateway Gates</h3>
+        <p class="control-panel-card-use">Regulatory exposure, country, entity, sequence — at entry gateway.</p>
+        <a href="/enter/" class="control-panel-card-route">/enter/ &rarr;</a>
+      </article>
+      <article class="control-panel-card">
+        <span class="control-panel-card-id">UI-EERS</span>
+        <span class="control-panel-card-function">Readiness Layer</span>
+        <h3 class="control-panel-card-title">Eight-Dimension Grid</h3>
+        <p class="control-panel-card-use">Unassessed on reference pages — no fabricated scores.</p>
+        <a href="/standard/eers/" class="control-panel-card-route">/standard/eers/ &rarr;</a>
+      </article>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap;">
       <a href="/sources/" class="btn btn-primary">Source Governance</a>
