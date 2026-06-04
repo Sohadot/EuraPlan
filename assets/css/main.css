@@ -12,6 +12,7 @@
   --grey-mid:    #6a7a8a;
   --grey-dark:   #344454;
   --yellow:      #e0c040;
+  --brand-gold:  #c9a84c;
   --font-ui:     -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono:   'SF Mono', 'Fira Code', Consolas, monospace;
   --max-content: 1060px;
@@ -53,9 +54,28 @@ a:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .wordmark {
   text-decoration: none;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.wordmark-text {
+  display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
+}
+.brand-mark {
   flex-shrink: 0;
+  display: block;
+  width: 32px;
+  height: auto;
+  aspect-ratio: 1;
+}
+.brand-mark--hero {
+  width: 56px;
+  margin-bottom: 16px;
 }
 .wordmark-name {
   font-size: 1.25rem;
@@ -83,6 +103,15 @@ nav a {
 }
 nav a:hover { color: var(--white); border-bottom-color: var(--grey-mid); }
 nav a[aria-current="page"] { color: var(--white); border-bottom-color: var(--yellow); }
+
+@media (max-width: 520px) {
+  .site-header { padding: 14px 16px; }
+  .site-header-inner { gap: 12px; }
+  .brand-mark { width: 28px; }
+  .wordmark-category { font-size: 0.52rem; letter-spacing: 0.1em; }
+  nav { gap: 10px; }
+  nav a { font-size: 0.65rem; }
+}
 
 /* --- Main --- */
 main { flex: 1; }

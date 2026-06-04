@@ -1,8 +1,8 @@
 # VISUAL_SYSTEM_GOVERNANCE.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
-**Last Updated:** June 2026
+**Last Updated:** June 2026 (Sprint 1B — Brand Asset Integration)
 **Governed by:** GOVERNANCE_CHARTER.md
 
 ---
@@ -13,9 +13,30 @@ The EuraPlan interface must feel like a European entry control room. Not a broch
 
 Every visual decision must serve the intelligence. If a visual element does not advance the user's understanding of the planning intelligence it is displaying, it has no place on the page.
 
+**Strategic tagline (category / institutional):** European Regulatory Entry & Expansion Planning Intelligence
+
+**Interface / experience tagline:** European Entry Control Room
+
 ---
 
-## 2. Colour System
+## 2. Brand Identity — Interface Mark
+
+The official **interface-facing** EuraPlan identity is the **clock + pillars inside the clock** mark (`assets/brand/logo-mark-gold.svg`, `logo-mark-white.svg`, and raster variants).
+
+| Element in mark | Meaning |
+|---|---|
+| Clock ring | Regulatory Entry Clock — timing, deadlines, execution windows |
+| Pillars (cardinal gates) | Institutional authority, regulation, governance, entry gates |
+| Center point | Planning core / decision center |
+| Pathways / checkpoints | Control-room routing between gates and decisions |
+
+The **map + pillars** identity may remain in use as an **institutional / secondary** mark where a geographic corpus signal is required. It must not replace the clock + pillars mark in the site header, favicon, or primary interface surfaces.
+
+Approved brand assets live under `assets/brand/`. Files not yet approved for public reference must remain in `assets/brand/_pending/` and must not be linked from public HTML.
+
+---
+
+## 3. Colour System
 
 All colours are defined as CSS custom properties in `:root` in `assets/css/main.css`. The visual system is not a collection of hex values — it is a semantic system where each colour has a defined role that cannot be violated.
 
@@ -30,13 +51,16 @@ All colours are defined as CSS custom properties in `:root` in `assets/css/main.
 | `--grey-light` | `#b8c4d0` | Body text. Labels. | Verify contrast ratio — must meet 4.5:1 for body text. |
 | `--grey-mid` | `#6a7a8a` | Metadata and de-emphasised labels. | Large text only if contrast < 4.5:1. |
 | `--grey-dark` | `#344454` | Heavily de-emphasised elements. Footer text. | Decorative use only if contrast insufficient. |
-| `--yellow` | `#e0c040` | European yellow — deadline and decision signals ONLY. | See Section 3. |
-| `--font-ui` | system stack | Interface typography | See Section 5. |
-| `--font-mono` | monospace stack | IDs, codes, regulation numbers | See Section 5. |
+| `--yellow` | `#e0c040` | European yellow — deadline and decision signals ONLY. | See Section 4. |
+| `--brand-gold` | `#c9a84c` | Brand gold — logo and interface mark ONLY. | See Section 4. |
+| `--font-ui` | system stack | Interface typography | See Section 6. |
+| `--font-mono` | monospace stack | IDs, codes, regulation numbers | See Section 6. |
+
+**Brand Gold and European Yellow are distinct functional tokens.** They must never be conflated in CSS, markup, or design decisions. Brand Gold (`--brand-gold`) is reserved for the clock + pillars mark and other approved brand asset rendering. European Yellow (`--yellow`) is reserved for deadlines, gates, decisions, and intelligence signals in page content.
 
 ---
 
-## 3. European Yellow — Strict Usage Rules
+## 4. European Yellow — Strict Usage Rules
 
 Yellow (`--yellow: #e0c040`) is a signal colour. It is not a brand colour and it is not a decorative colour.
 
@@ -58,7 +82,7 @@ The intent: when a user sees yellow on an EuraPlan page, they should understand 
 
 ---
 
-## 4. Visual Grammar — Functional Elements
+## 5. Visual Grammar — Functional Elements
 
 The interface uses functional visual grammar derived from the intelligence architecture. These elements are not decorative metaphors — they are functional representations of planning concepts.
 
@@ -75,7 +99,7 @@ These elements are defined structurally in INTERFACE_COMPONENT_POLICY.md. The vi
 
 ---
 
-## 5. Typography
+## 6. Typography
 
 **Phase 1 — System fonts:**
 
@@ -103,7 +127,7 @@ These elements are defined structurally in INTERFACE_COMPONENT_POLICY.md. The vi
 
 ---
 
-## 6. What the Interface Must Not Be
+## 7. What the Interface Must Not Be
 
 | Prohibited Visual Direction | Reason |
 |---|---|
@@ -117,7 +141,7 @@ These elements are defined structurally in INTERFACE_COMPONENT_POLICY.md. The vi
 
 ---
 
-## 7. Iconography Rules
+## 8. Iconography Rules
 
 - Phase 1: No icon fonts, no icon libraries (performance and accessibility risk)
 - Icons, if introduced, must be inline SVG with accessible `aria-label` or `title` elements
@@ -127,7 +151,7 @@ These elements are defined structurally in INTERFACE_COMPONENT_POLICY.md. The vi
 
 ---
 
-## 8. Layout Principles
+## 9. Layout Principles
 
 - Single-column content flow on mobile
 - Maximum content width: `1060px` (`--max-content`)
@@ -138,11 +162,11 @@ These elements are defined structurally in INTERFACE_COMPONENT_POLICY.md. The vi
 
 ---
 
-## 9. Visual Trust Requirements
+## 10. Visual Trust Requirements
 
 The visual system must produce institutional trust at first glance. Specific requirements:
 
-- The header wordmark must be visually dominant but restrained — not flashy
+- The header displays the clock + pillars mark alongside the text wordmark (`EuraPlan` + interface tagline). The mark must be visually present but restrained — not flashy
 - Navigation must be clearly legible on all screen sizes
 - Body text must be at a readable size without zooming on mobile (minimum effective 16px for body text)
 - Source lists and disclaimers must be visually present, not hidden in near-invisible type
