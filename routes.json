@@ -191,7 +191,7 @@
       "route_id": "EP-REG-004",
       "path": "/regulation/cyber-resilience-act/",
       "title": "Cyber Resilience Act Entry Planning Reference",
-      "purpose": "Sovereign regulation reference ontology page for Regulation (EU) 2024/2847. Maps CRA product-security roles, products with digital elements, vulnerability handling, Article 71 timeline, conformity planning, EERS relevance, multi-regulation coordination, and Tier 1 sources for non-EU companies planning European market entry.",
+      "purpose": "Sovereign regulation reference ontology page for Regulation (EU) 2024/2847. Maps CRA product-security roles, Article 71 application timeline, vulnerability handling and conformity planning, EERS relevance, AI Act/GDPR/Data Act coordination, and Tier 1 sources for non-EU companies planning European market entry.",
       "ontology_role": "regulation_reference",
       "doctrine_role": null,
       "indexable": true,
