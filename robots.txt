@@ -8,6 +8,7 @@ User-agent: *
 Allow: /$
 Allow: /enter/$
 Allow: /clock/$
+Allow: /regulation/$
 Allow: /standard/eers/$
 Allow: /protocol/$
 Allow: /sources/$
