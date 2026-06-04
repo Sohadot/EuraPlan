@@ -42,9 +42,9 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/enter/", "/standard/eers/", "/protocol/", "/sources/"],
-      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. Full timeline requires complete source capture before expansion.",
-      "content_status": "complete — framework and key established dates; full timeline expansion requires Sprint 1 deep regulation pages",
+      "required_internal_links": ["/enter/", "/standard/eers/", "/protocol/", "/sources/", "/regulation/eu-ai-act/"],
+      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. EU AI Act deep reference at /regulation/eu-ai-act/.",
+      "content_status": "complete — framework and key established dates; EU AI Act regulation reference published Sprint 2A",
       "publication_status": "published"
     },
     {
@@ -144,6 +144,20 @@
       "source_requirement": "High — all regulatory exposure mappings and timeline claims in diagnostic output require Tier 1 sourcing. Diagnostic query states (/diagnostic?...) are permanently disallowed from sitemap and robots.txt.",
       "content_status": "planned — Phase 3 interactive tool",
       "publication_status": "planned"
+    },
+    {
+      "route_id": "EP-REG-001",
+      "path": "/regulation/eu-ai-act/",
+      "title": "EU AI Act Entry Planning Reference",
+      "purpose": "Sovereign regulation reference ontology page for Regulation (EU) 2024/1689. Pilot model for all future regulation reference pages. Maps AI Act roles, Article 113 application timeline, EERS relevance, entry planning implications, and Tier 1 sources for non-EU AI and SaaS companies planning European market entry.",
+      "ontology_role": "regulation_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official — EUR-Lex regulation text, EU AI Act Service Desk, European Commission official AI framework materials",
+      "content_status": "complete",
+      "publication_status": "published"
     }
   ]
 }
