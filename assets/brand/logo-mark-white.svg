@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .gold { fill: #F8F9FA; stroke: #F8F9FA; }
+      .gold-stroke { stroke: #F8F9FA; fill: none; }
+    </style>
+  </defs>
+  <!-- Outer ring (Regulatory Clock) -->
+  <circle cx="200" cy="200" r="165" class="gold-stroke" stroke-width="6"/>
+  <!-- Inner ring (System Layer) -->
+  <circle cx="200" cy="200" r="88" class="gold-stroke" stroke-width="3"/>
+  <!-- Gates N, E, S, W -->
+  <rect x="184" y="18" width="32" height="48" class="gold" rx="2"/>
+  <rect x="334" y="184" width="48" height="32" class="gold" rx="2"/>
+  <rect x="184" y="334" width="32" height="48" class="gold" rx="2"/>
+  <rect x="18" y="184" width="48" height="32" class="gold" rx="2"/>
+  <!-- Gate caps -->
+  <rect x="176" y="18" width="48" height="4" class="gold" rx="1"/>
+  <rect x="334" y="176" width="4" height="48" class="gold" rx="1"/>
+  <rect x="176" y="378" width="48" height="4" class="gold" rx="1"/>
+  <rect x="18" y="176" width="4" height="48" class="gold" rx="1"/>
+  <!-- Pathways -->
+  <line x1="200" y1="200" x2="200" y2="66" class="gold-stroke" stroke-width="4"/>
+  <line x1="200" y1="200" x2="334" y2="200" class="gold-stroke" stroke-width="4"/>
+  <line x1="200" y1="200" x2="200" y2="334" class="gold-stroke" stroke-width="4"/>
+  <line x1="200" y1="200" x2="66" y2="200" class="gold-stroke" stroke-width="4"/>
+  <!-- Checkpoints on inner ring -->
+  <circle cx="262" cy="138" r="6" class="gold"/>
+  <circle cx="262" cy="262" r="6" class="gold"/>
+  <circle cx="138" cy="262" r="6" class="gold"/>
+  <circle cx="138" cy="138" r="6" class="gold"/>
+  <!-- Central Node -->
+  <circle cx="200" cy="200" r="22" class="gold"/>
+  <!-- Clock ticks (8 ticks, skipping gates) -->
+  <line x1="200" y1="35" x2="200" y2="45" class="gold-stroke" stroke-width="3"/>
+  <line x1="282" y1="82" x2="290" y2="90" class="gold-stroke" stroke-width="3"/>
+  <line x1="318" y1="165" x2="328" y2="165" class="gold-stroke" stroke-width="3"/>
+  <line x1="318" y1="235" x2="328" y2="235" class="gold-stroke" stroke-width="3"/>
+  <line x1="282" y1="318" x2="290" y2="310" class="gold-stroke" stroke-width="3"/>
+  <line x1="200" y1="355" x2="200" y2="365" class="gold-stroke" stroke-width="3"/>
+  <line x1="118" y1="318" x2="110" y2="310" class="gold-stroke" stroke-width="3"/>
+  <line x1="82" y1="235" x2="72" y2="235" class="gold-stroke" stroke-width="3"/>
+  <line x1="82" y1="165" x2="72" y2="165" class="gold-stroke" stroke-width="3"/>
+  <line x1="118" y1="82" x2="110" y2="90" class="gold-stroke" stroke-width="3"/>
+</svg>
