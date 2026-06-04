@@ -43,8 +43,8 @@
       "indexable": true,
       "sitemap": true,
       "required_internal_links": ["/enter/", "/standard/eers/", "/protocol/", "/sources/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/"],
-      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. Regulation references at /regulation/eu-ai-act/ and /regulation/gdpr/.",
-      "content_status": "complete — framework and key established dates; EU AI Act and GDPR regulation references published",
+      "source_requirement": "High — all regulatory enforcement dates must cite the specific EU regulation number and article. Regulation references at /regulation/eu-ai-act/, /regulation/gdpr/, /regulation/eu-data-act/, and /regulation/cyber-resilience-act/.",
+      "content_status": "complete — framework and key established dates; all four Wave 1 regulation references published",
       "publication_status": "published"
     },
     {
