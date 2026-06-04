@@ -1,0 +1,30 @@
+# EuraPlan.com robots.txt
+# Asset: EuraPlan.com — European Regulatory Entry Planning Intelligence
+# Governed by: ROUTE_GOVERNANCE.md
+
+User-agent: *
+
+# Approved public routes — indexing permitted
+Allow: /$
+Allow: /enter/$
+Allow: /clock/$
+Allow: /standard/eers/$
+Allow: /protocol/$
+Allow: /sources/$
+Allow: /governance/$
+Allow: /acquire/$
+Allow: /assets/
+
+# Diagnostic query states are never indexed
+# Context is carried by the system, not mapped into URLs
+Disallow: /diagnostic?
+
+# Draft and unpublished routes
+Disallow: /draft/
+Disallow: /internal/
+Disallow: /brief/
+
+# Matrix is not yet published
+Disallow: /matrix/
+
+Sitemap: https://euraplan.com/sitemap.xml
