@@ -28,7 +28,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/", "/country/germany/"],
+      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/", "/country/germany/", "/country/netherlands/", "/country/france/"],
       "source_requirement": "Low to Medium — framing content. No specific regulatory deadline claims requiring Tier 1 citation.",
       "content_status": "complete",
       "publication_status": "published"
@@ -212,6 +212,34 @@
       "sitemap": true,
       "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — GTAI, BMWK, BfDI, BSI, Unternehmensregister, EU member-state materials",
+      "content_status": "complete",
+      "publication_status": "published"
+    },
+    {
+      "route_id": "EP-COUNTRY-002",
+      "path": "/country/netherlands/",
+      "title": "Netherlands Entry Planning Reference",
+      "purpose": "Sovereign country reference ontology page for the Netherlands. Maps the Netherlands as a country execution environment for non-EU technology companies — EU regulatory stack in Dutch national context, AP/KVK/RVO institution mapping, digital-infrastructure and establishment sequencing, EERS relevance, and Tier 1 institutional sources.",
+      "ontology_role": "country_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official / official institutional — RVO, business.gov.nl, KVK, AP, NCSC-NL, EU member-state materials",
+      "content_status": "complete",
+      "publication_status": "published"
+    },
+    {
+      "route_id": "EP-COUNTRY-003",
+      "path": "/country/france/",
+      "title": "France Entry Planning Reference",
+      "purpose": "Sovereign country reference ontology page for France. Maps France as a strategic industrial, AI, data, and cybersecurity execution environment for non-EU technology companies — EU regulatory stack in French national context, CNIL/ANSSI/formalities institution mapping, Wave 1 trio sequencing, EERS relevance, and Tier 1 institutional sources.",
+      "ontology_role": "country_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/netherlands/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official / official institutional — Business France, formalites.entreprises.gouv.fr, CNIL, ANSSI/cyber.gouv.fr, Service-Public, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
     }
