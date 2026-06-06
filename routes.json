@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "asset": "EuraPlan.com",
-  "last_updated": "2026-06-04",
+  "last_updated": "2026-06-06",
   "governing_document": "ROUTE_GOVERNANCE.md",
   "doctrine": "No combinatorial URLs. Context is carried by the system, not multiplied into the URL tree.",
   "routes": [
@@ -253,6 +253,20 @@
       "indexable": true,
       "sitemap": true,
       "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/country/germany/", "/country/netherlands/", "/country/france/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "source_requirement": "Tier 1 official / official institutional",
+      "content_status": "complete",
+      "publication_status": "published"
+    },
+    {
+      "route_id": "EP-FUND-001",
+      "path": "/funding/horizon-europe/",
+      "title": "Horizon Europe Entry Planning Reference",
+      "purpose": "Sovereign funding reference ontology page for Horizon Europe. Maps Horizon Europe as a planning layer for non-EU companies entering Europe — programme structure, participation context, funding readiness dimensions, EERS relevance, country sequencing, and Tier 1 official sources. Planning intelligence, not funding advice.",
+      "ontology_role": "funding_reference",
+      "doctrine_role": null,
+      "indexable": true,
+      "sitemap": true,
+      "required_internal_links": ["/", "/enter/", "/clock/", "/standard/eers/", "/protocol/", "/sources/", "/governance/", "/sector/ai-saas/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/country/germany/", "/country/netherlands/", "/country/france/"],
       "source_requirement": "Tier 1 official / official institutional",
       "content_status": "complete",
       "publication_status": "published"
