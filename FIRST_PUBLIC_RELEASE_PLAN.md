@@ -1,5 +1,5 @@
 # FIRST_PUBLIC_RELEASE_PLAN.md
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active — Sprint Delivery Record
 **Asset:** EuraPlan.com
 **Last Updated:** June 2026
@@ -146,6 +146,46 @@ Before Sprint 2 begins:
 - PAGE_BLUEPRINT_STANDARD.md blueprint confirmed for each page type
 - Source candidates identified and classified for each page
 - REFERENCE_CORPUS_GOVERNANCE.md Wave 1 prerequisites confirmed
+
+---
+
+## 7. Sprint 4D — Decision Log Governance Patch (Complete)
+
+Sprint 4D created DECISION_LOG.md as mandatory governance infrastructure before opening the funding layer. This sprint closes the governance gap identified before Sprint 5A.
+
+Decision logging is now part of the EuraPlan governance baseline. All future sprint agents, maintainers, and contributors must record major decisions in DECISION_LOG.md before or during implementation, per ACCEPTANCE_CRITERIA.md Section 11 and DECISION_LOG.md Section 6.
+
+### Delivered in Sprint 4D
+
+| File | Action |
+|---|---|
+| DECISION_LOG.md | Created — 38 active decisions, 6 rejected/superseded decisions, 8 deferred decisions |
+| GOVERNANCE_CHARTER.md | Updated to v1.2 — DECISION_LOG.md added as core governing document |
+| ACCEPTANCE_CRITERIA.md | Updated to v1.2 — Section 11 added (decision log requirement) |
+| SCALING_AND_AUTOMATION_POLICY.md | Updated to v1.1 — automation prohibition on wave/route/monetization changes without decision-log entry |
+| FIRST_PUBLIC_RELEASE_PLAN.md | Updated to v1.2 — Sprint 4D recorded |
+
+### Sprint 4D Gate Status
+
+- [x] DECISION_LOG.md created with all required sections
+- [x] Minimum 38 active decisions recorded
+- [x] Minimum 6 rejected/superseded decisions recorded
+- [x] Minimum 8 deferred decisions recorded
+- [x] Future decision admission rules defined
+- [x] Change control rules defined
+- [x] Relationship to governance documents documented
+- [x] GOVERNANCE_CHARTER.md updated
+- [x] ACCEPTANCE_CRITERIA.md updated
+- [x] SCALING_AND_AUTOMATION_POLICY.md updated
+- [x] No public pages created
+- [x] sitemap.xml unchanged
+- [x] robots.txt unchanged
+- [x] routes.json unchanged
+- [x] No JS/scripts/forms/trackers added
+
+### Sprint 5A Recommendation
+
+Sprint 4D is complete. Sprint 5A — `/funding/horizon-europe/` — may begin. Decision DEC-030 records Horizon Europe as the preferred next funding node.
 
 ---
 
