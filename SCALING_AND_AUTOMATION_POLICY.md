@@ -1,9 +1,9 @@
 # SCALING_AND_AUTOMATION_POLICY.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
 **Last Updated:** June 2026
-**Governed by:** GOVERNANCE_CHARTER.md, REFERENCE_CORPUS_GOVERNANCE.md, CONTENT_QUALITY_STANDARD.md
+**Governed by:** GOVERNANCE_CHARTER.md, REFERENCE_CORPUS_GOVERNANCE.md, CONTENT_QUALITY_STANDARD.md, DECISION_LOG.md
 
 ---
 
@@ -45,6 +45,9 @@ The governing question for any automation proposal: does this maintain the gover
 | Applying claim risk or source confidence classifications without human verification | Classifications affect publication decisions and cannot be automated |
 | Auto-approving routes in routes.json without route governance review | Routes.json is a governance document, not a config file |
 | Auto-translating and auto-publishing multilingual pages | Violates MULTILINGUAL_GOVERNANCE.md |
+| Publishing new country, sector, funding, or regulation waves without a corresponding DECISION_LOG.md entry | Wave expansion is a major decision requiring DEC-NNN before implementation — see DECISION_LOG.md Section 6 |
+| Changing route strategy, sitemap/indexation behavior, or robots policy without a corresponding DECISION_LOG.md entry | These are governed decisions — automation may not make them unilaterally |
+| Altering monetization logic or activating any revenue unit without a corresponding DECISION_LOG.md entry | Monetization activation requires a DEC-NNN entry and ACCEPTANCE_CRITERIA.md Section 8 to pass |
 
 ---
 

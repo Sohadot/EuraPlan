@@ -1,5 +1,5 @@
 # ACCEPTANCE_CRITERIA.md
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
 **Last Updated:** June 2026
@@ -148,6 +148,16 @@ Every page published from Sprint 2 onwards must be verified against all relevant
 | SCALING_AND_AUTOMATION_POLICY.md | Any page produced with automation assistance |
 
 The publication gate checklist in SCALING_AND_AUTOMATION_POLICY.md must be completed for every page before publication_status is changed to `published` in routes.json.
+
+---
+
+## 11. Decision Log Requirement
+
+Any major future decision affecting route architecture, sitemap/indexation status, robots policy, source policy, claim policy, interface thesis, visual identity, monetization model, diagnostic/tooling behavior, matrix publication, brief/report publication, country expansion waves, sector expansion waves, funding expansion, multilingual expansion, security posture, analytics/indexation policy, or acquisition positioning must be recorded in DECISION_LOG.md before or during implementation.
+
+A route, monetization unit, or expansion decision is not governance-complete until DECISION_LOG.md contains the corresponding DEC-NNN entry with status Active.
+
+See DECISION_LOG.md Section 6 (Future Decision Admission Rules) for the full list of decision types requiring a log entry, and Section 7 (Change Control Rules) for numbering, reversal, and deferral procedures.
 
 ---
 

@@ -1,5 +1,5 @@
 # GOVERNANCE_CHARTER.md
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
@@ -66,6 +66,7 @@ EuraPlan produces the following governed intelligence outputs. No output may be 
 |---|---|
 | EURAPLAN_CATEGORY_INTELLIGENCE_FACTORY_PLAN.md | Master constitution |
 | GOVERNANCE_CHARTER.md | Asset identity and decision authority |
+| DECISION_LOG.md | Major decision register and audit trail |
 | SOURCE_POLICY.md | All claims, data, and references |
 | CLAIM_POLICY.md | All public statements and assertions |
 | ROUTE_GOVERNANCE.md | URL architecture and route approval |
@@ -110,6 +111,8 @@ Before any of the following, the governing document must be consulted:
 - Adding a monetization channel
 - Referencing a third party, institution, or authority
 - Changing the interface architecture
+
+Any major decision of the kinds listed in DECISION_LOG.md Section 6 must be recorded in DECISION_LOG.md before or during implementation.
 
 **The governing question for every decision:**
 > Does this advance the category claim and the intelligence architecture, or does it dilute it?
