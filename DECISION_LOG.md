@@ -1,10 +1,10 @@
 # DECISION_LOG.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Governance Infrastructure
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026
+**Last Updated:** June 2026 (Sprint 5A)
 
 ---
 
@@ -240,7 +240,7 @@ Each entry uses the following structure:
 - **Affected routes/files:** All public pages (disclaimer blocks); CLAIM_POLICY.md
 - **Governance documents involved:** CLAIM_POLICY.md; GOVERNANCE_CHARTER.md Section 7
 - **Reversal conditions:** Not reversible — permanent policy
-- **Notes:** Disclaimer wording varies by page type: legal/tax for regulation pages; investment/immigration added on country pages.
+- **Notes:** Disclaimer wording varies by page type: legal/tax for regulation pages; investment/immigration added on country pages; funding/grant added on funding pages.
 
 ### DEC-021
 - **Date:** Sprint 2
@@ -250,7 +250,7 @@ Each entry uses the following structure:
 - **Affected routes/files:** All regulation and country HTML pages (disclaimer element in hero section)
 - **Governance documents involved:** CLAIM_POLICY.md; ACCEPTANCE_CRITERIA.md
 - **Reversal conditions:** Not reversible — mandatory for all current and future regulation/country pages
-- **Notes:** Disclaimer appears in hero section at 0.72rem, below badge row, on all 7 current reference pages.
+- **Notes:** Disclaimer appears in hero section at 0.72rem, below badge row, on all 7 current reference pages. Extended to funding pages in Sprint 5A.
 
 ### DEC-022
 - **Date:** Sprint 0A
@@ -337,10 +337,10 @@ Each entry uses the following structure:
 - **Status:** Active
 - **Decision:** Horizon Europe is the preferred next funding node (Sprint 5A) after decision log completion.
 - **Rationale:** Horizon Europe is the largest EU research and innovation funding programme, directly relevant to non-EU technology companies entering Europe for R&D, pilots, and partnership access. Natural first node in the funding reference layer.
-- **Affected routes/files:** funding/horizon-europe/ (pending); routes.json
+- **Affected routes/files:** funding/horizon-europe/ (delivered Sprint 5A); routes.json
 - **Governance documents involved:** REFERENCE_CORPUS_GOVERNANCE.md; FIRST_PUBLIC_RELEASE_PLAN.md
 - **Reversal conditions:** Owner decision to open a different funding programme first — requires decision recorded here
-- **Notes:** Sprint 5A designation confirmed pending Sprint 4D decision log completion.
+- **Notes:** Delivered Sprint 5A per DEC-039.
 
 ### DEC-031
 - **Date:** Sprint 4D
@@ -422,6 +422,16 @@ Each entry uses the following structure:
 - **Reversal conditions:** Owner decision — repositioning the acquisition thesis requires owner approval and update to BUYER_LOGIC.md and /acquire/
 - **Notes:** DECISION_LOG.md itself is part of the acquisition-ready governance infrastructure.
 
+### DEC-039
+- **Date:** Sprint 5A
+- **Status:** Active
+- **Decision:** Publish /funding/horizon-europe/ as the first funding reference node (EP-FUND-001), activating the funding reference layer (Layer 4) of the EuraPlan ontology.
+- **Rationale:** DEC-030 designated Horizon Europe as the preferred first funding node, pending Sprint 4D decision log completion as the prerequisite gate. That gate was cleared. Horizon Europe is the largest EU R&D programme (2021–2027) with direct planning relevance for non-EU technology companies entering Europe for R&D partnerships, innovation pilots, and institutional sequencing. robots.txt required `Allow: /funding/` to permit indexation of the new route.
+- **Affected routes/files:** funding/horizon-europe/index.html (new); routes.json (EP-FUND-001 added); sitemap.xml (new URL); robots.txt (`Allow: /funding/` added); sector/ai-saas/index.html (nav-link added); country pages and core pages (minimal nav-link updates)
+- **Governance documents involved:** REFERENCE_CORPUS_GOVERNANCE.md; ROUTE_GOVERNANCE.md; SEO_GOVERNANCE.md; robots.txt; ACCESSIBILITY_STANDARD.md (caption on ep-table confirmed)
+- **Reversal conditions:** Deindexation decision required (removes from sitemap; adds `Disallow: /funding/` to robots.txt); route deprecation per SCALING_AND_AUTOMATION_POLICY.md Section 12; decision recorded here as Superseded
+- **Notes:** Page includes 8 funding readiness dimensions (FRD-01–08), 6 planning gates (F-GATE-01–06), EERS dimension mapping, EIC section, regulation × Horizon Europe coordination, matrix snippet, scope limits, and 5 Tier 1 official sources with ep-table caption. No funding advice, no eligibility claims, no JS. Layer 4 of EuraPlan ontology now open.
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -497,7 +507,7 @@ Each entry uses the following structure:
 - **Decision deferred:** Publish /matrix/country-sector-regulation/ as a live, indexed page
 - **Deferral reason:** Matrix requires regulation (4), country (3+), sector (2+), and funding (1+) dependencies to be complete before cross-reference is meaningful
 - **Activation gate:** Dependency audit; separate activation decision recorded here; ACCEPTANCE_CRITERIA.md must pass
-- **Notes:** Matrix content may be drafted internally. Route exists in routes.json as unpublished.
+- **Notes:** Matrix content may be drafted internally. Route exists in routes.json as unpublished. Funding dependency (EP-FUND-001) now satisfied.
 
 ### DEF-004 — Multilingual expansion
 - **Status:** Deferred
@@ -518,7 +528,7 @@ Each entry uses the following structure:
 - **Decision deferred:** Publish second sector reference page
 - **Deferral reason:** Second sector deferred until funding layer (Sprint 5A Horizon Europe) is delivered or a sector sequencing decision is separately recorded
 - **Activation gate:** Sector sequencing decision recorded here; REFERENCE_CORPUS_GOVERNANCE.md Wave 2 prerequisites confirmed
-- **Notes:** Candidate sectors: Cloud/Data Infrastructure, Connected Products/IoT — see DEC-031.
+- **Notes:** Candidate sectors: Cloud/Data Infrastructure, Connected Products/IoT — see DEC-031. Horizon Europe (EP-FUND-001) delivered Sprint 5A; second sector now eligible for sequencing decision.
 
 ### DEF-007 — Full interactive tooling
 - **Status:** Deferred
@@ -606,4 +616,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 5A — June 2026*
