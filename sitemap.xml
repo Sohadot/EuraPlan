@@ -82,6 +82,13 @@
   </url>
 
   <url>
+    <loc>https://euraplan.com/funding/horizon-europe/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
     <loc>https://euraplan.com/standard/eers/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>

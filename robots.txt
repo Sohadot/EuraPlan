@@ -11,6 +11,7 @@ Allow: /clock/$
 Allow: /regulation/
 Allow: /country/
 Allow: /sector/
+Allow: /funding/
 Allow: /standard/eers/$
 Allow: /protocol/$
 Allow: /sources/$
