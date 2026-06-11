@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 4E)
+**Last Updated:** June 2026 (Sprint 4E-RC1)
 
 ---
 
@@ -444,7 +444,23 @@ Each entry uses the following structure:
   - CSP is a **controlled baseline**, not maximum hardening: `script-src 'self' 'unsafe-inline'` and `style-src 'self' 'unsafe-inline'` are temporarily allowed because the static corpus uses inline JSON-LD script blocks and inline layout styles.
   - HSTS uses `max-age=31536000; includeSubDomains` — **no `preload`**.
   - Future hardening may move to hash-based CSP after structured-data externalization and inline-style cleanup.
-  - **Verification gate:** After merge and Cloudflare deployment, confirm headers in production with `curl -I https://euraplan.com/` (or equivalent). Expected response headers include `content-security-policy`, `strict-transport-security`, `x-content-type-options`, `x-frame-options`, `referrer-policy`, and `permissions-policy`. Do not treat repository presence alone as closure — runtime capture is required.
+  - **Verification gate:** Closed in DEC-041 (Sprint 4E-RC1). Runtime enforcement mechanism clarified there — `_headers` remains repository artifact; verified enforcement is Cloudflare Response Header Transform Rule while GitHub Pages/Fastly origin remains behind Cloudflare.
+
+### DEC-041
+- **Date:** Sprint 4E-RC1
+- **Status:** Active
+- **Decision:** Record production security-header verification and align governance with verified runtime enforcement mechanism.
+- **Rationale:** Sprint 4E added `_headers` and documented Cloudflare Pages header enforcement. Production HTTP header capture confirmed all required security headers are active at runtime. However, the live response path still shows GitHub Pages/Fastly origin behavior behind Cloudflare — therefore the **verified** runtime enforcement mechanism is the Cloudflare **Response Header Transform Rule** named **EuraPlan Security Headers**, not repository `_headers` alone.
+- **Affected routes/files:** DECISION_LOG.md; SECURITY_POLICY.md Section 8
+- **Governance documents involved:** SECURITY_POLICY.md; DEC-040
+- **Reversal conditions:** Cloudflare Pages becomes the active serving layer and `_headers` is confirmed via live header capture — record superseding note in DEC-041 Notes; Transform Rule may then be retired or kept as redundant edge policy per owner decision
+- **Notes:**
+  - **Production verification completed** via `curl.exe -I https://euraplan.com/` (or equivalent).
+  - **Observed headers:** `Content-Security-Policy`, `Strict-Transport-Security`, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`.
+  - **Verified runtime mechanism:** Cloudflare Response Header Transform Rule — **EuraPlan Security Headers**.
+  - **`_headers` status:** Remains in repository as Cloudflare Pages-compatible deployment artifact. Must not be treated as verified runtime enforcement unless Cloudflare Pages is the active serving layer and headers are confirmed by live capture.
+  - **Security policy-to-runtime gap:** **CLOSED** as of production header capture (Sprint 4E-RC1).
+  - **Future:** Hosting migration to Cloudflare Pages may make `_headers` the primary runtime mechanism — requires new verification capture before governance records are updated.
 
 ---
 
@@ -630,4 +646,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4E — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4E-RC1 — June 2026*

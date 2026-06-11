@@ -100,9 +100,15 @@ Any email capture (newsletter, brief subscription) requires:
 
 ## 8. Security Headers
 
-EuraPlan.com is deployed on **Cloudflare Pages** as a static site. Production response headers are enforced at the deployment layer via **`_headers`** at the repository root (Cloudflare Pages static output root). See DEC-040 in DECISION_LOG.md.
+Production security headers are enforced at the **Cloudflare edge**. See DEC-040 and DEC-041 in DECISION_LOG.md.
 
-| Header | Production value (`_headers`) |
+**Current verified runtime mechanism:** Cloudflare **Response Header Transform Rule** — **EuraPlan Security Headers** (verified Sprint 4E-RC1 via live HTTP header capture).
+
+**Repository artifact:** **`_headers`** at repository root is Cloudflare Pages-compatible configuration. It must **not** be treated as verified runtime enforcement unless Cloudflare Pages is the active serving layer and headers are confirmed by live capture. While GitHub Pages/Fastly remains in the origin path behind Cloudflare, edge Transform Rules are the proven enforcement layer.
+
+**Verification:** Requires live HTTP header capture (e.g. `curl -I https://euraplan.com/`). Repository presence of `_headers` alone is insufficient.
+
+| Header | Production value |
 |---|---|
 | `Content-Security-Policy` | Baseline self-only policy; `script-src` and `style-src` include `'unsafe-inline'` for existing inline JSON-LD and layout styles — not maximum strictness |
 | `X-Content-Type-Options` | `nosniff` |
