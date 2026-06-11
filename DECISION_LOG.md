@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 5A)
+**Last Updated:** June 2026 (Sprint 4E)
 
 ---
 
@@ -432,6 +432,20 @@ Each entry uses the following structure:
 - **Reversal conditions:** Deindexation decision required (removes from sitemap; adds `Disallow: /funding/` to robots.txt); route deprecation per SCALING_AND_AUTOMATION_POLICY.md Section 12; decision recorded here as Superseded
 - **Notes:** Page includes 8 funding readiness dimensions (FRD-01–08), 6 planning gates (F-GATE-01–06), EERS dimension mapping, EIC section, regulation × Horizon Europe coordination, matrix snippet, scope limits, and 5 Tier 1 official sources with ep-table caption. No funding advice, no eligibility claims, no JS. Layer 4 of EuraPlan ontology now open.
 
+### DEC-040
+- **Date:** Sprint 4E
+- **Status:** Active
+- **Decision:** Implement production security headers for EuraPlan.com via Cloudflare Pages `_headers` at repository root.
+- **Rationale:** Closes the security policy-to-runtime execution gap identified in due diligence. EuraPlan is confirmed hosted on Cloudflare Pages as a static site; `_headers` is the correct deployment-layer mechanism for static response headers on that platform. Global rule applies to `/*` with baseline headers: `Content-Security-Policy`, `Strict-Transport-Security`, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, and `Permissions-Policy`.
+- **Affected routes/files:** `_headers` (new); SECURITY_POLICY.md Section 8; DECISION_LOG.md
+- **Governance documents involved:** SECURITY_POLICY.md; TECHNICAL_STANDARD.md; ACCEPTANCE_CRITERIA.md
+- **Reversal conditions:** Owner-approved hosting migration away from Cloudflare Pages requires equivalent header enforcement on the new platform; decision recorded as Superseded with replacement mechanism documented
+- **Notes:**
+  - CSP is a **controlled baseline**, not maximum hardening: `script-src 'self' 'unsafe-inline'` and `style-src 'self' 'unsafe-inline'` are temporarily allowed because the static corpus uses inline JSON-LD script blocks and inline layout styles.
+  - HSTS uses `max-age=31536000; includeSubDomains` — **no `preload`**.
+  - Future hardening may move to hash-based CSP after structured-data externalization and inline-style cleanup.
+  - **Verification gate:** After merge and Cloudflare deployment, confirm headers in production with `curl -I https://euraplan.com/` (or equivalent). Expected response headers include `content-security-policy`, `strict-transport-security`, `x-content-type-options`, `x-frame-options`, `referrer-policy`, and `permissions-policy`. Do not treat repository presence alone as closure — runtime capture is required.
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -616,4 +630,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 5A — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4E — June 2026*
