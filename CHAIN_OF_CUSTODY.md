@@ -145,6 +145,7 @@ Major lifecycle milestones (sprint names from repository history; dates not inve
 | Structured data completion | Sprint 4F | DEC-042; core JSON-LD (`a00d9cf`, merge `d5b95d5`) |
 | Funding layer (Horizon Europe) | Sprint 5A | EP-FUND-001 (`553c7e1`, DEC-039) |
 | Provenance layer creation | Sprint 4G | DEC-043; this document set |
+| Funding layer integration review | Sprint 5B | `FUNDING_LAYER_INTEGRATION_REVIEW.md`; DEC-044; registry/link parity fixes |
 
 ---
 
