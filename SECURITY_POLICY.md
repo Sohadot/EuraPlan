@@ -100,18 +100,18 @@ Any email capture (newsletter, brief subscription) requires:
 
 ## 8. Security Headers
 
-When EuraPlan is served via Cloudflare Pages or an equivalent CDN/edge provider, configure:
+EuraPlan.com is deployed on **Cloudflare Pages** as a static site. Production response headers are enforced at the deployment layer via **`_headers`** at the repository root (Cloudflare Pages static output root). See DEC-040 in DECISION_LOG.md.
 
-| Header | Value |
+| Header | Production value (`_headers`) |
 |---|---|
-| `Content-Security-Policy` | Strict — allow self and explicitly approved external sources only |
+| `Content-Security-Policy` | Baseline self-only policy; `script-src` and `style-src` include `'unsafe-inline'` for existing inline JSON-LD and layout styles — not maximum strictness |
 | `X-Content-Type-Options` | `nosniff` |
-| `X-Frame-Options` | `SAMEORIGIN` |
+| `X-Frame-Options` | `DENY` |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` |
-| `Permissions-Policy` | Restrict camera, microphone, geolocation |
-| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), accelerometer=(), gyroscope=(), magnetometer=()` |
+| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` (no `preload`) |
 
-Content-Security-Policy must be reviewed whenever a new third-party resource is added.
+Content-Security-Policy must be reviewed whenever a new third-party resource is added. Future hardening may move to hash-based CSP after structured-data and inline-style cleanup.
 
 ---
 
