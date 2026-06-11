@@ -28,7 +28,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/", "/country/germany/", "/country/netherlands/", "/country/france/"],
+      "required_internal_links": ["/clock/", "/standard/eers/", "/protocol/", "/sources/", "/funding/horizon-europe/", "/country/germany/", "/country/netherlands/", "/country/france/"],
       "source_requirement": "Low to Medium — framing content. No specific regulatory deadline claims requiring Tier 1 citation.",
       "content_status": "complete",
       "publication_status": "published"
@@ -70,7 +70,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/enter/", "/protocol/", "/clock/", "/sources/", "/governance/"],
+      "required_internal_links": ["/enter/", "/protocol/", "/clock/", "/sources/", "/governance/", "/funding/horizon-europe/"],
       "source_requirement": "Low to Medium — the EERS is a proprietary standard. Dimension definitions are EuraPlan doctrine, not external regulatory claims.",
       "content_status": "complete",
       "publication_status": "published"
@@ -84,7 +84,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/enter/", "/standard/eers/", "/clock/", "/sources/"],
+      "required_internal_links": ["/enter/", "/standard/eers/", "/clock/", "/sources/", "/funding/horizon-europe/"],
       "source_requirement": "Low — the Protocol is EuraPlan doctrine governing the planning sequence.",
       "content_status": "complete",
       "publication_status": "published"
@@ -210,7 +210,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/country/netherlands/", "/country/france/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/netherlands/", "/country/france/", "/funding/horizon-europe/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — GTAI, BMWK, BfDI, BSI, Unternehmensregister, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
@@ -224,7 +224,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/france/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/france/", "/funding/horizon-europe/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — RVO, business.gov.nl, KVK, AP, NCSC-NL, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
@@ -238,7 +238,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/netherlands/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/country/germany/", "/country/netherlands/", "/funding/horizon-europe/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional — Business France, formalites.entreprises.gouv.fr, CNIL, ANSSI/cyber.gouv.fr, Service-Public, EU member-state materials",
       "content_status": "complete",
       "publication_status": "published"
@@ -252,7 +252,7 @@
       "doctrine_role": null,
       "indexable": true,
       "sitemap": true,
-      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/country/germany/", "/country/netherlands/", "/country/france/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
+      "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/eu-data-act/", "/regulation/cyber-resilience-act/", "/country/germany/", "/country/netherlands/", "/country/france/", "/funding/horizon-europe/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official / official institutional",
       "content_status": "complete",
       "publication_status": "published"

@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 4G)
+**Last Updated:** June 2026 (Sprint 5B)
 
 ---
 
@@ -493,6 +493,20 @@ Each entry uses the following structure:
   - **Relationship:** Builds on DEC-041 (security runtime verification) and DEC-042 (structured data closure) as verification anchors in AUTHENTICITY_CERTIFICATE.md.
   - **Future hardening:** signed release tags, notarized certificate, timestamped archive, domain registry export, Cloudflare configuration export, buyer data room packaging.
 
+### DEC-044
+- **Date:** Sprint 5B
+- **Status:** Active
+- **Decision:** Complete funding layer integration review and accept Horizon Europe (`EP-FUND-001`) as integrated Layer 4 of the governed corpus.
+- **Rationale:** Sprint 5A (DEC-039) published `/funding/horizon-europe/` without a formal integration review. Sprint 5B audits route registry, sitemap, robots, internal links, sources, claim boundaries, structured data, accessibility, security, and provenance alignment — mirroring Sprints 2E, 3D, and sector layer review pattern. No rebuild of Sprint 5A performed.
+- **Affected routes/files:** `FUNDING_LAYER_INTEGRATION_REVIEW.md` (new, internal); `funding/horizon-europe/index.html` (FRD-04 claim-boundary fix); `enter/index.html` (funding situation card link); `routes.json` (funding link parity on 7 routes); `DECISION_LOG.md`
+- **Governance documents involved:** ROUTE_GOVERNANCE.md; REFERENCE_CORPUS_GOVERNANCE.md; SOURCE_POLICY.md; CLAIM_POLICY.md; STRUCTURED_DATA_COVERAGE_AUDIT.md; DEC-039; DEC-043
+- **Reversal conditions:** Funding layer deindexation requires DEC entry Superseded; route deprecation per SCALING_AND_AUTOMATION_POLICY.md Section 12
+- **Notes:**
+  - **Audit result:** APPROVED — 17 sitemap URLs; `Allow: /funding/` in robots.txt; EP-FUND-001 complete in routes.json.
+  - **Defects fixed:** FRD-04 "optimal" country-ranking language; enter funding card missing Horizon Europe link; routes.json `required_internal_links` parity for enter, eers, protocol, sector, country trio.
+  - **No new funding pages** created. No sitemap/robots changes.
+  - **Next expansion:** controlled by future DEC entry — recommend Sprint 5C (agent readability) before second funding or sector page.
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -677,4 +691,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4G — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 5B — June 2026*
