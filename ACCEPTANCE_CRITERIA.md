@@ -161,4 +161,12 @@ See DECISION_LOG.md Section 6 (Future Decision Admission Rules) for the full lis
 
 ---
 
+## 12. Provenance Layer Requirement
+
+Major due-diligence and acquisition-readiness documentation is maintained in the Sprint 4G provenance layer (DEC-043): `PROVENANCE.md`, `AUTHENTICITY_CERTIFICATE.md`, `CHAIN_OF_CUSTODY.md`, `ASSET_TRANSFER_MANIFEST.md`, `RIGHTS_AND_USAGE_NOTICE.md`.
+
+These documents are internal governance records — not public pages. Updates to provenance, authenticity, custody, transfer manifest, or rights posture require a `DECISION_LOG.md` entry before or during implementation.
+
+---
+
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*

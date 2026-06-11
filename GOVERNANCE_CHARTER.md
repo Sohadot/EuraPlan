@@ -76,6 +76,18 @@ EuraPlan produces the following governed intelligence outputs. No output may be 
 | FIRST_PUBLIC_RELEASE_PLAN.md | Sprint delivery scope and release sequencing |
 | ACCEPTANCE_CRITERIA.md | Pass/fail rules for all future additions |
 
+### Acquisition-Readiness Documents (Sprint 4G)
+
+Internal documents — not public pages, not in sitemap. Support due diligence and transfer-readiness review. See DEC-043.
+
+| Document | Governs |
+|---|---|
+| PROVENANCE.md | Asset origin, identity, and development history |
+| AUTHENTICITY_CERTIFICATE.md | Repository-level authenticity record (non-legal) |
+| CHAIN_OF_CUSTODY.md | Custody history and change-control logic |
+| ASSET_TRANSFER_MANIFEST.md | Transfer component checklist |
+| RIGHTS_AND_USAGE_NOTICE.md | Rights posture — no open-source license implied |
+
 ### Companion Operating Documents
 
 Created in Sprint 1 (Sovereign Operating Governance Layer). These documents govern the technical, quality, and operational dimensions of all future corpus expansion. Every page published from Sprint 2 onwards must pass the relevant companion documents before publication.
