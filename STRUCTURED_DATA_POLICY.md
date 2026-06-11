@@ -15,7 +15,8 @@ Structured data makes EuraPlan pages readable as typed, structured knowledge by 
 
 ## 2. Implementation Method
 
-- All structured data implemented as JSON-LD in the `<head>` of each page
+- All structured data implemented as JSON-LD in the `<head>` of each page via inline `<script type="application/ld+json">` blocks
+- Current production CSP (DEC-040, DEC-041) permits inline JSON-LD through `script-src 'self' 'unsafe-inline'` — hash-based CSP hardening is deferred until schema coverage stabilizes (see DEC-042, STRUCTURED_DATA_COVERAGE_AUDIT.md)
 - No Microdata or RDFa (JSON-LD only)
 - JSON-LD blocks validated against schema.org before deployment
 - One primary JSON-LD block per page; additional blocks for BreadcrumbList and secondary types

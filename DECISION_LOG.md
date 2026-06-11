@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 4E-RC1)
+**Last Updated:** June 2026 (Sprint 4F)
 
 ---
 
@@ -462,6 +462,22 @@ Each entry uses the following structure:
   - **Security policy-to-runtime gap:** **CLOSED** as of production header capture (Sprint 4E-RC1).
   - **Future:** Hosting migration to Cloudflare Pages may make `_headers` the primary runtime mechanism — requires new verification capture before governance records are updated.
 
+### DEC-042
+- **Date:** Sprint 4F
+- **Status:** Active
+- **Decision:** Close the structured data governance-to-implementation gap by adding conservative inline JSON-LD to all eight core category pages.
+- **Rationale:** `STRUCTURED_DATA_POLICY.md` required schema by page type, but `/`, `/enter/`, `/clock/`, `/standard/eers/`, `/protocol/`, `/sources/`, `/governance/`, and `/acquire/` lacked JSON-LD while reference pages already had Article + BreadcrumbList. Due diligence identified this as a critical gap between policy and runtime page markup. Inline JSON-LD is the clearest agent-readability pattern and is permitted under the verified baseline CSP (`script-src 'self' 'unsafe-inline'`).
+- **Affected routes/files:** `index.html`; `enter/index.html`; `clock/index.html`; `standard/eers/index.html`; `protocol/index.html`; `sources/index.html`; `governance/index.html`; `acquire/index.html`; `STRUCTURED_DATA_COVERAGE_AUDIT.md` (new, internal); `STRUCTURED_DATA_POLICY.md` Section 2 (implementation note)
+- **Governance documents involved:** STRUCTURED_DATA_POLICY.md; AGENT_READABILITY_POLICY.md; SEO_GOVERNANCE.md
+- **Reversal conditions:** Schema removal or type change requires decision recorded here as Superseded; full corpus re-audit against STRUCTURED_DATA_POLICY.md
+- **Notes:**
+  - **Schema types used:** `WebSite`, `Organization` (homepage); `WebPage` + `BreadcrumbList` (enter, clock, sources, governance, acquire); `Article` + `BreadcrumbList` (eers, protocol).
+  - **Conservative scope:** No ratings, reviews, awards, service schema, fake endorsements, official affiliation schema, valuation schema, Product, Offer, Event, or price schema.
+  - **EERS / Protocol:** Described as EuraPlan planning-intelligence artifacts — not official EU standards, government endorsement, or certification authority.
+  - **Inline JSON-LD:** Retained under verified baseline CSP; externalization and hash-based CSP deferred until schema coverage stabilizes.
+  - **Reference pages:** Regulation, country, sector, and funding pages already compliant — not modified in Sprint 4F.
+  - **Audit:** `STRUCTURED_DATA_COVERAGE_AUDIT.md` records before/after coverage (internal, not in sitemap).
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -646,4 +662,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4E-RC1 — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4F — June 2026*
