@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 4F)
+**Last Updated:** June 2026 (Sprint 4G)
 
 ---
 
@@ -478,6 +478,21 @@ Each entry uses the following structure:
   - **Reference pages:** Regulation, country, sector, and funding pages already compliant — not modified in Sprint 4F.
   - **Audit:** `STRUCTURED_DATA_COVERAGE_AUDIT.md` records before/after coverage (internal, not in sitemap).
 
+### DEC-043
+- **Date:** Sprint 4G
+- **Status:** Active
+- **Decision:** Create the provenance and authenticity layer — five acquisition-readiness governance documents closing the third major due-diligence gap.
+- **Rationale:** EuraPlan is a governed category intelligence asset, not merely a static website. Strategic value and buyer due diligence require documented proof of origin, custody, authenticity, transfer components, and rights posture. Sprints 4E/4E-RC1 closed security policy-to-runtime; Sprint 4F closed structured data policy-to-implementation; Sprint 4G closes provenance/authenticity without creating public pages or claiming legal certification.
+- **Affected routes/files:** `PROVENANCE.md` (new); `AUTHENTICITY_CERTIFICATE.md` (new); `CHAIN_OF_CUSTODY.md` (new); `ASSET_TRANSFER_MANIFEST.md` (new); `RIGHTS_AND_USAGE_NOTICE.md` (new); `DECISION_LOG.md`; `GOVERNANCE_CHARTER.md` (minimal cross-reference); `BUYER_LOGIC.md` (minimal cross-reference); `ACCEPTANCE_CRITERIA.md` (minimal cross-reference)
+- **Governance documents involved:** BUYER_LOGIC.md; GOVERNANCE_CHARTER.md; ACCEPTANCE_CRITERIA.md; SECURITY_POLICY.md (DEC-041 reference); STRUCTURED_DATA_COVERAGE_AUDIT.md (DEC-042 reference)
+- **Reversal conditions:** Provenance layer deprecation requires owner decision recorded as Superseded; transfer completion may supersede with buyer-controlled custody records
+- **Notes:**
+  - **Files created:** PROVENANCE.md, AUTHENTICITY_CERTIFICATE.md, CHAIN_OF_CUSTODY.md, ASSET_TRANSFER_MANIFEST.md, RIGHTS_AND_USAGE_NOTICE.md — internal, not in sitemap, not linked from public navigation.
+  - **No open-source LICENSE** added — rights reserved unless owner adds explicit license in future DEC entry.
+  - **No claims:** formal notarization, trademark registration, government certification, institutional endorsement, valuation, sale price, traffic/revenue/ranking guarantees, or automatic third-party service transfer.
+  - **Relationship:** Builds on DEC-041 (security runtime verification) and DEC-042 (structured data closure) as verification anchors in AUTHENTICITY_CERTIFICATE.md.
+  - **Future hardening:** signed release tags, notarized certificate, timestamped archive, domain registry export, Cloudflare configuration export, buyer data room packaging.
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -662,4 +677,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4F — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 4G — June 2026*

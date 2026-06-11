@@ -71,7 +71,21 @@ The value is in the governed architecture, the proprietary standards, and the ca
 
 ---
 
-## 5. Acquisition Contact
+## 5. Due Diligence Records
+
+Internal acquisition-readiness documents (Sprint 4G, DEC-043) support technical and governance due diligence:
+
+- `PROVENANCE.md` — asset origin and development history
+- `AUTHENTICITY_CERTIFICATE.md` — repository authenticity record (non-legal, non-notarized)
+- `CHAIN_OF_CUSTODY.md` — custody and change-control log
+- `ASSET_TRANSFER_MANIFEST.md` — transfer component checklist
+- `RIGHTS_AND_USAGE_NOTICE.md` — rights posture; no open-source license granted
+
+These documents are not public pages and are not in `sitemap.xml`. They do not constitute a sale, valuation, or binding transfer offer.
+
+---
+
+## 6. Acquisition Contact
 
 Strategic acquisition enquiries: agent@sohadot.com
 
