@@ -1,5 +1,5 @@
 # REFERENCE_SOVEREIGNTY_DOCTRINE.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Governing Document — Constitutional Layer
 **Asset:** EuraPlan.com
 **Last Updated:** August 2026
@@ -100,6 +100,19 @@ rise together.
 Two hundred irreplaceable reference nodes outrank twenty thousand replaceable SEO
 pages. Depth and citability, not volume, are the growth axis.
 
+### 4.1 The maintenance-capacity rule (constitutional)
+
+> **Corpus size is constrained by verified maintenance capacity, not by publishing
+> capacity.**
+
+The corpus may only grow as fast as it can be kept verified under the Freshness
+Engine. A published claim is a standing liability until the day it is retired: it
+must be re-verified on every trigger and every backstop cycle. Therefore even the
+"200 nodes" figure is a ceiling to be earned, never a target to be filled. Any node
+that cannot be maintained to Tier-1 freshness MUST NOT be published — an
+unmaintained reference node is worse than an absent one, because it spends the
+authority the asset exists to accumulate.
+
 ---
 
 ## 5. THE REFERENCE SOVEREIGNTY SPRINT (SEQUENCE OF RECORD)
@@ -107,25 +120,36 @@ pages. Depth and citability, not volume, are the growth axis.
 The next phase is **not** horizontal expansion and **not** monetization. It is the
 construction of the layer that makes the information itself provable, citable,
 updatable, and reusable by human and machine. Horizontal growth is paused until
-the four foundational pieces exist.
+the foundational pieces exist and are hardened.
 
-**Sprint 1 — Foundational layer (this sprint):**
+**Sprint 1 — Foundational layer:**
 1. Freshness Engine governance (`FRESHNESS_ENGINE.md`)
-2. Atomic Citation Architecture + Evidence data model (`EVIDENCE_GRAPH_MODEL.md`)
-3. EERS 1.0 Specification as a citable public standard (`EERS_1.0_SPECIFICATION.md`)
-4. Machine-discovery surface (`llms.txt`)
+2. Evidence graph data model (`EVIDENCE_GRAPH_MODEL.md`)
+3. Claim identity + lifecycle (`CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md`)
+4. EERS as a **candidate** specification (`EERS_1.0_CANDIDATE_SPECIFICATION.md`)
+5. Machine-discovery surface (`llms.txt`)
+
+**Sprint 1.1 — Constitutional hardening (this sprint):** freeze the one-way
+decisions before any claim is minted — opaque claim identity, the two-axis
+lifecycle, the claim↔source graph relation, the trigger-based SLA, the
+content-date vs verification-date split, and demotion of EERS to candidate. No
+claim is minted and no live-site content changes until this passes.
 
 **Sprint 2 — Gold-standard reference implementation:**
 Take one regulation — **EU AI Act** — and build it to the full
-provision→article→source→version→change resolution, as the reference template all
-other regulations follow. Every regulatory claim re-verified against primary EU
-sources before its `verified_at` date is stamped.
+provision→source→lifecycle→change resolution, as the reference template all other
+regulations follow. Every regulatory claim is re-verified against primary EU
+sources before any `last_verified_at` is stamped. Begins with a **read-only
+verification audit** (no claims minted, no timestamps set, no live-site edits),
+reviewed before any `EP-CLM-*` object is created.
 
 **Sprint 3 — Generalization:** apply the template to GDPR, EU Data Act, and Cyber
-Resilience Act.
+Resilience Act — subject to the maintenance-capacity rule (§4.1).
 
-**Sprint 4 — Citable artifacts:** publish the first dataset and the EERS snapshot
-in a form that can be cited scientifically (persistent identifier / DOI).
+**Sprint 4 — Citable artifacts:** publish the first dataset, and — only after the
+EERS validation gate (`EERS_1.0_CANDIDATE_SPECIFICATION.md` §11) passes — the
+released EERS standard with a persistent identifier (DOI). No DOI is minted for a
+candidate.
 
 **Sprint 5 — High-value decision nodes**, then **Sprint 6 — paid Entry Monitor**.
 
@@ -174,7 +198,7 @@ day. Therefore:
   Official Source Registry → Change Detection → Human Verification →
   Claim Impact Analysis → Corpus Update → Changelog → Subscriber Delta.
 - The AI Act gold-standard implementation (Sprint 2) re-verifies every date and
-  provision against primary EU sources before any `verified_at` stamp is set.
+  provision against primary EU sources before any `last_verified_at` stamp is set.
 - Update dates are only advanced on genuine re-verification — never to simulate
   freshness. Advancing a date without verification is itself a governance breach.
 

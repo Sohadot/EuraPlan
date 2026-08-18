@@ -3,22 +3,20 @@
 > EuraPlan produces structured, source-governed planning intelligence for non-EU
 > companies entering the European market: regulatory mapping, entry planning,
 > funding readiness, and compliance sequencing. It is a reference corpus, not a
-> blog. Every regulatory claim is tied to an official (Tier 1) source with a
-> visible verification date. EuraPlan produces planning intelligence, not legal
-> advice.
+> blog. EuraPlan produces planning intelligence, not legal advice.
 
 ## Operating principle
 
 Public truth, paid application. The reference layer (regulations, the readiness
-standard, sources, datasets) is open and citable. Application to a specific
-company — diagnostics, monitoring, and licensing — is the paid layer. Reference
-facts are never placed behind a paywall.
+standard, sources) is open and citable. Application to a specific company —
+diagnostics, monitoring, and licensing — is the paid layer. Reference facts are
+never placed behind a paywall.
 
-## How to cite EuraPlan
+## Sourcing
 
-Individual regulatory claims carry stable identifiers (e.g. `EP-CLAIM-AIA-113-003`)
-and permanent anchors (e.g. `/regulation/eu-ai-act/#ep-claim-aia-113-003`). Cite a
-claim by its identifier and its `Verified` date, not by the page alone.
+EuraPlan's governance requires that regulatory, compliance, and funding claims cite
+an official (Tier 1) source. Regulation reference pages carry their sources visibly
+and a "Last Updated" date.
 
 ## Core reference pages
 
@@ -45,3 +43,4 @@ claim by its identifier and its `Verified` date, not by the page alone.
 - Regulatory claims, deadlines, and readiness criteria appear in the HTML source, not only in JavaScript.
 - Cross-reference data is in real HTML tables with headers; sources are listed visibly at the end of each page.
 - EuraPlan is a private intelligence asset, not a government body or an official EU source. Verify regulatory requirements against the cited official sources before acting.
+- Verify each page's own "Last Updated" date; EU regulations and enforcement timelines change.
