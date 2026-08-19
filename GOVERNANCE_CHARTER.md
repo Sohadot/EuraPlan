@@ -1,9 +1,9 @@
 # GOVERNANCE_CHARTER.md
-**Version:** 1.2
+**Version:** 1.3
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
-**Last Updated:** June 2026
+**Last Updated:** August 2026
 
 ---
 
@@ -75,10 +75,11 @@ EuraPlan produces the following governed intelligence outputs. No output may be 
 | BUYER_LOGIC.md | Acquisition thesis and strategic positioning |
 | FIRST_PUBLIC_RELEASE_PLAN.md | Sprint delivery scope and release sequencing |
 | ACCEPTANCE_CRITERIA.md | Pass/fail rules for all future additions |
+| DISCLOSURE_BOUNDARY.md | Public-disclosure boundary of the repository |
 
 ### Acquisition-Readiness Documents (Sprint 4G)
 
-Internal documents — not public pages, not in sitemap. Support due diligence and transfer-readiness review. See DEC-043.
+Repository-only governance records — not public website pages and not included in the sitemap. They live in the public repository and are readable as such (see DISCLOSURE_BOUNDARY.md); they are not confidential. Support due diligence and transfer-readiness review. See DEC-043.
 
 | Document | Governs |
 |---|---|
@@ -109,6 +110,18 @@ Created in Sprint 1 (Sovereign Operating Governance Layer). These documents gove
 | MULTILINGUAL_GOVERNANCE.md | Language release gates, hreflang, RTL requirements, translation standards |
 | ANALYTICS_AND_INDEXATION_POLICY.md | GSC, privacy-respecting analytics, indexation monitoring |
 | SCALING_AND_AUTOMATION_POLICY.md | Automation boundaries, publication gates, rollback rules |
+
+### Sovereignty Layer Documents (Reference Sovereignty Sprint)
+
+Govern the evidence-graph corpus: claim identity, provenance, freshness, and the public-disclosure boundary.
+
+| Document | Governs |
+|---|---|
+| REFERENCE_SOVEREIGNTY_DOCTRINE.md | Public-truth / paid-application doctrine and success metrics |
+| EVIDENCE_GRAPH_MODEL.md | Claim/Source nodes, edges, normalized serialization |
+| CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md | Opaque claim identity and two-axis lifecycle |
+| EERS_1.0_CANDIDATE_SPECIFICATION.md | European Entry Readiness Standard (candidate) |
+| FRESHNESS_ENGINE.md | Source-to-subscriber freshness pipeline and SLA |
 
 ---
 
@@ -144,6 +157,7 @@ Permanently prohibited regardless of speed, revenue, or convenience:
 - Pages without a last-updated date
 - Routes that bypass the route governance architecture
 - Monetization channels that contradict the intelligence model
+- Committing anything to the public repository that must not be publicly disclosed (see DISCLOSURE_BOUNDARY.md)
 
 ---
 
