@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "batch": "EU AI Act — Sprint 2B first Evidence Object batch (hardened in Sprint 2B.1)",
+    "batch": "EU AI Act — Sprint 2B Evidence Object batch (accuracy-patched in Sprint 2B.2)",
     "status": "pending_verification — internal review only; NOT published",
     "not_published": true,
     "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.2 (normalized)",
@@ -12,14 +12,13 @@
       "FRESHNESS_ENGINE.md"
     ],
     "notes": [
-      "Reserved-ID draft batch. IDs EP-CLM-000001..000013 are permanently burned once reserved.",
+      "Reserved-ID draft batch. IDs EP-CLM-000001..000014 are permanently burned once reserved.",
       "workflow_state is pending_verification for all objects; no last_verified_at; validity_state null.",
       "No object supersedes a prior EP-CLM-*; legacy prose held NO claim identity (no manufactured history).",
-      "Normalized serialization: Source nodes live once in source_registry; edges carry only source_id + provision_locator + relationship (no source_tier on edges).",
-      "amends = the source changes/replaces the operative legal basis on which the claim rests; it does not assert the claim value changed (EVIDENCE_GRAPH_MODEL.md v1.2 §4.1).",
-      "Claim->Claim qualified_by is stored on the qualified claim only; its inverse is derived.",
-      "Human verifier confirmed the amended Article 113 and Article 111 structure against EUR-Lex primary text (Regulation (EU) 2026/1744, Article 1 points (39)(a) and (40)).",
-      "Article 111(4) (content-generating systems existing before 2 Aug 2026; Article 50(2) compliance by 2 Dec 2026) is deferred to the next batch."
+      "Provenance discipline (append-only): edges to EP-SRC-000001 (2024/1689 OJ snapshot) only cite provisions that existed in that snapshot. Provisions and structure introduced by 2026/1744 (Article 5(ba)/(bb)/(1a)/(1b); Article 113(3)(c)(i)/(ii); Article 113(3)(d)) are carried by EP-SRC-000002.",
+      "amends = the source changes/replaces the operative legal basis; supports = the source substantiates the proposition (EVIDENCE_GRAPH_MODEL.md v1.2 §4.1).",
+      "Human verifier confirmed against EUR-Lex primary text of Regulation (EU) 2026/1744: Article 1(39), Article 1(40), Article 4.",
+      "Article 111(4) (content-generating systems existing before 2 Aug 2026; Article 50(2) by 2 Dec 2026) remains deferred to a later batch; not in this gate."
     ],
     "generated": "2026-08-19",
     "source_registry": {
@@ -123,15 +122,15 @@
     },
     {
       "id": "EP-CLM-000005",
-      "display_label": "AI Act · Art. 113 · general application",
-      "claim": "The general date of application of Regulation (EU) 2024/1689 is 2 August 2026 (Article 113, second paragraph); this date was retained after amendment by Regulation (EU) 2026/1744.",
+      "display_label": "AI Act · Art. 113 · general application (qualified)",
+      "claim": "The general application date of Regulation (EU) 2024/1689 is 2 August 2026, subject to the staggered exceptions set out in Article 113.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": "2026-08-02",
       "sources": [
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, second paragraph", "relationship": "supports" }
       ],
-      "qualified_by": null,
+      "qualified_by": ["EP-CLM-000003", "EP-CLM-000004", "EP-CLM-000006", "EP-CLM-000007", "EP-CLM-000008", "EP-CLM-000010"],
       "workflow_state": "pending_verification",
       "validity_state": null,
       "confidence": "Pending",
@@ -142,34 +141,33 @@
     },
     {
       "id": "EP-CLM-000006",
-      "display_label": "AI Act · Art. 113(3)(a) · new Article 5 prohibitions (exception)",
-      "claim": "The prohibited practices added to Article 5 of Regulation (EU) 2024/1689 by Regulation (EU) 2026/1744 — Article 5(1)(ba), (bb) and Article 5(1a), (1b) — apply from 2 December 2026.",
+      "display_label": "AI Act · Art. 5 · new prohibitions (2 Dec 2026)",
+      "claim": "The new Article 5 provisions of Regulation (EU) 2024/1689 — points (ba) and (bb), together with paragraphs 1a and 1b governing their scope — apply from 2 December 2026.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": "2026-12-02",
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (replaces Article 113 third paragraph point (a))", "relationship": "amends" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (a); Article 5(1)(ba),(bb),(1a),(1b)", "relationship": "supports" }
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 5(1)(ba),(bb) and (1a),(1b) as inserted into Regulation (EU) 2024/1689 by Regulation (EU) 2026/1744; application date 2 December 2026 set by Article 1, point (40)(a) (replaced Article 113 third paragraph point (a))", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
       "validity_state": null,
       "confidence": "Pending",
       "claim_risk": "High",
-      "affected_eers_dimensions": ["DIM-01", "DIM-02", "DIM-07"],
+      "affected_eers_dimensions": ["DIM-01", "DIM-02", "DIM-06", "DIM-07"],
       "last_verified_at": null,
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
       "id": "EP-CLM-000007",
-      "display_label": "AI Act · Art. 113(3)(c)(i) · high-risk Annex III",
-      "claim": "Obligations for high-risk AI systems classified pursuant to Article 6(2) and Annex III of Regulation (EU) 2024/1689 apply from 2 December 2027, as amended by Regulation (EU) 2026/1744.",
+      "display_label": "AI Act · Ch. III §1–3 · high-risk Annex III",
+      "claim": "Chapter III, Sections 1, 2 and 3 (with the exception of Article 6(5)) of Regulation (EU) 2024/1689 apply from 2 December 2027 as regards AI systems classified as high-risk pursuant to Article 6(2) and Annex III, as amended by Regulation (EU) 2026/1744.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": "2027-12-02",
       "sources": [
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c)) → point (c)(i)", "relationship": "amends" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (c)(i); Article 6(2); Annex III", "relationship": "supports" }
+        { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(2); Annex III; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
@@ -182,14 +180,14 @@
     },
     {
       "id": "EP-CLM-000008",
-      "display_label": "AI Act · Art. 113(3)(c)(ii) · high-risk Annex I",
-      "claim": "Obligations for high-risk AI systems classified pursuant to Article 6(1) and Annex I of Regulation (EU) 2024/1689 apply from 2 August 2028, as amended by Regulation (EU) 2026/1744.",
+      "display_label": "AI Act · Ch. III §1–3 · high-risk Annex I",
+      "claim": "Chapter III, Sections 1, 2 and 3 (with the exception of Article 6(5)) of Regulation (EU) 2024/1689 apply from 2 August 2028 as regards AI systems classified as high-risk pursuant to Article 6(1) and Annex I, as amended by Regulation (EU) 2026/1744.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": "2028-08-02",
       "sources": [
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c)) → point (c)(ii)", "relationship": "amends" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (c)(ii); Article 6(1); Annex I", "relationship": "supports" }
+        { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(1); Annex I; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
@@ -228,7 +226,7 @@
       "effective_date": "2026-07-27",
       "sources": [
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(c) (adds Article 113 third paragraph point (d))", "relationship": "amends" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (d); Articles 102–110", "relationship": "supports" }
+        { "source_id": "EP-SRC-000001", "provision_locator": "Articles 102–110", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
@@ -269,7 +267,7 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" },
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 111(2); Article 113 (Chapter III application date)", "relationship": "supports" }
       ],
-      "qualified_by": null,
+      "qualified_by": ["EP-CLM-000014"],
       "workflow_state": "pending_verification",
       "validity_state": null,
       "confidence": "Pending",
@@ -281,13 +279,13 @@
     {
       "id": "EP-CLM-000013",
       "display_label": "Digital Omnibus on AI · amends the AI Act (legal effect)",
-      "claim": "Regulation (EU) 2026/1744 amends Regulation (EU) 2024/1689 through its Article 1 (and also amends Regulations (EU) 2018/1139 and (EU) 2023/1230 through Articles 2 and 3).",
+      "claim": "Regulation (EU) 2026/1744 amends Regulation (EU) 2024/1689 through its Article 1.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Instrument title; Article 1 (amends 2024/1689); Articles 2–3", "relationship": "supports" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Regulation (EU) 2024/1689 as amended (target instrument)", "relationship": "supports" }
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1 (amends Regulation (EU) 2024/1689)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000001", "provision_locator": "Regulation (EU) 2024/1689 (target instrument)", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
@@ -295,6 +293,26 @@
       "confidence": "Pending",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01"],
+      "last_verified_at": null,
+      "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
+    },
+    {
+      "id": "EP-CLM-000014",
+      "display_label": "AI Act · Art. 111(2) · public-authority legacy systems (2 Aug 2030)",
+      "claim": "In any case, providers and deployers of high-risk AI systems (other than those referred to in Article 111(1)) intended to be used by public authorities and already placed on the market or put into service must take the necessary steps to comply with Regulation (EU) 2024/1689 by 2 August 2030.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2030-08-02",
+      "sources": [
+        { "source_id": "EP-SRC-000001", "provision_locator": "Article 111(2) (public-authority legacy high-risk systems; 2 August 2030)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" }
+      ],
+      "qualified_by": null,
+      "workflow_state": "pending_verification",
+      "validity_state": null,
+      "confidence": "Pending",
+      "claim_risk": "High",
+      "affected_eers_dimensions": ["DIM-02", "DIM-06", "DIM-07"],
       "last_verified_at": null,
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     }
