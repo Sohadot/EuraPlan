@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "batch": "EU AI Act — Sprint 2B Evidence Object batch (edge-semantics closed in Sprint 2B.3)",
-    "status": "pending_verification — internal review only; NOT published",
+    "batch": "EU AI Act — Sprint 2B Evidence Object batch (VERIFIED 2026-08-19; not yet published)",
+    "status": "verified — human-reviewed against EUR-Lex primary text on 2026-08-19; internal, NOT published",
     "not_published": true,
     "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.3 (normalized; dual-role edges)",
     "governed_by": [
@@ -12,13 +12,13 @@
       "FRESHNESS_ENGINE.md"
     ],
     "notes": [
-      "Reserved-ID draft batch. IDs EP-CLM-000001..000014 are permanently burned once reserved.",
-      "workflow_state is pending_verification for all objects; no last_verified_at; validity_state null.",
+      "Reserved-ID batch EP-CLM-000001..000014 (IDs permanently burned).",
+      "workflow_state=verified and confidence=Verified for all objects; last_verified_at=2026-08-19, based on a real human review of the primary sources (EUR-Lex). validity_state remains null: public validity begins only after published.",
+      "2B.4 transition changed ONLY workflow_state, confidence, and last_verified_at. No claim, effective_date, sources, qualified_by, claim_risk, display_label, EERS mapping, or ID changed.",
+      "publishable is a separate CLOSED gate: no move to /regulation/eu-ai-act/claims.json, no public anchors, no HTML change.",
       "No object supersedes a prior EP-CLM-*; legacy prose held NO claim identity (no manufactured history).",
-      "Dual-role edges (EVIDENCE_GRAPH_MODEL.md v1.3 §4.1): where 2026/1744 states the current value it carries a supports edge in addition to its amends edge (003, 007, 008, 010, 012, 014). Where 2026/1744 alone substantiates the proposition, the 2024/1689 edge was removed (012, 013).",
-      "Provenance (append-only): edges to EP-SRC-000001 (2024/1689 OJ snapshot) only cite provisions that existed in it.",
-      "Human verifier confirmed against EUR-Lex primary text of Regulation (EU) 2026/1744: Article 1(39), Article 1(40), Article 4.",
-      "actor:null on 012/014 is intentional for this reference gate; actor-scoping is a later intelligence-enrichment layer, not an evidence defect.",
+      "Dual-role edges (v1.3 §4.1): where 2026/1744 states the current value it carries a supports edge in addition to its amends edge (003, 007, 008, 010, 012, 014).",
+      "Disclosure rule adopted: everything committed to this repository is presumed public and permanently disclosable.",
       "Article 111(4) remains deferred to a later batch."
     ],
     "generated": "2026-08-19",
@@ -55,12 +55,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Instrument title / CELEX 32024R1689", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "Low",
       "affected_eers_dimensions": ["DIM-01"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -74,12 +74,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, first paragraph", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -95,12 +95,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (replaces Article 113 third paragraph point (a))", "relationship": "amends" }
       ],
       "qualified_by": ["EP-CLM-000006"],
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -114,12 +114,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (b)", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -133,12 +133,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, second paragraph", "relationship": "supports" }
       ],
       "qualified_by": ["EP-CLM-000003", "EP-CLM-000004", "EP-CLM-000006", "EP-CLM-000007", "EP-CLM-000008", "EP-CLM-000010"],
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -152,12 +152,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 5(1)(ba),(bb) and (1a),(1b) as inserted into Regulation (EU) 2024/1689 by Regulation (EU) 2026/1744; application date 2 December 2026 set by Article 1, point (40)(a) (replaced Article 113 third paragraph point (a))", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02", "DIM-06", "DIM-07"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -173,12 +173,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(2); Annex III; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-02", "DIM-06", "DIM-07"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -194,12 +194,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(1); Annex I; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-02", "DIM-06", "DIM-07"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -213,12 +213,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Instrument title / CELEX 32026R1744", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "Low",
       "affected_eers_dimensions": ["DIM-01"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -234,12 +234,12 @@
         { "source_id": "EP-SRC-000001", "provision_locator": "Articles 102–110", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -253,12 +253,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 4; OJ publication 24 July 2026", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01", "DIM-02"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -273,12 +273,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" }
       ],
       "qualified_by": ["EP-CLM-000014"],
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-02", "DIM-06", "DIM-07"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -292,12 +292,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1 (amends Regulation (EU) 2024/1689)", "relationship": "supports" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-01"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     },
     {
@@ -313,12 +313,12 @@
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" }
       ],
       "qualified_by": null,
-      "workflow_state": "pending_verification",
+      "workflow_state": "verified",
       "validity_state": null,
-      "confidence": "Pending",
+      "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": ["DIM-02", "DIM-06", "DIM-07"],
-      "last_verified_at": null,
+      "last_verified_at": "2026-08-19",
       "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
     }
   ]
