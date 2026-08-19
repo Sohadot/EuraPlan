@@ -1,5 +1,5 @@
 # EVIDENCE_GRAPH_MODEL.md
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
 **Last Updated:** August 2026
@@ -13,33 +13,32 @@ This policy converts EuraPlan's corpus from written prose into a **knowledge
 graph**. Every material regulatory claim becomes a stable, addressable node with a
 machine-readable representation, a human-readable rendering on the page, and a
 permanent citation identity. Claims and sources are distinct node types joined by
-an explicit evidence relation — not a single flat record.
-
-This is the layer that makes a future API valuable (it exposes a graph, not
-articles), makes AI extraction lossless (relationships are explicit, not inferred),
-and makes EERS deltas computable (a change to a claim propagates to the EERS
-dimensions it affects).
+explicit, typed edges — not a single flat record.
 
 **Identity and lifecycle are governed separately** by
-`CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md`; this document does not redefine
-them. It defines the node/relation data and how the graph is exposed.
+`CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md`. This document defines the
+node/relation data, the canonical serialization, and how the graph is exposed.
+
+### Changelog
+- **v1.2** — Normalized serialization made canonical (§4): Source nodes live once in a source registry; edges carry no `source_tier`. Added Claim→Claim `qualified_by` relation (§3.1). Froze `amends` semantics (§4.1). Added append-only source rule and a forward date-field split (§4.2).
+- **v1.1** — Introduced the many-to-many Claim↔Source relation and opaque identity.
 
 ---
 
-## 2. Three node/relation types
+## 2. Node and relation types
 
-The graph is not a list of claim records. It has three parts:
+The graph has two node types and two relation families:
 
-| Type | Is | Cardinality |
+| Element | Is | Cardinality |
 |---|---|---|
-| **Claim** | A single asserted planning-relevant proposition | — |
-| **Source** | An official document/provision that can support claims | — |
-| **Evidence relation** | A typed link: a source *supports / amends / clarifies* a claim | **many-to-many** |
+| **Claim** node | A single asserted planning-relevant proposition | — |
+| **Source** node | An official document/provision that can support claims | — |
+| **Claim→Source** edge | A source *supports / amends / clarifies* a claim | many-to-many |
+| **Claim→Claim** edge | A claim *qualifies* another claim (e.g. an exception to a default) | many-to-many |
 
-One claim MAY rest on several sources (legislative text + a consolidated version +
-Commission guidance); one source MAY support many claims. Modelling this as a
-relation — rather than a single `source_url` on the claim — is what makes it a
-graph.
+One claim MAY rest on several sources; one source MAY support many claims. One
+claim MAY be qualified by several others. Modelling these as edges — not as fields
+baked into a single record — is what makes it a graph.
 
 ---
 
@@ -48,12 +47,13 @@ graph.
 | Field | Description |
 |---|---|
 | `id` | Opaque canonical identifier, e.g. `EP-CLM-000042` (see identity spec) |
-| `display_label` | Non-authoritative human label, e.g. `AIA · Art. 113(3)` — never used in citations |
+| `display_label` | Non-authoritative human label — never used in citations |
 | `claim` | The single assertion, in one sentence |
 | `jurisdiction` | e.g. `EU` |
-| `actor` | Entry Ontology actor, e.g. `AI system provider` |
-| `effective_date` | ISO date the proposition takes effect, if applicable |
-| `sources` | Array of evidence relations (see §4) — **at least one** for any High-risk claim |
+| `actor` | Entry Ontology actor, or `null` for non-actor-scoped facts |
+| `effective_date` | ISO date the proposition takes effect, or `null` |
+| `sources` | Array of Claim→Source **edges** (see §4) — at least one for any High-risk claim |
+| `qualified_by` | Array of Claim IDs that qualify this claim (see §3.1); `null` if none |
 | `workflow_state` | `draft` … `published` \| `void` (identity spec §3.1) |
 | `validity_state` | `active` \| `review_required` \| `superseded` \| `withdrawn` \| `corrected` (identity spec §3.2) |
 | `confidence` | `Verified` \| `Referenced` \| `Pending` \| `Deprecated` (SOURCE_POLICY.md §5) |
@@ -63,137 +63,148 @@ graph.
 | `supersedes` / `superseded_by` / `corrects` / `corrected_by` | Chain pointers (identity spec §5–6) |
 | `change_type` | `amendment` \| `interpretation` \| `correction` \| `withdrawal`, when applicable |
 
-**Risk/tier coupling (from CLAIM_POLICY.md §6 + SOURCE_POLICY.md §2):** a `High`
-claim — any regulatory deadline, compliance requirement, or funding eligibility —
+**Risk/tier coupling (CLAIM_POLICY.md §6 + SOURCE_POLICY.md §2):** a `High` claim
 MUST carry at least one Tier-1 source and MUST reach `confidence: Verified` before
 `workflow_state: publishable`. A `Blocked` claim is never published.
 
+### 3.1 Claim→Claim: `qualified_by`
+
+`qualified_by` records that another claim **narrows, excepts, or conditions** this
+one. It exists so that a claim which is safe in isolation is never quoted without
+its exception attached.
+
+- `qualified_by` is **directional** and stored on the qualified claim only. Its
+  inverse (`qualifies`) is **derived**, not stored — storing both invites drift.
+- Example: a "default application date" claim is `qualified_by` an "exception
+  applies from a later date" claim. A retrieval agent reading the default MUST be
+  able to follow the edge to the exception.
+- A `qualified_by` edge is **not** supersession. Both claims are simultaneously
+  true; one bounds the other. Supersession (identity spec §5) replaces a claim
+  across time; qualification bounds a claim at the same point in time.
+
 ---
 
-## 4. The Source node and evidence relation
+## 4. Source nodes and the canonical serialization
 
-Each entry in a claim's `sources[]` is an evidence relation carrying its own source
-node and a locator:
+**Canonical serialization is normalized.** Source nodes are stored **once**, in a
+`source_registry` (in the per-regulation claims file's `_meta`). Each claim's
+`sources[]` entry is an **edge** that references a registry node by `source_id` and
+adds only edge-local data:
 
 ```json
-{
-  "source_id": "EP-SRC-000007",
+"sources": [
+  { "source_id": "EP-SRC-000002",
+    "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c))",
+    "relationship": "amends" }
+]
+```
+
+A Source **node** in the registry carries the source's own properties:
+
+```json
+"EP-SRC-000001": {
   "instrument_id": "EU-2024-1689",
-  "official_title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+  "official_title": "Regulation (EU) 2024/1689 … (Artificial Intelligence Act)",
   "celex": "32024R1689",
   "eli": "http://data.europa.eu/eli/reg/2024/1689/oj",
-  "provision_locator": "Art. 113",
-  "source_version_date": "YYYY-MM-DD",
-  "retrieved_at": "YYYY-MM-DD",
-  "source_tier": 1,
-  "relationship": "supports"
+  "source_version_date": "2024-07-12",
+  "retrieved_at": "2026-08-19",
+  "source_tier": 1
 }
 ```
 
-`relationship` is one of `supports` | `amends` | `clarifies`. This is what lets the
-graph express, for one claim, that the AI Act text *supports* it while a later
-Commission guidance *clarifies* it — each with its own tier and retrieval date.
+**`source_tier` is a property of the Source node only.** It MUST NOT be duplicated
+onto the edge — a node property carried in two places drifts. Edges carry exactly
+`source_id`, `provision_locator`, and `relationship`.
+
+### 4.1 `relationship` values (frozen semantics)
+
+| Value | Meaning |
+|---|---|
+| `supports` | The source substantiates the claim's proposition. |
+| `amends` | The source **changes or replaces the operative legal basis on which the claim rests** — *even if the claim's value is unchanged.* `amends` does **not** assert that the claim's value changed; it asserts that the carrying provision was altered. |
+| `clarifies` | The source (e.g. official guidance) interprets or explains the claim without changing the operative provision. |
+
+> Worked case: a date that did not change but whose carrying point was rewritten by
+> an amendment carries **both** a `supports` edge to the original instrument and an
+> `amends` edge to the amending instrument. The `amends` edge does not imply the
+> date moved — only that the legal basis was replaced.
+
+### 4.2 Source append-only rule and date fields
+
+- Source nodes are **append-only**, like claims. When EUR-Lex publishes a **new
+  consolidated version**, add a **new** Source node (e.g. `EP-SRC-000003`) for it;
+  **never rewrite** an existing node (e.g. do not retro-fit a 2026 consolidation
+  date onto the 2024 OJ node). Amended claims draw current-law provenance from the
+  original node (`supports`) plus the amending node (`amends`) together.
+- **Forward refinement (recommended):** `source_version_date` currently overloads
+  several meanings. Future source nodes SHOULD split it into `document_date` (the
+  act's own date), `publication_date` (OJ date), and `consolidated_as_of` (the
+  consolidation snapshot date), rather than a single overloaded field.
 
 ---
 
-## 5. Canonical Claim node — machine form
-
-Exposed both as an in-page `<script type="application/json">` block and, per
-regulation, as a downloadable `/regulation/<slug>/claims.json`.
+## 5. Canonical Claim node — machine form (normalized)
 
 ```json
 {
-  "id": "EP-CLM-000042",
-  "display_label": "PLACEHOLDER · not a real provision",
-  "claim": "PLACEHOLDER claim used to show schema shape only — carries no regulatory assertion.",
+  "id": "EP-CLM-000003",
+  "display_label": "AI Act · Art. 113(3)(a) · Chapters I & II",
+  "claim": "The default application date for Chapters I and II of Regulation (EU) 2024/1689 is 2 February 2025.",
   "jurisdiction": "EU",
-  "actor": "AI system provider",
-  "effective_date": null,
+  "actor": null,
+  "effective_date": "2025-02-02",
   "sources": [
-    {
-      "source_id": "EP-SRC-000001",
-      "instrument_id": "EU-0000-0000",
-      "official_title": "PLACEHOLDER — replaced by a real Tier-1 source at verification",
-      "celex": null,
-      "eli": null,
-      "provision_locator": "PLACEHOLDER",
-      "source_version_date": null,
-      "retrieved_at": null,
-      "source_tier": 1,
-      "relationship": "supports"
-    }
+    { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (a)", "relationship": "supports" },
+    { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (replaces Article 113 third paragraph point (a))", "relationship": "amends" }
   ],
-  "workflow_state": "draft",
+  "qualified_by": ["EP-CLM-000006"],
+  "workflow_state": "pending_verification",
   "validity_state": null,
   "confidence": "Pending",
   "claim_risk": "High",
   "affected_eers_dimensions": ["DIM-01", "DIM-02"],
   "last_verified_at": null,
-  "supersedes": null,
-  "superseded_by": null,
-  "change_type": null
+  "supersedes": null, "superseded_by": null, "corrects": null, "corrected_by": null, "change_type": null
 }
 ```
 
-> **This is a schema placeholder, not a claim.** It deliberately contains **no real
-> regulation, article, or date**, so it cannot be mistaken for verified content. It
-> is shown in the governance-correct state for an unverified High-risk claim:
-> `workflow_state: draft`, `confidence: Pending`, `claim_risk: High` (a regulatory
-> proposition is High per CLAIM_POLICY.md §6), and therefore **not publishable**
-> until a human sets a real Tier-1 source and `last_verified_at`.
+The Source nodes referenced by `source_id` live once in `_meta.source_registry`.
 
 ---
 
 ## 6. The Citation Unit (human form)
 
-Every published claim renders on the page with a permanent anchor and a copy-ready
-citation, so a researcher can quote a single fact, not a page.
+Every published claim renders with a permanent anchor and a copy-ready citation, so
+a researcher can quote a single fact, not a page.
 
-- **Anchor:** `/regulation/eu-ai-act/#ep-clm-000042` — the opaque ID, stable per
-  `AGENT_READABILITY_POLICY.md` §2; it does not change when the page is edited or
-  when a locator is renumbered.
-- **Citation format:**
-
-  > EuraPlan. "EU AI Act — [claim summary]." `EP-CLM-000042`.
-  > Verified [date]. https://euraplan.com/regulation/eu-ai-act/#ep-clm-000042
-
-The visible rendering shows the claim, its source link(s), its `last_verified_at`
-date, and its validity state — satisfying the visible-source requirement of
-`AGENT_READABILITY_POLICY.md` §6 and the per-claim confidence/risk requirement of
-`CONTENT_QUALITY_STANDARD.md` §2.
+- **Anchor:** `/regulation/eu-ai-act/#ep-clm-000003` — the opaque ID, stable per
+  `AGENT_READABILITY_POLICY.md` §2; unchanged when the page is edited or a locator
+  is renumbered.
+- A claim rendered with a `qualified_by` edge MUST render its qualification
+  visibly alongside it — never the default without its exception.
 
 ---
 
 ## 7. Page dates vs claim verification (do not conflate)
 
-Two different dates exist and MUST be kept distinct:
-
-- **Page last content update** — when the page's content/markup last changed. This
-  is the value that `dateModified` (JSON-LD) and the visible "Last Updated" date
-  mirror (`STRUCTURED_DATA_POLICY.md` §6).
+- **Page last content update** — mirrors `dateModified` (JSON-LD) and the visible
+  "Last Updated" date (`STRUCTURED_DATA_POLICY.md` §6).
 - **Regulatory verification date** — the newest `last_verified_at` among the page's
   published claims.
 
-A re-verification that confirms an unchanged claim advances the verification date
-without changing the page content; an accessibility or wording edit advances the
-content date without re-verifying anything. Merging the two would corrupt
-provenance. See `FRESHNESS_ENGINE.md` §4.
+Merging them corrupts provenance. See `FRESHNESS_ENGINE.md` §4.
 
 ---
 
 ## 8. How this feeds the paid layer (without paywalling truth)
 
-The graph is public. The paid layer consumes it:
-
-- **Change detection** watches `validity_state` / `last_verified_at` transitions.
-- Each transition maps — via `affected_eers_dimensions` — to the EERS dimensions it moves.
-- A subscriber's **Entry Profile** references a set of **profile archetypes**
-  (e.g. `US · AI provider · high-risk`), not the company individually. A change is
-  analyzed **once per archetype** and inherited by every profile in that archetype.
-
-This archetype indirection keeps the Freshness Engine's cost sublinear in
-subscriber count — the difference between a scalable product and a consultancy. It
-is mandatory, not optional.
+The graph is public. The paid layer consumes it: change detection watches
+`validity_state` / `last_verified_at` transitions; each maps via
+`affected_eers_dimensions` to the dimensions it moves; a subscriber's Entry Profile
+references **profile archetypes**, not the company individually, so a change is
+analyzed once per archetype and inherited. This keeps the Freshness Engine's cost
+sublinear in subscriber count.
 
 ---
 
@@ -201,12 +212,13 @@ is mandatory, not optional.
 
 | Prohibited | Reason |
 |---|---|
-| A single `source_url` in place of the `sources[]` relation | Collapses the graph back to a flat record |
+| A flat `source_url`/`source_tier` on a claim in place of the registry+edge model | Collapses the graph and duplicates node properties |
+| Duplicating `source_tier` (or other node properties) onto an edge | Drifts against the registry node |
+| Rewriting an existing Source node for a new consolidation | Violates the append-only rule |
 | A `High` claim with no Tier-1 source | Violates CLAIM_POLICY.md §6 / SOURCE_POLICY.md §2 |
 | Setting `last_verified_at` without a human checking the primary source | Violates SOURCE_POLICY.md §4 and Doctrine §8 |
+| Encoding a claim, or a Claim→Claim qualification, only in prose | Defeats machine retrieval; risks quoting a default without its exception |
 | A real-looking legal example that is not a verified claim | Risks mistaking illustration for verified content |
-| Encoding a claim only in prose with no Claim node | Defeats machine retrieval |
-| Putting graph data only behind JavaScript | Violates AGENT_READABILITY_POLICY.md §8 |
 
 ---
 
