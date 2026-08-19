@@ -1,0 +1,36 @@
+# EuraPlan .gitignore
+# Secrets and local artefacts must never reach the public repository.
+# Governed by SECURITY_POLICY.md §2 and DISCLOSURE_BOUNDARY.md.
+#
+# NOTE: .json / .yml / .yaml / .csv are intentionally NOT ignored — the corpus,
+# datasets, and evidence graph use them as legitimate content.
+
+# Environment files (a committed template is allowed)
+.env
+.env.*
+!.env.example
+
+# Keys, certificates, credential bundles
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+
+# Local SSH private keys (should never be in a repo working tree)
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+
+# Dependencies / build output
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
