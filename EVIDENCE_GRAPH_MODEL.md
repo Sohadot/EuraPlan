@@ -1,5 +1,5 @@
 # EVIDENCE_GRAPH_MODEL.md
-**Version:** 1.2
+**Version:** 1.3
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
 **Last Updated:** August 2026
@@ -20,6 +20,7 @@ explicit, typed edges — not a single flat record.
 node/relation data, the canonical serialization, and how the graph is exposed.
 
 ### Changelog
+- **v1.3** — Clarified §4.1: a single Source MAY carry multiple typed edges (e.g. `supports` + `amends`) to the same Claim when it performs both functions. No structural change; closes an ambiguity found on first real application.
 - **v1.2** — Normalized serialization made canonical (§4): Source nodes live once in a source registry; edges carry no `source_tier`. Added Claim→Claim `qualified_by` relation (§3.1). Froze `amends` semantics (§4.1). Added append-only source rule and a forward date-field split (§4.2).
 - **v1.1** — Introduced the many-to-many Claim↔Source relation and opaque identity.
 
@@ -36,9 +37,10 @@ The graph has two node types and two relation families:
 | **Claim→Source** edge | A source *supports / amends / clarifies* a claim | many-to-many |
 | **Claim→Claim** edge | A claim *qualifies* another claim (e.g. an exception to a default) | many-to-many |
 
-One claim MAY rest on several sources; one source MAY support many claims. One
-claim MAY be qualified by several others. Modelling these as edges — not as fields
-baked into a single record — is what makes it a graph.
+One claim MAY rest on several sources; one source MAY support many claims; one
+source MAY carry more than one edge to the *same* claim (§4.1). One claim MAY be
+qualified by several others. Modelling these as edges — not as fields baked into a
+single record — is what makes it a graph.
 
 ---
 
@@ -130,13 +132,24 @@ onto the edge — a node property carried in two places drifts. Edges carry exac
 > `amends` edge to the amending instrument. The `amends` edge does not imply the
 > date moved — only that the legal basis was replaced.
 
+**Dual-role edges.** A single Source MAY carry **multiple typed edges to the same
+Claim** when it performs two functions at once — e.g. it both substantiates the
+proposition (`supports`) and changes the operative legal basis on which the claim
+rests (`amends`). This is the correct encoding whenever an amending instrument is
+itself the source that states the claim's current value: the `supports` edge
+records that the value lives in that instrument, and the `amends` edge records that
+it replaced or added the carrying provision. A `High` claim whose current value
+originates in an amending instrument MUST carry a `supports` edge to that
+instrument — an `amends` edge alone does not substantiate a proposition.
+
 ### 4.2 Source append-only rule and date fields
 
 - Source nodes are **append-only**, like claims. When EUR-Lex publishes a **new
   consolidated version**, add a **new** Source node (e.g. `EP-SRC-000003`) for it;
   **never rewrite** an existing node (e.g. do not retro-fit a 2026 consolidation
   date onto the 2024 OJ node). Amended claims draw current-law provenance from the
-  original node (`supports`) plus the amending node (`amends`) together.
+  original node (`supports`) plus the amending node (`amends` and, where it states
+  the current value, also `supports`) together.
 - **Forward refinement (recommended):** `source_version_date` currently overloads
   several meanings. Future source nodes SHOULD split it into `document_date` (the
   act's own date), `publication_date` (OJ date), and `consolidated_as_of` (the
@@ -156,6 +169,7 @@ onto the edge — a node property carried in two places drifts. Edges carry exac
   "effective_date": "2025-02-02",
   "sources": [
     { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (a)", "relationship": "supports" },
+    { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (amended point (a) retains 2 February 2025)", "relationship": "supports" },
     { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (replaces Article 113 third paragraph point (a))", "relationship": "amends" }
   ],
   "qualified_by": ["EP-CLM-000006"],
@@ -215,6 +229,7 @@ sublinear in subscriber count.
 | A flat `source_url`/`source_tier` on a claim in place of the registry+edge model | Collapses the graph and duplicates node properties |
 | Duplicating `source_tier` (or other node properties) onto an edge | Drifts against the registry node |
 | Rewriting an existing Source node for a new consolidation | Violates the append-only rule |
+| A `High` claim whose current value comes from an amending instrument carrying only an `amends` edge to it | `amends` does not substantiate; a `supports` edge is required (§4.1) |
 | A `High` claim with no Tier-1 source | Violates CLAIM_POLICY.md §6 / SOURCE_POLICY.md §2 |
 | Setting `last_verified_at` without a human checking the primary source | Violates SOURCE_POLICY.md §4 and Doctrine §8 |
 | Encoding a claim, or a Claim→Claim qualification, only in prose | Defeats machine retrieval; risks quoting a default without its exception |

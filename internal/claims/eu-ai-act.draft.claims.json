@@ -1,9 +1,9 @@
 {
   "_meta": {
-    "batch": "EU AI Act — Sprint 2B Evidence Object batch (accuracy-patched in Sprint 2B.2)",
+    "batch": "EU AI Act — Sprint 2B Evidence Object batch (edge-semantics closed in Sprint 2B.3)",
     "status": "pending_verification — internal review only; NOT published",
     "not_published": true,
-    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.2 (normalized)",
+    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.3 (normalized; dual-role edges)",
     "governed_by": [
       "EVIDENCE_GRAPH_MODEL.md",
       "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
@@ -15,10 +15,11 @@
       "Reserved-ID draft batch. IDs EP-CLM-000001..000014 are permanently burned once reserved.",
       "workflow_state is pending_verification for all objects; no last_verified_at; validity_state null.",
       "No object supersedes a prior EP-CLM-*; legacy prose held NO claim identity (no manufactured history).",
-      "Provenance discipline (append-only): edges to EP-SRC-000001 (2024/1689 OJ snapshot) only cite provisions that existed in that snapshot. Provisions and structure introduced by 2026/1744 (Article 5(ba)/(bb)/(1a)/(1b); Article 113(3)(c)(i)/(ii); Article 113(3)(d)) are carried by EP-SRC-000002.",
-      "amends = the source changes/replaces the operative legal basis; supports = the source substantiates the proposition (EVIDENCE_GRAPH_MODEL.md v1.2 §4.1).",
+      "Dual-role edges (EVIDENCE_GRAPH_MODEL.md v1.3 §4.1): where 2026/1744 states the current value it carries a supports edge in addition to its amends edge (003, 007, 008, 010, 012, 014). Where 2026/1744 alone substantiates the proposition, the 2024/1689 edge was removed (012, 013).",
+      "Provenance (append-only): edges to EP-SRC-000001 (2024/1689 OJ snapshot) only cite provisions that existed in it.",
       "Human verifier confirmed against EUR-Lex primary text of Regulation (EU) 2026/1744: Article 1(39), Article 1(40), Article 4.",
-      "Article 111(4) (content-generating systems existing before 2 Aug 2026; Article 50(2) by 2 Dec 2026) remains deferred to a later batch; not in this gate."
+      "actor:null on 012/014 is intentional for this reference gate; actor-scoping is a later intelligence-enrichment layer, not an evidence defect.",
+      "Article 111(4) remains deferred to a later batch."
     ],
     "generated": "2026-08-19",
     "source_registry": {
@@ -90,6 +91,7 @@
       "effective_date": "2025-02-02",
       "sources": [
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 113, third paragraph, point (a)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) — amended Article 113 third paragraph point (a) retains 2 February 2025 for Chapters I and II", "relationship": "supports" },
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(a) (replaces Article 113 third paragraph point (a))", "relationship": "amends" }
       ],
       "qualified_by": ["EP-CLM-000006"],
@@ -166,7 +168,8 @@
       "actor": null,
       "effective_date": "2027-12-02",
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c)) → point (c)(i)", "relationship": "amends" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) → Article 113 third paragraph point (c)(i) (sets 2 December 2027 for Chapter III Sections 1–3 as regards Article 6(2)/Annex III)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c))", "relationship": "amends" },
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(2); Annex III; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
@@ -186,7 +189,8 @@
       "actor": null,
       "effective_date": "2028-08-02",
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c)) → point (c)(ii)", "relationship": "amends" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) → Article 113 third paragraph point (c)(ii) (sets 2 August 2028 for Chapter III Sections 1–3 as regards Article 6(1)/Annex I)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(b) (replaces Article 113 third paragraph point (c))", "relationship": "amends" },
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 6(1); Annex I; Chapter III Sections 1, 2 and 3; Article 6(5)", "relationship": "supports" }
       ],
       "qualified_by": null,
@@ -225,6 +229,7 @@
       "actor": null,
       "effective_date": "2026-07-27",
       "sources": [
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(c) → Article 113 third paragraph point (d) (Articles 102–110 apply from 27 July 2026)", "relationship": "supports" },
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (40)(c) (adds Article 113 third paragraph point (d))", "relationship": "amends" },
         { "source_id": "EP-SRC-000001", "provision_locator": "Articles 102–110", "relationship": "supports" }
       ],
@@ -264,8 +269,8 @@
       "actor": null,
       "effective_date": null,
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Article 111(2); Article 113 (Chapter III application date)", "relationship": "supports" }
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) — replaced Article 111(2) ties transitional treatment to the Chapter III application date in Article 113", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" }
       ],
       "qualified_by": ["EP-CLM-000014"],
       "workflow_state": "pending_verification",
@@ -284,8 +289,7 @@
       "actor": null,
       "effective_date": null,
       "sources": [
-        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1 (amends Regulation (EU) 2024/1689)", "relationship": "supports" },
-        { "source_id": "EP-SRC-000001", "provision_locator": "Regulation (EU) 2024/1689 (target instrument)", "relationship": "supports" }
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1 (amends Regulation (EU) 2024/1689)", "relationship": "supports" }
       ],
       "qualified_by": null,
       "workflow_state": "pending_verification",
@@ -305,6 +309,7 @@
       "effective_date": "2030-08-02",
       "sources": [
         { "source_id": "EP-SRC-000001", "provision_locator": "Article 111(2) (public-authority legacy high-risk systems; 2 August 2030)", "relationship": "supports" },
+        { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) — replaced Article 111(2) retains the 2 August 2030 public-authority deadline", "relationship": "supports" },
         { "source_id": "EP-SRC-000002", "provision_locator": "Article 1, point (39)(a) (replaces Article 111(2) of 2024/1689)", "relationship": "amends" }
       ],
       "qualified_by": null,
