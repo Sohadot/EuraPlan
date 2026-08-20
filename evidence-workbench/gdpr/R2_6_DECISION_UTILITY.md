@@ -59,12 +59,16 @@ If a utility sentence needs a **new legal proposition**, it does **not** enter t
 | International transfer path | 041-044 |
 | Enforcement exposure | 045 |
 
-Each object contains **only four fields**:
+Each object contains **four substantive fields** plus **governance metadata**.
+
+**Substantive fields (Decision Utility content):**
 
 1. **Question** — the planning decision to close  
 2. **Evidence** — claim IDs (+ co-render / hierarchy constraints)  
 3. **Planning consequence** — what must be decided before a named entry freeze point  
 4. **What remains fact-specific** — facts that cannot be closed from the graph alone  
+
+**Governance metadata (not additional utility propositions):** `id`, `title`, `primary_claims`, `co_render`, `related_hierarchy`, `seed_refs`, `hard_rules`  
 
 ---
 

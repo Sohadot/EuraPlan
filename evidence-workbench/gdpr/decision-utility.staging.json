@@ -19,13 +19,24 @@
       "DISCLOSURE_BOUNDARY.md",
       "R2_6_DECISION_UTILITY.md"
     ],
-    "object_schema": [
-      "question",
-      "evidence",
-      "planning_consequence",
-      "what_remains_fact_specific"
-    ],
-    "notes": "Decision Utility is a derived planning layer above verified claims. Seeds inform wording only. Any new legal proposition requires an independent claim path."
+    "object_schema": {
+      "substantive_fields": [
+        "question",
+        "evidence",
+        "planning_consequence",
+        "what_remains_fact_specific"
+      ],
+      "governance_metadata": [
+        "id",
+        "title",
+        "primary_claims",
+        "co_render",
+        "related_hierarchy",
+        "seed_refs",
+        "hard_rules"
+      ]
+    },
+    "notes": "Decision Utility is a derived planning layer above verified claims. Seeds inform wording only. Any new legal proposition requires an independent claim path. object_schema distinguishes four substantive fields from governance metadata."
   },
   "decision_objects": [
     {
@@ -40,7 +51,7 @@
       "related_hierarchy": null,
       "question": "Which Article 3 limb(s), if any, map the intended European activity for this entry plan?",
       "evidence": "Inspect establishment reach (EP-CLM-000018), offering of goods or services (EP-CLM-000019), and monitoring of behaviour (EP-CLM-000020). Art. 3(3) remains deferred/unminted in batch-1 and must not be invented here.",
-      "planning_consequence": "Close the territorial map before freezing entity design, go-to-market packaging, or tracking/analytics architecture. EU establishment design, offering signals (language, shipping, pricing), and monitoring design are entry gates - not post-launch cleanup.",
+      "planning_consequence": "Close the territorial map before freezing entity design, go-to-market packaging, or tracking/analytics architecture. EU establishment design, go-to-market configuration, and monitoring design should be examined against the applicable Article 3 limbs before launch.",
       "what_remains_fact_specific": "Whether a concrete establishment exists; whether a concrete offering targets data subjects in the Union; whether a concrete monitoring design observes behaviour in the Union; any Art. 3(3) analysis.",
       "seed_refs": [
         "EP-CLM-000018",
@@ -91,7 +102,7 @@
       "question": "If Article 3(2) applies to the activity, does the Art. 27(1) representative duty apply, or does an Art. 27(2) exception close the gate?",
       "evidence": "Default duty where Art. 3(2) applies (EP-CLM-000024) must be co-rendered with Art. 27(2) exceptions (EP-CLM-000025). Neither claim may be cited as a standalone conclusion.",
       "planning_consequence": "Representative status must be closed before freezing the European operating model. The gate cannot be closed without documenting the Art. 27(2) analysis alongside the Art. 27(1) default.",
-      "what_remains_fact_specific": "Whether Art. 3(2) actually applies; whether processing is occasional / large-scale special categories or Art. 10 data / unlikely to result in risk; whether the actor is a public authority or body.",
+      "what_remains_fact_specific": "Whether Art. 3(2) actually applies; whether all conjunctive conditions in Art. 27(2)(a) are satisfied; or whether Art. 27(2)(b) public-authority/body status applies.",
       "seed_refs": [
         "EP-CLM-000024",
         "EP-CLM-000025"
@@ -233,7 +244,7 @@
       ],
       "question": "Before freezing cloud regions and vendors, what Chapter V path governs any transfer - following 44 -> 45 -> 46 -> 49 rather than treating those as equal options?",
       "evidence": "General transfer gate (EP-CLM-000041), then adequacy where a valid decision exists (EP-CLM-000042), then appropriate safeguards (EP-CLM-000043), then derogations (EP-CLM-000044). These are related pathway claims, not qualified_by pairs and not interchangeable options. Dynamic adequacy-country lists remain deferred/unminted.",
-      "planning_consequence": "Design transfer architecture before freezing regions/vendors. Adequacy may be used only where a valid decision exists and must be re-checked under freshness rules. SCC/BCR/contract design precedes vendor freeze. Art. 49 must not be treated as the default transfer design.",
+      "planning_consequence": "Design transfer architecture before freezing regions/vendors. Adequacy may be used only where a valid decision exists and must be re-checked under freshness rules. Art. 46 safeguard selection and implementation precedes vendor freeze. Art. 49 must not be treated as the default transfer design.",
       "what_remains_fact_specific": "Whether a concrete transfer occurs; destination; existence and validity of an adequacy decision at decision time; which Art. 46 tool is actually available; whether any Art. 49 derogation conditions are met.",
       "seed_refs": [
         "EP-CLM-000041",
