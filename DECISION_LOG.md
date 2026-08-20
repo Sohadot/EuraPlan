@@ -572,6 +572,19 @@ Each entry uses the following structure:
   - **R2.2 exit gate:** 31/31 IDs in range; 4/4 deferred unminted; sources pinned; no generic EDPB/Commission portfolio source; draft/null/null; qualification edges resolvable; no public claims.json; HTML rewrite blocked; Publish Gate NOT OPEN
   - **R2.3 next:** claim-by-claim EUR-Lex literal verification — no batch approval
 
+### DEC-050
+- **Date:** 2026-08-20 (Sprint R2.3 closed; R2.4 opened)
+- **Status:** Active
+- **Decision:** (1) Close **R2.3 — Human Literal Verification** as **CLOSED / PASS** after PR #35 merge `d02979b5bf48741bc1f2563ea5ee117877778d0f`: all 31 batch-1 claims `EP-CLM-000015`…`000045` are `workflow_state=verified`, `confidence=Verified`, `last_verified_at=2026-08-20`, `validity_state=null`; qualification edges 24→25, 32→33, 35→36, 37→38 intact; Chapter V uses `related_claims` hierarchy (not `qualified_by`); VOID=0; no public `/regulation/gdpr/claims.json`; no HTML rewrite; Publish Gate remains NOT OPEN. (2) Open **R2.4 — Canonical Graph + Route Integration Preparation**: produce workbench-only `claims.canonical.staging.json` aligned toward the AI Act `claims.json` field set, document co-render/route-alternate prep in `R2_4_CANONICAL_PREP.md`, and prepare for later machine/page integration. (3) R2.4 must **not** create public `regulation/gdpr/claims.json`, must **not** rewrite GDPR HTML, must **not** register `routes.json`/`llms.txt` alternates yet, and must **not** open Publish Gate. Promotion to `publishable`/`published` remains R2.8.
+- **Rationale:** Identity and truth-status for batch-1 are fixed in the workbench. Canonical preparation can begin safely only while publication surfaces stay blocked, mirroring the AI Act path (verify → stage → publish gate → live `claims.json`).
+- **Affected routes/files:** `evidence-workbench/gdpr/*` (R2.3 close + R2.4 staging/prep); `DECISION_LOG.md`
+- **Governance documents involved:** EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; ROUTE_GOVERNANCE.md; DISCLOSURE_BOUNDARY.md; REFERENCE_GRADE_ROUTE_STANDARD.md; DEC-048; DEC-049
+- **Reversal conditions:** Superseding DEC to reopen R2.3 verification, to place public GDPR `claims.json` before Publish Gate, or to rewrite GDPR HTML in R2.4
+- **Notes:**
+  - **R2.3 integration merge:** `d02979b5bf48741bc1f2563ea5ee117877778d0f`
+  - **R2.5 boundary:** page transformation is branch-only / non-public while claims remain `verified`; live HTML on `/regulation/gdpr/` that presents the graph as the public reference ships only in the R2.8 Publish Gate sequence (`publishable → published`)
+  - **Next:** R2.5 page transformation only after R2.4 staging integrity + owner authorization
+
 ---
 
 ## 4. Superseded / Rejected Decisions
