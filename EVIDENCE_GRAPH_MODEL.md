@@ -1,5 +1,5 @@
 # EVIDENCE_GRAPH_MODEL.md
-**Version:** 1.3
+**Version:** 1.4
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
 **Last Updated:** August 2026
@@ -20,6 +20,7 @@ explicit, typed edges — not a single flat record.
 node/relation data, the canonical serialization, and how the graph is exposed.
 
 ### Changelog
+- **v1.4** — Added §10 Derivative surfaces: any surface displaying Evidence Graph dates must derive from the canonical claim graph or be registered in `DERIVATIVE_SURFACE_REGISTRY.md` with a consistency check (DEC-046).
 - **v1.3** — Clarified §4.1: a single Source MAY carry multiple typed edges (e.g. `supports` + `amends`) to the same Claim when it performs both functions. No structural change; closes an ambiguity found on first real application.
 - **v1.2** — Normalized serialization made canonical (§4): Source nodes live once in a source registry; edges carry no `source_tier`. Added Claim→Claim `qualified_by` relation (§3.1). Froze `amends` semantics (§4.1). Added append-only source rule and a forward date-field split (§4.2).
 - **v1.1** — Introduced the many-to-many Claim↔Source relation and opaque identity.
@@ -234,6 +235,23 @@ sublinear in subscriber count.
 | Setting `last_verified_at` without a human checking the primary source | Violates SOURCE_POLICY.md §4 and Doctrine §8 |
 | Encoding a claim, or a Claim→Claim qualification, only in prose | Defeats machine retrieval; risks quoting a default without its exception |
 | A real-looking legal example that is not a verified claim | Risks mistaking illustration for verified content |
+| An unregistered public surface that hand-copies Evidence Graph dates | Causes derivative drift (see §10 / `DERIVATIVE_SURFACE_REGISTRY.md`) |
+
+---
+
+## 10. Derivative surfaces
+
+A **derivative surface** is any public HTML (or other) presentation that displays
+dates, phases, or material facts taken from the Evidence Graph outside the
+canonical claim register / `claims.json`.
+
+**Rule:** such a surface MUST either derive from the canonical graph, or be
+listed in `DERIVATIVE_SURFACE_REGISTRY.md` with an explicit consistency check
+against its canonical parent. Unregistered manual copies are prohibited.
+
+This rule was opened after Post-Merge Live Verification found the homepage
+Regulatory Clock Preview still showing a pre-Omnibus AI Act timeline after
+`claims.json` and `/clock/` were correct (DEC-046).
 
 ---
 

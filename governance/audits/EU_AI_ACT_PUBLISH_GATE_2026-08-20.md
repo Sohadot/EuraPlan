@@ -1,5 +1,5 @@
 # EU_AI_ACT_PUBLISH_GATE_2026-08-20.md
-**Status:** Public working evidence — Publish Gate audit (Final Publication Release staged; not yet merged)
+**Status:** Public working evidence — Publish Gate audit (Final Publication Release merged; Post-Merge Verification CLOSED after homepage derivative-drift hotfix)
 **Asset:** EuraPlan.com
 **Route:** `/regulation/eu-ai-act/` (+ `/clock/` consistency)
 **Gate date:** 2026-08-20
@@ -8,12 +8,12 @@
 
 ---
 
-> **Final Publication Release staged — NOT yet live on `main`.** RC.2 is CLOSED / PASS.
-> The 14 Claim Objects are `workflow_state: published`, `validity_state: active`,
-> `_meta.published: true` in this release-state tree. That tree is staged for
-> atomic publication; public effectiveness occurs only when the exact release SHA
-> is merged to `main`. The corpus is not live merely because this commit exists
-> on the development branch. Merge is not yet authorized.
+> **Final Publication Release merged to `main`.** Release SHA
+> `1cc02e1a6fe3ec3764e7e234c6ffb943eebfea3e` via merge commit
+> `3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa`. RC.2 CLOSED / PASS. The 14 Claim
+> Objects are `workflow_state: published`, `validity_state: active`,
+> `_meta.published: true`. Post-Merge Live Verification initially failed on
+> homepage derivative drift; closed PASS after the homepage-only hotfix (DEC-046).
 
 ## 1. Gate results
 
@@ -117,6 +117,22 @@ RC.2 approved. Final Publication Release **AUTHORIZED**. Merge to `main` is **no
 
 **Overall after Final Publication Release commit: PASS (staged).** PR #24 remains open and unmerged. Merge to `main` = NOT YET AUTHORIZED.
 
+## 8. Post-Merge Live Verification (2026-08-20)
+
+Merge commit `3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa` (parents: prior `main` + release SHA `1cc02e1a6fe3ec3764e7e234c6ffb943eebfea3e`). Public effectiveness of the release-state tree begins at this merge.
+
+| # | Check | Result | Evidence |
+|---|---|---|---|
+| 1 | `main` contains release SHA `1cc02e1…` | **PASS** | `1cc02e1` is an ancestor of `origin/main` / merge commit `3322e6b`. |
+| 2 | Live / repo `claims.json`: `_meta.published: true`; 14/14 `published` / `active` | **PASS** | Canonical graph unchanged by hotfix; state transition intact. |
+| 3 | `/regulation/eu-ai-act/` — 14 anchors | **PASS** | Verified Claim Register anchors present; not modified by hotfix. |
+| 4 | `/clock/` — correct AI Act dates / scale | **PASS** | Canonical clock surface unchanged by hotfix. |
+| 5 | Homepage Regulatory Clock Preview ↔ canonical AI Act timeline | **FAIL → PASS** | **FAIL at first post-merge check:** homepage still showed 2024–2027 axis and Aug 2027 / Art. 113.4 while claims + AI Act page + `/clock/` were correct (derivative drift). **PASS after hotfix** `fix/homepage-ai-act-derivative-drift`: `index.html` only — five-year axis, calibrated markers, qualifications, Article 5 exception (2 Dec 2026) mentioned; Aug 2027 removed. No claim / source / AI Act page / `/clock/` change. |
+
+**Architectural follow-up (DEC-046):** `DERIVATIVE_SURFACE_REGISTRY.md` + `EVIDENCE_GRAPH_MODEL.md` §10 — any surface displaying Evidence Graph dates must derive from the canonical graph or be registered with a consistency check.
+
+**Overall after hotfix: Post-Merge Publication Verification = PASS / CLOSED.**
+
 ---
 
-*EuraPlan.com — EU AI Act Publish Gate audit (RC closed; Final Publication Release staged, not yet merged). Not a published website page.*
+*EuraPlan.com — EU AI Act Publish Gate audit (RC closed; Final Publication Release merged; Post-Merge Verification CLOSED after homepage derivative-drift hotfix). Not a published website page.*
