@@ -585,6 +585,18 @@ Each entry uses the following structure:
   - **R2.5 boundary:** page transformation is branch-only / non-public while claims remain `verified`; live HTML on `/regulation/gdpr/` that presents the graph as the public reference ships only in the R2.8 Publish Gate sequence (`publishable → published`)
   - **Next:** R2.5 page transformation only after R2.4 staging integrity + owner authorization
 
+### DEC-051
+- **Date:** 2026-08-20 (Sprint R2.4 closed; R2.5 opened)
+- **Status:** Active
+- **Decision:** (1) Close **R2.4 — Canonical Graph + Route Integration Preparation** as **CLOSED / PASS** after PR #36 merge `62856779053b5555040f7a3589f60d0f091ae979`, including post-fix Canonical Integrity Gate (clean edges; no mojibake; PR-wide text integrity). (2) Open **R2.5 — Branch-only Page Transformation**: build a GDPR Evidence Graph page candidate under `evidence-workbench/gdpr/page-candidate/` patterned after the AI Act Claim Register / co-render model, using `claims.canonical.staging.json` as propositional source. (3) R2.5 must **not** overwrite live `regulation/gdpr/index.html` on `main` as a public graph reference, must **not** create public `regulation/gdpr/claims.json`, must **not** promote claims beyond `verified`, and must **not** open Publish Gate. Live public HTML + public machine representation remain reserved for **R2.8**.
+- **Rationale:** Page design can proceed against a frozen verified staging graph, but publication discipline requires separating candidate work from live route effect until Publish Gate.
+- **Affected routes/files:** `evidence-workbench/gdpr/R2_5_PAGE_CANDIDATE.md`; `evidence-workbench/gdpr/page-candidate/*`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** EVIDENCE_GRAPH_MODEL.md; PAGE_BLUEPRINT_STANDARD.md; REFERENCE_GRADE_ROUTE_STANDARD.md; DISCLOSURE_BOUNDARY.md; DEC-050
+- **Reversal conditions:** Superseding DEC to allow live GDPR HTML graph publication or public `claims.json` before R2.8
+- **Notes:**
+  - **R2.4 integration merge:** `62856779053b5555040f7a3589f60d0f091ae979`
+  - **Co-render blockers remain:** 24↔25, 32↔33, 35↔36, 37↔38; Chapter V related hierarchy
+
 ---
 
 ## 4. Superseded / Rejected Decisions
