@@ -114,7 +114,7 @@ Country Evidence Objects (`EP-CTR-CLM-*` or successor) only after a designed mod
 ### Wave 3 — Supporting System Pages
 Homepage, Enter, Clock, Sources, Governance, Acquire, Funding, Sector — conceptual/functional depth appropriate to role (not legal depth for its own sake).
 
-**Upgrade order after R1 audit:** GDPR → Data Act → CRA → France → Germany → Netherlands → AI/SaaS → Horizon Europe (adjust if R1 scores dictate).
+**Upgrade order after R1 audit:** GDPR → Data Act → CRA → EERS → Protocol → France → Germany → Netherlands → AI/SaaS → Horizon Europe (adjust if R1 scores dictate).
 
 ---
 
