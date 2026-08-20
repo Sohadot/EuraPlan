@@ -1,12 +1,12 @@
 {
     "_meta":  {
                   "batch":  "GDPR — Sprint R2.2 Draft Mint (identity fixation; NOT verified; NOT published)",
-                  "status":  "draft mint complete — 31/31 workflow_state=draft; validity_state=null; last_verified_at=null; confidence=Pending; published=false. Human literal verification is R2.3 — NOT started.",
+                  "status":  "R2.2 draft mint retained. R2.3 Batch V1 (EP-CLM-000015..000020): human literal verification PASS â€” workflow_state=verified; confidence=Verified; last_verified_at=2026-08-20. Remaining EP-CLM-000021..000045 still draft. published=false. HTML blocked. Publish Gate NOT OPEN.",
                   "location_note":  "evidence-workbench/gdpr/claims.minted.draft.json — workbench only. Canonical /regulation/gdpr/claims.json must NOT be created until Publish Gate path.",
                   "published":  false,
-                  "phase":  "R2.2",
+                  "phase":  "R2.3 / V1 complete for IDs 000015-000020; further verification batches pending",
                   "minting":  "COMPLETE (draft identities only)",
-                  "verification":  "NOT YET",
+                  "verification":  "IN PROGRESS â€” V1 PASS (6/31); V2+ not started",
                   "html":  "BLOCKED",
                   "publish_gate":  "NOT OPEN",
                   "schema_version":  "EVIDENCE_GRAPH_MODEL.md v1.4",
@@ -22,7 +22,7 @@
                                       "DISCLOSURE_BOUNDARY.md",
                                       "REFERENCE_GRADE_ROUTE_STANDARD.md",
                                       "DEC-048",
-                    "DEC-049"
+                                      "DEC-049"
                                   ],
                   "notes":  [
                                 "Minting fixes identity, not truth-status. IDs are permanent; void+new ID if pre-publish proposition fails verification — never recycle.",
@@ -213,6 +213,20 @@
                                                                 "role":  "current-reading aid — NOT a replacement for the authentic Official Journal act (EP-SRC-000004), which remains the evidentiary basis",
                                                                 "retrieval_url":  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504"
                                                             }
+                                      },
+                  "verification_v1":  {
+                                          "batch":  "V1",
+                                          "date":  "2026-08-20",
+                                          "ids":  [
+                                                      "EP-CLM-000015",
+                                                      "EP-CLM-000016",
+                                                      "EP-CLM-000017",
+                                                      "EP-CLM-000018",
+                                                      "EP-CLM-000019",
+                                                      "EP-CLM-000020"
+                                                  ],
+                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V1_2026-08-20.md",
+                                          "result":  "6/6 PASS (000016 non-material encoding amend then PASS)"
                                       }
               },
     "claims":  [
@@ -238,14 +252,14 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "Low",
                        "affected_eers_dimensions":  [
                                                         "DIM-01"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
@@ -258,7 +272,7 @@
                        "id":  "EP-CLM-000016",
                        "candidate_key":  "GDPR-PROP-CAND-02",
                        "display_label":  "GDPR · 02 · Article 99(1)",
-                       "claim":  "Regulation (EU) 2016/679 entered into force on the twentieth day following its publication in the Official Journal (published 4 May 2016 â†’ 24 May 2016).",
+                       "claim":  "Regulation (EU) 2016/679 entered into force on the twentieth day following its publication in the Official Journal (published 4 May 2016 -\u003e 24 May 2016).",
                        "jurisdiction":  "EU",
                        "actor":  null,
                        "effective_date":  "2016-05-24",
@@ -276,14 +290,14 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "Low",
                        "affected_eers_dimensions":  [
                                                         "DIM-01"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
@@ -314,14 +328,14 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "High",
                        "affected_eers_dimensions":  [
                                                         "DIM-01"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
@@ -346,15 +360,15 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "High",
                        "affected_eers_dimensions":  [
                                                         "DIM-01",
                                                         "DIM-02"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
@@ -379,15 +393,15 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "High",
                        "affected_eers_dimensions":  [
                                                         "DIM-01",
                                                         "DIM-02"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
@@ -412,15 +426,15 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "workflow_state":  "draft",
+                       "workflow_state":  "verified",
                        "validity_state":  null,
-                       "confidence":  "Pending",
+                       "confidence":  "Verified",
                        "claim_risk":  "High",
                        "affected_eers_dimensions":  [
                                                         "DIM-01",
                                                         "DIM-02"
                                                     ],
-                       "last_verified_at":  null,
+                       "last_verified_at":  "2026-08-20",
                        "supersedes":  null,
                        "superseded_by":  null,
                        "corrects":  null,
