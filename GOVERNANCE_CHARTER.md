@@ -101,6 +101,7 @@ Created in Sprint 1 (Sovereign Operating Governance Layer). These documents gove
 | CONTENT_QUALITY_STANDARD.md | Required page elements, prohibited patterns, audience-layer markers |
 | REFERENCE_CORPUS_GOVERNANCE.md | Corpus layer architecture, page lifecycle, expansion wave sequencing |
 | PAGE_BLUEPRINT_STANDARD.md | Required fields, internal links, and source requirements per page type |
+| REFERENCE_GRADE_ROUTE_STANDARD.md | Mandatory six-layer reference-grade depth for all indexable published routes (DEC-047) |
 | STRUCTURED_DATA_POLICY.md | JSON-LD schema types, OG tags, internal ontology data attributes |
 | AGENT_READABILITY_POLICY.md | Heading hierarchy, lead summaries, machine-extractable content structure |
 | PERFORMANCE_BUDGET.md | Core Web Vitals targets, page weight budgets, font and image rules |

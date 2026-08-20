@@ -1,10 +1,13 @@
 {
   "_meta": {
-    "batch": "EU AI Act — canonical claim graph (Final Publication Release; published/active in the staged release-state tree)",
-    "status": "published / active (Final Publication Release) — human-verified 2026-08-19; freshness/publication check 2026-08-20; release-state tree staged on the branch for atomic publication; public effectiveness begins when this exact SHA is merged to main",
+    "batch": "EU AI Act — canonical claim graph (EU AI Act v1; published / active — live on main)",
+    "status": "published / active — live on main since 2026-08-20; human-verified 2026-08-19; freshness/publication check 2026-08-20",
     "location_note": "regulation/eu-ai-act/claims.json — canonical machine-readable claim graph for the EU AI Act reference route. Supersedes evidence-workbench/eu-ai-act/claims.verified.json as the publication candidate; the workbench copy remains the verification record.",
     "published": true,
-    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.3 (normalized; dual-role edges)",
+    "live_on_main_since": "2026-08-20",
+    "release_sha": "1cc02e1a6fe3ec3764e7e234c6ffb943eebfea3e",
+    "merge_sha": "3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa",
+    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.4 (normalized; dual-role edges; derivative surfaces)",
     "governed_by": [
       "EVIDENCE_GRAPH_MODEL.md",
       "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
@@ -20,7 +23,7 @@
       "No object supersedes a prior EP-CLM-*; legacy prose held NO claim identity (no manufactured history).",
       "Dual-role edges (v1.3 §4.1): where 2026/1744 states the current value it carries a supports edge in addition to its amends edge (003, 007, 008, 010, 012, 014).",
       "Article 111(4) remains deferred to a later batch.",
-      "This canonical graph is the Final Publication Release: workflow_state=published, validity_state=active, _meta.published=true. The release-state tree is staged on the branch for atomic publication. Spec meaning: published = Live in the corpus and active = public validity after publication — both take public effect only when this exact release SHA is merged to main. This file is not live merely by existing on the development branch."
+      "EU AI Act v1 is live on main: workflow_state=published, validity_state=active, _meta.published=true. Provenance: release SHA 1cc02e1a6fe3ec3764e7e234c6ffb943eebfea3e merged to main via 3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa on 2026-08-20. Post-merge homepage derivative-drift hotfix and sitemap freshness alignment are separate from this claim graph."
     ],
     "generated": "2026-08-20",
     "source_registry": {
@@ -53,7 +56,7 @@
         "role": "current-reading aid — NOT a replacement for the authentic Official Journal acts (EP-SRC-000001, EP-SRC-000002), which remain the evidentiary basis"
       }
     },
-    "publish_gate": "Final Publication Release authorized after RC.2 PASS. Release-state commit on branch claude/euraplan-strategic-digital-asset-sr2h1e. Public effectiveness begins when this exact release SHA is merged to main."
+    "publish_gate": "EU AI Act v1 live on main since 2026-08-20. Release SHA 1cc02e1a6fe3ec3764e7e234c6ffb943eebfea3e; merge commit 3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa. Publish Gate CLOSED / PASS; claim propositions unchanged by post-merge housekeeping."
   },
   "claims": [
     {

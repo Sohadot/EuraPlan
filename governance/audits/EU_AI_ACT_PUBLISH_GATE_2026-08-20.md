@@ -133,6 +133,10 @@ Merge commit `3322e6befd9e3f0c86fc993cad0d4fbe4d4f15aa` (parents: prior `main` +
 
 **Overall after hotfix: Post-Merge Publication Verification = PASS / CLOSED.**
 
+## 9. Post-merge `_meta` live-status housekeeping (2026-08-20)
+
+Metadata-only cleanup of `claims.json` `_meta` (DEC-047). Pre-merge “staged / effectiveness begins at merge” wording replaced with **published / active — live on main since 2026-08-20**, with `release_sha` / `merge_sha` retained as provenance. **No** claim proposition, workflow_state, validity_state, source, or `qualified_by` change. Publish Gate remains CLOSED / PASS.
+
 ---
 
-*EuraPlan.com — EU AI Act Publish Gate audit (RC closed; Final Publication Release merged; Post-Merge Verification CLOSED after homepage derivative-drift hotfix). Not a published website page.*
+*EuraPlan.com — EU AI Act Publish Gate audit (RC closed; Final Publication Release merged; Post-Merge Verification CLOSED; `_meta` live-status housekeeping recorded). Not a published website page.*
