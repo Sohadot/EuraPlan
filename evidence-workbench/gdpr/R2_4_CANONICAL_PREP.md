@@ -48,11 +48,20 @@ Those belong to later phases (R2.5–R2.8), after staging integrity and co-rende
 | Gate | Rule |
 |---|---|
 | Public `claims.json` | FORBIDDEN until Publish Gate path |
-| HTML rewrite | FORBIDDEN until R2.5+ |
+| HTML rewrite on live `/regulation/gdpr/` | FORBIDDEN in R2.4 and R2.5 until Publish Gate sequence |
 | Publish Gate | NOT OPEN |
 | Co-render pairs | Must remain design-blocking: 24↔25, 32↔33, 35↔36, 37↔38 |
 | Chapter V | related hierarchy, not `qualified_by` equivalence |
 | AI Act gold | Untouched except real freshness events |
+| Claim→Source edges | Exactly `source_id` + `provision_locator` + `relationship` — no edge-local `note` (EVIDENCE_GRAPH_MODEL.md §4) |
+
+### R2.5 boundary (fixed before page work)
+
+**R2.5 produces a page transformation candidate that is branch-only / non-public.** It must not merge live HTML onto `main` that presents these claims as a public reference surface while they remain `workflow_state=verified` (pre-publication).
+
+Public HTML on `/regulation/gdpr/` that renders the Evidence Graph as the live reference may ship only inside the **Publish Gate sequence (R2.8)** when claims move `publishable → published` and `_meta.published` becomes true — consistent with DEC-050.
+
+R2.5 may still design citation anchors, co-render layout, and hierarchy presentation on a feature branch; it must not treat that branch as a public publication event.
 
 ---
 
@@ -73,10 +82,10 @@ When a later phase authorizes public machine representation:
 
 R2.4 may close when:
 
-1. Staging graph integrity PASS (31 IDs; edges; sources; published=false)
+1. Staging graph integrity PASS (31 IDs; edges; sources; published=false; no mojibake; no illegal edge keys)
 2. Co-render / hierarchy constraints documented as Publish Gate blockers
 3. Route alternate registration plan written (not executed)
-4. Owner authorizes R2.5 page transformation work **without** premature public `claims.json` unless separately decided
+4. Owner authorizes R2.5 **branch-only** page transformation work — with explicit understanding that live public HTML + public `claims.json` wait for R2.8 Publish Gate
 
 ---
 

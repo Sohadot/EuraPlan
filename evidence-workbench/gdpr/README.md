@@ -9,7 +9,7 @@
 
 ## Hard rules for this sprint
 
-1. **No HTML rewrite** of `/regulation/gdpr/` until R2.5 after verified claims exist and R2.4 staging is ready.
+1. **No live HTML rewrite** of `/regulation/gdpr/` until the Publish Gate sequence (R2.8). R2.5 may produce a **branch-only / non-public** page candidate only.
 2. **No** public `/regulation/gdpr/claims.json` until Publish Gate path (R2.8). R2.4 staging stays in workbench.
 3. **Minting fixes identity, not truth-status.** IDs `EP-CLM-000015`…`EP-CLM-000045` are permanently reserved; never recycle.
 4. **No** parallel Data Act / country / expansion work.

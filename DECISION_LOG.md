@@ -582,6 +582,7 @@ Each entry uses the following structure:
 - **Reversal conditions:** Superseding DEC to reopen R2.3 verification, to place public GDPR `claims.json` before Publish Gate, or to rewrite GDPR HTML in R2.4
 - **Notes:**
   - **R2.3 integration merge:** `d02979b5bf48741bc1f2563ea5ee117877778d0f`
+  - **R2.5 boundary:** page transformation is branch-only / non-public while claims remain `verified`; live HTML on `/regulation/gdpr/` that presents the graph as the public reference ships only in the R2.8 Publish Gate sequence (`publishable → published`)
   - **Next:** R2.5 page transformation only after R2.4 staging integrity + owner authorization
 
 ---
