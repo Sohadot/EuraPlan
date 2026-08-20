@@ -163,7 +163,7 @@ A page may be pushed to `publication_status: published` only when all of the fol
 7. PAGE_BLUEPRINT_STANDARD.md — blueprint followed for page type
 8. STRUCTURED_DATA_POLICY.md — JSON-LD validated
 9. Internal link check — at least two outbound, at least one inbound
-10. Sitemap updated and validated
+10. Sitemap updated and validated — when an indexable governed route receives a substantive publication change, its `sitemap.xml` `<lastmod>` must be updated in the same release to the date of that change. Do not bump unrelated URLs. Alternate machine representations (e.g. `claims.json` with `sitemap: false`) are never added to the sitemap.
 
 ---
 

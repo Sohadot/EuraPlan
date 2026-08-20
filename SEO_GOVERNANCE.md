@@ -77,7 +77,7 @@ Every public page must include:
 - Diagnostic query states are never in `sitemap.xml`
 - Draft and planned routes are never in `sitemap.xml`
 - Submitted to Google Search Console after every structural update
-- `lastmod` dates are accurate and updated when content changes
+- `lastmod` dates are accurate and updated when content changes — same-release rule: a substantive change to an indexable governed route updates that URL's `<lastmod>` in the same release; unrelated URLs are not bumped; `sitemap: false` alternates (e.g. claim graphs) stay out of the sitemap (see `SCALING_AND_AUTOMATION_POLICY.md` §11)
 
 ---
 
