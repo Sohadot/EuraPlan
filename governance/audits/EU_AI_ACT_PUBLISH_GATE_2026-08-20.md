@@ -50,9 +50,37 @@
 - `DECISION_LOG.md` (DEC-045)
 - `governance/audits/EU_AI_ACT_PUBLISH_GATE_2026-08-20.md` (this record)
 
-## 4. Remaining to go live (separate gate — owner)
-RC review → merge PR #24 to `main` → only then `publishable → published` / `validity_state: active`. Routes/sitemap registration of `claims.json` and any hreflang/multilingual work are out of scope for this AI-Act-only RC.
+## 4. Remaining to go live (separate gate — owner) — corrected order
+
+If `main` is the publication source, merging **before** flipping state would make the
+HTML and `claims.json` live while the graph still says `publishable` /
+`validity_state: null` — the public reality would run ahead of the governed state.
+Correct order after RC.1 PASS:
+
+1. Final **release-state commit on the branch**: all 14 → `workflow_state: published`,
+   `validity_state: active`, `_meta.published: true`.
+2. Merge **that same SHA** to `main`.
+3. Live verification of euraplan.com.
+
+Public effectiveness begins at the merge to `main`; there is no moment where `main`
+serves a live corpus in a `publishable` state. Routes/sitemap registration of
+`claims.json` and any hreflang/multilingual work are out of scope for this
+AI-Act-only RC.
+
+## 5. RC.1 — Final Consistency Closure (2026-08-20)
+
+Four bounded fixes after RC review; no claim proposition, ID, source edge, or
+`qualified_by` changed.
+
+| Fix | Result |
+|---|---|
+| `claims.json` `_meta` self-contradiction (stale "verified" note; false "publishable is a CLOSED gate — no claims.json/anchors/HTML" note) | **PASS** — removed; `_meta` now describes the RC only; `generated: 2026-08-20`. |
+| Legacy `Article 113(2)` on the AI Act page (GPAI role panel + matrix question) | **PASS** — both corrected to `Article 113, third paragraph, point (b)`, linked to `#ep-clm-000004`; no `113(2)` remains. |
+| `/clock/` over-broad high-risk wording + incomplete ARIA | **PASS** — role panel narrowed to "Chapter III Sections 1–3, except Article 6(5) …"; AI Act lane `aria-label` now includes the 2 Dec 2026 Article 5 exception and marks 2 Aug 2026 as qualified. |
+| `/clock/` axis/track visual regression (6 axis cells vs 4-period CSS grid) | **PASS** — scoped, opt-in modifiers `clock-preview-axis--five-years` (`repeat(5,1fr)`) and `clock-lane-track--five-years` (20% gridlines) added; global 4-period grid unchanged for all other components/pages. |
+
+Overall after RC.1: **PASS (Release Candidate).** Still not merged; still `publishable`, not `published`/`active`.
 
 ---
 
-*EuraPlan.com — EU AI Act Publish Gate audit (Release Candidate). Not a published website page.*
+*EuraPlan.com — EU AI Act Publish Gate audit (Release Candidate, incl. RC.1). Not a published website page.*

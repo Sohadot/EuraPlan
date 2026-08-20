@@ -1078,6 +1078,12 @@ main { flex: 1; }
     linear-gradient(90deg, var(--blue-border) 1px, transparent 1px) 0 0 / 25% 100%;
   padding: 8px 0;
 }
+/* Publish Gate RC.1 — opt-in five-year (2024–2028) preview grid; used only where a lane spans to 2028 (EU AI Act clock). Default four-period grid elsewhere is unchanged. */
+.clock-preview-axis--five-years { grid-template-columns: 140px repeat(5, 1fr); }
+.clock-lane-track--five-years {
+  background:
+    linear-gradient(90deg, var(--blue-border) 1px, transparent 1px) 0 0 / 20% 100%;
+}
 .clock-marker {
   position: absolute;
   top: 50%;
