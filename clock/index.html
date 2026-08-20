@@ -29,7 +29,7 @@
     "description": "EuraPlan Regulatory Entry Clock reference surface. Maps the timeline of applicable EU regulations by company type, sector, and product for non-EU entry planning — not legal advice or live deadline certification.",
     "url": "https://euraplan.com/clock/",
     "inLanguage": "en",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-08-20",
     "isPartOf": { "@type": "WebSite", "name": "EuraPlan", "url": "https://euraplan.com/" }
   }
   </script>
@@ -75,7 +75,7 @@
       <div class="telemetry-cell"><dt>Audience</dt><dd>Non-EU companies mapping EU regulatory timelines</dd></div>
       <div class="telemetry-cell"><dt>Decision Problem</dt><dd>Which regulations apply, and when do they enforce?</dd></div>
       <div class="telemetry-cell"><dt>Source Requirement</dt><dd>High — Tier 1 regulation texts required</dd></div>
-      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>2026-08-20</dd></div>
     </dl>
   </div>
 
@@ -114,7 +114,7 @@
   <section class="page-section" aria-labelledby="clock-lanes-heading">
     <div class="section-header">
       <span class="section-eyebrow">Timeline Lanes — Source-Confirmed Dates</span>
-      <h2 class="section-title" id="clock-lanes-heading">Regulatory Phase Lanes (2024–2027)</h2>
+      <h2 class="section-title" id="clock-lanes-heading">Regulatory Phase Lanes (2024–2028)</h2>
       <p class="section-body">Horizontal lanes show established phases from official EU regulation texts. Yellow markers indicate enforcement decision points.</p>
     </div>
     <div class="regulatory-clock-preview" role="region" aria-label="EU regulation timeline lanes">
@@ -123,16 +123,17 @@
         <span class="clock-preview-note">Dates cited on this page match list detail below</span>
       </div>
       <div class="clock-preview-axis" aria-hidden="true">
-        <span>Regulation</span><span>2024</span><span>2025</span><span>2026</span><span>2027</span>
+        <span>Regulation</span><span>2024</span><span>2025</span><span>2026</span><span>2027</span><span>2028</span>
       </div>
       <div class="clock-lane">
         <div class="clock-lane-label">EU AI Act<small><a href="/regulation/eu-ai-act/">EP-REG-001</a></small></div>
-        <div class="clock-lane-track" aria-label="EU AI Act: Aug 2024 entry; Feb 2025 prohibited practices; Aug 2025 GPAI; Aug 2026 full; Aug 2027 Annex I">
+        <div class="clock-lane-track" aria-label="EU AI Act (Reg 2024/1689 as amended by 2026/1744): Aug 2024 entry into force; Feb 2025 Chapters I-II incl. prohibited practices; Aug 2025 GPAI + governance; Aug 2026 general application; Dec 2027 high-risk Annex III; Aug 2028 high-risk Annex I">
           <span class="clock-marker" style="left: 2%;">Aug 2024</span>
-          <span class="clock-marker clock-marker--signal" style="left: 18%;">Feb 2025</span>
-          <span class="clock-marker clock-marker--signal" style="left: 38%;">Aug 2025</span>
-          <span class="clock-marker clock-marker--signal" style="left: 62%;">Aug 2026</span>
-          <span class="clock-marker clock-marker--signal" style="left: 88%;">Aug 2027</span>
+          <span class="clock-marker clock-marker--signal" style="left: 16%;">Feb 2025</span>
+          <span class="clock-marker clock-marker--signal" style="left: 32%;">Aug 2025</span>
+          <span class="clock-marker clock-marker--signal" style="left: 50%;">Aug 2026</span>
+          <span class="clock-marker clock-marker--signal" style="left: 80%;">Dec 2027</span>
+          <span class="clock-marker clock-marker--signal" style="left: 96%;">Aug 2028</span>
         </div>
       </div>
       <div class="clock-lane">
@@ -171,7 +172,7 @@
     <div class="role-panels">
       <div class="role-panel">
         <h3 class="role-panel-title">AI Act — Provider</h3>
-        <p class="role-panel-desc">Places high-risk AI systems on the EU market. Annex III obligations phase in from August 2, 2026 (Art. 113.3).</p>
+        <p class="role-panel-desc">Places high-risk AI systems on the EU market. Annex III / Article 6(2) high-risk obligations apply from 2 December 2027 (Art. 113(3)(c)(i), as amended by Regulation (EU) 2026/1744); Annex I / Article 6(1) from 2 August 2028.</p>
       </div>
       <div class="role-panel">
         <h3 class="role-panel-title">AI Act — Deployer</h3>
@@ -246,11 +247,15 @@
           <div class="clock-reg-id">Regulation (EU) 2024/1689 — EUR-Lex</div>
         </div>
         <div class="clock-reg-dates">
-          <strong>Entry into force:</strong> August 1, 2024<br>
-          <span class="clock-date-signal">February 2, 2025:</span> Prohibited AI practices (Chapter II) apply — 6 months after entry into force (Art. 113.1)<br>
-          <span class="clock-date-signal">August 2, 2025:</span> GPAI model obligations and governance framework apply — 12 months (Art. 113.2)<br>
-          <span class="clock-date-signal">August 2, 2026:</span> Full application — high-risk AI under Annex III, all remaining obligations (Art. 113.3)<br>
-          <span class="clock-date-signal">August 2, 2027:</span> High-risk AI under Annex I (existing EU harmonisation legislation) (Art. 113.4)
+          Dates reflect Article 113 as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI). Canonical graph: <a href="/regulation/eu-ai-act/claims.json">claims.json</a>.<br>
+          <strong>Entry into force:</strong> 1 August 2024<br>
+          <span class="clock-date-signal">2 February 2025:</span> Chapters I and II apply (incl. prohibited practices) — default date, qualified by the new Article 5 exception from 2 December 2026 (Art. 113(3)(a))<br>
+          <span class="clock-date-signal">2 August 2025:</span> GPAI model obligations and governance framework apply (Art. 113(3)(b))<br>
+          <span class="clock-date-signal">27 July 2026:</span> Articles 102–110 apply (Art. 113(3)(d), added by 2026/1744)<br>
+          <span class="clock-date-signal">2 August 2026:</span> general application — subject to the staggered exceptions in Article 113 (not an absolute date for all provisions)<br>
+          <span class="clock-date-signal">2 December 2026:</span> new Article 5 prohibitions (points (ba)/(bb), scope paras 1a/1b) apply<br>
+          <span class="clock-date-signal">2 December 2027:</span> high-risk AI — Chapter III Sections 1–3 (except Art. 6(5)) under Article 6(2) and Annex III (Art. 113(3)(c)(i))<br>
+          <span class="clock-date-signal">2 August 2028:</span> high-risk AI — Chapter III Sections 1–3 (except Art. 6(5)) under Article 6(1) and Annex I (Art. 113(3)(c)(ii))
         </div>
       </li>
       <li class="clock-reg-item">

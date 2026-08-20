@@ -33,6 +33,10 @@ and a "Last Updated" date.
 - [EU Data Act](https://euraplan.com/regulation/eu-data-act/) (Regulation (EU) 2023/2854)
 - [Cyber Resilience Act](https://euraplan.com/regulation/cyber-resilience-act/)
 
+## Machine-readable claim graphs
+
+- [EU AI Act — canonical claim graph](https://euraplan.com/regulation/eu-ai-act/claims.json): the machine-readable canonical claim graph for the EU AI Act reference page — governed Evidence Objects with opaque stable identifiers (`EP-CLM-*`), source/provision locators, qualification links, and verification dates. It mirrors the visible Verified Claim Register on `/regulation/eu-ai-act/`. This is a static reference file, not an API, and implies no external endorsement.
+
 ## Governance and sourcing
 
 - [Sources & source policy](https://euraplan.com/sources/): tiering and verification of every claim.
