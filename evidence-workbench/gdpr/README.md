@@ -1,16 +1,16 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** Open — R2.3 V5 content complete (31/31 verified pending V5 Integration Gate)
-**Opened:** 2026-08-20
-**Branch:** `sprint-r2-gdpr-r2-3-v5-verification`
-**Canonical target (later):** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)
-**Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-048; DEC-049; DISCLOSURE_BOUNDARY.md
+**Status:** Open — **R2.4** Canonical Graph + Route Integration Preparation  
+**Opened:** 2026-08-20  
+**Branch:** `sprint-r2-gdpr-r2-4-canonical-prep`  
+**Canonical target (later):** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)  
+**Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-048; DEC-049; DEC-050; DISCLOSURE_BOUNDARY.md
 
 ---
 
 ## Hard rules for this sprint
 
-1. **No HTML rewrite** of `/regulation/gdpr/` until R2.4 after verified claims exist.
-2. **No** `/regulation/gdpr/claims.json` until after human verification + Publish Gate path.
+1. **No HTML rewrite** of `/regulation/gdpr/` until R2.5 after verified claims exist and R2.4 staging is ready.
+2. **No** public `/regulation/gdpr/claims.json` until Publish Gate path (R2.8). R2.4 staging stays in workbench.
 3. **Minting fixes identity, not truth-status.** IDs `EP-CLM-000015`…`EP-CLM-000045` are permanently reserved; never recycle.
 4. **No** parallel Data Act / country / expansion work.
 5. Claim count follows **material truth** for non-EU entry planning — not a template.
@@ -27,8 +27,8 @@
 | R2.0 | Source & Claim Discovery | **CLOSED / PASS** |
 | R2.1 | Claim Map & Falsification | **CLOSED / PASS** |
 | R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS** |
-| R2.3 | Human Literal Verification | **V1–V5 content PASS (31/31)** — **V5 Integration Gate pending** |
-| R2.4 | Canonical graph + routes alternate | Not started — opens only after V5 Integration Gate |
+| R2.3 | Human Literal Verification | **CLOSED / PASS** — 31/31 on `main` @ `d02979b…` (PR #35) |
+| R2.4 | Canonical Graph + Route Integration Preparation | **OPEN** |
 | R2.5 | Page transformation | Not started |
 | R2.6 | Decision utility layer | Hints in claim map; deepen at page stage |
 | R2.7 | Citation + machine + llms/routes/sitemap | Not started |
@@ -44,8 +44,10 @@
 | `SOURCE_REGISTRY.minted.draft.json` | R2.2 pinned sources + freshness watch |
 | `CLAIM_CANDIDATES.draft.md` | R2.0 discovery intake |
 | `CLAIM_MAP_R2_1.draft.json` | R2.1 truth filter |
-| `claims.minted.draft.json` | Minted identities — **31/31 verified** after V1–V5 (pending V5 merge) |
-| `VERIFICATION_V1_2026-08-20.md` … `VERIFICATION_V5_2026-08-20.md` | R2.3 literal verification records |
+| `claims.minted.draft.json` | Verified mint + provenance record (31/31) |
+| `claims.canonical.staging.json` | **R2.4** canonical-shaped staging candidate (workbench only) |
+| `VERIFICATION_V1`…`V5_2026-08-20.md` | R2.3 literal verification records |
+| `R2_4_CANONICAL_PREP.md` | R2.4 scope, gates, route-integration checklist |
 | `README.md` | This status note |
 
 ---
@@ -58,16 +60,12 @@
 
 **Sources:** `EP-SRC-000004` (OJ `32016R0679`); `EP-SRC-000005` (consolidated `02016R0679-20160504`).
 
-**Qualification edges (`qualified_by`):**
-- `000024` → `000025` (Art. 27)
-- `000032` → `000033` (Art. 30)
-- `000035` → `000036` (Art. 33)
-- `000037` → `000038` (Art. 34)
+**Qualification edges (`qualified_by`):** 24→25 · 32→33 · 35→36 · 37→38  
 
-**Chapter V related hierarchy (not `qualified_by`):**
-- `000042`/`000043`/`000044` → related pathway to `000041`
+**Chapter V related hierarchy (not `qualified_by`):** 041 ← 042 ← 043 ← 044
 
-`_meta.published=false`; HTML blocked; GDPR Publish Gate **NOT OPEN**.
+`_meta.published=false`; HTML blocked; GDPR Publish Gate **NOT OPEN**.  
+**No** public `regulation/gdpr/claims.json`.
 
 ---
 

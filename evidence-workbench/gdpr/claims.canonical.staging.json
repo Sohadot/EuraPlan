@@ -1,192 +1,40 @@
 {
     "_meta":  {
-                  "batch":  "GDPR — Sprint R2.2 Draft Mint (identity fixation; NOT verified; NOT published)",
-                  "location_note":  "evidence-workbench/gdpr/claims.minted.draft.json — workbench only. Canonical /regulation/gdpr/claims.json must NOT be created until Publish Gate path.",
+                  "batch":  "GDPR â€” R2.4 canonical staging candidate (NOT public; NOT published)",
+                  "status":  "Workbench staging graph derived from claims.minted.draft.json after R2.3 PASS. Shape aligned toward regulation/eu-ai-act/claims.json field set. Must NOT be copied to /regulation/gdpr/claims.json until later Publish Gate path (R2.8).",
+                  "location_note":  "evidence-workbench/gdpr/claims.canonical.staging.json â€” Class 2 workbench only",
                   "published":  false,
-                  "minting":  "COMPLETE (draft identities only)",
+                  "phase":  "R2.4",
+                  "target_public_path":  "/regulation/gdpr/claims.json",
+                  "target_route":  "/regulation/gdpr/",
+                  "route_id":  "EP-REG-002",
+                  "schema_version":  "EVIDENCE_GRAPH_MODEL.md v1.4",
+                  "claim_count":  31,
+                  "id_range":  "EP-CLM-000015..EP-CLM-000045",
+                  "source_of_truth_for_propositions":  "evidence-workbench/gdpr/claims.minted.draft.json + VERIFICATION_V1..V5",
                   "html":  "BLOCKED",
                   "publish_gate":  "NOT OPEN",
-                  "schema_version":  "EVIDENCE_GRAPH_MODEL.md v1.4",
-                  "id_range":  "EP-CLM-000015..EP-CLM-000045 (31 IDs permanently reserved/burned for these propositions)",
-                  "source_pins":  "EP-SRC-000004 (authentic OJ 32016R0679); EP-SRC-000005 (consolidated reading aid 02016R0679-20160504)",
-                  "no_generic_edpb_commission_portfolio":  true,
+                  "routes_json_alternate":  "NOT YET â€” register only when public claims.json is authorized",
+                  "llms_txt":  "NOT YET",
+                  "sitemap":  "NOT YET â€” claims.json never in sitemap",
+                  "co_render_blocking_pairs":  [
+                                                   "EP-CLM-000024 + EP-CLM-000025",
+                                                   "EP-CLM-000032 + EP-CLM-000033",
+                                                   "EP-CLM-000035 + EP-CLM-000036",
+                                                   "EP-CLM-000037 + EP-CLM-000038"
+                                               ],
+                  "chapter_v_related_hierarchy":  "EP-CLM-000041 \u003c- 000042 \u003c- 000043 \u003c- 000044 (related_claims, not qualified_by)",
                   "governed_by":  [
                                       "EVIDENCE_GRAPH_MODEL.md",
                                       "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
                                       "SOURCE_POLICY.md",
                                       "CLAIM_POLICY.md",
-                                      "FRESHNESS_ENGINE.md",
+                                      "ROUTE_GOVERNANCE.md",
                                       "DISCLOSURE_BOUNDARY.md",
                                       "REFERENCE_GRADE_ROUTE_STANDARD.md",
-                                      "DEC-048",
-                                      "DEC-049"
+                                      "DEC-050"
                                   ],
-                  "notes":  [
-                                "Minting fixes identity, not truth-status. IDs are permanent; void+new ID if pre-publish proposition fails verification — never recycle.",
-                                "qualified_by used only for true qualification pairs (27, 30, 33, 34). Chapter V uses related_claims hierarchy notes, not qualified_by.",
-                                "Art. 37 modelled as trigger disjunction (a)/(b)/(c) — no universal default duty claim.",
-                                "No EP-SRC for generic Commission overview or EDPB guidelines portfolio. Pin specific instruments only if a later claim needs clarification at verification.",
-                                "Deferred unminted: Art. 3(3), Art. 9, dynamic adequacy country list, broad SA architecture."
-                            ],
                   "generated":  "2026-08-20",
-                  "candidate_to_claim_id":  [
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-01",
-                                                    "permanent_claim_id":  "EP-CLM-000015"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-02",
-                                                    "permanent_claim_id":  "EP-CLM-000016"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-03",
-                                                    "permanent_claim_id":  "EP-CLM-000017"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-04",
-                                                    "permanent_claim_id":  "EP-CLM-000018"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-05",
-                                                    "permanent_claim_id":  "EP-CLM-000019"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-06",
-                                                    "permanent_claim_id":  "EP-CLM-000020"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-08",
-                                                    "permanent_claim_id":  "EP-CLM-000021"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-09",
-                                                    "permanent_claim_id":  "EP-CLM-000022"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-10",
-                                                    "permanent_claim_id":  "EP-CLM-000023"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-11a",
-                                                    "permanent_claim_id":  "EP-CLM-000024"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-11b",
-                                                    "permanent_claim_id":  "EP-CLM-000025"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-12",
-                                                    "permanent_claim_id":  "EP-CLM-000026"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-13a",
-                                                    "permanent_claim_id":  "EP-CLM-000027"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-13b",
-                                                    "permanent_claim_id":  "EP-CLM-000028"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-15",
-                                                    "permanent_claim_id":  "EP-CLM-000029"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-16",
-                                                    "permanent_claim_id":  "EP-CLM-000030"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-17",
-                                                    "permanent_claim_id":  "EP-CLM-000031"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-18a",
-                                                    "permanent_claim_id":  "EP-CLM-000032"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-18b",
-                                                    "permanent_claim_id":  "EP-CLM-000033"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-19",
-                                                    "permanent_claim_id":  "EP-CLM-000034"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-20a",
-                                                    "permanent_claim_id":  "EP-CLM-000035"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-20b",
-                                                    "permanent_claim_id":  "EP-CLM-000036"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-21a",
-                                                    "permanent_claim_id":  "EP-CLM-000037"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-21b",
-                                                    "permanent_claim_id":  "EP-CLM-000038"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-22",
-                                                    "permanent_claim_id":  "EP-CLM-000039"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-23",
-                                                    "permanent_claim_id":  "EP-CLM-000040"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-24",
-                                                    "permanent_claim_id":  "EP-CLM-000041"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-25",
-                                                    "permanent_claim_id":  "EP-CLM-000042"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-26",
-                                                    "permanent_claim_id":  "EP-CLM-000043"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-27",
-                                                    "permanent_claim_id":  "EP-CLM-000044"
-                                                },
-                                                {
-                                                    "candidate_key":  "GDPR-PROP-CAND-28",
-                                                    "permanent_claim_id":  "EP-CLM-000045"
-                                                }
-                                            ],
-                  "deferred_unminted":  [
-                                            {
-                                                "candidate_key":  "GDPR-PROP-CAND-07",
-                                                "reason":  "Art. 3(3) rare for typical non-EU SaaS entry",
-                                                "permanent_claim_id":  null
-                                            },
-                                            {
-                                                "candidate_key":  "GDPR-PROP-CAND-14",
-                                                "reason":  "Art. 9 special categories — mint when product context requires",
-                                                "permanent_claim_id":  null
-                                            },
-                                            {
-                                                "candidate_key":  "GDPR-PROP-CAND-25-DYNAMIC",
-                                                "reason":  "Dynamic adequacy country list needs Commission implementing-act pins + freshness contract",
-                                                "permanent_claim_id":  null
-                                            },
-                                            {
-                                                "candidate_key":  "GDPR-PROP-CAND-29",
-                                                "reason":  "Broad SA architecture — split later into minimal propositions if needed",
-                                                "permanent_claim_id":  null
-                                            }
-                                        ],
-                  "freshness_watch":  [
-                                          {
-                                              "instrument":  "Regulation (EU) 2025/2518",
-                                              "subject":  "Additional procedural rules for GDPR cross-border enforcement",
-                                              "noted_application":  "From 2 April 2027 (per EUR-Lex summary / instrument — confirm at verification of any future enforcement-layer claim)",
-                                              "disposition":  "watch_only",
-                                              "batch_1_impact":  "None — do not mix into EP-CLM-000015..000045",
-                                              "queue":  "GDPR Freshness Watch / related instruments — supervisory/enforcement deferred layer"
-                                          }
-                                      ],
                   "source_registry":  {
                                           "EP-SRC-000004":  {
                                                                 "instrument_id":  "EU-2016-679",
@@ -210,99 +58,11 @@
                                                                 "role":  "current-reading aid — NOT a replacement for the authentic Official Journal act (EP-SRC-000004), which remains the evidentiary basis",
                                                                 "retrieval_url":  "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504"
                                                             }
-                                      },
-                  "verification_v1":  {
-                                          "batch":  "V1",
-                                          "date":  "2026-08-20",
-                                          "ids":  [
-                                                      "EP-CLM-000015",
-                                                      "EP-CLM-000016",
-                                                      "EP-CLM-000017",
-                                                      "EP-CLM-000018",
-                                                      "EP-CLM-000019",
-                                                      "EP-CLM-000020"
-                                                  ],
-                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V1_2026-08-20.md",
-                                          "result":  "6/6 PASS (000016 non-material encoding amend then PASS)"
-                                      },
-                  "status":  "R2.3 Human Literal Verification CLOSED / PASS on main @ d02979b â€” 31/31 verified. R2.4 canonical preparation OPEN. published=false. HTML blocked. Publish Gate NOT OPEN. Minted workbench file remains verification/provenance record.",
-                  "phase":  "R2.4 â€” Canonical Graph + Route Integration Preparation",
-                  "verification":  "CLOSED / PASS â€” V1-V5 complete; 31/31 verified",
-                  "verification_v2":  {
-                                          "batch":  "V2",
-                                          "date":  "2026-08-20",
-                                          "ids":  [
-                                                      "EP-CLM-000021",
-                                                      "EP-CLM-000022",
-                                                      "EP-CLM-000023",
-                                                      "EP-CLM-000024",
-                                                      "EP-CLM-000025",
-                                                      "EP-CLM-000026"
-                                                  ],
-                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V2_2026-08-20.md",
-                                          "result":  "6/6 PASS; 000021, 000023, 000025 amended before verification; VOID 0",
-                                          "qualification_test":  "000024 qualified_by 000025 graph-level PASS; visible co-rendering remains blocking Publish Gate condition"
-                                      },
-                  "verification_v3":  {
-                                          "batch":  "V3",
-                                          "date":  "2026-08-20",
-                                          "ids":  [
-                                                      "EP-CLM-000027",
-                                                      "EP-CLM-000028",
-                                                      "EP-CLM-000029",
-                                                      "EP-CLM-000030",
-                                                      "EP-CLM-000031",
-                                                      "EP-CLM-000032",
-                                                      "EP-CLM-000033"
-                                                  ],
-                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V3_2026-08-20.md",
-                                          "result":  "7/7 PASS; 000029/000030/000031/000032/000033 amended before verification; VOID 0",
-                                          "qualification_test":  "000032 qualified_by 000033 graph-level PASS; visible co-rendering remains blocking Publish Gate condition"
-                                      },
-                  "verification_v4":  {
-                                          "batch":  "V4",
-                                          "date":  "2026-08-20",
-                                          "ids":  [
-                                                      "EP-CLM-000034",
-                                                      "EP-CLM-000035",
-                                                      "EP-CLM-000036",
-                                                      "EP-CLM-000037",
-                                                      "EP-CLM-000038",
-                                                      "EP-CLM-000039",
-                                                      "EP-CLM-000040"
-                                                  ],
-                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V4_2026-08-20.md",
-                                          "result":  "7/7 PASS; 000034/000036/000039/000040 amended before verification; VOID 0",
-                                          "qualification_tests":  [
-                                                                      "000035 qualified_by 000036 graph-level PASS",
-                                                                      "000037 qualified_by 000038 graph-level PASS",
-                                                                      "visible co-rendering remains blocking Publish Gate condition"
-                                                                  ]
-                                      },
-                  "verification_v5":  {
-                                          "batch":  "V5",
-                                          "date":  "2026-08-20",
-                                          "ids":  [
-                                                      "EP-CLM-000041",
-                                                      "EP-CLM-000042",
-                                                      "EP-CLM-000043",
-                                                      "EP-CLM-000044",
-                                                      "EP-CLM-000045"
-                                                  ],
-                                          "artifact":  "evidence-workbench/gdpr/VERIFICATION_V5_2026-08-20.md",
-                                          "result":  "5/5 PASS; 000041/000042/000044 amended before verification; VOID 0",
-                                          "chapter_v_hierarchy":  "related_claims pathway 041\u003c-042\u003c-043\u003c-044 â€” NOT qualified_by"
-                                      },
-                  "r2_3":  {
-                               "status":  "CLOSED / PASS",
-                               "integration_merge_sha":  "d02979b5bf48741bc1f2563ea5ee117877778d0f",
-                               "closed_at":  "2026-08-20"
-                           }
+                                      }
               },
     "claims":  [
                    {
                        "id":  "EP-CLM-000015",
-                       "candidate_key":  "GDPR-PROP-CAND-01",
                        "display_label":  "GDPR · 01 · Instrument title / CELEX 32016R0679",
                        "claim":  "The GDPR is Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016, CELEX 32016R0679.",
                        "jurisdiction":  "EU",
@@ -334,13 +94,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Any statement that a different instrument number is the GDPR.",
-                       "r2_1_planning_consequence":  "Correct instrument citation in entry planning references and vendor questionnaires."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000016",
-                       "candidate_key":  "GDPR-PROP-CAND-02",
                        "display_label":  "GDPR · 02 · Article 99(1)",
                        "claim":  "Regulation (EU) 2016/679 entered into force on the twentieth day following its publication in the Official Journal (published 4 May 2016 -\u003e 24 May 2016).",
                        "jurisdiction":  "EU",
@@ -372,13 +129,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Stating entry into force on 25 May 2018 (that is application, Art. 99(2)).",
-                       "r2_1_planning_consequence":  "Separates baseline-active status from future-phased regimes (e.g. AI Act Art. 113)."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000017",
-                       "candidate_key":  "GDPR-PROP-CAND-03",
                        "display_label":  "GDPR · 03 · Article 99(2)",
                        "claim":  "Regulation (EU) 2016/679 applies from 25 May 2018.",
                        "jurisdiction":  "EU",
@@ -410,13 +164,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Presenting GDPR general application as a future phased deadline after 25 May 2018.",
-                       "r2_1_planning_consequence":  "Entry plans treat GDPR as an already-active baseline, not a deferred phase."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000018",
-                       "candidate_key":  "GDPR-PROP-CAND-04",
                        "display_label":  "GDPR · 04 · Article 3(1)",
                        "claim":  "The GDPR applies to processing of personal data in the context of the activities of an establishment of a controller or a processor in the Union, regardless of whether the processing takes place in the Union.",
                        "jurisdiction":  "EU",
@@ -443,13 +194,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Claiming establishment presence is irrelevant once servers are outside the EU.",
-                       "r2_1_planning_consequence":  "EU entity/branch design changes GDPR exposure mapping."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000019",
-                       "candidate_key":  "GDPR-PROP-CAND-05",
                        "display_label":  "GDPR · 05 · Article 3(2)(a)",
                        "claim":  "The GDPR applies to processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union where the processing activities are related to the offering of goods or services to such data subjects in the Union, irrespective of whether a payment is required.",
                        "jurisdiction":  "EU",
@@ -476,13 +224,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Any contact with an EU person triggers GDPR regardless of offering.",
-                       "r2_1_planning_consequence":  "Go-to-market, pricing, language, and shipping design are entry gates for non-EU companies."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000020",
-                       "candidate_key":  "GDPR-PROP-CAND-06",
                        "display_label":  "GDPR · 06 · Article 3(2)(b)",
                        "claim":  "The GDPR applies to processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union where the processing activities are related to the monitoring of their behaviour as far as their behaviour takes place within the Union.",
                        "jurisdiction":  "EU",
@@ -509,13 +254,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Equating any cookie use anywhere with Art. 3(2)(b).",
-                       "r2_1_planning_consequence":  "Tracking/analytics/profiling architecture must be mapped before EU launch."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000021",
-                       "candidate_key":  "GDPR-PROP-CAND-08",
                        "display_label":  "GDPR · 08 · Article 4(7)",
                        "claim":  "Controller means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law.",
                        "jurisdiction":  "EU",
@@ -541,13 +283,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Equating hosting a database with automatic controllership.",
-                       "r2_1_planning_consequence":  "Role map precedes contracts and transfer tools."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000022",
-                       "candidate_key":  "GDPR-PROP-CAND-09",
                        "display_label":  "GDPR · 09 · Article 4(8)",
                        "claim":  "Processor means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.",
                        "jurisdiction":  "EU",
@@ -573,13 +312,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Labeling every SaaS vendor a processor without on-behalf analysis.",
-                       "r2_1_planning_consequence":  "Vendor classification drives Art. 28 contract and sub-processor graph."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000023",
-                       "candidate_key":  "GDPR-PROP-CAND-10",
                        "display_label":  "GDPR · 10 · Article 26(1)-(2)",
                        "claim":  "Where two or more controllers jointly determine the purposes and means of processing, they are joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance by arrangement, unless and in so far as those responsibilities are determined by Union or Member State law to which they are subject. The arrangement shall duly reflect their respective roles and relationships vis-à-vis data subjects, and its essence shall be made available to the data subject.",
                        "jurisdiction":  "EU",
@@ -605,13 +341,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Omitting joint-controller analysis for marketplaces/partnerships that jointly set purposes.",
-                       "r2_1_planning_consequence":  "Partnership/marketplace entry needs responsibility allocation before launch."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000024",
-                       "candidate_key":  "GDPR-PROP-CAND-11a",
                        "display_label":  "GDPR · 11a · Article 27(1)",
                        "claim":  "Where Article 3(2) applies, the controller or the processor shall designate in writing a representative in the Union.",
                        "jurisdiction":  "EU",
@@ -639,13 +372,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Stating a universal representative duty for every non-EU company regardless of Art. 3(2) and Art. 27(2).",
-                       "r2_1_planning_consequence":  "Non-EU entry structure must test representative requirement as a gate."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000025",
-                       "candidate_key":  "GDPR-PROP-CAND-11b",
                        "display_label":  "GDPR · 11b · Article 27(2)",
                        "claim":  "The Art. 27(1) designation obligation does not apply to (a) processing that is occasional, does not include, on a large scale, processing of special categories of data referred to in Art. 9(1) or personal data relating to criminal convictions and offences referred to in Art. 10, and is unlikely to result in a risk to the rights and freedoms of natural persons, taking into account the nature, context, scope and purposes of the processing; or (b) a public authority or body.",
                        "jurisdiction":  "EU",
@@ -671,13 +401,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Treating any occasional processing as exempt without the full Art. 27(2)(a) conjunction.",
-                       "r2_1_planning_consequence":  "Representative gate cannot be closed without documenting Art. 27(2) analysis."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000026",
-                       "candidate_key":  "GDPR-PROP-CAND-12",
                        "display_label":  "GDPR · 12 · Article 6(1)",
                        "claim":  "Processing shall be lawful only if and to the extent that at least one of the Art. 6(1)(a)-(f) bases applies.",
                        "jurisdiction":  "EU",
@@ -703,13 +430,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Asserting processing is lawful without identifying an Art. 6(1) basis.",
-                       "r2_1_planning_consequence":  "Entry plans need a legal-basis map per material processing activity."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000027",
-                       "candidate_key":  "GDPR-PROP-CAND-13a",
                        "display_label":  "GDPR · 13a · Article 5(1)",
                        "claim":  "Personal data shall be processed in accordance with the Art. 5(1) principles (lawfulness/fairness/transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality).",
                        "jurisdiction":  "EU",
@@ -735,13 +459,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Collapsing all principles into a vague fairness slogan without the Art. 5(1) list.",
-                       "r2_1_planning_consequence":  "Product data model and retention design constraints before EU launch."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000028",
-                       "candidate_key":  "GDPR-PROP-CAND-13b",
                        "display_label":  "GDPR · 13b · Article 5(2)",
                        "claim":  "The controller shall be responsible for, and be able to demonstrate compliance with, Article 5(1) (accountability).",
                        "jurisdiction":  "EU",
@@ -767,13 +488,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Treating accountability as optional documentation culture rather than Art. 5(2) duty.",
-                       "r2_1_planning_consequence":  "Governance evidence pack is an entry deliverable, not post-hoc."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000029",
-                       "candidate_key":  "GDPR-PROP-CAND-15",
                        "display_label":  "GDPR · 15 · Article 24(1)-(2)",
                        "claim":  "Taking into account the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for the rights and freedoms of natural persons, the controller shall implement appropriate technical and organisational measures to ensure and to be able to demonstrate that processing is performed in accordance with this Regulation; those measures shall be reviewed and updated where necessary; and where proportionate in relation to processing activities, those measures shall include appropriate data protection policies.",
                        "jurisdiction":  "EU",
@@ -799,13 +517,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Claiming policies alone without risk-appropriate measures.",
-                       "r2_1_planning_consequence":  "Security/governance design is part of entry readiness."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000030",
-                       "candidate_key":  "GDPR-PROP-CAND-16",
                        "display_label":  "GDPR · 16 · Article 25",
                        "claim":  "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures designed to implement data-protection principles effectively and to integrate the necessary safeguards. By default, only personal data which are necessary for each specific purpose of the processing shall be processed (amount collected, extent of processing, period of storage and accessibility); in particular, by default personal data shall not be made accessible without the individual\u0027s intervention to an indefinite number of natural persons.",
                        "jurisdiction":  "EU",
@@ -831,13 +546,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Bolting privacy features after EU launch as sufficient by-design compliance.",
-                       "r2_1_planning_consequence":  "Product architecture decisions before EU market activation."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000031",
-                       "candidate_key":  "GDPR-PROP-CAND-17",
                        "display_label":  "GDPR Â· 17 Â· Article 28(1)-(4)",
                        "claim":  "Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures so that processing will meet the requirements of this Regulation and ensure protection of the rights of the data subject; processing by a processor shall be governed by a contract or other legal act with Art. 28(3) mandated content; the processor shall not engage another processor without prior specific or general written authorisation of the controller (Art. 28(2)); where a processor engages another processor, the same data-protection obligations shall be imposed on that other processor by contract or other legal act (Art. 28(4) flow-down).",
                        "jurisdiction":  "EU",
@@ -863,13 +575,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Using a vendor without Art. 28 terms because TOR were signed.",
-                       "r2_1_planning_consequence":  "Vendor and sub-processor graph is a pre-entry procurement gate."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000032",
-                       "candidate_key":  "GDPR-PROP-CAND-18a",
                        "display_label":  "GDPR Â· 18a Â· Article 30(1)-(4)",
                        "claim":  "Each controller shall maintain a record of processing activities under its responsibility containing Art. 30(1)(a)-(g); each processor shall maintain a record of categories of processing carried out on behalf of a controller containing Art. 30(2)(a)-(d); records shall be in writing including electronic form and made available to the SA on request (Art. 30(3)-(4)).",
                        "jurisdiction":  "EU",
@@ -897,13 +606,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Asserting no RoPA needed for any SME without Art. 30(5) analysis.",
-                       "r2_1_planning_consequence":  "RoPA is an entry planning deliverable."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000033",
-                       "candidate_key":  "GDPR-PROP-CAND-18b",
                        "display_label":  "GDPR · 18b · Article 30(5)",
                        "claim":  "The Art. 30(1)-(2) record obligations do not apply to an enterprise or an organisation employing fewer than 250 persons unless the processing it carries out is likely to result in a risk to the rights and freedoms of data subjects, the processing is not occasional, or the processing includes special categories of data as referred to in Art. 9(1) or personal data relating to criminal convictions and offences referred to in Art. 10.",
                        "jurisdiction":  "EU",
@@ -929,13 +635,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Fewer than 250 employees automatically means no RoPA.",
-                       "r2_1_planning_consequence":  "Headcount alone does not close the RoPA gate."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000034",
-                       "candidate_key":  "GDPR-PROP-CAND-19",
                        "display_label":  "GDPR · 19 · Article 32(1)-(2)",
                        "claim":  "Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including inter alia as appropriate the Art. 32(1)(a)-(d) measures; in assessing the appropriate level of security, account shall be taken in particular of the risks presented by processing, in particular from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored or otherwise processed (Art. 32(2)).",
                        "jurisdiction":  "EU",
@@ -961,13 +664,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Checklist encryption alone equals Art. 32 compliance regardless of risk.",
-                       "r2_1_planning_consequence":  "Security architecture and vendor diligence before EU ops."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000035",
-                       "candidate_key":  "GDPR-PROP-CAND-20a",
                        "display_label":  "GDPR · 20a · Article 33(1)",
                        "claim":  "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the competent supervisory authority under Article 55; if not notified within 72 hours, the notification shall be accompanied by reasons for the delay.",
                        "jurisdiction":  "EU",
@@ -995,13 +695,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "72 hours as an absolute deadline with no undue-delay/feasibility reading and no risk threshold.",
-                       "r2_1_planning_consequence":  "Incident response design is a pre-entry operational gate."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000036",
-                       "candidate_key":  "GDPR-PROP-CAND-20b",
                        "display_label":  "GDPR Â· 20b Â· Article 33(1) unless clause",
                        "claim":  "Notification to the supervisory authority under Art. 33(1) is not required where the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
                        "jurisdiction":  "EU",
@@ -1027,13 +724,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Silent non-notification without a documented unlikely-risk assessment.",
-                       "r2_1_planning_consequence":  "IR playbooks must include risk-threshold assessment, not only a 72h timer."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000037",
-                       "candidate_key":  "GDPR-PROP-CAND-21a",
                        "display_label":  "GDPR · 21a · Article 34(1)-(2)",
                        "claim":  "When a personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the breach to the data subject without undue delay, in clear and plain language, including at least the information in Art. 33(3)(b)-(d).",
                        "jurisdiction":  "EU",
@@ -1061,13 +755,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Equating every Art. 33 SA notification with mandatory data-subject communication.",
-                       "r2_1_planning_consequence":  "Comms/IR plan distinguishes SA notify vs data-subject communicate."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000038",
-                       "candidate_key":  "GDPR-PROP-CAND-21b",
                        "display_label":  "GDPR · 21b · Article 34(3)",
                        "claim":  "Communication to the data subject under Art. 34(1) is not required if (a) appropriate technical and organisational protection measures were applied to the affected data (in particular rendering them unintelligible to unauthorised persons, such as encryption); or (b) subsequent measures ensure the high risk is no longer likely to materialise; or (c) it would involve disproportionate effort, in which case there shall instead be a public communication or similar equally effective measure.",
                        "jurisdiction":  "EU",
@@ -1093,13 +784,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Disproportionate effort used to avoid any effective communication.",
-                       "r2_1_planning_consequence":  "IR playbooks must encode Art. 34(3) branches explicitly."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000039",
-                       "candidate_key":  "GDPR-PROP-CAND-22",
                        "display_label":  "GDPR · 22 · Article 35(1), (3)",
                        "claim":  "Where a type of processing, in particular using new technologies, and taking into account the nature, scope, context and purposes of the processing, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out a data protection impact assessment of the envisaged processing operations. A DPIA is in particular required where: (a) systematic and extensive evaluation of personal aspects based on automated processing, including profiling, on which decisions are based that produce legal effects or similarly significantly affect the natural person; (b) processing on a large scale of special categories of data referred to in Art. 9(1), or of personal data relating to criminal convictions and offences referred to in Art. 10; or (c) a systematic monitoring of a publicly accessible area on a large scale (Art. 35(3)).",
                        "jurisdiction":  "EU",
@@ -1125,13 +813,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "New technology automatically requires DPIA regardless of high-risk analysis.",
-                       "r2_1_planning_consequence":  "High-risk feature design triggers DPIA before EU activation."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000040",
-                       "candidate_key":  "GDPR-PROP-CAND-23",
                        "display_label":  "GDPR · 23 · Article 37(1)(a)-(c)",
                        "claim":  "The controller and the processor shall designate a data protection officer where: (a) the processing is carried out by a public authority or body, except for courts acting in their judicial capacity; or (b) the core activities of the controller or the processor consist of processing operations which, by virtue of their nature, their scope and/or their purposes, require regular and systematic monitoring of data subjects on a large scale; or (c) the core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Art. 9 and personal data relating to criminal convictions and offences referred to in Art. 10.",
                        "jurisdiction":  "EU",
@@ -1157,13 +842,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Every company processing EU personal data must appoint a DPO.",
-                       "r2_1_planning_consequence":  "Org design tests 37(1) triggers â€” does not assume a default DPO."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000041",
-                       "candidate_key":  "GDPR-PROP-CAND-24",
                        "display_label":  "GDPR · 24 · Article 44",
                        "claim":  "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if, subject to the other provisions of this Regulation, the conditions laid down in Chapter V are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organisation to another third country or to another international organisation. All provisions in Chapter V shall be applied so that the level of protection of natural persons guaranteed by this Regulation is not undermined.",
                        "jurisdiction":  "EU",
@@ -1190,13 +872,10 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Treating SCCs, adequacy, and Art. 49 derogations as interchangeable equal options.",
-                       "r2_1_planning_consequence":  "Transfer architecture must be designed before freezing cloud regions/vendors."
+                       "change_type":  null
                    },
                    {
                        "id":  "EP-CLM-000042",
-                       "candidate_key":  "GDPR-PROP-CAND-25",
                        "display_label":  "GDPR Â· 25 Â· Article 45(1), (3), (5), (8)",
                        "claim":  "A transfer may take place where the Commission has decided that the third country, a territory or one or more specified sectors within that third country, or the international organisation ensures an adequate level of protection; such a transfer shall not require any specific authorisation. Adequacy implementing acts provide for a mechanism for periodic review, at least every four years (Art. 45(3)). The Commission shall publish a list of adequacy decisions (Art. 45(8)); where available information reveals that an adequate level of protection is no longer ensured, the Commission shall, to the extent necessary, repeal, amend or suspend the decision (Art. 45(5)).",
                        "jurisdiction":  "EU",
@@ -1210,10 +889,6 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "related_claims":  [
-                                              "EP-CLM-000041"
-                                          ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1228,12 +903,13 @@
                        "corrects":  null,
                        "corrected_by":  null,
                        "change_type":  null,
-                       "r2_1_falsifier":  "Publishing a static country list inside the Regulation claim as if Art. 45 itself enumerates countries.",
-                       "r2_1_planning_consequence":  "Entry plans may use adequacy where a valid decision exists; must re-check Commission list under freshness rules."
+                       "related_claims":  [
+                                              "EP-CLM-000041"
+                                          ],
+                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge"
                    },
                    {
                        "id":  "EP-CLM-000043",
-                       "candidate_key":  "GDPR-PROP-CAND-26",
                        "display_label":  "GDPR · 26 · Article 46(1)-(2)",
                        "claim":  "In the absence of an Art. 45(3) adequacy decision, a controller or processor may transfer personal data to a third country or international organisation only if appropriate safeguards are provided and enforceable data-subject rights and effective legal remedies are available; Art. 46(2) lists safeguards usable without specific SA authorisation (including SCCs and BCRs among others).",
                        "jurisdiction":  "EU",
@@ -1247,11 +923,6 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "related_claims":  [
-                                              "EP-CLM-000041",
-                                              "EP-CLM-000042"
-                                          ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1266,12 +937,14 @@
                        "corrects":  null,
                        "corrected_by":  null,
                        "change_type":  null,
-                       "r2_1_falsifier":  "Using SCCs where an adequacy decision already covers the transfer without noting hierarchy.",
-                       "r2_1_planning_consequence":  "Contract/SCC/BCR design before vendor freeze."
+                       "related_claims":  [
+                                              "EP-CLM-000041",
+                                              "EP-CLM-000042"
+                                          ],
+                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge"
                    },
                    {
                        "id":  "EP-CLM-000044",
-                       "candidate_key":  "GDPR-PROP-CAND-27",
                        "display_label":  "GDPR · 27 · Article 49(1)",
                        "claim":  "In the absence of an adequacy decision pursuant to Art. 45(3), or of appropriate safeguards pursuant to Art. 46, including binding corporate rules, a transfer or a set of transfers of personal data to a third country or an international organisation shall take place only on one of the specific Art. 49(1) conditions (derogations for specific situations).",
                        "jurisdiction":  "EU",
@@ -1285,12 +958,6 @@
                                        }
                                    ],
                        "qualified_by":  null,
-                       "related_claims":  [
-                                              "EP-CLM-000041",
-                                              "EP-CLM-000042",
-                                              "EP-CLM-000043"
-                                          ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1305,12 +972,15 @@
                        "corrects":  null,
                        "corrected_by":  null,
                        "change_type":  null,
-                       "r2_1_falsifier":  "Consent under Art. 49 as the default transfer strategy for ongoing cloud hosting.",
-                       "r2_1_planning_consequence":  "Entry plans must not treat Art. 49 as the default transfer design."
+                       "related_claims":  [
+                                              "EP-CLM-000041",
+                                              "EP-CLM-000042",
+                                              "EP-CLM-000043"
+                                          ],
+                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge"
                    },
                    {
                        "id":  "EP-CLM-000045",
-                       "candidate_key":  "GDPR-PROP-CAND-28",
                        "display_label":  "GDPR · 28 · Article 83(2), (4), (5)",
                        "claim":  "When deciding whether to impose an administrative fine and its amount, the SA shall give due regard to the Art. 83(2) criteria. Infringements listed in Art. 83(4) are subject to fines up to EUR 10 million or, for an undertaking, up to 2% of total worldwide annual turnover of the preceding financial year, whichever is higher. Infringements listed in Art. 83(5) are subject to fines up to EUR 20 million or, for an undertaking, up to 4% of such turnover, whichever is higher.",
                        "jurisdiction":  "EU",
@@ -1337,9 +1007,7 @@
                        "superseded_by":  null,
                        "corrects":  null,
                        "corrected_by":  null,
-                       "change_type":  null,
-                       "r2_1_falsifier":  "Reducing Art. 83 to a single maximum number without tiers or criteria.",
-                       "r2_1_planning_consequence":  "Risk register and board framing use tier structure and criteria â€” not a single scare figure."
+                       "change_type":  null
                    }
                ]
 }
