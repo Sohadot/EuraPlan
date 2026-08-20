@@ -535,6 +535,19 @@ Each entry uses the following structure:
   - **Not modified:** `claims.json`, any `EP-CLM-*`, source edges, `qualified_by`, `/regulation/eu-ai-act/`, `/clock/`
   - **Homepage AI Act lane** aligned to 2024–2028 scale and canonical phases; Aug 2027 removed; Article 5 exception (2 Dec 2026) mentioned in qualification text
 
+### DEC-047
+- **Date:** 2026-08-20 (Depth Equalization Program — Reference-Grade Route Standard v2 + Sprint R1)
+- **Status:** Active
+- **Decision:** (1) Housekeeping only: update `regulation/eu-ai-act/claims.json` `_meta` language from pre-merge “staged / effectiveness begins at merge” wording to **published / active — live on main since 2026-08-20**, retaining `release_sha` `1cc02e1…` and `merge_sha` `3322e6b…` as provenance. No claim proposition, workflow_state, validity_state, source, or `qualified_by` change. Does not reopen Publish Gate. (2) Adopt `REFERENCE_GRADE_ROUTE_STANDARD.md` v2.0 as mandatory for all indexable published routes: six layers (Identity & Scope; Primary Evidence; Unique Analytical Layer; Decision Utility; Machine & Citation; Maintenance Contract); hard-fail rejection criteria; moat test; Wave 1–3 Depth Equalization with **no new expansion** until Wave 1 Core Authority routes score ≥ 90/100. (3) Open Sprint R1 baseline audit in `governance/audits/REFERENCE_DEPTH_AUDIT_R1_2026-08-20.md`.
+- **Rationale:** A sovereign reference asset cannot tolerate one gold regulation page beside peer-substitutable or summary-grade siblings. Depth must match ontology role, not word count. SEO follows information gain. Stale pre-merge `_meta` in the live claim graph is metadata debt, not a claim defect.
+- **Affected routes/files:** `regulation/eu-ai-act/claims.json` (`_meta` only); `REFERENCE_GRADE_ROUTE_STANDARD.md` (new); `governance/audits/REFERENCE_DEPTH_AUDIT_R1_2026-08-20.md` (new); `GOVERNANCE_CHARTER.md`; `SCALING_AND_AUTOMATION_POLICY.md`; `ACCEPTANCE_CRITERIA.md`; `DECISION_LOG.md`
+- **Governance documents involved:** REFERENCE_SOVEREIGNTY_DOCTRINE.md; EVIDENCE_GRAPH_MODEL.md; PAGE_BLUEPRINT_STANDARD.md; CONTENT_QUALITY_STANDARD.md; SEO_GOVERNANCE.md; DERIVATIVE_SURFACE_REGISTRY.md; DEC-045; DEC-046
+- **Reversal conditions:** Superseding DEC required to lower the Wave 1 threshold, reopen expansion before Core Authority ≥ 90, or retire RGS v2
+- **Notes:**
+  - **Upgrade order (default):** GDPR → Data Act → CRA → EERS → Protocol → France → Germany → Netherlands → AI/SaaS → Horizon Europe
+  - **Country Evidence IDs:** do not freeze `EP-CTR-CLM-*` until a country evidence model is designed
+  - **Publish Gate:** remains CLOSED / PASS for EU AI Act v1
+
 ---
 
 ## 4. Superseded / Rejected Decisions

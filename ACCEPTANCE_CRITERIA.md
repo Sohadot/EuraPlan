@@ -143,6 +143,7 @@ Every page published from Sprint 2 onwards must be verified against all relevant
 | PERFORMANCE_BUDGET.md | All pages |
 | STRUCTURED_DATA_POLICY.md | All pages |
 | PAGE_BLUEPRINT_STANDARD.md | All reference, brief, and matrix pages |
+| REFERENCE_GRADE_ROUTE_STANDARD.md | All indexable published routes (six layers; Wave 1 ≥ 90 before expansion — DEC-047) |
 | VISUAL_SYSTEM_GOVERNANCE.md | All pages |
 | AGENT_READABILITY_POLICY.md | All pages |
 | SCALING_AND_AUTOMATION_POLICY.md | Any page produced with automation assistance |
