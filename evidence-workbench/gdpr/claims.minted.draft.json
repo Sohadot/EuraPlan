@@ -1,7 +1,7 @@
 {
     "_meta":  {
-                  "batch":  "GDPR — Sprint R2.2 Draft Mint (identity fixation; NOT verified; NOT published)",
-                  "location_note":  "evidence-workbench/gdpr/claims.minted.draft.json — workbench only. Canonical /regulation/gdpr/claims.json must NOT be created until Publish Gate path.",
+                  "batch":  "GDPR - Sprint R2.2 Draft Mint (identity fixation; NOT verified; NOT published)",
+                  "location_note":  "evidence-workbench/gdpr/claims.minted.draft.json - workbench only. Canonical /regulation/gdpr/claims.json must NOT be created until Publish Gate path.",
                   "published":  false,
                   "minting":  "COMPLETE (draft identities only)",
                   "html":  "BLOCKED",
@@ -22,9 +22,9 @@
                                       "DEC-049"
                                   ],
                   "notes":  [
-                                "Minting fixes identity, not truth-status. IDs are permanent; void+new ID if pre-publish proposition fails verification — never recycle.",
+                                "Minting fixes identity, not truth-status. IDs are permanent; void+new ID if pre-publish proposition fails verification  -  never recycle.",
                                 "qualified_by used only for true qualification pairs (27, 30, 33, 34). Chapter V uses related_claims hierarchy notes, not qualified_by.",
-                                "Art. 37 modelled as trigger disjunction (a)/(b)/(c) — no universal default duty claim.",
+                                "Art. 37 modelled as trigger disjunction (a)/(b)/(c)  -  no universal default duty claim.",
                                 "No EP-SRC for generic Commission overview or EDPB guidelines portfolio. Pin specific instruments only if a later claim needs clarification at verification.",
                                 "Deferred unminted: Art. 3(3), Art. 9, dynamic adequacy country list, broad SA architecture."
                             ],
@@ -163,7 +163,7 @@
                                             },
                                             {
                                                 "candidate_key":  "GDPR-PROP-CAND-14",
-                                                "reason":  "Art. 9 special categories — mint when product context requires",
+                                                "reason":  "Art. 9 special categories  -  mint when product context requires",
                                                 "permanent_claim_id":  null
                                             },
                                             {
@@ -173,7 +173,7 @@
                                             },
                                             {
                                                 "candidate_key":  "GDPR-PROP-CAND-29",
-                                                "reason":  "Broad SA architecture — split later into minimal propositions if needed",
+                                                "reason":  "Broad SA architecture  -  split later into minimal propositions if needed",
                                                 "permanent_claim_id":  null
                                             }
                                         ],
@@ -181,10 +181,10 @@
                                           {
                                               "instrument":  "Regulation (EU) 2025/2518",
                                               "subject":  "Additional procedural rules for GDPR cross-border enforcement",
-                                              "noted_application":  "From 2 April 2027 (per EUR-Lex summary / instrument — confirm at verification of any future enforcement-layer claim)",
+                                              "noted_application":  "From 2 April 2027 (per EUR-Lex summary / instrument  -  confirm at verification of any future enforcement-layer claim)",
                                               "disposition":  "watch_only",
-                                              "batch_1_impact":  "None — do not mix into EP-CLM-000015..000045",
-                                              "queue":  "GDPR Freshness Watch / related instruments — supervisory/enforcement deferred layer"
+                                              "batch_1_impact":  "None  -  do not mix into EP-CLM-000015..000045",
+                                              "queue":  "GDPR Freshness Watch / related instruments  -  supervisory/enforcement deferred layer"
                                           }
                                       ],
                   "source_registry":  {
@@ -225,9 +225,9 @@
                                           "artifact":  "evidence-workbench/gdpr/VERIFICATION_V1_2026-08-20.md",
                                           "result":  "6/6 PASS (000016 non-material encoding amend then PASS)"
                                       },
-                  "status":  "R2.3 Human Literal Verification CLOSED / PASS on main @ d02979b â€” 31/31 verified. R2.4 canonical preparation OPEN. published=false. HTML blocked. Publish Gate NOT OPEN. Minted workbench file remains verification/provenance record.",
-                  "phase":  "R2.4 â€” Canonical Graph + Route Integration Preparation",
-                  "verification":  "CLOSED / PASS â€” V1-V5 complete; 31/31 verified",
+                  "status":  "R2.3 Human Literal Verification CLOSED / PASS on main @ d02979b - 31/31 verified. R2.4 canonical preparation OPEN. published=false. HTML blocked. Publish Gate NOT OPEN. Minted workbench file remains verification/provenance record.",
+                  "phase":  "R2.4 - Canonical Graph + Route Integration Preparation",
+                  "verification":  "CLOSED / PASS - V1-V5 complete; 31/31 verified",
                   "verification_v2":  {
                                           "batch":  "V2",
                                           "date":  "2026-08-20",
@@ -291,7 +291,7 @@
                                                   ],
                                           "artifact":  "evidence-workbench/gdpr/VERIFICATION_V5_2026-08-20.md",
                                           "result":  "5/5 PASS; 000041/000042/000044 amended before verification; VOID 0",
-                                          "chapter_v_hierarchy":  "related_claims pathway 041\u003c-042\u003c-043\u003c-044 â€” NOT qualified_by"
+                                          "chapter_v_hierarchy":  "related_claims pathway 041\u003c-042\u003c-043\u003c-044 - NOT qualified_by"
                                       },
                   "r2_3":  {
                                "status":  "CLOSED / PASS",
@@ -1156,7 +1156,7 @@
                        "corrected_by":  null,
                        "change_type":  null,
                        "r2_1_falsifier":  "Every company processing EU personal data must appoint a DPO.",
-                       "r2_1_planning_consequence":  "Org design tests 37(1) triggers â€” does not assume a default DPO."
+                       "r2_1_planning_consequence":  "Org design tests 37(1) triggers - does not assume a default DPO."
                    },
                    {
                        "id":  "EP-CLM-000041",
@@ -1210,7 +1210,7 @@
                        "related_claims":  [
                                               "EP-CLM-000041"
                                           ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
+                       "related_claims_note":  "Chapter V hierarchy / related pathway - NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1248,7 +1248,7 @@
                                               "EP-CLM-000041",
                                               "EP-CLM-000042"
                                           ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
+                       "related_claims_note":  "Chapter V hierarchy / related pathway - NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1287,7 +1287,7 @@
                                               "EP-CLM-000042",
                                               "EP-CLM-000043"
                                           ],
-                       "related_claims_note":  "Chapter V hierarchy / related pathway — NOT a qualified_by edge",
+                       "related_claims_note":  "Chapter V hierarchy / related pathway - NOT a qualified_by edge",
                        "workflow_state":  "verified",
                        "validity_state":  null,
                        "confidence":  "Verified",
@@ -1336,7 +1336,7 @@
                        "corrected_by":  null,
                        "change_type":  null,
                        "r2_1_falsifier":  "Reducing Art. 83 to a single maximum number without tiers or criteria.",
-                       "r2_1_planning_consequence":  "Risk register and board framing use tier structure and criteria â€” not a single scare figure."
+                       "r2_1_planning_consequence":  "Risk register and board framing use tier structure and criteria - not a single scare figure."
                    }
                ]
 }
