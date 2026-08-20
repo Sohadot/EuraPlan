@@ -24,7 +24,7 @@
                                                    "EP-CLM-000037 + EP-CLM-000038"
                                                ],
                   "chapter_v_related_hierarchy":  "EP-CLM-000041 \u003c- 000042 \u003c- 000043 \u003c- 000044 (related_claims, not qualified_by)",
-                  "integrity_fix":  "2026-08-20: ASCII separators; stripped illegal edge notes; trailing newline; R2.5 branch-only HTML boundary documented",
+                  "integrity_fix":  "2026-08-20: ASCII separators; stripped illegal edge notes; trailing newline; preserved instrument slashes; R2.5 branch-only HTML boundary documented",
                   "governed_by":  [
                                       "EVIDENCE_GRAPH_MODEL.md",
                                       "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
@@ -39,7 +39,7 @@
                   "source_registry":  {
                                           "EP-SRC-000004":  {
                                                                 "instrument_id":  "EU-2016-679",
-                                                                "official_title":  "Regulation (EU) 2016 / 679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95 / 46 / EC (General Data Protection Regulation)",
+                                                                "official_title":  "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)",
                                                                 "celex":  "32016R0679",
                                                                 "eli":  "http://data.europa.eu/eli/reg/2016/679/oj",
                                                                 "oj_reference":  "OJ L 119, 4.5.2016, p. 1-88",
@@ -50,7 +50,7 @@
                                                             },
                                           "EP-SRC-000005":  {
                                                                 "instrument_id":  "EU-2016-679-CONSOLIDATED-20160504",
-                                                                "official_title":  "Regulation (EU) 2016 / 679 - EUR-Lex consolidated text (CELEX 02016R0679-20160504)",
+                                                                "official_title":  "Regulation (EU) 2016/679 - EUR-Lex consolidated text (CELEX 02016R0679-20160504)",
                                                                 "celex":  "02016R0679-20160504",
                                                                 "eli":  "http://data.europa.eu/eli/reg/2016/679/2016-05-04",
                                                                 "source_version_date":  "2016-05-04",
@@ -98,7 +98,7 @@
                    },
                    {
                        "id":  "EP-CLM-000016",
-                       "display_label":  "GDPR / 02 / Article 99(1)",
+                       "display_label":  "GDPR / 02 / Article 99(1); OJ L 119, 4.5.2016",
                        "claim":  "Regulation (EU) 2016/679 entered into force on the twentieth day following its publication in the Official Journal (published 4 May 2016 -\u003e 24 May 2016).",
                        "jurisdiction":  "EU",
                        "actor":  null,
