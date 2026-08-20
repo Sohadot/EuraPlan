@@ -45,8 +45,11 @@
 ## 3. Files in this gate
 - `regulation/eu-ai-act/claims.json` (new, canonical, 14 `publishable`)
 - `regulation/eu-ai-act/index.html` (timeline corrected; Verified Claim Register; sources; dates; alternate link)
-- `clock/index.html` (AI Act lane/list corrected; dates)
+- `clock/index.html` (AI Act lane/list corrected; dates; RC.2 visual scale)
 - `llms.txt` (expose `claims.json`)
+- `routes.json` (RC.2: `claims.json` registered as alternate machine representation of EP-REG-001)
+- `assets/css/main.css` (five-year clock surface; RC.2 scale comment)
+- `ROUTE_GOVERNANCE.md` (RC.2: alternate machine representation registry rule)
 - `DECISION_LOG.md` (DEC-045)
 - `governance/audits/EU_AI_ACT_PUBLISH_GATE_2026-08-20.md` (this record)
 
@@ -63,9 +66,10 @@ Correct order after RC.1 PASS:
 3. Live verification of euraplan.com.
 
 Public effectiveness begins at the merge to `main`; there is no moment where `main`
-serves a live corpus in a `publishable` state. Routes/sitemap registration of
-`claims.json` and any hreflang/multilingual work are out of scope for this
-AI-Act-only RC.
+serves a live corpus in a `publishable` state. `claims.json` is registered in
+`routes.json` as an alternate machine representation of EP-REG-001 (not a new
+Layer, not independently indexed, not a sitemap URL). Hreflang/multilingual work
+remains out of scope for this AI-Act-only RC.
 
 ## 5. RC.1 — Final Consistency Closure (2026-08-20)
 
@@ -81,6 +85,19 @@ Four bounded fixes after RC review; no claim proposition, ID, source edge, or
 
 Overall after RC.1: **PASS (Release Candidate).** Still not merged; still `publishable`, not `published`/`active`.
 
+## 6. RC.2 — Final Release Preflight (2026-08-20)
+
+Three bounded preflight fixes after RC.1; no `EP-CLM-*`, source edge, effective
+date, or `qualified_by` changed.
+
+| Fix | Result |
+|---|---|
+| `/clock/` marker `left:%` still on the old 4-year visual scale after RC.1 stretched the axis to 2024–2028 | **PASS** — markers recalibrated to a fixed scale `2024-01-01 = 0%`, `2029-01-01 = 100%`. Regulatory dates unchanged; only visual position. GDPR remains a pre-window baseline on the leading edge (`pre-2024 — ongoing`). CSS comment corrected: the five-year modifier applies to all lanes on the 2024–2028 Clock surface. |
+| `claims.json` announced as the canonical public graph but unregistered in `routes.json` | **PASS** — registered as `alternate_representations[]` on EP-REG-001 (`path` `/regulation/eu-ai-act/claims.json`, `media_type` `application/json`, `role` `canonical_claim_graph`, `canonical_parent` `/regulation/eu-ai-act/`, `indexable`/`sitemap` false). No new Layer. `ROUTE_GOVERNANCE.md` §4/§7 record the pattern. |
+| Release-semantics wording (`_meta.publish_gate`; DEC-045 Rationale) still described the RC as if already published | **PASS** — `publish_gate` now: final release-state commit gated on RC approval; public effectiveness begins when that release SHA is merged to `main`. DEC-045 Rationale: `publishes` → `authorizes the publication candidate`. |
+
+Overall after RC.2: **PASS (Release Candidate).** Still not merged; still `publishable`, not `published`/`active`. No further conceptual round; remaining owner action is Final Publication Release then the release-state commit and merge.
+
 ---
 
-*EuraPlan.com — EU AI Act Publish Gate audit (Release Candidate, incl. RC.1). Not a published website page.*
+*EuraPlan.com — EU AI Act Publish Gate audit (Release Candidate, incl. RC.1 and RC.2). Not a published website page.*

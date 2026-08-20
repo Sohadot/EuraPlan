@@ -53,7 +53,7 @@
         "role": "current-reading aid — NOT a replacement for the authentic Official Journal acts (EP-SRC-000001, EP-SRC-000002), which remain the evidentiary basis"
       }
     },
-    "publish_gate": "Release Candidate on branch claude/euraplan-strategic-digital-asset-sr2h1e; final published/active transition gated on RC review and merge to main."
+    "publish_gate": "Release Candidate on branch claude/euraplan-strategic-digital-asset-sr2h1e. Final release-state commit is gated on RC approval; public effectiveness begins when that release SHA is merged to main."
   },
   "claims": [
     {

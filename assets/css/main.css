@@ -1078,7 +1078,7 @@ main { flex: 1; }
     linear-gradient(90deg, var(--blue-border) 1px, transparent 1px) 0 0 / 25% 100%;
   padding: 8px 0;
 }
-/* Publish Gate RC.1 — opt-in five-year (2024–2028) preview grid; used only where a lane spans to 2028 (EU AI Act clock). Default four-period grid elsewhere is unchanged. */
+/* Publish Gate RC.2 — five-year (2024–2028) preview grid on the Regulatory Entry Clock surface. The modifier is applied to all lanes on that 2024–2028 surface, not only the AI Act lane. Default four-period grid elsewhere is unchanged. Marker left:% uses a fixed scale: 2024-01-01 = 0%, 2029-01-01 = 100% (pre-window baselines sit on the leading edge). */
 .clock-preview-axis--five-years { grid-template-columns: 140px repeat(5, 1fr); }
 .clock-lane-track--five-years {
   background:
@@ -1103,10 +1103,10 @@ main { flex: 1; }
   font-weight: 600;
 }
 .clock-marker--baseline {
-  left: 4%;
+  left: 2%;
   border-color: var(--grey-mid);
   color: var(--grey-mid);
-  max-width: 100px;
+  max-width: 148px;
 }
 .clock-lane-note {
   padding: 10px 12px;
