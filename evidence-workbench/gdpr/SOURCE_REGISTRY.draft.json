@@ -1,15 +1,17 @@
 {
   "_meta": {
-    "batch": "GDPR — Sprint R2.0 Source Discovery (draft; no IDs reserved; not published)",
-    "status": "discovery only — retrieved against EUR-Lex CELEX 32016R0679 on 2026-08-20; no EP-SRC-* minted; no claims.json",
+    "batch": "GDPR — Sprint R2.0 Source Discovery (draft; retained as candidate ledger)",
+    "status": "R2.0 discovery ledger retained. R2.2 minted EP-SRC-000004 (OJ 32016R0679) and EP-SRC-000005 (consolidated 02016R0679-20160504) in SOURCE_REGISTRY.minted.draft.json. GDPR-SRC-CAND-03 and GDPR-SRC-CAND-04 remain intentionally unminted. No public /regulation/gdpr/claims.json.",
     "location_note": "evidence-workbench/gdpr/SOURCE_REGISTRY.draft.json — public working evidence per DISCLOSURE_BOUNDARY.md",
     "published": false,
-    "next_ep_src_slot_note": "AI Act consumed EP-SRC-000001..000003. First GDPR Tier-1 authentic act, when minted in R2.2+, should use EP-SRC-000004 (append-only; do not reuse AI Act nodes).",
+    "minted_companion": "SOURCE_REGISTRY.minted.draft.json",
+    "next_ep_src_slot_note": "EP-SRC-000004 and EP-SRC-000005 consumed in R2.2. Next free source slot after those pins: EP-SRC-000006 (only for a specific pinned instrument — never a generic portfolio page).",
     "governed_by": [
       "SOURCE_POLICY.md",
       "EVIDENCE_GRAPH_MODEL.md",
       "DISCLOSURE_BOUNDARY.md",
-      "REFERENCE_GRADE_ROUTE_STANDARD.md"
+      "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "DEC-049"
     ],
     "generated": "2026-08-20"
   },
@@ -25,7 +27,7 @@
       "oj_reference": "OJ L 119, 4.5.2016, p. 1–88",
       "retrieved_at": "2026-08-20",
       "retrieval_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
-      "notes": "Primary evidentiary basis for all direct legal propositions. Application date Art. 99(2): 25 May 2018."
+      "notes": "MINTED in R2.2 as EP-SRC-000004. Primary evidentiary basis for all direct legal propositions. Application date Art. 99(2): 25 May 2018."
     },
     {
       "candidate_key": "GDPR-SRC-CAND-02",
@@ -35,7 +37,7 @@
       "celex_pattern": "02016R0679-YYYYMMDD",
       "source_tier_proposed": 1,
       "retrieved_at": null,
-      "notes": "DO NOT mint until R2.2 pins an exact CELEX consolidated version date. Append-only; never replaces GDPR-SRC-CAND-01 / authentic OJ act. Same pattern as EP-SRC-000003 for AI Act."
+      "notes": "MINTED in R2.2 as EP-SRC-000005 — CELEX 02016R0679-20160504. Reading aid only; never replaces authentic OJ act."
     },
     {
       "candidate_key": "GDPR-SRC-CAND-03",
@@ -45,7 +47,7 @@
       "url": "https://commission.europa.eu/law/law-topic/data-protection_en",
       "source_tier_proposed": 2,
       "retrieved_at": "2026-08-20",
-      "notes": "May clarify application context. Must NOT support High claim_risk legal propositions in place of the Regulation text."
+      "notes": "INTENTIONALLY UNMINTED in R2.2 — no generic Commission overview EP-SRC-*. Must NOT support High claim_risk legal propositions in place of the Regulation text."
     },
     {
       "candidate_key": "GDPR-SRC-CAND-04",
@@ -55,7 +57,7 @@
       "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
       "source_tier_proposed": 2,
       "retrieved_at": "2026-08-20",
-      "notes": "Use only to explain application of an already-supported Regulation proposition. Each guideline cited must be pinned by exact document + date in R2.2 — never a vague 'EDPB says'."
+      "notes": "INTENTIONALLY UNMINTED in R2.2 — no generic EDPB portfolio EP-SRC-*. If a claim needs clarification at R2.3, pin the specific guideline by name/version/date as a new EP-SRC-*."
     }
   ]
 }

@@ -560,6 +560,18 @@ Each entry uses the following structure:
   - **R2.0 deliverables:** candidate source registry + claim candidates with exception flags; no `claims.json`; no GDPR page rewrite
   - **AI Act Gold Reference:** untouched except real freshness events
 
+### DEC-049
+- **Date:** 2026-08-20 (Sprint R2.2 — GDPR draft mint + source pinning)
+- **Status:** Active
+- **Decision:** (1) Close R2.1 as PASS with owner KEEP of all 31 `batch_1` candidates; defer unminted Art. 3(3), Art. 9, dynamic adequacy-country list, and broad SA architecture. (2) Execute R2.2 as **identity fixation + source pinning + draft serialization only** (not verification): mint `EP-CLM-000015`…`EP-CLM-000045` into `evidence-workbench/gdpr/claims.minted.draft.json` with explicit `candidate_key → permanent_claim_id` map; all claims `workflow_state=draft`, `validity_state=null`, `last_verified_at=null`, `confidence=Pending`, `_meta.published=false`. (3) Pin only `EP-SRC-000004` (authentic OJ CELEX `32016R0679`) and `EP-SRC-000005` (consolidated reading aid CELEX `02016R0679-20160504`); do not mint generic Commission overview or EDPB guidelines-portfolio nodes. (4) Wire `qualified_by` for true qualification pairs (Art. 27, 30, 33, 34); Chapter V uses related hierarchy notes, not blanket `qualified_by`; Art. 37 remains trigger-disjunction modelling. (5) Record Regulation (EU) 2025/2518 (cross-border enforcement procedures; noted application from 2 April 2027) as Freshness Watch only — not batch-1. (6) Do not create `/regulation/gdpr/claims.json`; do not rewrite GDPR HTML; GDPR Publish Gate remains NOT OPEN. Next free claim ID after this mint: `EP-CLM-000046`.
+- **Rationale:** Minting fixes identity, not truth-status. Workbench draft serialization preserves R2.1 provenance before human literal verification (R2.3). Canonical public machine representation must wait for Publish Gate readiness.
+- **Affected routes/files:** `evidence-workbench/gdpr/claims.minted.draft.json`; `evidence-workbench/gdpr/SOURCE_REGISTRY.minted.draft.json`; `evidence-workbench/gdpr/SOURCE_REGISTRY.draft.json`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; FRESHNESS_ENGINE.md; DISCLOSURE_BOUNDARY.md; REFERENCE_GRADE_ROUTE_STANDARD.md; DEC-048
+- **Reversal conditions:** Superseding DEC to void/re-mint identities, open public GDPR `claims.json` early, or treat draft mint as verification
+- **Notes:**
+  - **R2.2 exit gate:** 31/31 IDs in range; 4/4 deferred unminted; sources pinned; no generic EDPB/Commission portfolio source; draft/null/null; qualification edges resolvable; no public claims.json; HTML rewrite blocked; Publish Gate NOT OPEN
+  - **R2.3 next:** claim-by-claim EUR-Lex literal verification — no batch approval
+
 ---
 
 ## 4. Superseded / Rejected Decisions
