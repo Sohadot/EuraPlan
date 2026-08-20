@@ -1,8 +1,10 @@
 # R2.6 — Decision Utility Layer
 
-**Status:** OPEN — Decision Objects staged + candidate integrated (workbench only)  
+**Status:** CLOSED / PASS  
 **Opened:** 2026-08-20  
-**Branch:** `sprint-r2-gdpr-r2-6-decision-utility`  
+**Closed:** 2026-08-20  
+**Integration merge:** PR #39 `81684158aeeff1f89da937e76c9e3e481ed69c34`  
+**Reviewed head:** `d8586f156e8e62f9a2ae234a56c5f720e6d88985`  
 **Prerequisite:** R2.5 CLOSED / PASS via PR #38 merge `a6b9ed0ea09e2e816b5ef5dd2a0a7dc9960105a6`
 
 ---
@@ -116,12 +118,12 @@ R2.6 **fails** if any of the following appears:
 
 ## Exit toward R2.7 / R2.8
 
-R2.6 may close when owner fidelity audit PASSes against the Exit Gate.
+R2.6 closed after owner Utility Fidelity + Content gates PASS and Integration merge on `main`.
 
-Then only:
+Next:
 
-- **R2.7** — citation + machine registration prep (still gated)  
-- **R2.8** — Publish Gate (`publishable` / `published` + live HTML + public `claims.json`)
+- **R2.7** — citation + machine registration prep (still gated; no live registration) — **OPEN under DEC-053**
+- **R2.8** — Publish Gate (`publishable` / `published` + live HTML + public `claims.json`) — **NOT OPEN**
 
 ---
 

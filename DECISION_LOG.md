@@ -610,6 +610,19 @@ Each entry uses the following structure:
   - **Exit Gate fails on:** unsupported legal conclusion; missing qualification; adequacy/SCC/Art.49 framed as equal options; personal recommendation disguised as fact; planning consequence not traceable to claim IDs
   - **Next:** utility fidelity audit, then R2.7 only after owner close of R2.6
 
+### DEC-053
+- **Date:** 2026-08-20 (Sprint R2.6 closed; R2.7 opened)
+- **Status:** Active
+- **Decision:** (1) Close **R2.6 — Decision Utility Layer** as **CLOSED / PASS** after PR #39 merge `81684158aeeff1f89da937e76c9e3e481ed69c34` (head `d8586f156e8e62f9a2ae234a56c5f720e6d88985`): nine Decision Objects `EP-DU-GDPR-001`…`009` staged and integrated on the workbench candidate; Utility Fidelity + Content gates PASS; schema contract = four substantive fields + governance metadata; Art. 27(2)(a) conjunctive framing restored; seed leak (language/shipping/pricing) removed; Art. 46 safeguard wording used for transfer planning; no new `EP-CLM-*`; no live `/regulation/gdpr/` rewrite; no public `claims.json`; claims remain `workflow_state=verified`; Publish Gate remains NOT OPEN. (2) Open **R2.7 — Citation + Machine Registration Preparation**: document citation integrity inventory and draft (not execute) live registration deltas for EP-REG-002 alternate `claims.json`, `llms.txt` exposure, and HTML cutover package. (3) R2.7 must **not** create public `regulation/gdpr/claims.json`, must **not** edit live `routes.json` / `llms.txt` / sitemap for GDPR claims registration, must **not** overwrite live GDPR HTML with the Evidence Graph candidate, must **not** promote claims beyond `verified`, and must **not** open R2.8 Publish Gate.
+- **Rationale:** Machine and citation surfaces must be prepared as a governed package before Publish Gate, while keeping all live registration effects reserved for R2.8 so publication remains a single controlled sequence.
+- **Affected routes/files:** `evidence-workbench/gdpr/R2_7_CITATION_MACHINE_PREP.md`; `evidence-workbench/gdpr/R2_7_REGISTRATION_DRAFT.md`; `evidence-workbench/gdpr/R2_6_DECISION_UTILITY.md`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** ROUTE_GOVERNANCE.md; REFERENCE_GRADE_ROUTE_STANDARD.md (L5); EVIDENCE_GRAPH_MODEL.md; DISCLOSURE_BOUNDARY.md; DEC-050; DEC-051; DEC-052
+- **Reversal conditions:** Superseding DEC to execute live GDPR claims registration or live Evidence Graph HTML cutover before R2.8, or to treat Decision Utility as a second public truth graph without a dedicated DEC
+- **Notes:**
+  - **R2.6 integration merge:** `81684158aeeff1f89da937e76c9e3e481ed69c34`
+  - **Registration draft is non-executing** until R2.8
+  - **Next:** complete R2.7 citation/registration prep review; open R2.8 only by separate DEC
+
 ---
 
 ## 4. Superseded / Rejected Decisions
