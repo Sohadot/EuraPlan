@@ -1,9 +1,9 @@
 # R2.5 — Branch-only Page Transformation
 
-**Status:** OPEN  
+**Status:** OPEN — HTML candidate delivered in workbench (`page-candidate/index.html`)  
 **Opened:** 2026-08-20  
-**Branch:** `sprint-r2-gdpr-r2-5-page-candidate`  
-**Prerequisite:** R2.4 CLOSED / PASS — merge `62856779053b5555040f7a3589f60d0f091ae979` (PR #36)
+**Branch:** `sprint-r2-gdpr-r2-5-html-candidate`  
+**Prerequisite:** R2.5 opening CLOSED on `main` via PR #37 merge `49336e581f9f088b19bafdd9733d87dfbebb47c9`
 
 ---
 
