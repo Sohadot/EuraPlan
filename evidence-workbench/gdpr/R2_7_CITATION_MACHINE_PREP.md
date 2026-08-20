@@ -19,6 +19,7 @@ R2.7 is **not**:
 - exposing GDPR `claims.json` in live `llms.txt`
 - sitemap changes for a claims alternate
 - opening Publish Gate (R2.8)
+- inventing publication provenance SHAs before they exist
 
 Those execute only inside **R2.8**.
 
@@ -31,14 +32,15 @@ Those execute only inside **R2.8**.
 | `claims.canonical.staging.json` | Truth layer (31 verified claims) |
 | `decision-utility.staging.json` | Derived Decision Utility (9 objects; not claims) |
 | `page-candidate/index.html` | Citation surface + Decision Utility + Claim Register |
-| AI Act gold | Pattern for `routes.json` alternate + `llms.txt` exposure |
+| Live `/regulation/gdpr/index.html` | Publication chrome baseline (canonical, robots, OG/Twitter, JSON-LD) |
+| AI Act gold | Pattern for public `_meta`, `routes.json` alternate, `llms.txt` |
 
 ---
 
 ## R2.7 deliverables
 
 1. **This prep note** — citation checklist, machine-registration draft, hard gates  
-2. **`R2_7_REGISTRATION_DRAFT.md`** — exact planned live deltas for R2.8 (not applied)  
+2. **`R2_7_REGISTRATION_DRAFT.md`** — transformation contract, crawl reality, HTML sanitization checklist (not applied)  
 3. **DEC-053** — close R2.6; open R2.7 under the above constraints  
 4. Workbench status updates (`README.md`, R2.6 closed marker)
 
@@ -52,8 +54,8 @@ Candidate must retain:
 - [x] Co-render pairs visible: 024↔025, 032↔033, 035↔036, 037↔038
 - [x] Chapter V hierarchy `44 -> 45 -> 46 -> 49` (not equal options)
 - [x] Decision Utility objects `EP-DU-GDPR-001`…`009` cite claim IDs only (no new legal propositions)
-- [ ] Live page citation parity plan documented for R2.8 cutover (candidate → `/regulation/gdpr/`)
-- [ ] Machine graph path planned: `/regulation/gdpr/claims.json` (file **not** created in R2.7)
+- [x] **Live page citation parity contract documented** for R2.8 cutover — see `R2_7_REGISTRATION_DRAFT.md` §E.1 / §E.2 (documented; **not** executed)
+- [x] **Machine graph path + transformation contract documented** for `/regulation/gdpr/claims.json` — see `R2_7_REGISTRATION_DRAFT.md` §A / §A.1 (documented; file **not** created in R2.7)
 
 ---
 
@@ -61,18 +63,13 @@ Candidate must retain:
 
 When R2.8 authorizes publication, planned deltas (mirror AI Act EP-REG-001):
 
-1. Place canonical file at `regulation/gdpr/claims.json` from staging (after `publishable` → `published` promotion rules)
-2. Add `alternate_representations` on EP-REG-002 in `routes.json`:
-   - `path`: `/regulation/gdpr/claims.json`
-   - `media_type`: `application/json`
-   - `role`: `canonical_claim_graph`
-   - `canonical_parent`: `/regulation/gdpr/`
-   - `indexable`: false
-   - `sitemap`: false
+1. Transform staging → public canonical graph under §A.1 (lifecycle + `_meta` sanitization + real provenance SHAs only when they exist)
+2. Add `alternate_representations` on EP-REG-002 in `routes.json` (`indexable:false` = **governance metadata only**, not crawler enforcement)
 3. Expose in `llms.txt` with AI Act–parallel wording (static reference file, not an API)
 4. **Do not** add `claims.json` to sitemap
-5. Replace live HTML with the approved candidate only inside the same Publish Gate sequence
-6. Decision Utility remains a page layer derived from claims — **not** a second public JSON truth file unless a later DEC explicitly authorizes it
+5. Decide and record crawler/indexing mechanism under hosting capability (`robots.txt` / `X-Robots-Tag` / explicit accept-crawlability) — see draft §D.1
+6. Cut over live HTML only after completing the §E.2 release-sanitization checklist
+7. Decision Utility remains a page layer derived from claims — **not** a second public JSON truth file unless a later DEC explicitly authorizes it
 
 Exact draft text lives in `R2_7_REGISTRATION_DRAFT.md`.
 
@@ -90,6 +87,8 @@ Exact draft text lives in `R2_7_REGISTRATION_DRAFT.md`.
 | New claims | None required for registration prep |
 | AI Act gold | Untouched except real freshness events |
 | Decision Utility | Derived only; not promoted to truth layer |
+| Provenance SHAs | Must not be invented before R2.8 git objects exist |
+| `indexable:false` | Governance only; not assumed crawler enforcement |
 
 ---
 
@@ -98,7 +97,7 @@ Exact draft text lives in `R2_7_REGISTRATION_DRAFT.md`.
 R2.7 may close when:
 
 1. Citation inventory PASS (anchors, co-render, hierarchy, DU traceability)
-2. Registration draft complete and owner-reviewed
+2. Registration draft complete — including transformation contract, crawl reality, HTML sanitization checklist — and owner-reviewed
 3. No live registration executed
 4. Owner authorizes **R2.8 Publish Gate** as a separate controlled sequence
 
