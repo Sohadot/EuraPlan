@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "batch": "GDPR — Sprint R2.2 Source Pinning (draft mint; NOT verification; NOT published)",
+    "status": "EP-SRC-000004 and EP-SRC-000005 pinned. No EP-SRC for Commission overview or EDPB guidelines portfolio. Clarifying instruments pin by exact document/version/date only if a claim needs them at R2.3 verification.",
+    "location_note": "evidence-workbench/gdpr/SOURCE_REGISTRY.minted.draft.json — workbench only",
+    "published": false,
+    "phase": "R2.2",
+    "minting": "COMPLETE (source identities only)",
+    "verification": "NOT YET",
+    "html": "BLOCKED",
+    "publish_gate": "NOT OPEN",
+    "companion_claims": "evidence-workbench/gdpr/claims.minted.draft.json",
+    "candidate_registry": "evidence-workbench/gdpr/SOURCE_REGISTRY.draft.json",
+    "governed_by": [
+      "SOURCE_POLICY.md",
+      "EVIDENCE_GRAPH_MODEL.md",
+      "DISCLOSURE_BOUNDARY.md",
+      "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "DEC-048",
+      "DEC-049"
+    ],
+    "generated": "2026-08-20",
+    "freshness_watch": [
+      {
+        "instrument": "Regulation (EU) 2025/2518",
+        "subject": "Additional procedural rules for GDPR cross-border enforcement",
+        "noted_application": "From 2 April 2027 (confirm at verification of any future enforcement-layer claim)",
+        "disposition": "watch_only",
+        "batch_1_impact": "None — not mixed into EP-CLM-000015..000045",
+        "queue": "GDPR Freshness Watch / related instruments — supervisory/enforcement deferred layer"
+      }
+    ],
+    "intentionally_unminted_candidates": [
+      {
+        "candidate_key": "GDPR-SRC-CAND-03",
+        "reason": "Generic Commission data-protection overview — no evidentiary role for batch-1 draft mint"
+      },
+      {
+        "candidate_key": "GDPR-SRC-CAND-04",
+        "reason": "Generic EDPB guidelines portfolio — pin specific guideline name/version/date only if a claim needs clarification at verification"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "EP-SRC-000004",
+      "candidate_key": "GDPR-SRC-CAND-01",
+      "instrument_id": "EU-2016-679",
+      "official_title": "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)",
+      "celex": "32016R0679",
+      "eli": "http://data.europa.eu/eli/reg/2016/679/oj",
+      "oj_reference": "OJ L 119, 4.5.2016, p. 1–88",
+      "source_version_date": "2016-05-04",
+      "retrieved_at": "2026-08-20",
+      "retrieval_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+      "source_tier": 1,
+      "role": "authentic Official Journal act — evidentiary basis for batch-1 draft claims",
+      "workflow_state": "draft",
+      "published": false
+    },
+    {
+      "id": "EP-SRC-000005",
+      "candidate_key": "GDPR-SRC-CAND-02",
+      "instrument_id": "EU-2016-679-CONSOLIDATED-20160504",
+      "official_title": "Regulation (EU) 2016/679 — EUR-Lex consolidated text (CELEX 02016R0679-20160504)",
+      "celex": "02016R0679-20160504",
+      "eli": "http://data.europa.eu/eli/reg/2016/679/2016-05-04",
+      "source_version_date": "2016-05-04",
+      "retrieved_at": "2026-08-20",
+      "retrieval_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504",
+      "source_tier": 1,
+      "role": "current-reading aid — NOT a replacement for the authentic Official Journal act (EP-SRC-000004)",
+      "workflow_state": "draft",
+      "published": false,
+      "note": "EUR-Lex current consolidated version pin as of 2026-08-20 owner confirmation. Authentic OJ act remains evidentiary basis."
+    }
+  ]
+}
