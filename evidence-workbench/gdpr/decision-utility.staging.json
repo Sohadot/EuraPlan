@@ -1,0 +1,270 @@
+{
+  "_meta": {
+    "phase": "R2.6",
+    "layer": "decision_utility",
+    "status": "staging",
+    "opened": "2026-08-20",
+    "truth_layer": "claims.canonical.staging.json",
+    "seed_field": "r2_1_planning_consequence",
+    "seed_source": "claims.minted.draft.json",
+    "seeds_are_verified_facts": false,
+    "new_claims_minted": false,
+    "published": false,
+    "live_route_effect": false,
+    "public_claims_json": false,
+    "governed_by": [
+      "DEC-052",
+      "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "EVIDENCE_GRAPH_MODEL.md",
+      "DISCLOSURE_BOUNDARY.md",
+      "R2_6_DECISION_UTILITY.md"
+    ],
+    "object_schema": [
+      "question",
+      "evidence",
+      "planning_consequence",
+      "what_remains_fact_specific"
+    ],
+    "notes": "Decision Utility is a derived planning layer above verified claims. Seeds inform wording only. Any new legal proposition requires an independent claim path."
+  },
+  "decision_objects": [
+    {
+      "id": "EP-DU-GDPR-001",
+      "title": "Territorial applicability",
+      "primary_claims": [
+        "EP-CLM-000018",
+        "EP-CLM-000019",
+        "EP-CLM-000020"
+      ],
+      "co_render": null,
+      "related_hierarchy": null,
+      "question": "Which Article 3 limb(s), if any, map the intended European activity for this entry plan?",
+      "evidence": "Inspect establishment reach (EP-CLM-000018), offering of goods or services (EP-CLM-000019), and monitoring of behaviour (EP-CLM-000020). Art. 3(3) remains deferred/unminted in batch-1 and must not be invented here.",
+      "planning_consequence": "Close the territorial map before freezing entity design, go-to-market packaging, or tracking/analytics architecture. EU establishment design, offering signals (language, shipping, pricing), and monitoring design are entry gates - not post-launch cleanup.",
+      "what_remains_fact_specific": "Whether a concrete establishment exists; whether a concrete offering targets data subjects in the Union; whether a concrete monitoring design observes behaviour in the Union; any Art. 3(3) analysis.",
+      "seed_refs": [
+        "EP-CLM-000018",
+        "EP-CLM-000019",
+        "EP-CLM-000020"
+      ],
+      "hard_rules": [
+        "Do not declare that a named unknown company is in or out of GDPR scope.",
+        "Do not collapse the three limbs into one slogan."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-002",
+      "title": "Operating role",
+      "primary_claims": [
+        "EP-CLM-000021",
+        "EP-CLM-000022",
+        "EP-CLM-000023"
+      ],
+      "co_render": null,
+      "related_hierarchy": null,
+      "question": "For each material processing activity, who determines purposes and means, who processes on behalf of whom, and where are joint-controller arrangements required?",
+      "evidence": "Controller definition (EP-CLM-000021), processor definition (EP-CLM-000022), and joint-controller arrangement duty (EP-CLM-000023).",
+      "planning_consequence": "Close the role map before contracting, sub-processor graphs, transfer tools, or marketplace partnership launch. Vendor classification and responsibility allocation are pre-entry gates.",
+      "what_remains_fact_specific": "Actual purpose/means determination on each activity; contractual reality versus labels; whether two or more actors jointly determine purposes and means.",
+      "seed_refs": [
+        "EP-CLM-000021",
+        "EP-CLM-000022",
+        "EP-CLM-000023"
+      ],
+      "hard_rules": [
+        "Do not equate vendor labels with legal role.",
+        "Do not treat joint-controller status as optional branding."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-003",
+      "title": "EU representative",
+      "primary_claims": [
+        "EP-CLM-000024",
+        "EP-CLM-000025"
+      ],
+      "co_render": [
+        "EP-CLM-000024",
+        "EP-CLM-000025"
+      ],
+      "related_hierarchy": null,
+      "question": "If Article 3(2) applies to the activity, does the Art. 27(1) representative duty apply, or does an Art. 27(2) exception close the gate?",
+      "evidence": "Default duty where Art. 3(2) applies (EP-CLM-000024) must be co-rendered with Art. 27(2) exceptions (EP-CLM-000025). Neither claim may be cited as a standalone conclusion.",
+      "planning_consequence": "Representative status must be closed before freezing the European operating model. The gate cannot be closed without documenting the Art. 27(2) analysis alongside the Art. 27(1) default.",
+      "what_remains_fact_specific": "Whether Art. 3(2) actually applies; whether processing is occasional / large-scale special categories or Art. 10 data / unlikely to result in risk; whether the actor is a public authority or body.",
+      "seed_refs": [
+        "EP-CLM-000024",
+        "EP-CLM-000025"
+      ],
+      "hard_rules": [
+        "Never say 'your company needs an EU representative' as a graph conclusion.",
+        "Never render EP-CLM-000024 without EP-CLM-000025."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-004",
+      "title": "Lawfulness baseline",
+      "primary_claims": [
+        "EP-CLM-000026",
+        "EP-CLM-000027",
+        "EP-CLM-000028"
+      ],
+      "co_render": null,
+      "related_hierarchy": null,
+      "question": "For each material processing activity, which Art. 6(1) basis is relied on, how do Art. 5(1) principles constrain the design, and what accountability evidence will demonstrate that map?",
+      "evidence": "Lawfulness requires at least one Art. 6(1)(a)-(f) basis (EP-CLM-000026); Art. 5(1) principles (EP-CLM-000027); Art. 5(2) accountability (EP-CLM-000028).",
+      "planning_consequence": "Build a legal-basis map and a governance evidence pack before EU launch. Product data model and retention design are constrained by the principles before market activation.",
+      "what_remains_fact_specific": "Which concrete basis applies to each activity; whether consent is actually used or appropriate; how purpose limitation, minimisation, and storage limitation bind a specific product; what records will demonstrate accountability.",
+      "seed_refs": [
+        "EP-CLM-000026",
+        "EP-CLM-000027",
+        "EP-CLM-000028"
+      ],
+      "hard_rules": [
+        "Art. 6 is a structural gate - not a slogan that 'consent is required'.",
+        "Do not elevate one Art. 6(1) basis as the universal default."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-005",
+      "title": "Governance readiness",
+      "primary_claims": [
+        "EP-CLM-000029",
+        "EP-CLM-000030",
+        "EP-CLM-000031",
+        "EP-CLM-000032",
+        "EP-CLM-000033",
+        "EP-CLM-000034"
+      ],
+      "co_render": [
+        "EP-CLM-000032",
+        "EP-CLM-000033"
+      ],
+      "related_hierarchy": null,
+      "question": "Is the operating model ready on Art. 24/25/28/30/32 before EU ops freeze - including RoPA with its Art. 30(5) qualification?",
+      "evidence": "Controller responsibility (EP-CLM-000029), data protection by design/default (EP-CLM-000030), processor/sub-processor controls (EP-CLM-000031), records of processing (EP-CLM-000032) co-rendered with Art. 30(5) (EP-CLM-000033), and security appropriate to risk (EP-CLM-000034).",
+      "planning_consequence": "Treat security/governance design, product architecture, vendor graph, and RoPA as pre-entry deliverables. Headcount alone does not close the RoPA gate; Art. 30(5) must be analysed with the Art. 30(1)-(2) default.",
+      "what_remains_fact_specific": "Risk profile of concrete processing; whether <250-person organisations meet any Art. 30(5) re-trigger (risk / not occasional / special categories or Art. 10); vendor diligence outcomes; chosen technical and organisational measures.",
+      "seed_refs": [
+        "EP-CLM-000029",
+        "EP-CLM-000030",
+        "EP-CLM-000031",
+        "EP-CLM-000032",
+        "EP-CLM-000033",
+        "EP-CLM-000034"
+      ],
+      "hard_rules": [
+        "Never present Art. 30 as an automatic exemption for organisations under 250 persons.",
+        "Never render EP-CLM-000032 without EP-CLM-000033."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-006",
+      "title": "Breach response",
+      "primary_claims": [
+        "EP-CLM-000035",
+        "EP-CLM-000036",
+        "EP-CLM-000037",
+        "EP-CLM-000038"
+      ],
+      "co_render": [
+        [
+          "EP-CLM-000035",
+          "EP-CLM-000036"
+        ],
+        [
+          "EP-CLM-000037",
+          "EP-CLM-000038"
+        ]
+      ],
+      "related_hierarchy": null,
+      "question": "Does the incident path distinguish supervisory-authority notification (Art. 33) from data-subject communication (Art. 34), including each default and its qualification?",
+      "evidence": "Art. 33(1) notify default (EP-CLM-000035) co-rendered with unlikely-to-result-in-risk qualifier (EP-CLM-000036); Art. 34(1)-(2) communicate default (EP-CLM-000037) co-rendered with Art. 34(3) exceptions (EP-CLM-000038).",
+      "planning_consequence": "Incident-response design is a pre-entry operational gate. Playbooks must encode risk-threshold assessment and Art. 34(3) branches - not only a 72-hour timer - and must keep SA notify vs data-subject communicate as separate decisions.",
+      "what_remains_fact_specific": "Concrete breach facts; risk and high-risk assessments; whether a delay reason applies; whether any Art. 34(3) branch is met.",
+      "seed_refs": [
+        "EP-CLM-000035",
+        "EP-CLM-000036",
+        "EP-CLM-000037",
+        "EP-CLM-000038"
+      ],
+      "hard_rules": [
+        "Never collapse Art. 33 and Art. 34 into one notice duty.",
+        "Never render either default without its qualifier pair."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-007",
+      "title": "DPIA / DPO triggers",
+      "primary_claims": [
+        "EP-CLM-000039",
+        "EP-CLM-000040"
+      ],
+      "co_render": null,
+      "related_hierarchy": null,
+      "question": "Which features trigger a DPIA under Art. 35, and which Art. 37(1)(a)/(b)/(c) triggers, if any, require DPO designation?",
+      "evidence": "DPIA high-risk gate and particular cases (EP-CLM-000039); DPO designation as Art. 37(1) trigger model (EP-CLM-000040).",
+      "planning_consequence": "High-risk feature design must test DPIA before EU activation. Org design tests Art. 37(1) triggers and does not assume a default DPO for every operator.",
+      "what_remains_fact_specific": "Whether a concrete processing is likely to result in high risk; which particular cases apply; whether a public authority / core-activity large-scale special categories or monitoring trigger is met.",
+      "seed_refs": [
+        "EP-CLM-000039",
+        "EP-CLM-000040"
+      ],
+      "hard_rules": [
+        "Art. 37 is a trigger model - not a universal DPO duty.",
+        "Do not invent Art. 9 special-category claims beyond verified batch-1 scope."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-008",
+      "title": "International transfer path",
+      "primary_claims": [
+        "EP-CLM-000041",
+        "EP-CLM-000042",
+        "EP-CLM-000043",
+        "EP-CLM-000044"
+      ],
+      "co_render": null,
+      "related_hierarchy": [
+        "EP-CLM-000041",
+        "EP-CLM-000042",
+        "EP-CLM-000043",
+        "EP-CLM-000044"
+      ],
+      "question": "Before freezing cloud regions and vendors, what Chapter V path governs any transfer - following 44 -> 45 -> 46 -> 49 rather than treating those as equal options?",
+      "evidence": "General transfer gate (EP-CLM-000041), then adequacy where a valid decision exists (EP-CLM-000042), then appropriate safeguards (EP-CLM-000043), then derogations (EP-CLM-000044). These are related pathway claims, not qualified_by pairs and not interchangeable options. Dynamic adequacy-country lists remain deferred/unminted.",
+      "planning_consequence": "Design transfer architecture before freezing regions/vendors. Adequacy may be used only where a valid decision exists and must be re-checked under freshness rules. SCC/BCR/contract design precedes vendor freeze. Art. 49 must not be treated as the default transfer design.",
+      "what_remains_fact_specific": "Whether a concrete transfer occurs; destination; existence and validity of an adequacy decision at decision time; which Art. 46 tool is actually available; whether any Art. 49 derogation conditions are met.",
+      "seed_refs": [
+        "EP-CLM-000041",
+        "EP-CLM-000042",
+        "EP-CLM-000043",
+        "EP-CLM-000044"
+      ],
+      "hard_rules": [
+        "Never present adequacy, SCC/BCR, and Art. 49 as equal menu options.",
+        "Never treat Art. 49 as the planned default path."
+      ]
+    },
+    {
+      "id": "EP-DU-GDPR-009",
+      "title": "Enforcement exposure",
+      "primary_claims": [
+        "EP-CLM-000045"
+      ],
+      "co_render": null,
+      "related_hierarchy": null,
+      "question": "How should board and risk framing present Art. 83 exposure - criteria and tiers rather than a single scare figure?",
+      "evidence": "Administrative fines retain criteria plus tiers (EP-CLM-000045). Regulation (EU) 2025/2518 remains Freshness Watch only and is not a batch-1 claim.",
+      "planning_consequence": "Risk register and board framing use the Art. 83 structure and criteria - not a single maximum figure detached from the statutory method.",
+      "what_remains_fact_specific": "Concrete infringement facts; which tier/criteria apply; turnover or other calculation inputs; any future instrument effect under freshness watch.",
+      "seed_refs": [
+        "EP-CLM-000045"
+      ],
+      "hard_rules": [
+        "Do not reduce Art. 83 to a scare headline number.",
+        "Do not mint 2025/2518 as a verified claim inside R2.6."
+      ]
+    }
+  ]
+}

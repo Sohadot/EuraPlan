@@ -597,6 +597,19 @@ Each entry uses the following structure:
   - **R2.4 integration merge:** `62856779053b5555040f7a3589f60d0f091ae979`
   - **Co-render blockers remain:** 24↔25, 32↔33, 35↔36, 37↔38; Chapter V related hierarchy
 
+### DEC-052
+- **Date:** 2026-08-20 (Sprint R2.5 closed; R2.6 opened)
+- **Status:** Active
+- **Decision:** (1) Close **R2.5 — Branch-only Page Transformation** as **CLOSED / PASS** after PR #38 merge `a6b9ed0ea09e2e816b5ef5dd2a0a7dc9960105a6`: workbench candidate under `evidence-workbench/gdpr/page-candidate/` with 31 citation anchors `#ep-clm-000015`…`000045`, four co-render pairs, Chapter V hierarchy `44 -> 45 -> 46 -> 49`, Art. 6 not reduced to "consent required", Art. 30 not auto-exemption under 250, Art. 37 as trigger model; `noindex,nofollow` + NOT LIVE banner; claims remain `workflow_state=verified`; no public `claims.json`; no live `/regulation/gdpr/` rewrite; Publish Gate remains NOT OPEN. (2) Open **R2.6 — Decision Utility Layer**: derive nine Decision Objects on the candidate (`Territorial applicability`, `Operating role`, `EU representative`, `Lawfulness baseline`, `Governance readiness`, `Breach response`, `DPIA / DPO triggers`, `International transfer path`, `Enforcement exposure`) each limited to Question / Evidence / Planning consequence / What remains fact-specific. (3) Use `r2_1_planning_consequence` only as analytical seeds — **not** as verified facts. Mint **no** new `EP-CLM-*` solely for utility. (4) R2.6 must **not** touch R2.7/R2.8, must **not** overwrite live GDPR HTML, must **not** create public `claims.json`, and must **not** promote claims beyond `verified`.
+- **Rationale:** RGS v2 L4 Decision Utility requires converting verified claims into planning decisions without inventing legal conclusions about unknown actors. Separating truth layer from derived utility preserves claim governance while making the candidate a reference planning instrument.
+- **Affected routes/files:** `evidence-workbench/gdpr/R2_6_DECISION_UTILITY.md`; `evidence-workbench/gdpr/decision-utility.staging.json`; `evidence-workbench/gdpr/page-candidate/*`; `evidence-workbench/gdpr/R2_5_PAGE_CANDIDATE.md`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** REFERENCE_GRADE_ROUTE_STANDARD.md (L4); EVIDENCE_GRAPH_MODEL.md; DISCLOSURE_BOUNDARY.md; DEC-050; DEC-051
+- **Reversal conditions:** Superseding DEC to treat Decision Utility sentences as verified claims, to mint claims solely for page usefulness, to open R2.7/R2.8 early, or to publish live GDPR HTML / public `claims.json` before Publish Gate
+- **Notes:**
+  - **R2.5 integration merge:** `a6b9ed0ea09e2e816b5ef5dd2a0a7dc9960105a6`
+  - **Exit Gate fails on:** unsupported legal conclusion; missing qualification; adequacy/SCC/Art.49 framed as equal options; personal recommendation disguised as fact; planning consequence not traceable to claim IDs
+  - **Next:** utility fidelity audit, then R2.7 only after owner close of R2.6
+
 ---
 
 ## 4. Superseded / Rejected Decisions
