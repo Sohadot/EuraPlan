@@ -521,6 +521,7 @@ Each entry uses the following structure:
   - **Gate state:** publishable only. Not merged to `main`; `validity_state` remains `null`; no claim marked published/active; Article 111(4) deferred; EERS remains Candidate.
   - **Verification vs publication dates kept distinct:** human primary-source verification 2026-08-19; publication/freshness check 2026-08-20.
   - **RC.2 Final Release Preflight:** Clock marker positions recalibrated to the 2024–2028 visual scale (dates unchanged); `claims.json` registered as an alternate machine representation of EP-REG-001 in `routes.json`; `_meta.publish_gate` and DEC-045 Rationale aligned with release-state-then-merge semantics.
+  - **Final Publication Release (2026-08-20):** RC.2 approved. Release-state transition authorized: 14/14 `publishable` → `published`, 14/14 `null` → `active`, `_meta.published: true`. No semantic Claim mutation. Release-state tree staged on the branch for atomic publication; public effectiveness begins when this exact release SHA is merged to `main`. Merge not yet authorized.
 
 ---
 

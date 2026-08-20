@@ -1,5 +1,5 @@
 # EU_AI_ACT_PUBLISH_GATE_2026-08-20.md
-**Status:** Public working evidence — Publish Gate audit (Release Candidate)
+**Status:** Public working evidence — Publish Gate audit (Final Publication Release staged; not yet merged)
 **Asset:** EuraPlan.com
 **Route:** `/regulation/eu-ai-act/` (+ `/clock/` consistency)
 **Gate date:** 2026-08-20
@@ -8,9 +8,12 @@
 
 ---
 
-> **Release Candidate only — NOT yet live on `main`.** The 14 Claim Objects are
-> `workflow_state: publishable`, `validity_state: null` — publication candidates, not
-> `published`/`active`. Nothing in this gate is merged to `main`.
+> **Final Publication Release staged — NOT yet live on `main`.** RC.2 is CLOSED / PASS.
+> The 14 Claim Objects are `workflow_state: published`, `validity_state: active`,
+> `_meta.published: true` in this release-state tree. That tree is staged for
+> atomic publication; public effectiveness occurs only when the exact release SHA
+> is merged to `main`. The corpus is not live merely because this commit exists
+> on the development branch. Merge is not yet authorized.
 
 ## 1. Gate results
 
@@ -98,6 +101,22 @@ date, or `qualified_by` changed.
 
 Overall after RC.2: **PASS (Release Candidate).** Still not merged; still `publishable`, not `published`/`active`. No further conceptual round; remaining owner action is Final Publication Release then the release-state commit and merge.
 
+## 7. Final Publication Release (2026-08-20)
+
+RC.2 approved. Final Publication Release **AUTHORIZED**. Merge to `main` is **not** authorized.
+
+| Check | Result |
+|---|---|
+| RC.2 approved | **PASS** — Clock scale, route governance, release semantics, claim integrity, secret-scan, PR state, and this audit's RC.2 section all PASS. |
+| 14/14 `publishable` → `published` | **PASS** — workflow-state only. Spec meaning `published` = Live in the corpus takes public effect at merge of this exact SHA to `main`. |
+| 14/14 `null` → `active` | **PASS** — validity-state only. Spec meaning `active` = public validity after publication takes public effect at the same merge. |
+| Semantic Claim mutation | **NONE** — no `claim` text, ID, display label, effective date, source registry node, source edge, `qualified_by`, risk, EERS dimension, or lifecycle pointer changed. `confidence` remains `Verified`; every `last_verified_at` remains `2026-08-19`. HTML/CSS/`/clock/` untouched. Article 111(4) still deferred; EERS still Candidate. |
+| Release staging | **PASS** — this is a release-state tree staged for atomic publication on the branch. It is not live merely by existing on the development branch. |
+| Public effectiveness | Begins only when the exact release SHA is merged to `main`. |
+| Post-merge live verification | **Still required** after merge: euraplan.com, `claims.json`, and the 14 anchors. |
+
+**Overall after Final Publication Release commit: PASS (staged).** PR #24 remains open and unmerged. Merge to `main` = NOT YET AUTHORIZED.
+
 ---
 
-*EuraPlan.com — EU AI Act Publish Gate audit (Release Candidate, incl. RC.1 and RC.2). Not a published website page.*
+*EuraPlan.com — EU AI Act Publish Gate audit (RC closed; Final Publication Release staged, not yet merged). Not a published website page.*

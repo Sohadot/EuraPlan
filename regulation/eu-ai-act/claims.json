@@ -1,9 +1,9 @@
 {
   "_meta": {
-    "batch": "EU AI Act — canonical claim graph (Release Candidate, publishable; not yet published/active)",
-    "status": "publishable (Release Candidate) — human-verified 2026-08-19; freshness/publication check 2026-08-20; NOT merged to main, NOT active",
+    "batch": "EU AI Act — canonical claim graph (Final Publication Release; published/active in the staged release-state tree)",
+    "status": "published / active (Final Publication Release) — human-verified 2026-08-19; freshness/publication check 2026-08-20; release-state tree staged on the branch for atomic publication; public effectiveness begins when this exact SHA is merged to main",
     "location_note": "regulation/eu-ai-act/claims.json — canonical machine-readable claim graph for the EU AI Act reference route. Supersedes evidence-workbench/eu-ai-act/claims.verified.json as the publication candidate; the workbench copy remains the verification record.",
-    "published": false,
+    "published": true,
     "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.3 (normalized; dual-role edges)",
     "governed_by": [
       "EVIDENCE_GRAPH_MODEL.md",
@@ -15,12 +15,12 @@
     ],
     "notes": [
       "Reserved-ID batch EP-CLM-000001..000014 (IDs permanently burned).",
-      "workflow_state=publishable for all 14 (verified->publishable only); confidence=Verified, last_verified_at=2026-08-19, validity_state=null unchanged. No claim text, ID, effective_date, source edge, qualified_by, claim_risk, or EERS mapping changed.",
+      "workflow_state=published for all 14 (publishable->published only); validity_state=active (null->active only); confidence=Verified, last_verified_at=2026-08-19 unchanged. No claim text, ID, effective_date, source edge, qualified_by, claim_risk, or EERS mapping changed.",
       "EP-SRC-000003 added as an append-only Tier-1 source (EUR-Lex consolidated text, CELEX 02024R1689-20260727). EP-SRC-000001/000002 (authentic OJ acts) are unchanged and remain authoritative.",
       "No object supersedes a prior EP-CLM-*; legacy prose held NO claim identity (no manufactured history).",
       "Dual-role edges (v1.3 §4.1): where 2026/1744 states the current value it carries a supports edge in addition to its amends edge (003, 007, 008, 010, 012, 014).",
       "Article 111(4) remains deferred to a later batch.",
-      "This canonical graph is the Release Candidate: workflow_state=publishable and validity_state=null. Public validity (validity_state=active) begins only when the release-state commit sets published=true and is merged to main. This file, its anchors, and the HTML register are the RC representation on the branch."
+      "This canonical graph is the Final Publication Release: workflow_state=published, validity_state=active, _meta.published=true. The release-state tree is staged on the branch for atomic publication. Spec meaning: published = Live in the corpus and active = public validity after publication — both take public effect only when this exact release SHA is merged to main. This file is not live merely by existing on the development branch."
     ],
     "generated": "2026-08-20",
     "source_registry": {
@@ -53,7 +53,7 @@
         "role": "current-reading aid — NOT a replacement for the authentic Official Journal acts (EP-SRC-000001, EP-SRC-000002), which remain the evidentiary basis"
       }
     },
-    "publish_gate": "Release Candidate on branch claude/euraplan-strategic-digital-asset-sr2h1e. Final release-state commit is gated on RC approval; public effectiveness begins when that release SHA is merged to main."
+    "publish_gate": "Final Publication Release authorized after RC.2 PASS. Release-state commit on branch claude/euraplan-strategic-digital-asset-sr2h1e. Public effectiveness begins when this exact release SHA is merged to main."
   },
   "claims": [
     {
@@ -71,8 +71,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "Low",
       "affected_eers_dimensions": [
@@ -100,8 +100,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -142,8 +142,8 @@
       "qualified_by": [
         "EP-CLM-000006"
       ],
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -172,8 +172,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -209,8 +209,8 @@
         "EP-CLM-000008",
         "EP-CLM-000010"
       ],
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -238,8 +238,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -280,8 +280,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -321,8 +321,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -352,8 +352,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "Low",
       "affected_eers_dimensions": [
@@ -391,8 +391,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -421,8 +421,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -458,8 +458,8 @@
       "qualified_by": [
         "EP-CLM-000014"
       ],
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -489,8 +489,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
@@ -528,8 +528,8 @@
         }
       ],
       "qualified_by": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
+      "workflow_state": "published",
+      "validity_state": "active",
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
