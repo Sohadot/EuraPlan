@@ -523,6 +523,18 @@ Each entry uses the following structure:
   - **RC.2 Final Release Preflight:** Clock marker positions recalibrated to the 2024–2028 visual scale (dates unchanged); `claims.json` registered as an alternate machine representation of EP-REG-001 in `routes.json`; `_meta.publish_gate` and DEC-045 Rationale aligned with release-state-then-merge semantics.
   - **Final Publication Release (2026-08-20):** RC.2 approved. Release-state transition authorized: 14/14 `publishable` → `published`, 14/14 `null` → `active`, `_meta.published: true`. No semantic Claim mutation. Release-state tree staged on the branch for atomic publication; public effectiveness begins when this exact release SHA is merged to `main`. Merge not yet authorized.
 
+### DEC-046
+- **Date:** 2026-08-20 (Post-Merge Live Verification — homepage derivative drift hotfix)
+- **Status:** Active
+- **Decision:** After merge of Final Publication Release (`1cc02e1` via merge commit `3322e6b`), Post-Merge Live Verification found the homepage Regulatory Clock Preview still displaying a pre-Omnibus AI Act timeline (incl. Aug 2027 / Art. 113.4) while `claims.json`, `/regulation/eu-ai-act/`, and `/clock/` were correct. Correct `index.html` only; do not reopen claim research. Adopt an architectural rule: any surface displaying Evidence Graph dates must derive from the canonical claim graph or be registered in `DERIVATIVE_SURFACE_REGISTRY.md` with a consistency check.
+- **Rationale:** The defect is derivative drift between canonical truth and a hand-maintained preview — not a legal-proposition error. Closing the gate without a registry would allow the same class of failure on the next claim update.
+- **Affected routes/files:** `index.html` (homepage clock preview); `DERIVATIVE_SURFACE_REGISTRY.md` (new); `EVIDENCE_GRAPH_MODEL.md` (v1.4 §10); `governance/audits/EU_AI_ACT_PUBLISH_GATE_2026-08-20.md` (Post-Merge section); `DECISION_LOG.md`
+- **Governance documents involved:** EVIDENCE_GRAPH_MODEL.md; CLAIM_POLICY.md; REFERENCE_SOVEREIGNTY_DOCTRINE.md; DEC-045
+- **Reversal conditions:** Superseding DEC entry required to retire the registry rule or to de-register a surface without removing the public timeline copy
+- **Notes:**
+  - **Not modified:** `claims.json`, any `EP-CLM-*`, source edges, `qualified_by`, `/regulation/eu-ai-act/`, `/clock/`
+  - **Homepage AI Act lane** aligned to 2024–2028 scale and canonical phases; Aug 2027 removed; Article 5 exception (2 Dec 2026) mentioned in qualification text
+
 ---
 
 ## 4. Superseded / Rejected Decisions
