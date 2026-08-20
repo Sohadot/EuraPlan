@@ -2,10 +2,11 @@
 
 **Status:** OPEN / EXECUTION BLOCKED AT GATE 0  
 **Opened:** 2026-08-20  
-**Branch:** `sprint-r2-gdpr-r2-8-publish-gate-open`  
-**Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b` (head `b3d35f6e5f91c633cdff19df3eb2986b7bd6dd8a`)  
+**Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
+**Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
 **Governing DEC:** DEC-054  
-**Registration contracts:** `R2_7_REGISTRATION_DRAFT.md` (§A.1, §D.1, §E.1–E.2)
+**Registration contracts:** `R2_7_REGISTRATION_DRAFT.md` (§A.1, §D.1, §E.1–E.2)  
+**Gate 0 investigation:** `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` (COMPLETE / owner decision pending)
 
 ---
 
@@ -45,9 +46,20 @@ Required determinations:
 | `robots.txt` | `Allow: /regulation/` | When `claims.json` exists under `/regulation/gdpr/`, it is **technically crawlable** unless Gate 0 chooses another control |
 | `routes.json` `indexable:false` | governance metadata only | Not crawler/index enforcement |
 
-**Prefer** `X-Robots-Tag: noindex` for index control if the host/CDN supports it. `robots.txt Disallow` alone is crawl guidance, not a guarantee of `noindex`.
+#### Gate 0 investigation result (2026-08-20)
 
-**Exit Gate 0:** written capability decision recorded in this file (or a linked Gate 0 note) before any Gate 1+ work that prepares live-bound artifacts.
+See `R2_8_GATE0_HOSTING_INDEX_CONTROL.md`.
+
+| Determination | Result |
+|---|---|
+| Serving stack | **Cloudflare-proxied GitHub Pages** (NS + `Server: cloudflare` + `X-GitHub-Request-Id` / Fastly origin markers) |
+| `X-Robots-Tag` via GitHub Pages alone | **Not available** |
+| `X-Robots-Tag` via Cloudflare | **Capable in principle** (Transform Rules / header modification); **not configured today** (absent on live HTML and on `/regulation/eu-ai-act/claims.json`) |
+| Owner decision | **PENDING** — Options A (preferred CF `X-Robots-Tag`), B (`robots.txt` crawl fallback), C (accept crawlability) |
+
+**Prefer** Option A: `X-Robots-Tag: noindex` for index control if Cloudflare rule is configured and verified. `robots.txt Disallow` alone is crawl guidance, not a guarantee of `noindex`.
+
+**Exit Gate 0:** owner selects A/B/C; if A, verify live header on the target path before Gates 1–6 proceed.
 
 ---
 
@@ -107,7 +119,7 @@ In one controlled release sequence:
 - `validity_state`: `null` → `active`
 - `_meta.published=true`
 - Live HTML + public graph + registrations together
-- Fill `release_sha` / `merge_sha` only from **real** git objects after they exist (AI Act pattern)
+- `release_sha` may be set on the release commit; **`merge_sha` is post-merge provenance finalization** (real merge commit on `main`) — typically immediately after merge and before Gate 6 closeout. Do **not** invent or guess `merge_sha` inside the pre-merge release PR.
 
 ---
 

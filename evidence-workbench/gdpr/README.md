@@ -49,6 +49,7 @@
 | `R2_7_CITATION_MACHINE_PREP.md` | R2.7 scope (closed) |
 | `R2_7_REGISTRATION_DRAFT.md` | Non-executing contracts for R2.8 |
 | `R2_8_PUBLISH_GATE.md` | **R2.8** gate sequence + Gate 0 freeze |
+| `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` | **Gate 0** serving stack + index-control investigation |
 | `page-candidate/` | Non-live HTML candidate |
 | `README.md` | This status note |
 
