@@ -23,12 +23,12 @@
 
 | Phase | Name | State |
 |---|---|---|
-| R2.0 | Source & Claim Discovery | **IN PROGRESS** — see this folder |
-| R2.1 | Claim Map & Falsification | Not started |
-| R2.2 | Human Verification (`draft` → `pending_verification` → `verified`) | Not started |
+| R2.0 | Source & Claim Discovery | **CLOSED / PASS** |
+| R2.1 | Claim Map & Falsification | **CLOSED / PASS** — `CLAIM_MAP_R2_1.draft.json` |
+| R2.2 | Human Verification (`draft` → `pending_verification` → `verified`) | **OPEN next** — minting still owner-gated; first IDs `EP-CLM-000015` / `EP-SRC-000004` only after KEEP selection |
 | R2.3 | Canonical graph + routes alternate | Not started |
 | R2.4 | Page transformation | Not started |
-| R2.5 | Decision utility layer | Not started (draft hints in claim map) |
+| R2.5 | Decision utility layer | Hints in claim map; deepen at page stage |
 | R2.6 | Citation + machine + llms/routes/sitemap | Not started |
 | R2.7 | GDPR Publish Gate → RGS re-score ≥90 | Not started |
 
@@ -39,7 +39,8 @@
 | File | Role |
 |---|---|
 | `SOURCE_REGISTRY.draft.json` | Candidate Tier-1/Tier-2 sources — **no** `EP-SRC-*` reserved yet |
-| `CLAIM_CANDIDATES.draft.md` | Candidate propositions with provision → exception map — **no** `EP-CLM-*` |
+| `CLAIM_CANDIDATES.draft.md` | R2.0 discovery intake (superseded for dispositions by R2.1 map) |
+| `CLAIM_MAP_R2_1.draft.json` | **R2.1 truth filter** — falsification + KEEP/SPLIT/DEFER; minting BLOCKED |
 | `README.md` | This status note |
 
 ---
