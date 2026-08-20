@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "batch": "GDPR — Sprint R2.0 Source Discovery (draft; no IDs reserved; not published)",
+    "status": "discovery only — retrieved against EUR-Lex CELEX 32016R0679 on 2026-08-20; no EP-SRC-* minted; no claims.json",
+    "location_note": "evidence-workbench/gdpr/SOURCE_REGISTRY.draft.json — public working evidence per DISCLOSURE_BOUNDARY.md",
+    "published": false,
+    "next_ep_src_slot_note": "AI Act consumed EP-SRC-000001..000003. First GDPR Tier-1 authentic act, when minted in R2.2+, should use EP-SRC-000004 (append-only; do not reuse AI Act nodes).",
+    "governed_by": [
+      "SOURCE_POLICY.md",
+      "EVIDENCE_GRAPH_MODEL.md",
+      "DISCLOSURE_BOUNDARY.md",
+      "REFERENCE_GRADE_ROUTE_STANDARD.md"
+    ],
+    "generated": "2026-08-20"
+  },
+  "candidate_sources": [
+    {
+      "candidate_key": "GDPR-SRC-CAND-01",
+      "proposed_role": "authentic_oj_act",
+      "instrument_id": "EU-2016-679",
+      "official_title": "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)",
+      "celex": "32016R0679",
+      "eli": "http://data.europa.eu/eli/reg/2016/679/oj",
+      "source_tier_proposed": 1,
+      "oj_reference": "OJ L 119, 4.5.2016, p. 1–88",
+      "retrieved_at": "2026-08-20",
+      "retrieval_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+      "notes": "Primary evidentiary basis for all direct legal propositions. Application date Art. 99(2): 25 May 2018."
+    },
+    {
+      "candidate_key": "GDPR-SRC-CAND-02",
+      "proposed_role": "current_reading_aid_only",
+      "instrument_id": "EU-2016-679-CONSOLIDATED-CANDIDATE",
+      "official_title": "Regulation (EU) 2016/679 — EUR-Lex consolidated text (version to be pinned at verification time)",
+      "celex_pattern": "02016R0679-YYYYMMDD",
+      "source_tier_proposed": 1,
+      "retrieved_at": null,
+      "notes": "DO NOT mint until R2.2 pins an exact CELEX consolidated version date. Append-only; never replaces GDPR-SRC-CAND-01 / authentic OJ act. Same pattern as EP-SRC-000003 for AI Act."
+    },
+    {
+      "candidate_key": "GDPR-SRC-CAND-03",
+      "proposed_role": "explanatory_tier2",
+      "instrument_id": "EC-DATA-PROTECTION-RULES",
+      "official_title": "European Commission — Data protection in the EU (policy / rules overview)",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection_en",
+      "source_tier_proposed": 2,
+      "retrieved_at": "2026-08-20",
+      "notes": "May clarify application context. Must NOT support High claim_risk legal propositions in place of the Regulation text."
+    },
+    {
+      "candidate_key": "GDPR-SRC-CAND-04",
+      "proposed_role": "explanatory_tier2",
+      "instrument_id": "EDPB-GUIDELINES-PORTFOLIO",
+      "official_title": "European Data Protection Board — Guidelines (topic-specific; pin per claim at verification)",
+      "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
+      "source_tier_proposed": 2,
+      "retrieved_at": "2026-08-20",
+      "notes": "Use only to explain application of an already-supported Regulation proposition. Each guideline cited must be pinned by exact document + date in R2.2 — never a vague 'EDPB says'."
+    }
+  ]
+}

@@ -548,6 +548,18 @@ Each entry uses the following structure:
   - **Country Evidence IDs:** do not freeze `EP-CTR-CLM-*` until a country evidence model is designed
   - **Publish Gate:** remains CLOSED / PASS for EU AI Act v1
 
+### DEC-048
+- **Date:** 2026-08-20 (Sprint R2 — GDPR Evidence Graph-grade Upgrade opened)
+- **Status:** Active
+- **Decision:** Open Sprint R2 to upgrade `/regulation/gdpr/` (EP-REG-002) from structured summary toward Evidence Graph-grade reference under REFERENCE_GRADE_ROUTE_STANDARD.md v2. Sequence: source discovery → claim map/falsification → human verification → canonical `claims.json` → page transformation → Publish Gate → RGS re-score. No parallel Data Act/country/expansion work. No `EP-CLM-*` mint before literal falsification; next free ID is `EP-CLM-000015`. No HTML publish in R2.0. Correct RGS v2 post-R1 upgrade order line to include EERS and Protocol before France (consistency with Wave 1 / DEC-047; no score change).
+- **Rationale:** R1 baseline shows AI Act at 97 and GDPR at 58. Depth equalization requires GDPR next, not expansion. Claim count must follow material truth for non-EU entry planning, not an AI Act template.
+- **Affected routes/files:** `REFERENCE_GRADE_ROUTE_STANDARD.md` (upgrade-order consistency); `evidence-workbench/gdpr/*` (R2.0 discovery); `DECISION_LOG.md`
+- **Governance documents involved:** REFERENCE_GRADE_ROUTE_STANDARD.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DISCLOSURE_BOUNDARY.md; DEC-047
+- **Reversal conditions:** Superseding DEC to cancel R2 or to reopen expansion before Wave 1 ≥ 90
+- **Notes:**
+  - **R2.0 deliverables:** candidate source registry + claim candidates with exception flags; no `claims.json`; no GDPR page rewrite
+  - **AI Act Gold Reference:** untouched except real freshness events
+
 ---
 
 ## 4. Superseded / Rejected Decisions
