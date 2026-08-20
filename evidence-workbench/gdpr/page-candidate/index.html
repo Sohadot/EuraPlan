@@ -3,8 +3,8 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>GDPR Evidence Graph Page Candidate (R2.5 workbench) - EuraPlan</title>
- <meta name="description" content="Branch-only GDPR Evidence Graph page candidate for Regulation (EU) 2016/679. Not the live public reference. 31 verified claims EP-CLM-000015 to EP-CLM-000045.">
+ <title>GDPR Evidence Graph Page Candidate (R2.6 workbench) - EuraPlan</title>
+ <meta name="description" content="Workbench GDPR Evidence Graph page candidate with Decision Utility layer for Regulation (EU) 2016/679. Not the live public reference. 31 verified claims EP-CLM-000015 to EP-CLM-000045; nine derived Decision Objects.">
  <meta name="robots" content="noindex, nofollow">
  <link rel="stylesheet" href="/assets/css/main.css">
  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
@@ -34,10 +34,10 @@
 <main class="control-room-shell">
 
  <div class="system-panel" style="margin:18px 0 8px; border-color:var(--gold);">
- <p class="system-panel-body" style="margin:0 0 8px;"><strong>R2.5 WORKBENCH PAGE CANDIDATE - NOT LIVE</strong></p>
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>R2.6 WORKBENCH PAGE CANDIDATE - NOT LIVE</strong></p>
  <p class="system-panel-body" style="margin:0;">
  This file lives at <code>evidence-workbench/gdpr/page-candidate/index.html</code>. It is <strong>not</strong> the public route <code>/regulation/gdpr/</code>.
- Claims remain <code>workflow_state=verified</code> (pre-publication). No public <code>claims.json</code>. Publish Gate is <strong>NOT OPEN</strong> (DEC-050 / DEC-051).
+ Claims remain <code>workflow_state=verified</code> (pre-publication). No public <code>claims.json</code>. Publish Gate is <strong>NOT OPEN</strong> (DEC-050 / DEC-051 / DEC-052). Decision Utility is a derived planning layer - not new verified claims.
  Do not treat this candidate as a published reference surface.
  </p>
  </div>
@@ -45,7 +45,7 @@
  <div class="telemetry-strip" role="group" aria-label="Control room telemetry">
  <dl class="telemetry-grid">
  <div class="telemetry-cell"><dt>Route target (later)</dt><dd>EP-REG-002</dd></div>
- <div class="telemetry-cell"><dt>Phase</dt><dd>R2.5 page candidate</dd></div>
+ <div class="telemetry-cell"><dt>Phase</dt><dd>R2.6 decision utility</dd></div>
  <div class="telemetry-cell"><dt>Claims</dt><dd>EP-CLM-000015..000045 (31 verified)</dd></div>
  <div class="telemetry-cell"><dt>Sources</dt><dd>EP-SRC-000004 / EP-SRC-000005</dd></div>
  <div class="telemetry-cell"><dt>Publication</dt><dd>blocked until R2.8</dd></div>
@@ -61,7 +61,7 @@
  <h1 class="control-room-hero-title" id="reg-heading">GDPR - Evidence Graph Reference Candidate</h1>
  <p class="control-room-hero-thesis">
  Regulation (EU) 2016/679 as a citable planning graph for non-EU entry: territorial reach, roles, lawfulness, operational duties,
- incident paths, DPIA/DPO triggers, transfer hierarchy, and enforcement framing - each proposition pinned to a permanent claim ID.
+ incident paths, DPIA/DPO triggers, transfer hierarchy, enforcement framing, and Decision Utility objects - each truth proposition pinned to a permanent claim ID.
  </p>
  <div class="badge-row">
  <span class="source-confidence-badge source-confidence-badge--tier1">Source: Tier 1 official</span>
@@ -220,11 +220,95 @@
  </div>
  </section>
 
- <hr class="section-divider">
+  <hr class="section-divider">
+
+ <section class="page-section" id="decision-utility" aria-labelledby="decision-utility-heading">
+ <div class="section-header">
+ <span class="section-eyebrow">10 - Decision Utility Layer (R2.6)</span>
+ <h2 class="section-title" id="decision-utility-heading">Verified claim to planning decision</h2>
+ <p class="section-body">
+ This layer converts verified claims into planning decisions. It does <strong>not</strong> mint new legal facts and does <strong>not</strong> judge an unknown company.
+ Pattern: verified claim -&gt; planning question -&gt; consequence -&gt; dependency/qualification -&gt; action to investigate.
+ Analytical seeds from <code>r2_1_planning_consequence</code> inform wording only; they are <strong>not</strong> verified propositions. Source staging: <code>decision-utility.staging.json</code> (DEC-052).
+ </p>
+ </div>
+
+ <div class="system-panel" style="margin-top:14px;" id="ep-du-gdpr-001">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-001 - Territorial applicability</strong>  &middot;  <a href="#ep-clm-000018"><code>EP-CLM-000018</code></a>-<a href="#ep-clm-000020"><code>000020</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> Which Article 3 limb(s), if any, map the intended European activity for this entry plan?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Establishment (<a href="#ep-clm-000018"><code>000018</code></a>), offering (<a href="#ep-clm-000019"><code>000019</code></a>), monitoring (<a href="#ep-clm-000020"><code>000020</code></a>). Art. 3(3) remains deferred/unminted.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Close the territorial map before freezing entity design, go-to-market packaging, or tracking/analytics architecture. EU establishment design, go-to-market configuration, and monitoring design should be examined against the applicable Article 3 limbs before launch.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Concrete establishment, offering facts under Art. 3(2)(a), and monitoring design; any Art. 3(3) analysis.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-002">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-002 - Operating role</strong>  &middot;  <a href="#ep-clm-000021"><code>EP-CLM-000021</code></a>-<a href="#ep-clm-000023"><code>000023</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> For each material processing activity, who determines purposes and means, who processes on behalf of whom, and where are joint-controller arrangements required?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Controller (<a href="#ep-clm-000021"><code>000021</code></a>), processor (<a href="#ep-clm-000022"><code>000022</code></a>), joint controllers (<a href="#ep-clm-000023"><code>000023</code></a>).</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Close the role map before contracting, sub-processor graphs, transfer tools, or marketplace partnership launch.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Actual purpose/means determination; contractual reality versus labels; whether actors jointly determine purposes and means.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-003">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-003 - EU representative</strong>  &middot;  co-render <a href="#ep-clm-000024"><code>EP-CLM-000024</code></a> &lt;-&gt; <a href="#ep-clm-000025"><code>000025</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> If Article 3(2) applies, does the Art. 27(1) representative duty apply, or does an Art. 27(2) exception close the gate?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Default duty (<a href="#ep-clm-000024"><code>000024</code></a>) must be read with exceptions (<a href="#ep-clm-000025"><code>000025</code></a>). Neither is a standalone conclusion.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Representative status must be closed before freezing the European operating model; document the Art. 27(2) analysis with the Art. 27(1) default.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Whether Art. 3(2) applies; whether all conjunctive conditions in Art. 27(2)(a) are satisfied; or whether Art. 27(2)(b) public-authority/body status applies.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-004">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-004 - Lawfulness baseline</strong>  &middot;  <a href="#ep-clm-000026"><code>EP-CLM-000026</code></a>-<a href="#ep-clm-000028"><code>000028</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> For each material processing activity, which Art. 6(1) basis is relied on, how do Art. 5(1) principles constrain design, and what accountability evidence will demonstrate that map?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Art. 6(1) structural gate (<a href="#ep-clm-000026"><code>000026</code></a>), Art. 5(1) principles (<a href="#ep-clm-000027"><code>000027</code></a>), Art. 5(2) accountability (<a href="#ep-clm-000028"><code>000028</code></a>). Not a slogan that "consent is required".</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Build a legal-basis map and governance evidence pack before EU launch; data model and retention are constrained before market activation.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Which basis applies per activity; whether consent is used; how principles bind a specific product; demonstration records.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-005">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-005 - Governance readiness</strong>  &middot;  <a href="#ep-clm-000029"><code>EP-CLM-000029</code></a>-<a href="#ep-clm-000034"><code>000034</code></a> (RoPA co-render 032&lt;-&gt;033)</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> Is the operating model ready on Art. 24/25/28/30/32 before EU ops freeze - including RoPA with its Art. 30(5) qualification?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> <a href="#ep-clm-000029"><code>000029</code></a>-<a href="#ep-clm-000034"><code>000034</code></a>; records default (<a href="#ep-clm-000032"><code>000032</code></a>) with Art. 30(5) (<a href="#ep-clm-000033"><code>000033</code></a>). Headcount alone does not close RoPA.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Treat security/governance design, product architecture, vendor graph, and RoPA as pre-entry deliverables.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Concrete risk profile; whether any Art. 30(5) re-trigger applies; vendor diligence; chosen TOMs.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-006">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-006 - Breach response</strong>  &middot;  co-render 035&lt;-&gt;036 and 037&lt;-&gt;038</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> Does the incident path distinguish SA notification (Art. 33) from data-subject communication (Art. 34), including each default and its qualification?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> <a href="#ep-clm-000035"><code>000035</code></a>&lt;-&gt;<a href="#ep-clm-000036"><code>000036</code></a>; <a href="#ep-clm-000037"><code>000037</code></a>&lt;-&gt;<a href="#ep-clm-000038"><code>000038</code></a>.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Incident-response design is a pre-entry gate. Playbooks encode risk-threshold assessment and Art. 34(3) branches - not only a 72-hour timer.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Concrete breach facts; risk/high-risk assessments; delay reasons; Art. 34(3) branch applicability.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-007">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-007 - DPIA / DPO triggers</strong>  &middot;  <a href="#ep-clm-000039"><code>EP-CLM-000039</code></a>-<a href="#ep-clm-000040"><code>000040</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> Which features trigger a DPIA under Art. 35, and which Art. 37(1)(a)/(b)/(c) triggers, if any, require DPO designation?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> DPIA gate (<a href="#ep-clm-000039"><code>000039</code></a>); DPO as trigger model (<a href="#ep-clm-000040"><code>000040</code></a>) - not a universal default duty.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> High-risk feature design tests DPIA before EU activation; org design tests Art. 37(1) triggers without assuming a default DPO.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Concrete high-risk assessment; which particular cases apply; whether any Art. 37(1) trigger is met.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-008">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-008 - International transfer path</strong>  &middot;  hierarchy <a href="#ep-clm-000041"><code>041</code></a> -&gt; <a href="#ep-clm-000042"><code>042</code></a> -&gt; <a href="#ep-clm-000043"><code>043</code></a> -&gt; <a href="#ep-clm-000044"><code>044</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> Before freezing cloud regions and vendors, what Chapter V path governs any transfer?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Related pathway claims - not equal options and not <code>qualified_by</code>. Adequacy only where a valid decision exists; Art. 49 is not the default design.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Design transfer architecture before region/vendor freeze; re-check adequacy under freshness rules; Art. 46 safeguard selection and implementation precedes vendor freeze.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Whether a transfer occurs; destination; adequacy validity at decision time; available Art. 46 tool; any Art. 49 conditions.</p>
+ </div>
+
+ <div class="system-panel" style="margin-top:12px;" id="ep-du-gdpr-009">
+ <p class="system-panel-body" style="margin:0 0 8px;"><strong>EP-DU-GDPR-009 - Enforcement exposure</strong>  &middot;  <a href="#ep-clm-000045"><code>EP-CLM-000045</code></a></p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Question:</strong> How should board and risk framing present Art. 83 exposure - criteria and tiers rather than a single scare figure?</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Evidence:</strong> Administrative fines retain criteria plus tiers (<a href="#ep-clm-000045"><code>000045</code></a>). Regulation (EU) 2025/2518 remains Freshness Watch only.</p>
+ <p class="system-panel-body" style="margin:0 0 6px;"><strong>Planning consequence:</strong> Risk register and board framing use the Art. 83 structure and criteria - not a single maximum figure detached from the statutory method.</p>
+ <p class="system-panel-body" style="margin:0;"><strong>What remains fact-specific:</strong> Concrete infringement facts; applicable tier/criteria; calculation inputs; any future instrument under freshness watch.</p>
+ </div>
+ </section>
 
  <section class="page-section" id="claim-register" aria-labelledby="claim-register-heading">
  <div class="section-header">
- <span class="section-eyebrow">10 - Verified Claim Register</span>
+ <span class="section-eyebrow">11 - Verified Claim Register</span>
  <h2 class="section-title" id="claim-register-heading">GDPR - Verified Claim Register (candidate)</h2>
  <p class="section-body">
  Each fact below is a governed Evidence Object with a stable identifier and source locator, human-verified against EUR-Lex on 2026-08-20.
@@ -622,7 +706,7 @@
 
  <section class="page-section" id="sources" aria-labelledby="sources-heading">
  <div class="section-header">
- <span class="section-eyebrow">11 - Primary Sources + Verification / Freshness Contract</span>
+ <span class="section-eyebrow">12 - Primary Sources + Verification / Freshness Contract</span>
  <h2 class="section-title" id="sources-heading">Pinned sources and maintenance</h2>
  </div>
  <div class="system-panel">
@@ -649,7 +733,7 @@
  <ul class="tension-list">
  <li>
  <span class="tension-label">Is</span>
- <span class="tension-desc">A branch-only, citable Evidence Graph page candidate for GDPR batch-1 claims, with mandatory qualification co-render and Chapter V hierarchy presentation.</span>
+ <span class="tension-desc">A workbench, citable Evidence Graph page candidate for GDPR batch-1 claims, with mandatory qualification co-render, Chapter V hierarchy, and nine Decision Utility objects (derived planning layer).</span>
  </li>
  <li>
  <span class="tension-label">Is not</span>
