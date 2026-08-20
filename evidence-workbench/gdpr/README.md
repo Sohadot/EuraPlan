@@ -1,7 +1,7 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** Open — R2.3 human literal verification in progress (V1 PASS for EP-CLM-000015…000020)
+**Status:** Open — R2.3 human literal verification in progress (V1 + V2 PASS for EP-CLM-000015…000026)
 **Opened:** 2026-08-20
-**Branch:** `sprint-r2-gdpr-r2-3-v1-verification`
+**Branch:** `sprint-r2-gdpr-r2-3-v2-verification`
 **Canonical target (later):** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)
 **Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-048; DEC-049; DISCLOSURE_BOUNDARY.md
 
@@ -10,13 +10,13 @@
 ## Hard rules for this sprint
 
 1. **No HTML rewrite** of `/regulation/gdpr/` until R2.4 after verified claims exist.
-2. **No** `/regulation/gdpr/claims.json` until after human verification + Publish Gate path (R2.3+).
-3. **Minting fixes identity, not truth-status.** Draft IDs `EP-CLM-000015`…`EP-CLM-000045` are permanently reserved for their R2.2 propositions. Do not recycle; use `void` + new ID if a proposition fails before publish.
+2. **No** `/regulation/gdpr/claims.json` until after human verification + Publish Gate path.
+3. **Minting fixes identity, not truth-status.** IDs `EP-CLM-000015`…`EP-CLM-000045` are permanently reserved; never recycle.
 4. **No** parallel Data Act / country / expansion work.
-5. Claim count follows **material truth** for non-EU entry planning — not a 14-claim template.
+5. Claim count follows **material truth** for non-EU entry planning — not a template.
 6. Global opaque ID sequence only — never `GDPR-CLM-*`.
-7. Defaults that have exceptions (`unless` / `except` / thresholds) must carry `qualified_by` — never publish a default alone.
-8. **No** generic Commission overview or EDPB guidelines-portfolio `EP-SRC-*`. Pin specific instruments only when a claim needs them at verification.
+7. Defaults with exceptions must carry `qualified_by`; a published default may never render without its qualifier.
+8. No generic Commission/EDPB portfolio source nodes; pin specific instruments only when needed.
 
 ---
 
@@ -25,9 +25,9 @@
 | Phase | Name | State |
 |---|---|---|
 | R2.0 | Source & Claim Discovery | **CLOSED / PASS** |
-| R2.1 | Claim Map & Falsification | **CLOSED / PASS** — `CLAIM_MAP_R2_1.draft.json` (31 keep / 4 defer) |
-| R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS** (Content + Integration on `main` @ `2000b76…`) |
-| R2.3 | Human Literal Verification (`draft` → `pending_verification` → `verified`) | **IN PROGRESS** — **V1 PASS** (`000015`–`000020`); V2+ not started |
+| R2.1 | Claim Map & Falsification | **CLOSED / PASS** |
+| R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS** (content + integration) |
+| R2.3 | Human Literal Verification | **IN PROGRESS** — **V1 PASS** (`000015`–`000020`) + **V2 PASS** (`000021`–`000026`); V3 not started |
 | R2.4 | Canonical graph + routes alternate | Not started |
 | R2.5 | Page transformation | Not started |
 | R2.6 | Decision utility layer | Hints in claim map; deepen at page stage |
@@ -36,39 +36,42 @@
 
 ---
 
-## Workbench files (Class 2 public working evidence)
+## Workbench files
 
 | File | Role |
 |---|---|
-| `SOURCE_REGISTRY.draft.json` | R2.0 candidate sources (Commission/EDPB remain unminted) |
-| `SOURCE_REGISTRY.minted.draft.json` | **R2.2** pinned `EP-SRC-000004` / `EP-SRC-000005` + freshness watch |
+| `SOURCE_REGISTRY.draft.json` | R2.0 candidate sources |
+| `SOURCE_REGISTRY.minted.draft.json` | R2.2 pinned `EP-SRC-000004` / `EP-SRC-000005` + freshness watch |
 | `CLAIM_CANDIDATES.draft.md` | R2.0 discovery intake |
-| `CLAIM_MAP_R2_1.draft.json` | R2.1 truth filter — falsification + KEEP/SPLIT/DEFER |
-| `claims.minted.draft.json` | Minted identities — V1 (`000015`–`000020`) = `verified`; remainder `draft`; `_meta.published: false` |
-| `VERIFICATION_V1_2026-08-20.md` | **R2.3 V1** claim-by-claim literal verification record |
+| `CLAIM_MAP_R2_1.draft.json` | R2.1 truth filter |
+| `claims.minted.draft.json` | Minted identities — `000015`–`000026` verified after V1/V2; `000027`–`000045` remain draft |
+| `VERIFICATION_V1_2026-08-20.md` | R2.3 V1 literal verification |
+| `VERIFICATION_V2_2026-08-20.md` | R2.3 V2 literal verification |
 | `README.md` | This status note |
 
 ---
 
-## R2.2 identity range (owner-approved Batch-1)
+## Current truth-status
 
-| Permanent ID | Candidate key |
-|---|---|
-| `EP-CLM-000015` … `EP-CLM-000045` | 31 KEEP from R2.1 (see `_meta.candidate_to_claim_id`) |
+**Verified:** `EP-CLM-000015` … `EP-CLM-000026` (12/31).
 
-**Deferred / UNMINTED (no IDs):** Art. 3(3); Art. 9; dynamic adequacy-country list; broad supervisory-authority architecture.
+**Still draft:** `EP-CLM-000027` … `EP-CLM-000045` (19/31).
 
-**Sources minted:** `EP-SRC-000004` (OJ `32016R0679`); `EP-SRC-000005` (consolidated `02016R0679-20160504`).
+**Deferred / UNMINTED:** Art. 3(3); Art. 9; dynamic adequacy-country list; broad supervisory-authority architecture.
 
-**Post-V1 state:** `000015`–`000020` = `verified` / `Verified` / `last_verified_at=2026-08-20`; `000021`–`000045` still `draft` / `Pending` / `null`; all `validity_state=null`; `_meta.published=false`.
+**Sources:** `EP-SRC-000004` (OJ `32016R0679`); `EP-SRC-000005` (consolidated `02016R0679-20160504`).
+
+**V2 qualification constraint:** `EP-CLM-000024` remains `qualified_by` `EP-CLM-000025`; graph-level integrity verified. Visible co-rendering is a blocking later Publish Gate condition, because no public GDPR claim renderer exists yet.
+
+`_meta.published=false`; HTML blocked; GDPR Publish Gate **NOT OPEN**.
 
 ---
 
 ## Success condition (end of R2)
 
-- AI Act remains ≥90 (untouched except real freshness events)
+- AI Act remains ≥90
 - GDPR RGS score ≥90 for real six-layer reasons
-- Data Act / CRA / EERS / Protocol still later
+- Data Act / CRA / EERS / Protocol remain later
 - **No expansion opened**
 
 ---
