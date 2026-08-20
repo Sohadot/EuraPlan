@@ -1,7 +1,7 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** Open — R2.2 Draft Minting & Source Pinning complete locally; human verification not started
+**Status:** Open — R2.3 human literal verification in progress (V1 PASS for EP-CLM-000015…000020)
 **Opened:** 2026-08-20
-**Branch:** `sprint-r2-gdpr-r2-2-draft-mint`
+**Branch:** `sprint-r2-gdpr-r2-3-v1-verification`
 **Canonical target (later):** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)
 **Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-048; DEC-049; DISCLOSURE_BOUNDARY.md
 
@@ -26,8 +26,8 @@
 |---|---|---|
 | R2.0 | Source & Claim Discovery | **CLOSED / PASS** |
 | R2.1 | Claim Map & Falsification | **CLOSED / PASS** — `CLAIM_MAP_R2_1.draft.json` (31 keep / 4 defer) |
-| R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS (workbench)** — `claims.minted.draft.json` + `SOURCE_REGISTRY.minted.draft.json` |
-| R2.3 | Human Literal Verification (`draft` → `pending_verification` → `verified`) | **NEXT — NOT STARTED** |
+| R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS** (Content + Integration on `main` @ `2000b76…`) |
+| R2.3 | Human Literal Verification (`draft` → `pending_verification` → `verified`) | **IN PROGRESS** — **V1 PASS** (`000015`–`000020`); V2+ not started |
 | R2.4 | Canonical graph + routes alternate | Not started |
 | R2.5 | Page transformation | Not started |
 | R2.6 | Decision utility layer | Hints in claim map; deepen at page stage |
@@ -44,7 +44,8 @@
 | `SOURCE_REGISTRY.minted.draft.json` | **R2.2** pinned `EP-SRC-000004` / `EP-SRC-000005` + freshness watch |
 | `CLAIM_CANDIDATES.draft.md` | R2.0 discovery intake |
 | `CLAIM_MAP_R2_1.draft.json` | R2.1 truth filter — falsification + KEEP/SPLIT/DEFER |
-| `claims.minted.draft.json` | **R2.2** draft identity fixation — 31 claims; `_meta.published: false` |
+| `claims.minted.draft.json` | Minted identities — V1 (`000015`–`000020`) = `verified`; remainder `draft`; `_meta.published: false` |
+| `VERIFICATION_V1_2026-08-20.md` | **R2.3 V1** claim-by-claim literal verification record |
 | `README.md` | This status note |
 
 ---
@@ -59,7 +60,7 @@
 
 **Sources minted:** `EP-SRC-000004` (OJ `32016R0679`); `EP-SRC-000005` (consolidated `02016R0679-20160504`).
 
-**Draft state (all 31):** `workflow_state=draft`; `validity_state=null`; `last_verified_at=null`; `confidence=Pending`; `_meta.published=false`.
+**Post-V1 state:** `000015`–`000020` = `verified` / `Verified` / `last_verified_at=2026-08-20`; `000021`–`000045` still `draft` / `Pending` / `null`; all `validity_state=null`; `_meta.published=false`.
 
 ---
 
