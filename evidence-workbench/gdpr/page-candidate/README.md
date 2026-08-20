@@ -18,6 +18,7 @@
 4. Co-render all `qualified_by` pairs; present Chapter V as hierarchy, not interchangeable options.
 5. Proposition text is driven from `../claims.canonical.staging.json` (verified 2026-08-20).
 6. Decision Utility is driven from `../decision-utility.staging.json` (derived layer; seeds are not verified facts).
-7. No new `EP-CLM-*` for utility alone. R2.7 / R2.8 remain blocked.
+7. No new `EP-CLM-*` for utility alone.
+8. R2.7 prepares citation/machine registration drafts only — do not copy this candidate over live HTML and do not create `regulation/gdpr/claims.json` until R2.8.
 
-See `../R2_5_PAGE_CANDIDATE.md`, `../R2_6_DECISION_UTILITY.md`, DEC-051, and DEC-052.
+See `../R2_5_PAGE_CANDIDATE.md`, `../R2_6_DECISION_UTILITY.md`, `../R2_7_CITATION_MACHINE_PREP.md`, DEC-051, DEC-052, and DEC-053.
