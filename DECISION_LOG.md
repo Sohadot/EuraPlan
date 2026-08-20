@@ -623,6 +623,19 @@ Each entry uses the following structure:
   - **Registration draft is non-executing** until R2.8
   - **Next:** complete R2.7 citation/registration prep review; open R2.8 only by separate DEC
 
+### DEC-054
+- **Date:** 2026-08-20 (Sprint R2.7 closed; R2.8 Publish Gate opened / execution blocked at Gate 0)
+- **Status:** Active
+- **Decision:** (1) Close **R2.7 — Citation + Machine Registration Preparation** as **CLOSED / PASS** after PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b` (head `b3d35f6e5f91c633cdff19df3eb2986b7bd6dd8a`): citation integrity prep PASS; registration preparation fidelity PASS (crawl reality; staging→public transformation contract; HTML release-sanitization checklist); no live registration executed. (2) Open **R2.8 — GDPR Publish Gate** as **OPEN / EXECUTION BLOCKED AT GATE 0**. Opening the phase does **not** promote claims, create public `claims.json`, or authorize immediate live mutations. (3) Freeze the internal Publish Gate order: **Gate 0** Hosting & Index-Control Capability; **Gate 1** Pre-publication canonical build (`verified → publishable`; `validity_state` remains `null`; no invented SHAs); **Gate 2** Release HTML candidate (full §E.2); **Gate 3** Machine + registration package; **Gate 4** Pre-merge Publish Gate checks; **Gate 5** Publication (`publishable → published`; `null → active`; `_meta.published=true`; single release sequence); **Gate 6** Post-merge live verification with real merge SHA + RGS v2 re-score target ≥90. (4) Gate 0 must distinguish crawl control from index control; prefer `X-Robots-Tag: noindex` for `/regulation/gdpr/claims.json` if hosting/CDN supports it; do not assume GitHub Pages alone provides arbitrary per-path headers; `routes.json` `indexable:false` remains governance metadata only. (5) Until Gate 0 PASSes and later gates authorize them, forbid public `claims.json`, live GDPR HTML cutover, and live `routes.json` / `llms.txt` / sitemap / robots execution.
+- **Rationale:** R2.7 completed the non-executing package. Publication must still begin with proven hosting/index-control capability because the repo reports `has_pages=true`, custom domain `euraplan.com`, and `robots.txt` `Allow: /regulation/`, so a future `claims.json` would be technically crawlable unless Gate 0 records an explicit control decision.
+- **Affected routes/files:** `evidence-workbench/gdpr/R2_8_PUBLISH_GATE.md`; `evidence-workbench/gdpr/R2_7_CITATION_MACHINE_PREP.md`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** ROUTE_GOVERNANCE.md; REFERENCE_GRADE_ROUTE_STANDARD.md; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; DISCLOSURE_BOUNDARY.md; `R2_7_REGISTRATION_DRAFT.md`; DEC-050…DEC-053
+- **Reversal conditions:** Superseding DEC to skip Gate 0, to invent provenance SHAs, to promote `validity_state` to `active` before publication, or to mutate live GDPR publication surfaces before Gate 4/5 authorization
+- **Notes:**
+  - **R2.7 integration merge:** `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`
+  - **Opening PR must not** create public `claims.json` or edit live GDPR HTML / `routes.json` / `llms.txt` / sitemap / robots
+  - **Next:** execute Gate 0 hosting/index-control investigation; remain blocked from Gates 1–6 until Gate 0 is recorded
+
 ---
 
 ## 4. Superseded / Rejected Decisions

@@ -1,8 +1,10 @@
 # R2.7 — Citation + Machine Registration Preparation
 
-**Status:** OPEN  
+**Status:** CLOSED / PASS  
 **Opened:** 2026-08-20  
-**Branch:** `sprint-r2-gdpr-r2-7-citation-machine-prep`  
+**Closed:** 2026-08-20  
+**Integration merge:** PR #40 `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
+**Reviewed head:** `b3d35f6e5f91c633cdff19df3eb2986b7bd6dd8a`  
 **Prerequisite:** R2.6 CLOSED / PASS via PR #39 merge `81684158aeeff1f89da937e76c9e3e481ed69c34`
 
 ---
@@ -94,12 +96,9 @@ Exact draft text lives in `R2_7_REGISTRATION_DRAFT.md`.
 
 ## Exit toward R2.8
 
-R2.7 may close when:
+R2.7 closed after owner Citation Integrity Prep + Registration Preparation Fidelity PASS and Integration merge on `main`.
 
-1. Citation inventory PASS (anchors, co-render, hierarchy, DU traceability)
-2. Registration draft complete — including transformation contract, crawl reality, HTML sanitization checklist — and owner-reviewed
-3. No live registration executed
-4. Owner authorizes **R2.8 Publish Gate** as a separate controlled sequence
+**R2.8 — Publish Gate** is OPEN under **DEC-054** with **execution BLOCKED AT GATE 0** (Hosting & Index-Control Capability). Live mutations remain forbidden until later R2.8 gates authorize them.
 
 ---
 
