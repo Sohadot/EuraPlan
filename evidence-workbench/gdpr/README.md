@@ -1,7 +1,7 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** Open — R2.3 human literal verification in progress (V1 + V2 PASS for EP-CLM-000015…000026)
+**Status:** Open — R2.3 human literal verification in progress (V1+V2+V3 PASS for EP-CLM-000015…000033)
 **Opened:** 2026-08-20
-**Branch:** `sprint-r2-gdpr-r2-3-v2-verification`
+**Branch:** `sprint-r2-gdpr-r2-3-v3-verification`
 **Canonical target (later):** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)
 **Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-048; DEC-049; DISCLOSURE_BOUNDARY.md
 
@@ -27,7 +27,7 @@
 | R2.0 | Source & Claim Discovery | **CLOSED / PASS** |
 | R2.1 | Claim Map & Falsification | **CLOSED / PASS** |
 | R2.2 | Identity Fixation + Source Pinning + Draft Serialization | **CLOSED / PASS** (content + integration) |
-| R2.3 | Human Literal Verification | **IN PROGRESS** — **V1 PASS** (`000015`–`000020`) + **V2 PASS** (`000021`–`000026`); V3 not started |
+| R2.3 | Human Literal Verification | **IN PROGRESS** — **V1+V2+V3 PASS** (`000015`–`000033` = 19/31); V4 not started |
 | R2.4 | Canonical graph + routes alternate | Not started |
 | R2.5 | Page transformation | Not started |
 | R2.6 | Decision utility layer | Hints in claim map; deepen at page stage |
@@ -44,26 +44,35 @@
 | `SOURCE_REGISTRY.minted.draft.json` | R2.2 pinned `EP-SRC-000004` / `EP-SRC-000005` + freshness watch |
 | `CLAIM_CANDIDATES.draft.md` | R2.0 discovery intake |
 | `CLAIM_MAP_R2_1.draft.json` | R2.1 truth filter |
-| `claims.minted.draft.json` | Minted identities — `000015`–`000026` verified after V1/V2; `000027`–`000045` remain draft |
+| `claims.minted.draft.json` | Minted identities — `000015`–`000033` verified after V1–V3; `000034`–`000045` remain draft |
 | `VERIFICATION_V1_2026-08-20.md` | R2.3 V1 literal verification |
 | `VERIFICATION_V2_2026-08-20.md` | R2.3 V2 literal verification |
+| `VERIFICATION_V3_2026-08-20.md` | R2.3 V3 literal verification |
 | `README.md` | This status note |
 
 ---
 
 ## Current truth-status
 
-**Verified:** `EP-CLM-000015` … `EP-CLM-000026` (12/31).
+**Verified:** `EP-CLM-000015` … `EP-CLM-000033` (19/31).
 
-**Still draft:** `EP-CLM-000027` … `EP-CLM-000045` (19/31).
+**Still draft:** `EP-CLM-000034` … `EP-CLM-000045` (12/31).
 
 **Deferred / UNMINTED:** Art. 3(3); Art. 9; dynamic adequacy-country list; broad supervisory-authority architecture.
 
 **Sources:** `EP-SRC-000004` (OJ `32016R0679`); `EP-SRC-000005` (consolidated `02016R0679-20160504`).
 
-**V2 qualification constraint:** `EP-CLM-000024` remains `qualified_by` `EP-CLM-000025`; graph-level integrity verified. Visible co-rendering is a blocking later Publish Gate condition, because no public GDPR claim renderer exists yet.
+**Qualification edges retained:**
+- `EP-CLM-000024` → `000025` (Art. 27)
+- `EP-CLM-000032` → `000033` (Art. 30)
+
+Visible co-rendering of qualified pairs remains a blocking later Publish Gate condition (no public GDPR claim renderer yet).
 
 `_meta.published=false`; HTML blocked; GDPR Publish Gate **NOT OPEN**.
+
+**Planned remaining R2.3 batches:**
+- **V4:** `000034`–`000040` — security, breach, DPIA, DPO
+- **V5:** `000041`–`000045` — Chapter V transfers + fines
 
 ---
 
