@@ -1,8 +1,8 @@
 # CLAIM_POLICY.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
-**Last Updated:** June 2026
+**Last Updated:** August 2026
 
 ---
 
@@ -12,6 +12,9 @@ EuraPlan.com produces planning intelligence. Not legal advice.
 
 This document defines what EuraPlan may and may not assert in any public output — page, tool, output, or interface element.
 
+### Changelog
+- **v1.1** — Added the legal-effect claim category (amendment / repeal / applicability / instrument-effect) to the permitted list (§2) and classified it High-risk, Tier-1-required (§6). This closes a gap: the prior High band named regulatory deadlines and compliance requirements but not the underlying "instrument X amends/affects instrument Y" claim type that a governed regulatory corpus must make.
+
 ---
 
 ## 2. Permitted Claim Types
@@ -20,6 +23,7 @@ This document defines what EuraPlan may and may not assert in any public output 
 |---|---|
 | A regulatory obligation exists | Must cite specific regulation and article |
 | A regulatory deadline applies | Must cite official source; uncertainty must be noted if date is not yet confirmed |
+| A regulation amends, repeals, or otherwise legally affects another instrument | Must cite the amending instrument and the specific amending article/point, and the target provision (legal-effect claim) |
 | A funding programme is available | Must link to official programme page |
 | A country is a viable entry consideration | Must frame as planning signal, not certainty |
 | A compliance step is typically required | Must cite applicable regulation or official guidance |
@@ -80,10 +84,15 @@ Every claim must be classified before publication:
 
 | Risk Level | Description | Requirement |
 |---|---|---|
-| **Low** | General category or orientation statement | No external source required |
+| **Low** | General category or orientation statement; bibliographic instrument identity | No external source required (identity claims cite the instrument) |
 | **Medium** | Sector, country, or strategy framing | Tier 2 or Tier 3 source |
-| **High** | Regulatory deadline, compliance requirement, funding eligibility | Tier 1 source required |
+| **High** | Regulatory deadline, compliance requirement, funding eligibility, **or legal applicability / amendment / repeal / instrument-effect** | Tier 1 source required |
 | **Blocked** | Legal conclusion or implied legal advice | Not permitted — must be rephrased or removed |
+
+> A legal-effect claim — "Regulation A amends/repeals/affects Regulation B" — is
+> **High**: it states a legal relationship a reader may rely on, and requires a
+> Tier-1 basis (the amending instrument and its specific article). Bibliographic
+> **identity** of an instrument (its title, CELEX, common name) remains Low.
 
 ---
 

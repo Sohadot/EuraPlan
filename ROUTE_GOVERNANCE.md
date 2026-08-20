@@ -2,7 +2,7 @@
 **Version:** 1.0
 **Status:** Active — Governing Document
 **Asset:** EuraPlan.com
-**Last Updated:** June 2026
+**Last Updated:** August 2026
 
 ---
 
@@ -70,6 +70,7 @@ Routes that do not meet these requirements remain at `status: draft` and are not
 | Diagnostic query state (`/diagnostic?...`) | No | No |
 | Brief (`/brief/...`) | Yes | Yes (when published) |
 | Governance and source pages | Yes | Yes |
+| Alternate machine representation of an existing route (e.g. canonical claim graph) | No | No |
 | Draft routes | No | No |
 | Internal tooling or admin paths | No | No |
 
@@ -101,6 +102,8 @@ Never return a 404 for a previously indexed route without a redirect in place.
 All approved routes are maintained in `routes.json`.
 No route is considered governed without an entry in `routes.json`.
 `routes.json` is the single source of truth for route state.
+
+Alternate machine representations of an existing governed route (for example a canonical claim graph served as `application/json`) are registered on that route's entry in `routes.json` under `alternate_representations`. They are not a new Layer, not independently indexable, and not sitemap entries. No public URL is considered governed without this registration.
 
 ---
 

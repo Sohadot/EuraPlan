@@ -1,6 +1,6 @@
 # EuraPlan.com robots.txt
 # Asset: EuraPlan.com — European Regulatory Entry Planning Intelligence
-# Governed by: ROUTE_GOVERNANCE.md
+# Governed by: ROUTE_GOVERNANCE.md, DISCLOSURE_BOUNDARY.md
 
 User-agent: *
 
@@ -25,8 +25,11 @@ Disallow: /diagnostic?
 
 # Draft and unpublished routes
 Disallow: /draft/
-Disallow: /internal/
 Disallow: /brief/
+
+# Pre-publication working evidence (public in repo, but not the canonical corpus)
+# Crawl hygiene only — robots.txt is a crawl directive, not an access control (see DISCLOSURE_BOUNDARY.md)
+Disallow: /evidence-workbench/
 
 # Matrix is not yet published
 Disallow: /matrix/

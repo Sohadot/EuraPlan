@@ -1,0 +1,50 @@
+# EuraPlan
+
+> EuraPlan produces structured, source-governed planning intelligence for non-EU
+> companies entering the European market: regulatory mapping, entry planning,
+> funding readiness, and compliance sequencing. It is a reference corpus, not a
+> blog. EuraPlan produces planning intelligence, not legal advice.
+
+## Operating principle
+
+Public truth, paid application. The reference layer (regulations, the readiness
+standard, sources) is open and citable. Application to a specific company —
+diagnostics, monitoring, and licensing — is the paid layer. Reference facts are
+never placed behind a paywall.
+
+## Sourcing
+
+EuraPlan's governance requires that regulatory, compliance, and funding claims cite
+an official (Tier 1) source. Regulation reference pages carry their sources visibly
+and a "Last Updated" date.
+
+## Core reference pages
+
+- [EuraPlan home](https://euraplan.com/): the European Entry Control Room and intelligence output panels.
+- [Regulatory Entry Clock](https://euraplan.com/clock/): EU regulation enforcement and phase dates from official texts.
+- [European Entry Readiness Standard (EERS)](https://euraplan.com/standard/eers/): the eight-dimension readiness standard.
+- [Entry Planning Protocol](https://euraplan.com/protocol/): the twelve-step sequence governing every intelligence output.
+- [Enter](https://euraplan.com/enter/): the four gateway entry decisions.
+
+## Regulation references
+
+- [EU AI Act](https://euraplan.com/regulation/eu-ai-act/) (Regulation (EU) 2024/1689)
+- [GDPR](https://euraplan.com/regulation/gdpr/) (Regulation (EU) 2016/679)
+- [EU Data Act](https://euraplan.com/regulation/eu-data-act/) (Regulation (EU) 2023/2854)
+- [Cyber Resilience Act](https://euraplan.com/regulation/cyber-resilience-act/)
+
+## Machine-readable claim graphs
+
+- [EU AI Act — canonical claim graph](https://euraplan.com/regulation/eu-ai-act/claims.json): the machine-readable canonical claim graph for the EU AI Act reference page — governed Evidence Objects with opaque stable identifiers (`EP-CLM-*`), source/provision locators, qualification links, and verification dates. It mirrors the visible Verified Claim Register on `/regulation/eu-ai-act/`. This is a static reference file, not an API, and implies no external endorsement.
+
+## Governance and sourcing
+
+- [Sources & source policy](https://euraplan.com/sources/): tiering and verification of every claim.
+- [Governance note](https://euraplan.com/governance/): how EuraPlan intelligence is governed.
+
+## Notes for automated agents
+
+- Regulatory claims, deadlines, and readiness criteria appear in the HTML source, not only in JavaScript.
+- Cross-reference data is in real HTML tables with headers; sources are listed visibly at the end of each page.
+- EuraPlan is a private intelligence asset, not a government body or an official EU source. Verify regulatory requirements against the cited official sources before acting.
+- Verify each page's own "Last Updated" date; EU regulations and enforcement timelines change.

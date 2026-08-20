@@ -1,9 +1,9 @@
 # SECURITY_POLICY.md
-**Version:** 1.0
+**Version:** 1.1
 **Status:** Active — Operating Governance
 **Asset:** EuraPlan.com
-**Last Updated:** June 2026
-**Governed by:** GOVERNANCE_CHARTER.md
+**Last Updated:** August 2026
+**Governed by:** GOVERNANCE_CHARTER.md, DISCLOSURE_BOUNDARY.md
 
 ---
 
@@ -29,7 +29,7 @@ EuraPlan does not currently collect user data, run server-side code, or handle p
 - Environment variables embedded directly in source code
 - `.env` files (must be in `.gitignore`)
 
-`.gitignore` must exclude: `.env`, `*.pem`, `credentials.*`, `secrets.*`, `.DS_Store`, `node_modules/`.
+`.gitignore` (present at repository root) excludes: `.env`, `.env.*` (except `.env.example`), `*.pem`, `*.key`, `*.p12`, `*.pfx`, `credentials.*`, `secrets.*`, local SSH private keys, `.DS_Store`, `Thumbs.db`, `node_modules/`. JSON/YAML/CSV are intentionally not ignored because the corpus and datasets use them.
 
 ---
 
@@ -95,6 +95,7 @@ Any email capture (newsletter, brief subscription) requires:
 - Dependencies reviewed for known vulnerabilities at each major update cycle
 - No dependency from an unmaintained repository (last commit > 24 months) without a documented exception
 - Prefer zero-dependency or minimal-dependency implementations for Phase 1
+- GitHub Actions are pinned to immutable commit SHAs, not floating tags (see §11)
 
 ---
 
@@ -127,6 +128,7 @@ Content-Security-Policy must be reviewed whenever a new third-party resource is 
 - Prefer self-hosted assets
 - Phase 1 approved default: no external CDN dependencies — all assets served from repository
 - Any third-party integration introduced in Phase 2+ requires a dependency review against this policy
+- GitHub Actions from third parties are pinned to a full immutable commit SHA (never a floating tag), with the human-readable version recorded in a trailing comment
 
 ---
 
@@ -140,6 +142,21 @@ If a security issue is identified (secret committed, data exposed, script inject
 4. Document the incident in owner private communications
 5. If personal data was exposed, assess GDPR notification obligations (72-hour window under GDPR Article 33)
 6. Review and update this policy if the incident reveals a governance gap
+
+---
+
+## 11. Automated Secret-Scan Gate
+
+Two independent gates protect the public-disclosure boundary (`DISCLOSURE_BOUNDARY.md`):
+
+**Machine Secret Gate** — a `secret-scan` GitHub Action (`.github/workflows/secret-scan.yml`) runs Gitleaks on every push, pull request, and manual dispatch, over full Git history (`fetch-depth: 0`). It detects keys, tokens, passwords, and credentials. Third-party actions are pinned to immutable commit SHAs. Scan output that could contain secret values is never uploaded as an artifact or printed unredacted.
+
+- `.gitignore` (§2) keeps secret-bearing files out of the working tree in the first place.
+- **Owner action required (repository settings, not a commit):** enable GitHub **Secret Protection + Push Protection**, and make the `secret-scan` check a **required status check** on `main` via a branch ruleset. A failing Action alone does not block a merge until it is required by branch protection.
+
+**Human Disclosure Gate** — the pull-request template (`.github/pull_request_template.md`) carries the attestation *“I confirm that every file in this change is safe for permanent public disclosure.”* A secret scanner cannot detect private operational intelligence (buyer strategy, outreach lists, valuations, customer data); this human gate covers what the machine gate cannot.
+
+If the baseline or any run finds a real credential: do not silently “fix” it — rotate the credential first, report location and type without exposing the value, then decide on history remediation (§10).
 
 ---
 
