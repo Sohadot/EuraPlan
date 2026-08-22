@@ -54,6 +54,7 @@
 | `R2_8_GATE1_CANONICAL_BUILD.md` | **Gate 1** pre-publication canonical build + transformation checks |
 | `R2_8_GATE2_RELEASE_HTML.md` | **Gate 2** release HTML candidate + §E.2 sanitization checklist |
 | `R2_8_GATE3_MACHINE_REGISTRATION.md` | **Gate 3** machine + registration package + planned diffs + consistency tests |
+| `R2_8_GATE4_PREMERGE_AUDIT.md` | **Gate 4** pre-merge Publish Gate audit (25/25 PASS) + atomic Gate-5 mutation list |
 | `page-candidate/` | Non-live HTML candidate (R2.5/R2.6 workbench + verification record) |
 | `release-candidate/` | **Gate 2/3** release bundle candidate — `index.html` + `claims.json` (branch-only; not live) |
 | `README.md` | This status note |

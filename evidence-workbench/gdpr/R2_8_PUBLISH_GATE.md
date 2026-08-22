@@ -1,8 +1,8 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN — Gates 0–2 CLOSED / PASS; Gate 3 AUTHORIZED / ACTIVE  
+**Status:** OPEN — Gates 0–3 CLOSED / PASS; Gate 4 AUTHORIZED / ACTIVE  
 **Opened:** 2026-08-20  
-**Gates 0–2 closed:** 2026-08-22  
+**Gates 0–3 closed:** 2026-08-22  
 **Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
 **Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
 **Governing DEC:** DEC-054; DEC-055  
@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gates 0–2 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44). **Gate 3 is AUTHORIZED / ACTIVE.** Gates 4–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
+**Current state:** **Gates 0–3 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45). **Gate 4 is AUTHORIZED / ACTIVE** (pre-merge audit — see `R2_8_GATE4_PREMERGE_AUDIT.md`, 25/25 PASS). Gates 5–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
 
 ---
 
@@ -86,7 +86,7 @@ Workbench / branch only until later gates authorize live placement.
 
 ---
 
-### Gate 3 — Machine + registration package (AUTHORIZED / ACTIVE)
+### Gate 3 — Machine + registration package (CLOSED / PASS)
 
 Prepare (still gated from merge until Gate 4/5):
 
@@ -98,7 +98,7 @@ Prepare (still gated from merge until Gate 4/5):
 
 ---
 
-### Gate 4 — Pre-merge Publish Gate
+### Gate 4 — Pre-merge Publish Gate (AUTHORIZED / ACTIVE)
 
 Must PASS before any release PR may merge:
 
@@ -112,15 +112,19 @@ Must PASS before any release PR may merge:
 
 ---
 
-### Gate 5 — Publication (single release sequence)
+### Gate 5 — Publication (release sequence + post-merge provenance)
 
-In one controlled release sequence:
+Content and registration land together in one controlled release sequence (Phase A); provenance is finalized post-merge (Phase B):
 
+Phase A (release PR, pre-merge):
 - Lifecycle final: `publishable` → `published`
 - `validity_state`: `null` → `active`
 - `_meta.published=true`
 - Live HTML + public graph + registrations together
-- `release_sha` may be set on the release commit; **`merge_sha` is post-merge provenance finalization** (real merge commit on `main`) — typically immediately after merge and before Gate 6 closeout. Do **not** invent or guess `merge_sha` inside the pre-merge release PR.
+- **No provenance SHAs in the release PR** (they do not exist pre-merge)
+
+Phase B (post-merge provenance finalization, before Gate 6):
+- A commit cannot contain its own SHA, so provenance is written **after** the commits exist, in a follow-up provenance PR/commit merged to `main` before Gate 6: `release_sha` = the real release-state commit SHA and **`merge_sha` = the real merge commit on `main`** (both from real git objects); `live_on_main_since` = the actual publication event. Never pre-merge, never self-referencing. (AI Act precedent: `release_sha` and `merge_sha` recorded this way.)
 
 ---
 
@@ -132,7 +136,7 @@ In one controlled release sequence:
 
 ---
 
-## Hard rules while OPEN (Gates 0–2 CLOSED / PASS; Gate 3 ACTIVE)
+## Hard rules while OPEN (Gates 0–3 CLOSED / PASS; Gate 4 ACTIVE)
 
 | Rule | Status |
 |---|---|
@@ -140,7 +144,7 @@ In one controlled release sequence:
 | Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **FORBIDDEN** until Gate 5 |
 | Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 5 (Gate 3 drafts the diffs only; no live edit) |
 | Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **FORBIDDEN** until Gate 5 |
-| Invented provenance SHAs | **FORBIDDEN** always (`release_sha` at Gate 5 release; `merge_sha` post-merge before Gate 6) |
+| Invented provenance SHAs | **FORBIDDEN** always — written post-merge, before Gate 6: `release_sha` and `merge_sha` from real git objects, `live_on_main_since` from the actual publication event; never inside their own commit |
 
 ---
 
@@ -153,7 +157,7 @@ In one controlled release sequence:
 3. Left execution blocked at Gate 0 (its state at the time)
 4. Contained **no** live mutations
 
-**Current progress:** Gates 0–2 are CLOSED / PASS. Gate 3 is AUTHORIZED / ACTIVE. Gates 4–6 remain unexecuted.
+**Current progress:** Gates 0–3 are CLOSED / PASS. Gate 4 is AUTHORIZED / ACTIVE. Gates 5–6 remain unexecuted.
 
 ---
 
