@@ -1,8 +1,8 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN — Gates 0–3 CLOSED / PASS; Gate 4 AUTHORIZED / ACTIVE  
+**Status:** OPEN — Gates 0–4 CLOSED / PASS; Gate 5 AUTHORIZED / ACTIVE (publication release)  
 **Opened:** 2026-08-20  
-**Gates 0–3 closed:** 2026-08-22  
+**Gates 0–4 closed:** 2026-08-22  
 **Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
 **Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
 **Governing DEC:** DEC-054; DEC-055  
@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gates 0–3 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45). **Gate 4 is AUTHORIZED / ACTIVE** (pre-merge audit — see `R2_8_GATE4_PREMERGE_AUDIT.md`, 25/25 PASS). Gates 5–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
+**Current state:** **Gates 0–4 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45), Gate 4 (pre-merge audit 25/25, PR #46). **Gate 5 is AUTHORIZED / ACTIVE** — this is the **publication release** (Phase A): live `regulation/gdpr/index.html` + `regulation/gdpr/claims.json`, `routes.json` alternate, `llms.txt` line, sitemap `lastmod`. Provenance SHAs are Phase B (post-merge). **Gate 6 remains unexecuted.** Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
 
 ---
 
@@ -98,7 +98,7 @@ Prepare (still gated from merge until Gate 4/5):
 
 ---
 
-### Gate 4 — Pre-merge Publish Gate (AUTHORIZED / ACTIVE)
+### Gate 4 — Pre-merge Publish Gate (CLOSED / PASS)
 
 Must PASS before any release PR may merge:
 
@@ -112,7 +112,7 @@ Must PASS before any release PR may merge:
 
 ---
 
-### Gate 5 — Publication (release sequence + post-merge provenance)
+### Gate 5 — Publication (release sequence + post-merge provenance) (AUTHORIZED / ACTIVE)
 
 Content and registration land together in one controlled release sequence (Phase A); provenance is finalized post-merge (Phase B):
 
@@ -136,15 +136,15 @@ Phase B (post-merge provenance finalization, before Gate 6):
 
 ---
 
-## Hard rules while OPEN (Gates 0–3 CLOSED / PASS; Gate 4 ACTIVE)
+## Hard rules while OPEN (Gates 0–4 CLOSED / PASS; Gate 5 ACTIVE — publication release)
 
 | Rule | Status |
 |---|---|
-| Public `claims.json` live placement (`regulation/gdpr/**`) | **FORBIDDEN** until Gate 5 |
-| Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **FORBIDDEN** until Gate 5 |
-| Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 5 (Gate 3 drafts the diffs only; no live edit) |
-| Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **FORBIDDEN** until Gate 5 |
-| Invented provenance SHAs | **FORBIDDEN** always — written post-merge, before Gate 6: `release_sha` and `merge_sha` from real git objects, `live_on_main_since` from the actual publication event; never inside their own commit |
+| Public `claims.json` live placement (`regulation/gdpr/**`) | **APPLIED in Gate 5 Phase A** (this release PR) |
+| Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **APPLIED in Gate 5 Phase A** (this release PR) |
+| Live `routes.json` / `llms.txt` / sitemap mutation | **APPLIED in Gate 5 Phase A** (`routes.json` alternate, `llms.txt` line, sitemap `lastmod`); `robots.txt` unchanged |
+| Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **APPLIED in Gate 5 Phase A** (published / active) |
+| Invented provenance SHAs | **FORBIDDEN** always — written in **Phase B** post-merge, before Gate 6: `release_sha` and `merge_sha` from real git objects, `live_on_main_since` from the actual publication event; never inside their own commit |
 
 ---
 
@@ -157,7 +157,7 @@ Phase B (post-merge provenance finalization, before Gate 6):
 3. Left execution blocked at Gate 0 (its state at the time)
 4. Contained **no** live mutations
 
-**Current progress:** Gates 0–3 are CLOSED / PASS. Gate 4 is AUTHORIZED / ACTIVE. Gates 5–6 remain unexecuted.
+**Current progress:** Gates 0–4 are CLOSED / PASS. Gate 5 is AUTHORIZED / ACTIVE (publication release; Phase A in this PR, Phase B provenance post-merge). Gate 6 remains unexecuted.
 
 ---
 
