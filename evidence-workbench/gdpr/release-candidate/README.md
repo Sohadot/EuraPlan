@@ -8,6 +8,7 @@
 | File | Role |
 |---|---|
 | `index.html` | Gate 2 release-sanitized Evidence Graph page (transform of `../page-candidate/index.html`) |
+| `claims.json` | Gate 3 machine package candidate for `/regulation/gdpr/claims.json` (assembled from the Gate 1 build; `publishable`, not published) |
 | `README.md` | This note |
 
 ## What this is
