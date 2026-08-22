@@ -1,11 +1,13 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN / EXECUTION BLOCKED AT GATE 0  
+**Status:** OPEN — Gate 0 CLOSED / PASS; Gate 1 AUTHORIZED / ACTIVE  
 **Opened:** 2026-08-20  
-**Branch:** `sprint-r2-gdpr-r2-8-publish-gate-open`  
-**Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b` (head `b3d35f6e5f91c633cdff19df3eb2986b7bd6dd8a`)  
-**Governing DEC:** DEC-054  
-**Registration contracts:** `R2_7_REGISTRATION_DRAFT.md` (§A.1, §D.1, §E.1–E.2)
+**Gate 0 closed:** 2026-08-22  
+**Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
+**Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
+**Governing DEC:** DEC-054; DEC-055  
+**Registration contracts:** `R2_7_REGISTRATION_DRAFT.md` (§A.1, §D.1, §E.1–E.2)  
+**Gate 0 investigation:** `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` (CLOSED / PASS — Option A implemented)
 
 ---
 
@@ -19,13 +21,13 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current freeze:** execution is **BLOCKED AT GATE 0** until Hosting & Index-Control Capability is verified and recorded.
+**Current state:** **Gate 0 is CLOSED / PASS** (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22). **Gate 1 is AUTHORIZED / ACTIVE.** Gates 2–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it.
 
 ---
 
 ## Gate sequence (frozen by DEC-054)
 
-### Gate 0 — Hosting & Index-Control Capability (ACTIVE BLOCKER)
+### Gate 0 — Hosting & Index-Control Capability (CLOSED / PASS)
 
 Determine the actual serving stack for `euraplan.com` and whether path-specific index control is possible.
 
@@ -45,13 +47,24 @@ Required determinations:
 | `robots.txt` | `Allow: /regulation/` | When `claims.json` exists under `/regulation/gdpr/`, it is **technically crawlable** unless Gate 0 chooses another control |
 | `routes.json` `indexable:false` | governance metadata only | Not crawler/index enforcement |
 
-**Prefer** `X-Robots-Tag: noindex` for index control if the host/CDN supports it. `robots.txt Disallow` alone is crawl guidance, not a guarantee of `noindex`.
+#### Gate 0 investigation result (2026-08-20) + closeout (2026-08-22)
 
-**Exit Gate 0:** written capability decision recorded in this file (or a linked Gate 0 note) before any Gate 1+ work that prepares live-bound artifacts.
+See `R2_8_GATE0_HOSTING_INDEX_CONTROL.md`.
+
+| Determination | Result |
+|---|---|
+| Serving stack | **Cloudflare-proxied GitHub Pages** (NS + `Server: cloudflare` + `X-GitHub-Request-Id` / Fastly origin markers) |
+| `X-Robots-Tag` via GitHub Pages alone | **Not available** |
+| `X-Robots-Tag` via Cloudflare | **CONFIGURED / VERIFIED LIVE** (2026-08-22): target `/regulation/gdpr/claims.json` → **404** pre-publication + `X-Robots-Tag: noindex` **present**; negative control `/regulation/gdpr/` → **200** + header **absent** (scope isolation PASS) |
+| Owner decision | **Option A SELECTED / IMPLEMENTED** |
+
+**Selected** Option A: `X-Robots-Tag: noindex` via a Cloudflare **exact-path** rule; configured and verified live 2026-08-22. `robots.txt Disallow` alone is crawl guidance, not a guarantee of `noindex` — not used.
+
+**Gate 0 exit:** **CLOSED / PASS.** Option A implemented and scope-isolated (positive + negative controls). **Gate 6** re-tests the header on a live `200` response after publication (current verification is against a pre-publication `404`). **Gate 1 is now AUTHORIZED / ACTIVE.**
 
 ---
 
-### Gate 1 — Pre-publication canonical build
+### Gate 1 — Pre-publication canonical build (AUTHORIZED / ACTIVE)
 
 Workbench / branch only until later gates authorize live placement.
 
@@ -107,7 +120,7 @@ In one controlled release sequence:
 - `validity_state`: `null` → `active`
 - `_meta.published=true`
 - Live HTML + public graph + registrations together
-- Fill `release_sha` / `merge_sha` only from **real** git objects after they exist (AI Act pattern)
+- `release_sha` may be set on the release commit; **`merge_sha` is post-merge provenance finalization** (real merge commit on `main`) — typically immediately after merge and before Gate 6 closeout. Do **not** invent or guess `merge_sha` inside the pre-merge release PR.
 
 ---
 
@@ -119,13 +132,13 @@ In one controlled release sequence:
 
 ---
 
-## Hard rules while OPEN / BLOCKED AT GATE 0
+## Hard rules while OPEN (Gate 0 CLOSED / PASS; Gate 1 ACTIVE)
 
 | Rule | Status |
 |---|---|
 | Public `claims.json` | **FORBIDDEN** until Gate 3–5 sequence |
 | Live GDPR HTML cutover | **FORBIDDEN** until Gate 2–5 sequence |
-| Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 0 decision + Gate 3–5 |
+| Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 3–5 (Gate 0 decision recorded — Option A; no such mutation in this closeout) |
 | Claim promotion beyond `verified` | **FORBIDDEN** until Gate 1+ |
 | Invented provenance SHAs | **FORBIDDEN** always |
 | Opening PR content | Gates + DEC + status notes only |
@@ -141,7 +154,7 @@ This opening PR may merge when it correctly:
 3. Leaves execution blocked at Gate 0
 4. Contains **no** live mutations
 
-Next work after merge: execute **Gate 0** investigation and record the hosting/index-control decision.
+Gate 0 investigation and closeout are complete (Option A implemented; DEC-055). Next work: execute **Gate 1** pre-publication canonical build; Gates 2–6 remain gated.
 
 ---
 
