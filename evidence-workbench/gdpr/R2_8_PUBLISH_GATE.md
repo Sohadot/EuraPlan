@@ -1,8 +1,8 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN — Gate 0 CLOSED / PASS; Gate 1 AUTHORIZED / ACTIVE  
+**Status:** OPEN — Gates 0–2 CLOSED / PASS; Gate 3 AUTHORIZED / ACTIVE  
 **Opened:** 2026-08-20  
-**Gate 0 closed:** 2026-08-22  
+**Gates 0–2 closed:** 2026-08-22  
 **Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
 **Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
 **Governing DEC:** DEC-054; DEC-055  
@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gate 0 is CLOSED / PASS** (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22). **Gate 1 is AUTHORIZED / ACTIVE.** Gates 2–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it.
+**Current state:** **Gates 0–2 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44). **Gate 3 is AUTHORIZED / ACTIVE.** Gates 4–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
 
 ---
 
@@ -64,7 +64,7 @@ See `R2_8_GATE0_HOSTING_INDEX_CONTROL.md`.
 
 ---
 
-### Gate 1 — Pre-publication canonical build (AUTHORIZED / ACTIVE)
+### Gate 1 — Pre-publication canonical build (CLOSED / PASS)
 
 Workbench / branch only until later gates authorize live placement.
 
@@ -76,7 +76,7 @@ Workbench / branch only until later gates authorize live placement.
 
 ---
 
-### Gate 2 — Release HTML candidate
+### Gate 2 — Release HTML candidate (CLOSED / PASS)
 
 - Execute full §E.2 release-sanitization checklist.
 - Remove all R2.6 / workbench / pre-publication chrome.
@@ -86,7 +86,7 @@ Workbench / branch only until later gates authorize live placement.
 
 ---
 
-### Gate 3 — Machine + registration package
+### Gate 3 — Machine + registration package (AUTHORIZED / ACTIVE)
 
 Prepare (still gated from merge until Gate 4/5):
 

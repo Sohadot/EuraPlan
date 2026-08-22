@@ -3,7 +3,7 @@
 **Status:** PREPARED (branch-only) / AWAITING REVIEW
 **Date:** 2026-08-22
 **Scope:** Gate 3 only — **prepare, do not publish**; no Gate 4–6 execution; no live mutation
-**Authorized by:** DEC-055 (Gate 2 CLOSED / PASS → Gate 3 may begin)
+**Authorized by:** Gate 2 CLOSED / PASS under the DEC-054 frozen sequence (DEC-055 governs only the Gate 0 index-control decision)
 **Governed by:** `R2_7_REGISTRATION_DRAFT.md` §A–D; `ROUTE_GOVERNANCE.md`
 **Related:** `R2_8_PUBLISH_GATE.md`; `R2_8_GATE1_CANONICAL_BUILD.md`; `R2_8_GATE2_RELEASE_HTML.md`
 
@@ -28,8 +28,24 @@ Assemble the machine + registration **package** so Gate 4 can verify it and Gate
 - **Source:** the Gate 1 build `claims.prepublication.candidate.json` — the 31-claim array is **byte-identical**.
 - **Lifecycle:** `workflow_state = publishable` (all 31), `validity_state = null`, `_meta.published = false`.
 - **`_meta`:** machine-package framing for the public path; `governed_by` retains R2.8 DECs (DEC-054, DEC-055); `source_registry` (EP-SRC-000004, EP-SRC-000005) retained.
-- **No provenance SHAs:** `release_sha` / `merge_sha` / `live_on_main_since` are absent — set only at Gate 5 from real git objects.
-- **Not the live file:** no file under `regulation/gdpr/**` is created; the live `regulation/gdpr/claims.json` is written only in the Gate 5 release sequence (Gate 5 flips `publishable → published`, `null → active`, `published=true`, and fills the SHAs).
+- **No provenance SHAs:** `release_sha` / `merge_sha` / `live_on_main_since` are absent. Per the frozen contract (`R2_8_PUBLISH_GATE.md` Gate 5): `release_sha` is set on the Gate 5 release commit; **`merge_sha` is post-merge provenance finalization** — the real merge commit on `main`, added after merge and before the Gate 6 closeout, **never pre-merge**; `live_on_main_since` is set to the actual publication/merge event. None are invented here.
+- **Not the live file:** no file under `regulation/gdpr/**` is created; the live `regulation/gdpr/claims.json` is written only in the Gate 5 release sequence.
+
+### 2.1 Gate 5 public `_meta` transformation contract (no raw-copy publication)
+
+At Gate 5 the candidate becomes the live `regulation/gdpr/claims.json` by **transformation, never a byte-for-byte copy** (per `R2_7_REGISTRATION_DRAFT.md` §A.1):
+
+| Element | Gate 5 rule |
+|---|---|
+| 31-claim array, `source_registry`, graph-integrity metadata (`co_render_blocking_pairs`, `chapter_v_related_hierarchy`, `id_range`, `claim_count`, `route_id`, `schema_version`) | **Unchanged** |
+| `workflow_state` (all 31) | `publishable → published` |
+| `validity_state` (all 31) | `null → active` |
+| `_meta.published` | `false → true` |
+| `batch` / `status` / `location_note` / `notes` | Rewrite to AI Act–parallel **published / active — live on main** wording; **remove every Gate / workbench / candidate / "NOT live" phrase** and all `evidence-workbench/…` path references |
+| `governed_by` | Retain (with the R2.8 DECs) |
+| Provenance | Add `release_sha` (release commit), then `merge_sha` + `live_on_main_since` **post-merge** |
+
+**Hard rule:** a straight copy of this candidate to the live path (with Gate/workbench/candidate `_meta` language intact) is a **Gate 5 hard fail**.
 
 ---
 
@@ -108,10 +124,11 @@ Gate 3 is satisfied when:
 
 ## 8. Reserved for Gate 5 (publication) — NOT done here
 
-- Write `regulation/gdpr/claims.json` (from this candidate) with `published → true`, `publishable → published`, `null → active`
+- Write `regulation/gdpr/claims.json` (transform of this candidate per §2.1) with `publishable → published`, `null → active`, `published → true`
 - Apply the `routes.json` alternate entry and the `llms.txt` line to the live files
 - Refresh HTML `lastmod` in the sitemap
-- Fill `release_sha` / `merge_sha` / `live_on_main_since` from real git objects
+- Set `release_sha` on the Gate 5 release commit (real git object)
+- Finalize `merge_sha` **post-merge** (real merge commit on `main`) and set `live_on_main_since` to the actual publication date — after merge, before the Gate 6 closeout; **never pre-merge**
 - Live HTML cutover to `regulation/gdpr/index.html`
 
 ---

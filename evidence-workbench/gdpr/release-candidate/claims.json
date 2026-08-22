@@ -32,7 +32,7 @@
     "generated": "2026-08-22",
     "notes": [
       "Gate 3 assembles this machine package from the Gate 1 build (claims.prepublication.candidate.json); the claims array is byte-identical.",
-      "No provenance SHAs: release_sha / merge_sha / live_on_main_since are set only at Gate 5 from real git objects (never invented here).",
+      "No provenance SHAs invented: release_sha is set on the Gate 5 release commit; merge_sha is post-merge provenance finalization (real merge commit on main, after merge and before the Gate 6 closeout, never pre-merge); live_on_main_since is the actual publication event. See R2_8_PUBLISH_GATE.md (Gate 5) and R2_8_GATE3_MACHINE_REGISTRATION.md §2.1.",
       "Not live: no file under regulation/gdpr/**; no routes.json / llms.txt / sitemap / robots mutation in Gate 3.",
       "Index control: Gate 0 Option A (Cloudflare exact-path X-Robots-Tag: noindex; DEC-055). routes.json indexable:false is governance metadata only; claims.json is never listed in sitemap."
     ],
