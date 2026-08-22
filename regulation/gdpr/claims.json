@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "batch": "GDPR — canonical claim graph (GDPR v1; published / active — live on main)",
-    "status": "published / active — GDPR reference publication release; human-verified 2026-08-20; freshness/publication check 2026-08-22. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
+    "batch": "GDPR — canonical claim graph (GDPR v1; published / active release state)",
+    "status": "published / active — GDPR reference publication release; public effectiveness occurs when this release-state tree is merged to main. Human-verified 2026-08-20; freshness/publication check 2026-08-22. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
     "location_note": "regulation/gdpr/claims.json — canonical machine-readable claim graph for the GDPR reference route (EP-REG-002). Mirrors the visible Verified Claim Register on /regulation/gdpr/.",
     "published": true,
     "route_id": "EP-REG-002",
@@ -30,7 +30,7 @@
     "notes": [
       "31 claims workflow_state=published (publishable->published only); validity_state=active (null->active only); confidence=Verified and last_verified_at=2026-08-20 unchanged. No claim text, ID, effective_date, source edge, qualified_by, claim_risk, or EERS mapping changed at publication.",
       "Index control: Cloudflare exact-path X-Robots-Tag: noindex on /regulation/gdpr/claims.json (DEC-055, Option A). routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
-      "Provenance: release_sha, merge_sha, and live_on_main_since are recorded post-merge from the real git objects (never inside their own commit)."
+      "Provenance: release_sha and merge_sha are finalized from real git objects post-merge; live_on_main_since is recorded from the actual publication event. Never inside their own commit."
     ],
     "generated": "2026-08-22",
     "source_registry": {

@@ -1,8 +1,8 @@
 # R2.8 Gate 5 — Publication (release sequence)
 
-**Status:** PHASE A COMPLETE (this release PR) / PENDING owner review + merge; PHASE B (provenance) reserved
+**Status:** PHASE A RELEASE-STATE TREE COMPLETE / STAGED — PENDING owner review + merge; **not live until merge**. PHASE B (provenance) reserved (post-merge).
 **Date:** 2026-08-22
-**Scope:** Gate 5 Phase A — the live cutover for EP-REG-002. Phase B (provenance) is post-merge; Gate 6 remains unexecuted.
+**Scope:** Gate 5 Phase A — the release-state cutover for EP-REG-002, staged in this PR and **effective/live only when merged**. Phase B (provenance) is post-merge; Gate 6 remains unexecuted.
 **Authorized by:** Gate 4 CLOSED / PASS (audit 25/25, PR #46) under the DEC-054 frozen sequence; DEC-055 governs the Gate 0 index-control decision
 **Related:** `R2_8_PUBLISH_GATE.md`; `R2_8_GATE4_PREMERGE_AUDIT.md`; `R2_8_GATE3_MACHINE_REGISTRATION.md` §2.1
 
@@ -10,9 +10,9 @@
 
 ## 1. What this PR does (Phase A — pre-merge)
 
-This is the **release PR**: merging it (owner action) publishes the GDPR Evidence Graph reference to the live site. Phase A applies the live cutover; it does **not** write provenance SHAs (those do not exist until the commits do — Phase B).
+This is the **release PR**: it **stages** the GDPR Evidence Graph reference in the release-state tree. Nothing here is live yet — **merging it (owner action) is the publication event** that makes it effective on the live site. Phase A does **not** write provenance SHAs (those do not exist until the commits do — Phase B).
 
-| # | Live change | From | Transform |
+| # | Release-state change (effective on merge) | From | Transform |
 |---|---|---|---|
 | 1 | `regulation/gdpr/index.html` | `release-candidate/index.html` (Gate 2) | deferred switches applied: `robots → index, follow`; visible workflow labels `publishable → published` (31 claims + hero + sources + telemetry); Article `dateModified = 2026-08-22` (cutover). Substance unchanged: 31 anchors, 4 co-render pairs, Chapter V, 9 Decision Utility objects. |
 | 2 | `regulation/gdpr/claims.json` (new) | `release-candidate/claims.json` (Gate 3) | **transform** per §2.1: `workflow_state publishable → published`; `validity_state null → active`; `_meta.published → true`; `_meta` rewritten to published/public wording with all Gate/workbench/candidate language and `evidence-workbench/…` paths removed. Claims array text/IDs/sources/`qualified_by` and `source_registry` unchanged. **No provenance SHAs.** |
@@ -23,18 +23,43 @@ This is the **release PR**: merging it (owner action) publishes the GDPR Evidenc
 
 ---
 
-## 2. Phase-A verification (all PASS)
+## 2. Phase-A verification — 20 / 20 PASS (reproducible)
 
-- [x] `regulation/gdpr/claims.json`: valid JSON; 31 claims; all `workflow_state = published`; all `validity_state = active`; `_meta.published = true`
-- [x] claims array text/IDs/sources/`qualified_by` identical to the Gate 3 candidate (only the two lifecycle fields changed)
-- [x] `confidence = Verified` and `last_verified_at = 2026-08-20` unchanged on all 31
-- [x] published `_meta` carries **no** Gate/workbench/candidate language, no `evidence-workbench/…` paths, no `release_sha`/`merge_sha`/`live_on_main_since`
-- [x] `regulation/gdpr/index.html`: `robots = index, follow`; zero `publishable` labels remain (all `published`); 31 anchors, 9 Decision Utility objects, 4 co-render blocks intact; `dateModified = 2026-08-22`
-- [x] claim IDs in `claims.json` == claim anchors in the live HTML (31, identical set)
-- [x] `routes.json` valid JSON; EP-REG-002 `alternate_representations` present; parses
-- [x] `llms.txt` GDPR claims line present, after the AI Act line
-- [x] `sitemap.xml` `/regulation/gdpr/` `lastmod = 2026-08-22`; `claims.json` absent from sitemap
-- [x] `robots.txt` unchanged
+Each row is an independent assertion, numbered so an auditor can reproduce it one-for-one against the release-state tree.
+
+**Published `claims.json`**
+- [x] **G5A-01** — valid JSON; 31 claims
+- [x] **G5A-02** — all `workflow_state = published`
+- [x] **G5A-03** — all `validity_state = active`
+- [x] **G5A-04** — `_meta.published = true`
+- [x] **G5A-05** — `confidence = Verified` and `last_verified_at = 2026-08-20` unchanged on all 31
+- [x] **G5A-06** — claims array text/IDs/sources/`qualified_by` identical to the Gate 3 candidate (only the two lifecycle fields changed)
+- [x] **G5A-07** — published `_meta` carries **no** Gate/workbench/candidate language and no `evidence-workbench/…` paths
+- [x] **G5A-08** — published `_meta` has **no** `release_sha` / `merge_sha` / `live_on_main_since`
+- [x] **G5A-09** — `governed_by` carries DEC-054 & DEC-055
+
+**Published `index.html`**
+- [x] **G5A-10** — `robots = index, follow`
+- [x] **G5A-11** — zero `publishable` labels remain (all `published`)
+- [x] **G5A-12** — 31 claim anchors present
+- [x] **G5A-13** — 9 Decision Utility objects present
+- [x] **G5A-14** — 4 co-render blocks present
+- [x] **G5A-15** — Article `dateModified = 2026-08-22`
+- [x] **G5A-16** — claim IDs in `claims.json` == claim anchors in the HTML (31, identical set)
+- [x] **G5A-17** — every claim proposition text present verbatim in the HTML
+
+**Registration surfaces**
+- [x] **G5A-18** — `routes.json` valid JSON; EP-REG-002 `alternate_representations` present
+- [x] **G5A-19** — `llms.txt` GDPR claims line present, after the AI Act line
+- [x] **G5A-20** — `sitemap.xml` well-formed; `/regulation/gdpr/` `lastmod = 2026-08-22`; `claims.json` **not** listed; `robots.txt` unchanged
+
+**Result: 20 / 20 PASS (G5A-01 … G5A-20).** secret-scan is a separate external check (green on this head).
+
+---
+
+## 2a. Merge-time condition — publication date
+
+`index.html` Article `dateModified` and `sitemap.xml` `lastmod` are set to **2026-08-22**, which assumes this PR is merged on 2026-08-22. **If the merge slips to a later date, update both to the actual merge/publication date before merging** — the publication date must reflect the real event, not the PR-preparation date.
 
 ---
 

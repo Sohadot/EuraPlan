@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gates 0–4 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45), Gate 4 (pre-merge audit 25/25, PR #46). **Gate 5 is AUTHORIZED / ACTIVE** — this is the **publication release** (Phase A): live `regulation/gdpr/index.html` + `regulation/gdpr/claims.json`, `routes.json` alternate, `llms.txt` line, sitemap `lastmod`. Provenance SHAs are Phase B (post-merge). **Gate 6 remains unexecuted.** Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
+**Current state:** **Gates 0–4 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45), Gate 4 (pre-merge audit 25/25, PR #46). **Gate 5 is AUTHORIZED / ACTIVE** — this is the **publication release** (Phase A), staged in the release-state tree and **effective/live only on merge**: `regulation/gdpr/index.html` + `regulation/gdpr/claims.json`, `routes.json` alternate, `llms.txt` line, sitemap `lastmod`. Provenance SHAs are Phase B (post-merge). **Gate 6 remains unexecuted.** Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
 
 ---
 
@@ -140,10 +140,10 @@ Phase B (post-merge provenance finalization, before Gate 6):
 
 | Rule | Status |
 |---|---|
-| Public `claims.json` live placement (`regulation/gdpr/**`) | **APPLIED in Gate 5 Phase A** (this release PR) |
-| Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **APPLIED in Gate 5 Phase A** (this release PR) |
-| Live `routes.json` / `llms.txt` / sitemap mutation | **APPLIED in Gate 5 Phase A** (`routes.json` alternate, `llms.txt` line, sitemap `lastmod`); `robots.txt` unchanged |
-| Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **APPLIED in Gate 5 Phase A** (published / active) |
+| Public `claims.json` live placement (`regulation/gdpr/**`) | **STAGED in Gate 5 Phase A release tree** — effective/live on merge |
+| Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **STAGED in Gate 5 Phase A release tree** — effective/live on merge |
+| Live `routes.json` / `llms.txt` / sitemap mutation | **STAGED in Gate 5 Phase A release tree** (`routes.json` alternate, `llms.txt` line, sitemap `lastmod`) — effective/live on merge; `robots.txt` unchanged |
+| Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **STAGED in Gate 5 Phase A release tree** (published / active) — effective/live on merge |
 | Invented provenance SHAs | **FORBIDDEN** always — written in **Phase B** post-merge, before Gate 6: `release_sha` and `merge_sha` from real git objects, `live_on_main_since` from the actual publication event; never inside their own commit |
 
 ---
