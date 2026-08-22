@@ -32,7 +32,9 @@ The original staging file is **not** overwritten; the candidate is a separate ar
 
 **Workbench chrome removed from `_meta`:** `phase` (`R2.4`), `html` (`BLOCKED`), `publish_gate` (`NOT OPEN`), `routes_json_alternate` (`NOT YET`), `llms_txt` (`NOT YET`), `sitemap` (`NOT YET`), `integrity_fix`, `source_of_truth_for_propositions`, and staging `location_note`/`batch`/`status` language.
 
-**Preserved substantive graph metadata:** `route_id` (EP-REG-002), `target_public_path`, `target_route`, `schema_version`, `claim_count` (31), `id_range` (EP-CLM-000015..000045), `co_render_blocking_pairs`, `chapter_v_related_hierarchy`, `governed_by`, `source_registry` (EP-SRC-000004, EP-SRC-000005).
+**Preserved substantive graph metadata:** `route_id` (EP-REG-002), `target_public_path`, `target_route`, `schema_version`, `claim_count` (31), `id_range` (EP-CLM-000015..000045), `co_render_blocking_pairs`, `chapter_v_related_hierarchy`, `source_registry` (EP-SRC-000004, EP-SRC-000005).
+
+**`governed_by` updated (per `R2_7_REGISTRATION_DRAFT.md` §A.1 — "retain + add R2.8 Publish Gate DEC when issued"):** existing entries retained; **`DEC-054` and `DEC-055` added** so the build reflects the DECs that actually govern R2.8 (previously the list ended at `DEC-050`). No other `_meta` field and no claim changed.
 
 **No invented provenance:** `release_sha` / `merge_sha` are **absent** from `_meta`; they are set only from real git objects at Gate 5 (never guessed here). The `_meta.notes` references to them are documentation of that deferral, not values.
 
@@ -47,6 +49,7 @@ Verified by a deterministic transform + independent re-diff of output vs input:
 - [x] `validity_state = null` on all 31 (no premature `active`)
 - [x] `confidence = Verified` and `last_verified_at = 2026-08-20` on all 31 (unchanged)
 - [x] `_meta.published = false`
+- [x] `_meta.governed_by` retained and updated to reflect R2.8 governance — **`DEC-054` and `DEC-055` added** (§A.1: retain + add the R2.8 Publish Gate DEC when issued)
 - [x] No `phase` / `html=BLOCKED` / `publish_gate=NOT OPEN` / `NOT YET` markers in output
 - [x] No `release_sha` / `merge_sha` keys invented in `_meta`
 - [x] No file created under `regulation/gdpr/**`
