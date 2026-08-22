@@ -112,15 +112,19 @@ Must PASS before any release PR may merge:
 
 ---
 
-### Gate 5 — Publication (single release sequence)
+### Gate 5 — Publication (release sequence + post-merge provenance)
 
-In one controlled release sequence:
+Content and registration land together in one controlled release sequence (Phase A); provenance is finalized post-merge (Phase B):
 
+Phase A (release PR, pre-merge):
 - Lifecycle final: `publishable` → `published`
 - `validity_state`: `null` → `active`
 - `_meta.published=true`
 - Live HTML + public graph + registrations together
-- `release_sha` may be set on the release commit; **`merge_sha` is post-merge provenance finalization** (real merge commit on `main`) — typically immediately after merge and before Gate 6 closeout. Do **not** invent or guess `merge_sha` inside the pre-merge release PR.
+- **No provenance SHAs in the release PR** (they do not exist pre-merge)
+
+Phase B (post-merge provenance finalization, before Gate 6):
+- A commit cannot contain its own SHA, so provenance is written **after** the commits exist, in a follow-up commit on `main`: `release_sha` = the real release-state commit SHA; **`merge_sha` = the real merge commit on `main`**; `live_on_main_since` = the actual publication date. Never pre-merge, never self-referencing. (AI Act precedent: `release_sha` and `merge_sha` recorded this way.)
 
 ---
 
@@ -140,7 +144,7 @@ In one controlled release sequence:
 | Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **FORBIDDEN** until Gate 5 |
 | Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 5 (Gate 3 drafts the diffs only; no live edit) |
 | Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **FORBIDDEN** until Gate 5 |
-| Invented provenance SHAs | **FORBIDDEN** always (`release_sha` at Gate 5 release; `merge_sha` post-merge before Gate 6) |
+| Invented provenance SHAs | **FORBIDDEN** always — all three (`release_sha`, `merge_sha`, `live_on_main_since`) written post-merge from real git objects, before Gate 6; never inside their own commit |
 
 ---
 
