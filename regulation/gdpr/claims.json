@@ -1,0 +1,1008 @@
+{
+  "_meta": {
+    "batch": "GDPR — canonical claim graph (GDPR v1; published / active release state)",
+    "status": "published / active — GDPR reference publication release; public effectiveness occurs when this release-state tree is merged to main. Verified against pinned EUR-Lex sources; last_verified_at=2026-08-20; publication release prepared 2026-08-22. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
+    "location_note": "regulation/gdpr/claims.json — canonical machine-readable claim graph for the GDPR reference route (EP-REG-002). Mirrors the visible Verified Claim Register on /regulation/gdpr/.",
+    "published": true,
+    "route_id": "EP-REG-002",
+    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.4",
+    "claim_count": 31,
+    "id_range": "EP-CLM-000015..EP-CLM-000045",
+    "co_render_blocking_pairs": [
+      "EP-CLM-000024 + EP-CLM-000025",
+      "EP-CLM-000032 + EP-CLM-000033",
+      "EP-CLM-000035 + EP-CLM-000036",
+      "EP-CLM-000037 + EP-CLM-000038"
+    ],
+    "chapter_v_related_hierarchy": "EP-CLM-000041 <- 000042 <- 000043 <- 000044 (related_claims, not qualified_by)",
+    "governed_by": [
+      "EVIDENCE_GRAPH_MODEL.md",
+      "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
+      "SOURCE_POLICY.md",
+      "CLAIM_POLICY.md",
+      "ROUTE_GOVERNANCE.md",
+      "DISCLOSURE_BOUNDARY.md",
+      "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "DEC-050",
+      "DEC-054",
+      "DEC-055"
+    ],
+    "notes": [
+      "31 claims workflow_state=published (publishable->published only); validity_state=active (null->active only); confidence=Verified and last_verified_at=2026-08-20 unchanged. No claim text, ID, effective_date, source edge, qualified_by, claim_risk, or EERS mapping changed at publication.",
+      "Index control: Cloudflare exact-path X-Robots-Tag: noindex on /regulation/gdpr/claims.json (DEC-055, Option A). routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
+      "Provenance: release_sha and merge_sha are finalized from real git objects post-merge; live_on_main_since is recorded from the actual publication event. Never inside their own commit."
+    ],
+    "generated": "2026-08-22",
+    "source_registry": {
+      "EP-SRC-000004": {
+        "instrument_id": "EU-2016-679",
+        "official_title": "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)",
+        "celex": "32016R0679",
+        "eli": "http://data.europa.eu/eli/reg/2016/679/oj",
+        "oj_reference": "OJ L 119, 4.5.2016, p. 1-88",
+        "source_version_date": "2016-05-04",
+        "retrieved_at": "2026-08-20",
+        "source_tier": 1,
+        "role": "authentic Official Journal act - evidentiary basis"
+      },
+      "EP-SRC-000005": {
+        "instrument_id": "EU-2016-679-CONSOLIDATED-20160504",
+        "official_title": "Regulation (EU) 2016/679 - EUR-Lex consolidated text (CELEX 02016R0679-20160504)",
+        "celex": "02016R0679-20160504",
+        "eli": "http://data.europa.eu/eli/reg/2016/679/2016-05-04",
+        "source_version_date": "2016-05-04",
+        "retrieved_at": "2026-08-20",
+        "source_tier": 1,
+        "role": "current-reading aid - NOT a replacement for the authentic Official Journal act (EP-SRC-000004), which remains the evidentiary basis",
+        "retrieval_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504"
+      }
+    }
+  },
+  "claims": [
+    {
+      "id": "EP-CLM-000015",
+      "display_label": "GDPR / 01 / Instrument title / CELEX 32016R0679",
+      "claim": "The GDPR is Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016, CELEX 32016R0679.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Instrument title / CELEX 32016R0679",
+          "relationship": "supports"
+        },
+        {
+          "source_id": "EP-SRC-000005",
+          "provision_locator": "Instrument title / CELEX 32016R0679",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "Low",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000016",
+      "display_label": "GDPR / 02 / Article 99(1); OJ L 119, 4.5.2016",
+      "claim": "Regulation (EU) 2016/679 entered into force on the twentieth day following its publication in the Official Journal (published 4 May 2016 -> 24 May 2016).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2016-05-24",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 99(1); OJ L 119, 4.5.2016",
+          "relationship": "supports"
+        },
+        {
+          "source_id": "EP-SRC-000005",
+          "provision_locator": "Article 99(1); OJ L 119, 4.5.2016",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "Low",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000017",
+      "display_label": "GDPR / 03 / Article 99(2)",
+      "claim": "Regulation (EU) 2016/679 applies from 25 May 2018.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2018-05-25",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 99(2)",
+          "relationship": "supports"
+        },
+        {
+          "source_id": "EP-SRC-000005",
+          "provision_locator": "Article 99(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000018",
+      "display_label": "GDPR / 04 / Article 3(1)",
+      "claim": "The GDPR applies to processing of personal data in the context of the activities of an establishment of a controller or a processor in the Union, regardless of whether the processing takes place in the Union.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor established in the Union",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 3(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000019",
+      "display_label": "GDPR / 05 / Article 3(2)(a)",
+      "claim": "The GDPR applies to processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union where the processing activities are related to the offering of goods or services to such data subjects in the Union, irrespective of whether a payment is required.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor not established in the Union",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 3(2)(a)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000020",
+      "display_label": "GDPR / 06 / Article 3(2)(b)",
+      "claim": "The GDPR applies to processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union where the processing activities are related to the monitoring of their behaviour as far as their behaviour takes place within the Union.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor not established in the Union",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 3(2)(b)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000021",
+      "display_label": "GDPR / 08 / Article 4(7)",
+      "claim": "Controller means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 4(7)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000022",
+      "display_label": "GDPR / 09 / Article 4(8)",
+      "claim": "Processor means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.",
+      "jurisdiction": "EU",
+      "actor": "Processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 4(8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000023",
+      "display_label": "GDPR / 10 / Article 26(1)-(2)",
+      "claim": "Where two or more controllers jointly determine the purposes and means of processing, they are joint controllers. They shall in a transparent manner determine their respective responsibilities for compliance by arrangement, unless and in so far as those responsibilities are determined by Union or Member State law to which they are subject. The arrangement shall duly reflect their respective roles and relationships vis-à-vis data subjects, and its essence shall be made available to the data subject.",
+      "jurisdiction": "EU",
+      "actor": "Joint controllers",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 26(1)-(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000024",
+      "display_label": "GDPR / 11a / Article 27(1)",
+      "claim": "Where Article 3(2) applies, the controller or the processor shall designate in writing a representative in the Union.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor not established in the Union (where Art. 3(2) applies)",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 27(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000025"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000025",
+      "display_label": "GDPR / 11b / Article 27(2)",
+      "claim": "The Art. 27(1) designation obligation does not apply to (a) processing that is occasional, does not include, on a large scale, processing of special categories of data referred to in Art. 9(1) or personal data relating to criminal convictions and offences referred to in Art. 10, and is unlikely to result in a risk to the rights and freedoms of natural persons, taking into account the nature, context, scope and purposes of the processing; or (b) a public authority or body.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor otherwise in scope of Art. 27(1)",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 27(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000026",
+      "display_label": "GDPR / 12 / Article 6(1)",
+      "claim": "Processing shall be lawful only if and to the extent that at least one of the Art. 6(1)(a)-(f) bases applies.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 6(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000027",
+      "display_label": "GDPR / 13a / Article 5(1)",
+      "claim": "Personal data shall be processed in accordance with the Art. 5(1) principles (lawfulness/fairness/transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality).",
+      "jurisdiction": "EU",
+      "actor": "Controller (as responsible under Art. 5(2))",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 5(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000028",
+      "display_label": "GDPR / 13b / Article 5(2)",
+      "claim": "The controller shall be responsible for, and be able to demonstrate compliance with, Article 5(1) (accountability).",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 5(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000029",
+      "display_label": "GDPR / 15 / Article 24(1)-(2)",
+      "claim": "Taking into account the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for the rights and freedoms of natural persons, the controller shall implement appropriate technical and organisational measures to ensure and to be able to demonstrate that processing is performed in accordance with this Regulation; those measures shall be reviewed and updated where necessary; and where proportionate in relation to processing activities, those measures shall include appropriate data protection policies.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 24(1)-(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000030",
+      "display_label": "GDPR / 16 / Article 25",
+      "claim": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures designed to implement data-protection principles effectively and to integrate the necessary safeguards. By default, only personal data which are necessary for each specific purpose of the processing shall be processed (amount collected, extent of processing, period of storage and accessibility); in particular, by default personal data shall not be made accessible without the individual's intervention to an indefinite number of natural persons.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 25",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000031",
+      "display_label": "GDPR / 17 / Article 28(1)-(4)",
+      "claim": "Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organisational measures so that processing will meet the requirements of this Regulation and ensure protection of the rights of the data subject; processing by a processor shall be governed by a contract or other legal act with Art. 28(3) mandated content; the processor shall not engage another processor without prior specific or general written authorisation of the controller (Art. 28(2)); where a processor engages another processor, the same data-protection obligations shall be imposed on that other processor by contract or other legal act (Art. 28(4) flow-down).",
+      "jurisdiction": "EU",
+      "actor": "Controller and processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 28(1)-(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000032",
+      "display_label": "GDPR / 18a / Article 30(1)-(4)",
+      "claim": "Each controller shall maintain a record of processing activities under its responsibility containing Art. 30(1)(a)-(g); each processor shall maintain a record of categories of processing carried out on behalf of a controller containing Art. 30(2)(a)-(d); records shall be in writing including electronic form and made available to the SA on request (Art. 30(3)-(4)).",
+      "jurisdiction": "EU",
+      "actor": "Controller (and where applicable representative); processor (and where applicable representative)",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 30(1)-(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000033"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000033",
+      "display_label": "GDPR / 18b / Article 30(5)",
+      "claim": "The Art. 30(1)-(2) record obligations do not apply to an enterprise or an organisation employing fewer than 250 persons unless the processing it carries out is likely to result in a risk to the rights and freedoms of data subjects, the processing is not occasional, or the processing includes special categories of data as referred to in Art. 9(1) or personal data relating to criminal convictions and offences referred to in Art. 10.",
+      "jurisdiction": "EU",
+      "actor": "Enterprise or organisation employing fewer than 250 persons",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 30(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000034",
+      "display_label": "GDPR / 19 / Article 32(1)-(2)",
+      "claim": "Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including inter alia as appropriate the Art. 32(1)(a)-(d) measures; in assessing the appropriate level of security, account shall be taken in particular of the risks presented by processing, in particular from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored or otherwise processed (Art. 32(2)).",
+      "jurisdiction": "EU",
+      "actor": "Controller and processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 32(1)-(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000035",
+      "display_label": "GDPR / 20a / Article 33(1)",
+      "claim": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the competent supervisory authority under Article 55; if not notified within 72 hours, the notification shall be accompanied by reasons for the delay.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 33(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000036"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000036",
+      "display_label": "GDPR / 20b / Article 33(1) unless clause",
+      "claim": "Notification to the supervisory authority under Art. 33(1) is not required where the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 33(1) unless clause",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000037",
+      "display_label": "GDPR / 21a / Article 34(1)-(2)",
+      "claim": "When a personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the breach to the data subject without undue delay, in clear and plain language, including at least the information in Art. 33(3)(b)-(d).",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 34(1)-(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000038"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000038",
+      "display_label": "GDPR / 21b / Article 34(3)",
+      "claim": "Communication to the data subject under Art. 34(1) is not required if (a) appropriate technical and organisational protection measures were applied to the affected data (in particular rendering them unintelligible to unauthorised persons, such as encryption); or (b) subsequent measures ensure the high risk is no longer likely to materialise; or (c) it would involve disproportionate effort, in which case there shall instead be a public communication or similar equally effective measure.",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 34(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000039",
+      "display_label": "GDPR / 22 / Article 35(1), (3)",
+      "claim": "Where a type of processing, in particular using new technologies, and taking into account the nature, scope, context and purposes of the processing, is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out a data protection impact assessment of the envisaged processing operations. A DPIA is in particular required where: (a) systematic and extensive evaluation of personal aspects based on automated processing, including profiling, on which decisions are based that produce legal effects or similarly significantly affect the natural person; (b) processing on a large scale of special categories of data referred to in Art. 9(1), or of personal data relating to criminal convictions and offences referred to in Art. 10; or (c) a systematic monitoring of a publicly accessible area on a large scale (Art. 35(3)).",
+      "jurisdiction": "EU",
+      "actor": "Controller",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 35(1), (3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000040",
+      "display_label": "GDPR / 23 / Article 37(1)(a)-(c)",
+      "claim": "The controller and the processor shall designate a data protection officer where: (a) the processing is carried out by a public authority or body, except for courts acting in their judicial capacity; or (b) the core activities of the controller or the processor consist of processing operations which, by virtue of their nature, their scope and/or their purposes, require regular and systematic monitoring of data subjects on a large scale; or (c) the core activities of the controller or the processor consist of processing on a large scale of special categories of data pursuant to Art. 9 and personal data relating to criminal convictions and offences referred to in Art. 10.",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 37(1)(a)-(c)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000041",
+      "display_label": "GDPR / 24 / Article 44",
+      "claim": "Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation shall take place only if, subject to the other provisions of this Regulation, the conditions laid down in Chapter V are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organisation to another third country or to another international organisation. All provisions in Chapter V shall be applied so that the level of protection of natural persons guaranteed by this Regulation is not undermined.",
+      "jurisdiction": "EU",
+      "actor": "Controller and processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 44",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-05"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000042",
+      "display_label": "GDPR / 25 / Article 45(1), (3), (5), (8)",
+      "claim": "A transfer may take place where the Commission has decided that the third country, a territory or one or more specified sectors within that third country, or the international organisation ensures an adequate level of protection; such a transfer shall not require any specific authorisation. Adequacy implementing acts provide for a mechanism for periodic review, at least every four years (Art. 45(3)). The Commission shall publish a list of adequacy decisions (Art. 45(8)); where available information reveals that an adequate level of protection is no longer ensured, the Commission shall, to the extent necessary, repeal, amend or suspend the decision (Art. 45(5)).",
+      "jurisdiction": "EU",
+      "actor": "Controller/processor relying on adequacy; Commission decides",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 45(1), (3), (5), (8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-05"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null,
+      "related_claims": [
+        "EP-CLM-000041"
+      ],
+      "related_claims_note": "Chapter V hierarchy / related pathway - NOT a qualified_by edge"
+    },
+    {
+      "id": "EP-CLM-000043",
+      "display_label": "GDPR / 26 / Article 46(1)-(2)",
+      "claim": "In the absence of an Art. 45(3) adequacy decision, a controller or processor may transfer personal data to a third country or international organisation only if appropriate safeguards are provided and enforceable data-subject rights and effective legal remedies are available; Art. 46(2) lists safeguards usable without specific SA authorisation (including SCCs and BCRs among others).",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 46(1)-(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-05"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null,
+      "related_claims": [
+        "EP-CLM-000041",
+        "EP-CLM-000042"
+      ],
+      "related_claims_note": "Chapter V hierarchy / related pathway - NOT a qualified_by edge"
+    },
+    {
+      "id": "EP-CLM-000044",
+      "display_label": "GDPR / 27 / Article 49(1)",
+      "claim": "In the absence of an adequacy decision pursuant to Art. 45(3), or of appropriate safeguards pursuant to Art. 46, including binding corporate rules, a transfer or a set of transfers of personal data to a third country or an international organisation shall take place only on one of the specific Art. 49(1) conditions (derogations for specific situations).",
+      "jurisdiction": "EU",
+      "actor": "Controller or processor",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 49(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-05"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null,
+      "related_claims": [
+        "EP-CLM-000041",
+        "EP-CLM-000042",
+        "EP-CLM-000043"
+      ],
+      "related_claims_note": "Chapter V hierarchy / related pathway - NOT a qualified_by edge"
+    },
+    {
+      "id": "EP-CLM-000045",
+      "display_label": "GDPR / 28 / Article 83(2), (4), (5)",
+      "claim": "When deciding whether to impose an administrative fine and its amount, the SA shall give due regard to the Art. 83(2) criteria. Infringements listed in Art. 83(4) are subject to fines up to EUR 10 million or, for an undertaking, up to 2% of total worldwide annual turnover of the preceding financial year, whichever is higher. Infringements listed in Art. 83(5) are subject to fines up to EUR 20 million or, for an undertaking, up to 4% of such turnover, whichever is higher.",
+      "jurisdiction": "EU",
+      "actor": "Supervisory authority (imposing fines); controller/processor (addressees)",
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000004",
+          "provision_locator": "Article 83(2), (4), (5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-08"
+      ],
+      "last_verified_at": "2026-08-20",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    }
+  ]
+}
