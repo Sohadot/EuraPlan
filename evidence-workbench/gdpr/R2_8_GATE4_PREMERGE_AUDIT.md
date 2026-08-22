@@ -1,6 +1,6 @@
 # R2.8 Gate 4 — Pre-merge Publish Gate (audit)
 
-**Status:** AUDIT COMPLETE — ALL PASS (25/25) / release PR AUTHORIZED (pending owner review)
+**Status:** AUDIT COMPLETE — ALL PASS (25/25) / Gate 5 authorization PENDING owner review
 **Date:** 2026-08-22
 **Scope:** Gate 4 only — **audit, build nothing**; no `published`, no `active`, no live files
 **Authorized by:** Gate 3 CLOSED / PASS under the DEC-054 frozen sequence (DEC-055 governs only the Gate 0 index-control decision)
@@ -100,7 +100,7 @@ The publication is **not** a single in-PR event: content and registration land i
 
 ### Phase B — Post-merge provenance finalization (before Gate 6)
 
-7. In a follow-up commit on `main`, fill `_meta`: `release_sha` = the real release-state commit SHA, `merge_sha` = the real merge commit SHA, `live_on_main_since` = the actual publication date. Never pre-merge; never self-referencing (see §4).
+7. In a follow-up provenance PR/commit merged to `main` before Gate 6, fill `_meta`: `release_sha` = the real release-state commit SHA and `merge_sha` = the real merge commit SHA (both from real git objects), `live_on_main_since` = the actual publication event. Never pre-merge; never self-referencing (see §4).
 
 ---
 
