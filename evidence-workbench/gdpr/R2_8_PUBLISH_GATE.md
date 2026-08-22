@@ -60,7 +60,7 @@ See `R2_8_GATE0_HOSTING_INDEX_CONTROL.md`.
 
 **Selected** Option A: `X-Robots-Tag: noindex` via a Cloudflare **exact-path** rule; configured and verified live 2026-08-22. `robots.txt Disallow` alone is crawl guidance, not a guarantee of `noindex` — not used.
 
-**Gate 0 exit:** **CLOSED / PASS.** Option A implemented and scope-isolated (positive + negative controls). **Gate 6** re-tests the header on a live `200` response after publication (current verification is against a pre-publication `404`). **Gate 1 is now AUTHORIZED / ACTIVE.**
+**Gate 0 exit:** **CLOSED / PASS.** Option A implemented and scope-isolated (positive + negative controls). **Gate 6** re-tests the header on a live `200` response after publication (current verification is against a pre-publication `404`). Gate 1 was authorized at Gate 0 closeout and is now **CLOSED / PASS** (PR #43).
 
 ---
 
@@ -132,29 +132,28 @@ In one controlled release sequence:
 
 ---
 
-## Hard rules while OPEN (Gate 0 CLOSED / PASS; Gate 1 ACTIVE)
+## Hard rules while OPEN (Gates 0–2 CLOSED / PASS; Gate 3 ACTIVE)
 
 | Rule | Status |
 |---|---|
-| Public `claims.json` | **FORBIDDEN** until Gate 3–5 sequence |
-| Live GDPR HTML cutover | **FORBIDDEN** until Gate 2–5 sequence |
-| Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 3–5 (Gate 0 decision recorded — Option A; no such mutation in this closeout) |
-| Claim promotion beyond `verified` | **FORBIDDEN** until Gate 1+ |
-| Invented provenance SHAs | **FORBIDDEN** always |
-| Opening PR content | Gates + DEC + status notes only |
+| Public `claims.json` live placement (`regulation/gdpr/**`) | **FORBIDDEN** until Gate 5 |
+| Live GDPR HTML cutover (`regulation/gdpr/index.html`) | **FORBIDDEN** until Gate 5 |
+| Live `routes.json` / `llms.txt` / sitemap / robots mutation | **FORBIDDEN** until Gate 5 (Gate 3 drafts the diffs only; no live edit) |
+| Claim promotion beyond `publishable` (→ `published`) / `validity_state → active` | **FORBIDDEN** until Gate 5 |
+| Invented provenance SHAs | **FORBIDDEN** always (`release_sha` at Gate 5 release; `merge_sha` post-merge before Gate 6) |
 
 ---
 
-## Exit of this opening PR
+## Historical — opening PR criteria (satisfied)
 
-This opening PR may merge when it correctly:
+*This section records the criteria the original opening PR met when R2.8 was first opened. It is historical; it does **not** describe the current state (see the status header and "Current state" above).* The opening PR correctly:
 
-1. Records DEC-054
-2. Freezes the Gate 0→6 sequence above
-3. Leaves execution blocked at Gate 0
-4. Contains **no** live mutations
+1. Recorded DEC-054
+2. Froze the Gate 0→6 sequence above
+3. Left execution blocked at Gate 0 (its state at the time)
+4. Contained **no** live mutations
 
-Gate 0 investigation and closeout are complete (Option A implemented; DEC-055). Next work: execute **Gate 1** pre-publication canonical build; Gates 2–6 remain gated.
+**Current progress:** Gates 0–2 are CLOSED / PASS. Gate 3 is AUTHORIZED / ACTIVE. Gates 4–6 remain unexecuted.
 
 ---
 
