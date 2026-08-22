@@ -45,11 +45,13 @@
 |---|---|
 | `claims.minted.draft.json` | Verified mint + provenance (31/31) |
 | `claims.canonical.staging.json` | Staging truth layer (not public) |
+| `claims.prepublication.candidate.json` | **Gate 1** pre-publication build (`verified→publishable`; not public) |
 | `decision-utility.staging.json` | Nine Decision Objects (derived) |
 | `R2_7_CITATION_MACHINE_PREP.md` | R2.7 scope (closed) |
 | `R2_7_REGISTRATION_DRAFT.md` | Non-executing contracts for R2.8 |
 | `R2_8_PUBLISH_GATE.md` | **R2.8** gate sequence + Gate 0 freeze |
-| `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` | **Gate 0** serving stack + index-control investigation |
+| `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` | **Gate 0** serving stack + index-control investigation (CLOSED / PASS) |
+| `R2_8_GATE1_CANONICAL_BUILD.md` | **Gate 1** pre-publication canonical build + transformation checks |
 | `page-candidate/` | Non-live HTML candidate |
 | `README.md` | This status note |
 
