@@ -1,8 +1,8 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN — Gates 0–2 CLOSED / PASS; Gate 3 AUTHORIZED / ACTIVE  
+**Status:** OPEN — Gates 0–3 CLOSED / PASS; Gate 4 AUTHORIZED / ACTIVE  
 **Opened:** 2026-08-20  
-**Gates 0–2 closed:** 2026-08-22  
+**Gates 0–3 closed:** 2026-08-22  
 **Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
 **Prerequisite:** R2.7 CLOSED / PASS via PR #40 merge `8ec08e0b9c5315ef2f80c6b945503b5784e0788b`  
 **Governing DEC:** DEC-054; DEC-055  
@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gates 0–2 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44). **Gate 3 is AUTHORIZED / ACTIVE.** Gates 4–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
+**Current state:** **Gates 0–3 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45). **Gate 4 is AUTHORIZED / ACTIVE** (pre-merge audit — see `R2_8_GATE4_PREMERGE_AUDIT.md`, 25/25 PASS). Gates 5–6 remain unexecuted, and every live-mutation rule below still holds until its own gate authorizes it. Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
 
 ---
 
@@ -86,7 +86,7 @@ Workbench / branch only until later gates authorize live placement.
 
 ---
 
-### Gate 3 — Machine + registration package (AUTHORIZED / ACTIVE)
+### Gate 3 — Machine + registration package (CLOSED / PASS)
 
 Prepare (still gated from merge until Gate 4/5):
 
@@ -98,7 +98,7 @@ Prepare (still gated from merge until Gate 4/5):
 
 ---
 
-### Gate 4 — Pre-merge Publish Gate
+### Gate 4 — Pre-merge Publish Gate (AUTHORIZED / ACTIVE)
 
 Must PASS before any release PR may merge:
 
@@ -132,7 +132,7 @@ In one controlled release sequence:
 
 ---
 
-## Hard rules while OPEN (Gates 0–2 CLOSED / PASS; Gate 3 ACTIVE)
+## Hard rules while OPEN (Gates 0–3 CLOSED / PASS; Gate 4 ACTIVE)
 
 | Rule | Status |
 |---|---|
@@ -153,7 +153,7 @@ In one controlled release sequence:
 3. Left execution blocked at Gate 0 (its state at the time)
 4. Contained **no** live mutations
 
-**Current progress:** Gates 0–2 are CLOSED / PASS. Gate 3 is AUTHORIZED / ACTIVE. Gates 4–6 remain unexecuted.
+**Current progress:** Gates 0–3 are CLOSED / PASS. Gate 4 is AUTHORIZED / ACTIVE. Gates 5–6 remain unexecuted.
 
 ---
 
