@@ -52,7 +52,9 @@
 | `R2_8_PUBLISH_GATE.md` | **R2.8** gate sequence + Gate 0 freeze |
 | `R2_8_GATE0_HOSTING_INDEX_CONTROL.md` | **Gate 0** serving stack + index-control investigation (CLOSED / PASS) |
 | `R2_8_GATE1_CANONICAL_BUILD.md` | **Gate 1** pre-publication canonical build + transformation checks |
-| `page-candidate/` | Non-live HTML candidate |
+| `R2_8_GATE2_RELEASE_HTML.md` | **Gate 2** release HTML candidate + §E.2 sanitization checklist |
+| `page-candidate/` | Non-live HTML candidate (R2.5/R2.6 workbench + verification record) |
+| `release-candidate/` | **Gate 2** release-sanitized HTML candidate (branch-only; not live) |
 | `README.md` | This status note |
 
 ---
