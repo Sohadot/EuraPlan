@@ -1,7 +1,7 @@
 {
   "_meta": {
     "batch": "GDPR — canonical claim graph (GDPR v1; published / active release state)",
-    "status": "published / active — GDPR reference publication release; public effectiveness occurs when this release-state tree is merged to main. Human-verified 2026-08-20; freshness/publication check 2026-08-22. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
+    "status": "published / active — GDPR reference publication release; public effectiveness occurs when this release-state tree is merged to main. Verified against pinned EUR-Lex sources; last_verified_at=2026-08-20; publication release prepared 2026-08-22. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
     "location_note": "regulation/gdpr/claims.json — canonical machine-readable claim graph for the GDPR reference route (EP-REG-002). Mirrors the visible Verified Claim Register on /regulation/gdpr/.",
     "published": true,
     "route_id": "EP-REG-002",
