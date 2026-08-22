@@ -1,9 +1,9 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** Open — **R2.8** Publish Gate (**EXECUTION BLOCKED AT GATE 0**)  
+**Status:** R2.8 OPEN — **Gate 0 CLOSED / PASS; Gate 1 ACTIVE**  
 **Opened:** 2026-08-20  
 **Branch:** `sprint-r2-gdpr-r2-8-publish-gate-open`  
 **Canonical target:** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)  
-**Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047…DEC-054; DISCLOSURE_BOUNDARY.md; ROUTE_GOVERNANCE.md
+**Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047…DEC-055; DISCLOSURE_BOUNDARY.md; ROUTE_GOVERNANCE.md
 
 ---
 
@@ -19,7 +19,7 @@
 8. No generic Commission/EDPB portfolio source nodes; pin specific instruments only when needed.
 9. **R2.6 Decision Utility** is a derived planning layer. Seeds are not verified facts.
 10. **R2.7** registration contracts are frozen inputs to R2.8 (`R2_7_REGISTRATION_DRAFT.md`).
-11. **R2.8** is OPEN but **BLOCKED AT GATE 0** until hosting/index-control capability is verified. Opening ≠ publication. No invented provenance SHAs. `routes.json` `indexable:false` is governance only.
+11. **R2.8** is OPEN; **Gate 0 is CLOSED / PASS** (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22) and **Gate 1 is AUTHORIZED / ACTIVE**. Gates 2–6 remain unexecuted (Gate 6 re-tests the index-control header on a live `200` response). Opening ≠ publication. No invented provenance SHAs. `routes.json` `indexable:false` is governance only.
 
 ---
 
@@ -35,7 +35,7 @@
 | R2.5 | Branch-only Page Transformation | **CLOSED / PASS** — merge `a6b9ed0…` (PR #38) |
 | R2.6 | Decision utility layer | **CLOSED / PASS** — merge `8168415…` (PR #39) |
 | R2.7 | Citation + machine registration prep | **CLOSED / PASS** — merge `8ec08e0…` (PR #40) |
-| R2.8 | GDPR Publish Gate → RGS re-score ≥90 | **OPEN / BLOCKED AT GATE 0** |
+| R2.8 | GDPR Publish Gate → RGS re-score ≥90 | **OPEN — Gate 0 CLOSED / PASS; Gate 1 ACTIVE** |
 
 ---
 
@@ -65,7 +65,7 @@
 
 **Decision Utility:** `EP-DU-GDPR-001`…`009` — derived; not claims.
 
-`_meta.published=false`; live HTML mutation blocked; public `claims.json` blocked; live registration blocked; **Gate 0 active blocker**.
+`_meta.published=false`; live HTML mutation blocked; public `claims.json` blocked; live registration blocked; **Gate 0 CLOSED / PASS; Gate 1 ACTIVE** (Gates 2–6 unexecuted).
 
 ---
 

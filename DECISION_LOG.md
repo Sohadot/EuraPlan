@@ -636,6 +636,19 @@ Each entry uses the following structure:
   - **Opening PR must not** create public `claims.json` or edit live GDPR HTML / `routes.json` / `llms.txt` / sitemap / robots
   - **Next:** execute Gate 0 hosting/index-control investigation; remain blocked from Gates 1–6 until Gate 0 is recorded
 
+### DEC-055
+- **Date:** 2026-08-22 (R2.8 Gate 0 closed; Gate 1 authorized)
+- **Status:** Active
+- **Decision:** (1) Close **R2.8 Gate 0 — Hosting & Index-Control Capability** as **CLOSED / PASS** and select **Option A**: index control via a **Cloudflare exact-path `X-Robots-Tag: noindex` rule** on `/regulation/gdpr/claims.json` (dashboard Transform Rule / response-header modification; configuration lives at the CDN edge, outside git). (2) Record live verification (2026-08-22): target `https://euraplan.com/regulation/gdpr/claims.json` → **404** pre-publication with **`X-Robots-Tag: noindex` present**; negative control `https://euraplan.com/regulation/gdpr/` → **200** with header **absent** — confirming the rule is scoped to the exact path and is **not** site-wide (positive + negative controls both PASS; scope isolation PASS). (3) **Authorize Gate 1** (Pre-publication canonical build) as **ACTIVE**: `verified → publishable`; `validity_state` remains `null`; no invented provenance SHAs. (4) Gates 2–6 remain **unexecuted**; **Gate 6** must re-verify the index-control header on a live **`200`** response after publication (current verification is against a `404`). (5) This closeout makes **no** changes to `robots.txt`, `routes.json`, `llms.txt`, sitemap, or live GDPR HTML; the only new control lives in Cloudflare configuration, not in git.
+- **Rationale:** Gate 0 required proven, path-scoped index control before the publish sequence. Option A delivers index control (not merely crawl guidance) at the CDN layer that actually fronts the site, and the negative control proves the `noindex` directive does not leak to the rest of `/regulation/gdpr/`. With capability proven and scope-isolated, execution can safely advance to the pre-publication build at Gate 1 while every live-mutation surface stays gated.
+- **Affected routes/files:** `evidence-workbench/gdpr/R2_8_GATE0_HOSTING_INDEX_CONTROL.md`; `evidence-workbench/gdpr/R2_8_PUBLISH_GATE.md`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`; Cloudflare edge configuration (out-of-git) for `/regulation/gdpr/claims.json`
+- **Governance documents involved:** ROUTE_GOVERNANCE.md; REFERENCE_GRADE_ROUTE_STANDARD.md; DISCLOSURE_BOUNDARY.md; `R2_8_PUBLISH_GATE.md`; `R2_8_GATE0_HOSTING_INDEX_CONTROL.md`; DEC-054
+- **Reversal conditions:** Superseding DEC to remove or re-scope the Cloudflare header rule, to switch to Option B/C, to skip the Gate 6 live-`200` re-verification, or to proceed to Gates 2–6 / any live mutation without their own gate authorization
+- **Notes:**
+  - **Verification date:** 2026-08-22 (target 404 + `noindex`; negative control 200 + absent)
+  - **Deferred:** Gate 6 re-tests the header on a live `200` response post-publication
+  - **Next:** execute **Gate 1** pre-publication canonical build; Gates 2–6 remain gated
+
 ---
 
 ## 4. Superseded / Rejected Decisions

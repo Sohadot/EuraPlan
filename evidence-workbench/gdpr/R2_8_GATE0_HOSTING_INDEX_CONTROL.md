@@ -1,9 +1,10 @@
 # R2.8 Gate 0 — Hosting & Index-Control Investigation
 
-**Status:** INVESTIGATION COMPLETE / OWNER DECISION REQUIRED  
-**Date:** 2026-08-20  
+**Status:** CLOSED / PASS — Option A SELECTED / IMPLEMENTED  
+**Investigation date:** 2026-08-20  
+**Closeout / live-verification date:** 2026-08-22  
 **Scope:** Gate 0 only — no Gates 1–6 execution  
-**Related:** DEC-054; `R2_8_PUBLISH_GATE.md`; `R2_7_REGISTRATION_DRAFT.md` §D.1
+**Related:** DEC-054; DEC-055; `R2_8_PUBLISH_GATE.md`; `R2_7_REGISTRATION_DRAFT.md` §D.1
 
 ---
 
@@ -63,18 +64,33 @@ Probed 2026-08-20 (HEAD requests):
 
 Current `robots.txt` has `Allow: /regulation/`, so a future `/regulation/gdpr/claims.json` is **technically crawlable** unless Gate 0 chooses otherwise.
 
+### 2.5 Live verification — Option A implemented (2026-08-22)
+
+Owner configured the Cloudflare **exact-path** response-header rule for `/regulation/gdpr/claims.json` (`X-Robots-Tag: noindex`) and re-probed:
+
+| URL | HTTP status | `X-Robots-Tag` | Interpretation |
+|---|---|---|---|
+| `https://euraplan.com/regulation/gdpr/claims.json` (**target**) | **404** (pre-publication — file not yet published) | **`noindex` present** | Exact-path rule is live; the header attaches even before the JSON exists |
+| `https://euraplan.com/regulation/gdpr/` (**negative control**) | **200** | **absent** | Rule is scoped to the exact path, **not** site-wide — scope isolation PASS |
+
+**Result:** Option A is **IMPLEMENTED** and correctly scoped. Positive control (header present on target) and negative control (header absent on the surrounding directory) both PASS, so the `noindex` directive is bound to the exact target path only and does not leak site-wide.
+
+**Deferred to Gate 6:** re-run this verification **after publication**, when the target returns **200** (not the current pre-publication **404**), to confirm the header persists on a live `200` response.
+
 ---
 
 ## 3. Decision options (owner must pick one)
 
-### Option A — Preferred (index control)
+### Option A — SELECTED / IMPLEMENTED (index control)
+
+**Chosen and configured 2026-08-22 — see §2.5 for live verification.**
 
 1. Configure Cloudflare Transform Rule (or equivalent) for  
-   `https://euraplan.com/regulation/gdpr/claims.json` → `X-Robots-Tag: noindex`
+   `https://euraplan.com/regulation/gdpr/claims.json` → `X-Robots-Tag: noindex` — **DONE**
 2. Keep file **crawlable** enough for crawlers to see the header (do **not** Disallow the path if relying on `X-Robots-Tag`)
 3. Keep `claims.json` out of sitemap; keep `routes.json` `indexable:false`
-4. Verify with `HEAD`/`GET` that the header is present before Gate 5 publication
-5. Record PASS only after live header verification
+4. Verify with `HEAD`/`GET` that the header is present before Gate 5 publication — **verified present (404 pre-publication, §2.5); live-200 re-check deferred to Gate 6**
+5. Record PASS only after live header verification — **recorded PASS 2026-08-22 (positive + negative controls)**
 
 ### Option B — Crawl control fallback
 
@@ -97,11 +113,12 @@ Current `robots.txt` has `Allow: /regulation/`, so a future `/regulation/gdpr/cl
 |---|---|
 | Serving stack identified | **PASS** |
 | GH Pages header capability alone | **FAIL** (as sole mechanism) |
-| Cloudflare path-specific `X-Robots-Tag` | **CAPABLE / NOT CONFIGURED** |
-| Owner decision among A/B/C | **PENDING** |
-| Gate 0 overall | **BLOCKED** until owner selects and (for A) verifies header live |
+| Cloudflare path-specific `X-Robots-Tag` | **CONFIGURED / VERIFIED LIVE** (2026-08-22; target 404 + `noindex`, negative control 200 + absent) |
+| Owner decision among A/B/C | **SELECTED — Option A** |
+| Scope isolation (positive + negative controls) | **PASS** |
+| Gate 0 overall | **CLOSED / PASS** — Option A implemented; scope isolation verified; live-200 re-test deferred to Gate 6 |
 
-**Gates 1–6 remain forbidden** until Gate 0 records a chosen option and any required verification.
+**Gate 0 is CLOSED / PASS.** **Gate 1 is AUTHORIZED / ACTIVE.** Gates 2–6 remain unexecuted; **Gate 6** re-tests the index-control header on a live `200` response after publication (current verification is against a pre-publication `404`).
 
 ---
 
