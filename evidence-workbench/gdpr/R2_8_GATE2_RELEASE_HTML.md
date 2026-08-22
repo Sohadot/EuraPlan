@@ -71,10 +71,11 @@ These are the atomic **live-switch** steps; applying them now would misrepresent
 Deterministic transform (`page-candidate/index.html` → `release-candidate/index.html`); every chrome replacement was count-asserted, and substance was re-counted independently:
 
 - [x] 31 anchors, 9 DU objects, 4 co-render blocks, 31 claim bodies — parity with source
-- [x] Zero workbench markers remain (`R2.6 workbench`, `NOT LIVE`, `pre-publication`, `blocked until R2.8`, `Route target (later)`, `Phase`, `not the live public`, `(candidate)`)
+- [x] **Zero sprint / workbench / governance-implementation language in the release candidate** (verified by sweep): no `R2.x` phase tags, `Publish Gate` / `Gate N`, `staging`, `DEC-0xx`, `workbench`, `pre-publication`, `V1–V5`, governance-doc filenames (e.g. `FRESHNESS_ENGINE.md`), or workbench field names (e.g. `r2_1_planning_consequence` / `decision-utility.staging.json`); NOT LIVE banner, candidate/phase labels, and the internal `<head>` build comment all removed
 - [x] Live chrome present: canonical, OG set, Twitter set, Article JSON-LD, Breadcrumb JSON-LD, `dateModified`, `favicon.png`, header+footer `Acquire`
 - [x] Both `application/ld+json` blocks parse as valid JSON
 - [x] `robots` stays `noindex, nofollow` (deferred)
+- [x] File ends with a trailing newline
 - [x] Source workbench candidate unchanged; **no file under `regulation/gdpr/**`**
 - [x] No `routes.json` / `llms.txt` / sitemap / robots.txt / live HTML mutation
 

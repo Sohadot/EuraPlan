@@ -5,7 +5,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>GDPR Entry Planning Reference — EuraPlan</title>
  <meta name="description" content="Source-governed GDPR entry planning reference for non-EU AI, SaaS, and technology companies. Controller/processor roles, data-flow planning, baseline obligations, EERS dimensions, and AI Act coordination — not legal advice.">
- <!-- Gate 2 release candidate: robots stays noindex,nofollow until the Gate 5 cutover flips it to index,follow at publication -->
  <meta name="robots" content="noindex, nofollow">
  <link rel="canonical" href="https://euraplan.com/regulation/gdpr/">
  <link rel="stylesheet" href="/assets/css/main.css">
@@ -254,12 +253,12 @@
 
  <section class="page-section" id="decision-utility" aria-labelledby="decision-utility-heading">
  <div class="section-header">
- <span class="section-eyebrow">10 - Decision Utility Layer (R2.6)</span>
+ <span class="section-eyebrow">10 - Decision Utility Layer</span>
  <h2 class="section-title" id="decision-utility-heading">Verified claim to planning decision</h2>
  <p class="section-body">
  This layer converts verified claims into planning decisions. It does <strong>not</strong> mint new legal facts and does <strong>not</strong> judge an unknown company.
  Pattern: verified claim -&gt; planning question -&gt; consequence -&gt; dependency/qualification -&gt; action to investigate.
- Analytical seeds from <code>r2_1_planning_consequence</code> inform wording only; they are <strong>not</strong> verified propositions. Source staging: <code>decision-utility.staging.json</code> (DEC-052).
+ The analytical seeds behind this layer inform wording only; they are <strong>not</strong> verified propositions.
  </p>
  </div>
 
@@ -342,7 +341,7 @@
  <h2 class="section-title" id="claim-register-heading">GDPR — Verified Claim Register</h2>
  <p class="section-body">
  Each fact below is a governed Evidence Object with a stable identifier and source locator, human-verified against EUR-Lex on 2026-08-20.
- Cite by claim ID and anchor (e.g. <code>#ep-clm-000024</code>). Public machine graph path <code>/regulation/gdpr/claims.json</code> is registered in the R2.8 Publish Gate sequence.
+ Cite by claim ID and anchor (e.g. <code>#ep-clm-000024</code>).
  </p>
  <div class="badge-row">
  <span class="source-confidence-badge source-confidence-badge--tier1">Source: Tier 1 official</span>
@@ -743,12 +742,11 @@
  <dl class="system-panel-grid">
  <div class="system-panel-cell"><dt>EP-SRC-000004</dt><dd>Authentic Official Journal act - CELEX 32016R0679 - evidentiary basis</dd></div>
  <div class="system-panel-cell"><dt>EP-SRC-000005</dt><dd>EUR-Lex consolidated reading aid - CELEX 02016R0679-20160504 - not a replacement for the OJ act</dd></div>
- <div class="system-panel-cell"><dt>Verification</dt><dd>R2.3 V1 - V5 human literal verification; last_verified_at 2026-08-20; workflow publishable</dd></div>
+ <div class="system-panel-cell"><dt>Verification</dt><dd>Human literal verification against pinned EUR-Lex sources; last_verified_at 2026-08-20; workflow publishable</dd></div>
  <div class="system-panel-cell"><dt>Freshness watch</dt><dd>Regulation (EU) 2025/2518 (cross-border enforcement procedures) - watch only; not batch-1</dd></div>
  </dl>
  <p class="system-panel-body" style="margin-top:14px;">
- Freshness and maintenance follow <code>FRESHNESS_ENGINE.md</code>.
- The public machine graph <code>/regulation/gdpr/claims.json</code> is published in the R2.8 Publish Gate sequence.
+ Freshness and maintenance follow the EuraPlan freshness contract; verify current text at EUR-Lex before acting.
  </p>
  </div>
  </section>
