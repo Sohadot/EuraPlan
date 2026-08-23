@@ -21,7 +21,7 @@ R3 is **not** a copy of the GDPR sprint. It reuses the *operating system* proven
 **Rediscovered from scratch (Data Act material truth):**
 - The claim set — what the Data Act actually obligates, permits, and triggers — mapped from Regulation (EU) 2023/2854 directly, not ported from GDPR.
 - The analytical layer and Decision Objects — the planning consequences that are specific to data access, connected products, cloud switching, and B2B/B2G data sharing.
-- The source set — Tier 1 primary instruments and Commission data-economy materials pinned to real CELEX identifiers.
+- The source set — Tier-1 primary instruments and specific Commission materials pinned to canonical official locators — CELEX/ELI where applicable; stable Commission URL/document identifier otherwise.
 
 > GDPR is the precedent for *how*, never the template for *what*. No GDPR claim, Decision Object, source node, or claim count is carried over.
 
