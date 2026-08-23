@@ -1,8 +1,8 @@
 # R2.8 Gate 5 — Publication (release sequence)
 
-**Status:** PHASE A LIVE (PR #47 merged `f97a51e`, publication 2026-08-23) + PHASE B PROVENANCE FINALIZED. Gate 5 CLOSED / PASS. Gate 6 next.
+**Status:** PHASE A LIVE (PR #47 merged `f97a51e`, publication 2026-08-23). PHASE B PROVENANCE STAGED / PENDING MERGE (PR #48). Gate 5 closes when PR #48 merges; Gate 6 remains blocked until then.
 **Date:** 2026-08-23
-**Scope:** Gate 5 Phase A — the release cutover for EP-REG-002 (now live on main); Phase B — post-merge provenance (now finalized). Gate 6 (live verification + RGS) remains unexecuted.
+**Scope:** Gate 5 Phase A — the release cutover for EP-REG-002 (now live on main); Phase B — post-merge provenance (staged in PR #48, effective on merge). Gate 6 (live verification + RGS) remains unexecuted.
 **Authorized by:** Gate 4 CLOSED / PASS (audit 25/25, PR #46) under the DEC-054 frozen sequence; DEC-055 governs the Gate 0 index-control decision
 **Related:** `R2_8_PUBLISH_GATE.md`; `R2_8_GATE4_PREMERGE_AUDIT.md`; `R2_8_GATE3_MACHINE_REGISTRATION.md` §2.1
 
@@ -63,9 +63,9 @@ Each row is an independent assertion, numbered so an auditor can reproduce it on
 
 ---
 
-## 3. Phase B — post-merge provenance finalization (DONE)
+## 3. Phase B — post-merge provenance finalization (STAGED / PENDING MERGE — PR #48)
 
-Filled in the published `_meta` from real git objects after PR #47 merged:
+Staged in PR #48 to fill the published `_meta` from real git objects (effective when #48 merges):
 
 - `release_sha` = `b392ba50015e98b273a458320c5bd3201732a590` (release-state commit — PR #47 head)
 - `merge_sha` = `f97a51ed438e1b00c689ffe22b682a05d11f9704` (merge commit on `main`)
