@@ -1,7 +1,7 @@
 # R2.8 Gate 5 — Publication (release sequence)
 
 **Status:** PHASE A RELEASE-STATE TREE COMPLETE / STAGED — PENDING owner review + merge; **not live until merge**. PHASE B (provenance) reserved (post-merge).
-**Date:** 2026-08-22
+**Date:** 2026-08-23
 **Scope:** Gate 5 Phase A — the release-state cutover for EP-REG-002, staged in this PR and **effective/live only when merged**. Phase B (provenance) is post-merge; Gate 6 remains unexecuted.
 **Authorized by:** Gate 4 CLOSED / PASS (audit 25/25, PR #46) under the DEC-054 frozen sequence; DEC-055 governs the Gate 0 index-control decision
 **Related:** `R2_8_PUBLISH_GATE.md`; `R2_8_GATE4_PREMERGE_AUDIT.md`; `R2_8_GATE3_MACHINE_REGISTRATION.md` §2.1
@@ -14,11 +14,11 @@ This is the **release PR**: it **stages** the GDPR Evidence Graph reference in t
 
 | # | Release-state change (effective on merge) | From | Transform |
 |---|---|---|---|
-| 1 | `regulation/gdpr/index.html` | `release-candidate/index.html` (Gate 2) | deferred switches applied: `robots → index, follow`; visible workflow labels `publishable → published` (31 claims + hero + sources + telemetry); Article `dateModified = 2026-08-22` (cutover). Substance unchanged: 31 anchors, 4 co-render pairs, Chapter V, 9 Decision Utility objects. |
+| 1 | `regulation/gdpr/index.html` | `release-candidate/index.html` (Gate 2) | deferred switches applied: `robots → index, follow`; visible workflow labels `publishable → published` (31 claims + hero + sources + telemetry); Article `dateModified = 2026-08-23` (cutover). Substance unchanged: 31 anchors, 4 co-render pairs, Chapter V, 9 Decision Utility objects. |
 | 2 | `regulation/gdpr/claims.json` (new) | `release-candidate/claims.json` (Gate 3) | **transform** per §2.1: `workflow_state publishable → published`; `validity_state null → active`; `_meta.published → true`; `_meta` rewritten to published/public wording with all Gate/workbench/candidate language and `evidence-workbench/…` paths removed. Claims array text/IDs/sources/`qualified_by` and `source_registry` unchanged. **No provenance SHAs.** |
 | 3 | `routes.json` | — | EP-REG-002 `alternate_representations` entry added (parallel to EP-REG-001), `indexable:false` / `sitemap:false`. |
 | 4 | `llms.txt` | — | GDPR canonical-claim-graph line added after the AI Act line. |
-| 5 | `sitemap.xml` | — | `/regulation/gdpr/` `lastmod → 2026-08-22`; `claims.json` **not** listed. |
+| 5 | `sitemap.xml` | — | `/regulation/gdpr/` `lastmod → 2026-08-23`; `claims.json` **not** listed. |
 | 6 | `robots.txt` | — | **No change** (index control is Gate 0 Option A at the CDN). |
 
 ---
@@ -44,14 +44,14 @@ Each row is an independent assertion, numbered so an auditor can reproduce it on
 - [x] **G5A-12** — 31 claim anchors present
 - [x] **G5A-13** — 9 Decision Utility objects present
 - [x] **G5A-14** — 4 co-render blocks present
-- [x] **G5A-15** — Article `dateModified = 2026-08-22`
+- [x] **G5A-15** — Article `dateModified = 2026-08-23`
 - [x] **G5A-16** — claim IDs in `claims.json` == claim anchors in the HTML (31, identical set)
 - [x] **G5A-17** — every claim proposition text present verbatim in the HTML
 
 **Registration surfaces**
 - [x] **G5A-18** — `routes.json` valid JSON; EP-REG-002 `alternate_representations` present
 - [x] **G5A-19** — `llms.txt` GDPR claims line present, after the AI Act line
-- [x] **G5A-20** — `sitemap.xml` well-formed; `/regulation/gdpr/` `lastmod = 2026-08-22`; `claims.json` **not** listed; `robots.txt` unchanged
+- [x] **G5A-20** — `sitemap.xml` well-formed; `/regulation/gdpr/` `lastmod = 2026-08-23`; `claims.json` **not** listed; `robots.txt` unchanged
 
 **Result: 20 / 20 PASS (G5A-01 … G5A-20).** secret-scan is a separate external check (green on this head).
 
@@ -59,7 +59,7 @@ Each row is an independent assertion, numbered so an auditor can reproduce it on
 
 ## 2a. Merge-time condition — publication date
 
-`index.html` Article `dateModified` and `sitemap.xml` `lastmod` are set to **2026-08-22**, which assumes this PR is merged on 2026-08-22. **If the merge slips to a later date, update both to the actual merge/publication date before merging** — the publication date must reflect the real event, not the PR-preparation date.
+`index.html` Article `dateModified` and `sitemap.xml` `lastmod` are set to **2026-08-23**, which assumes this PR is merged on 2026-08-23. **If the merge slips to a later date, update both to the actual merge/publication date before merging** — the publication date must reflect the real event, not the PR-preparation date.
 
 ---
 
