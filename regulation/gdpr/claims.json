@@ -1,9 +1,12 @@
 {
   "_meta": {
-    "batch": "GDPR — canonical claim graph (GDPR v1; published / active release state)",
-    "status": "published / active — GDPR reference publication release; public effectiveness occurs when this release-state tree is merged to main. Verified against pinned EUR-Lex sources; last_verified_at=2026-08-20; publication release prepared 2026-08-23. workflow_state=published (publishable->published only); validity_state=active (null->active only).",
+    "batch": "GDPR — canonical claim graph (GDPR v1; published / active — live on main)",
+    "status": "published / active — live on main since 2026-08-23. Verified against pinned EUR-Lex sources; last_verified_at=2026-08-20. workflow_state=published; validity_state=active.",
     "location_note": "regulation/gdpr/claims.json — canonical machine-readable claim graph for the GDPR reference route (EP-REG-002). Mirrors the visible Verified Claim Register on /regulation/gdpr/.",
     "published": true,
+    "live_on_main_since": "2026-08-23",
+    "release_sha": "b392ba50015e98b273a458320c5bd3201732a590",
+    "merge_sha": "f97a51ed438e1b00c689ffe22b682a05d11f9704",
     "route_id": "EP-REG-002",
     "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.4",
     "claim_count": 31,
@@ -30,7 +33,7 @@
     "notes": [
       "31 claims workflow_state=published (publishable->published only); validity_state=active (null->active only); confidence=Verified and last_verified_at=2026-08-20 unchanged. No claim text, ID, effective_date, source edge, qualified_by, claim_risk, or EERS mapping changed at publication.",
       "Index control: Cloudflare exact-path X-Robots-Tag: noindex on /regulation/gdpr/claims.json (DEC-055, Option A). routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
-      "Provenance: release_sha and merge_sha are finalized from real git objects post-merge; live_on_main_since is recorded from the actual publication event. Never inside their own commit."
+      "Provenance finalized post-merge: release_sha is the release-state commit; merge_sha is the merge commit on main; live_on_main_since is the actual publication date (2026-08-23)."
     ],
     "generated": "2026-08-22",
     "source_registry": {
