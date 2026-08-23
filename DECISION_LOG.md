@@ -649,6 +649,19 @@ Each entry uses the following structure:
   - **Deferred:** Gate 6 re-tests the header on a live `200` response post-publication
   - **Next:** execute **Gate 1** pre-publication canonical build; Gates 2–6 remain gated
 
+### DEC-056
+- **Date:** 2026-08-23 (R2.8 GDPR Publish Gate closed; GDPR Evidence Graph reference published)
+- **Status:** Active
+- **Decision:** Close **R2.8 — GDPR Publish Gate** as **CLOSED / PASS** with all seven gates complete under the DEC-054 frozen sequence: Gate 0 hosting/index-control (Option A, DEC-055); Gate 1 pre-publication canonical build (PR #43); Gate 2 release HTML candidate (PR #44); Gate 3 machine + registration package (PR #45); Gate 4 pre-merge audit 25/25 (PR #46); Gate 5 publication (PR #47 merge `f97a51ed438e1b00c689ffe22b682a05d11f9704`, live on main since 2026-08-23) + Phase B provenance (PR #48 merge `9faabcced9e0d11d3284e0ebdabd99589d73d990`); Gate 6 post-merge live verification. The GDPR Evidence Graph reference is **live**: `regulation/gdpr/index.html` (`index, follow`) and public `regulation/gdpr/claims.json` (31 claims `workflow_state=published`, `validity_state=active`, `_meta.published=true`), with `routes.json` EP-REG-002 `alternate_representations`, the `llms.txt` claim-graph line, and sitemap `lastmod=2026-08-23` (claims.json never listed). Provenance on the public graph: `release_sha=b392ba50015e98b273a458320c5bd3201732a590`, `merge_sha=f97a51ed438e1b00c689ffe22b682a05d11f9704`, `live_on_main_since=2026-08-23`. Index control confirmed on a live `200` (Cloudflare exact-path `X-Robots-Tag: noindex`; negative control `/regulation/gdpr/` 200 + header absent). **RGS v2 re-score = 97.5 / 100** (≥ 90), parity with the EU AI Act Gold Reference. `last_verified_at=2026-08-20` and `confidence=Verified` unchanged throughout; publication changed only lifecycle state, never claim substance.
+- **Rationale:** R2.8 upgraded EP-REG-002 from a structured summary (R1 baseline 58) to an Evidence Graph-grade reference through a gated publish sequence that kept every live mutation behind an explicit gate and never invented provenance. The route now meets the Core Authority threshold with all six `REFERENCE_GRADE_ROUTE_STANDARD.md` layers present.
+- **Affected routes/files:** `regulation/gdpr/index.html`; `regulation/gdpr/claims.json`; `routes.json`; `llms.txt`; `sitemap.xml`; `evidence-workbench/gdpr/R2_8_PUBLISH_GATE.md`; `evidence-workbench/gdpr/R2_8_GATE5_PUBLICATION.md`; `evidence-workbench/gdpr/R2_8_GATE6_LIVE_VERIFICATION.md`; `evidence-workbench/gdpr/README.md`; `DECISION_LOG.md`
+- **Governance documents involved:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; ROUTE_GOVERNANCE.md; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; DISCLOSURE_BOUNDARY.md; DEC-047; DEC-054; DEC-055
+- **Reversal conditions:** Superseding DEC to unpublish or re-stage EP-REG-002, to alter published claim substance without a new verification event, or to open expansion routes before **all** Wave 1 Core Authority routes reach ≥ 90
+- **Notes:**
+  - **Publication merge:** `f97a51ed438e1b00c689ffe22b682a05d11f9704` (PR #47); **Phase B provenance merge:** `9faabcced9e0d11d3284e0ebdabd99589d73d990` (PR #48)
+  - **Wave 1 status:** EU AI Act (97) + GDPR (97.5) at ≥ 90; **Data Act, CRA, EERS, Protocol remain < 90** — expansion stays gated (DEC-047)
+  - **Next:** no Data Act / country / sector / expansion work is unblocked by this closeout; the next Wave 1 upgrade follows the RGS v2 order (Data Act → CRA → EERS → Protocol)
+
 ---
 
 ## 4. Superseded / Rejected Decisions

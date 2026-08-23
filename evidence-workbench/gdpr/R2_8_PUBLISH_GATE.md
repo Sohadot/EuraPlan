@@ -1,6 +1,6 @@
 # R2.8 — GDPR Publish Gate
 
-**Status:** OPEN — Gates 0–4 CLOSED / PASS; Gate 5 Phase A LIVE (2026-08-23), Phase B STAGED / PENDING MERGE (PR #48); Gate 6 UNEXECUTED / NOT YET AUTHORIZED  
+**Status:** COMPLETE — Gates 0–6 all CLOSED / PASS; GDPR reference LIVE since 2026-08-23; RGS v2 = 97.5 / 100  
 **Opened:** 2026-08-20  
 **Gates 0–4 closed:** 2026-08-22  
 **Opening merge:** PR #41 `cb893438c65438b4aaa7673990ea432798fc535c`  
@@ -21,7 +21,7 @@ Opening this phase authorizes the **Publish Gate sequence** for EP-REG-002. It d
 - live `routes.json` / `llms.txt` / sitemap / robots may be edited yet
 - provenance SHAs may be invented
 
-**Current state:** **Gates 0–4 are CLOSED / PASS** — Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45), Gate 4 (pre-merge audit 25/25, PR #46). **Gate 5 Phase A is LIVE** — PR #47 merged `f97a51e`, **GDPR reference live on main since 2026-08-23**. **Gate 5 Phase B is STAGED / PENDING MERGE** in PR #48 (provenance `release_sha=b392ba5`, `merge_sha=f97a51e`, `live_on_main_since=2026-08-23`); Gate 5 closes when PR #48 merges. **Gate 6 is NOT YET AUTHORIZED** — it becomes authorized on the PR #48 merge (post-merge live verification + RGS v2 re-score). Each gate proceeds under the DEC-054 frozen sequence as the prior gate closes; DEC-055 governs only the Gate 0 index-control decision.
+**Current state:** **Gates 0–6 are all CLOSED / PASS.** Gate 0 (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, DEC-055), Gate 1 (pre-publication canonical build, PR #43), Gate 2 (release HTML candidate, PR #44), Gate 3 (machine + registration package, PR #45), Gate 4 (pre-merge audit 25/25, PR #46), Gate 5 (publication — PR #47 `f97a51e`, live since 2026-08-23; Phase B provenance PR #48 `9faabcc`: `release_sha=b392ba5`, `merge_sha=f97a51e`, `live_on_main_since=2026-08-23`), Gate 6 (live verification — index control confirmed on a live `200`; live-surface integrity; **RGS v2 = 97.5 / 100**, see `R2_8_GATE6_LIVE_VERIFICATION.md`). **R2.8 GDPR Publish Gate is COMPLETE.** Expansion remains gated (DEC-047): Data Act, CRA, EERS, Protocol are still < 90.
 
 ---
 
@@ -128,7 +128,7 @@ Phase B (post-merge provenance finalization, before Gate 6):
 
 ---
 
-### Gate 6 — Post-merge live verification (AUTHORIZED ON MERGE OF PR #48)
+### Gate 6 — Post-merge live verification (CLOSED / PASS)
 
 - Use the **real merge SHA**
 - Verify live HTML, anchors, JSON, routes, llms, sitemap, and crawler/index behavior against Gate 0 decision
@@ -136,7 +136,7 @@ Phase B (post-merge provenance finalization, before Gate 6):
 
 ---
 
-## Hard rules while OPEN (Gates 0–4 CLOSED / PASS; Gate 5 Phase A LIVE, Phase B pending PR #48; Gate 6 not yet authorized)
+## Hard rules — R2.8 COMPLETE (Gates 0–6 CLOSED / PASS; GDPR reference live)
 
 | Rule | Status |
 |---|---|
@@ -157,7 +157,7 @@ Phase B (post-merge provenance finalization, before Gate 6):
 3. Left execution blocked at Gate 0 (its state at the time)
 4. Contained **no** live mutations
 
-**Current progress:** Gates 0–4 are CLOSED / PASS. Gate 5 Phase A is LIVE (GDPR reference live on main since 2026-08-23); Phase B provenance is staged in PR #48 (pending merge). Gate 6 is authorized on the PR #48 merge (live verification + RGS re-score).
+**Current progress:** Gates 0–6 are all CLOSED / PASS. GDPR reference is live on main since 2026-08-23; RGS v2 = 97.5 / 100. R2.8 is COMPLETE. Expansion remains gated until all Wave 1 routes reach ≥ 90 (DEC-047).
 
 ---
 
