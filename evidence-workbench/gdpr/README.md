@@ -1,5 +1,5 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
-**Status:** R2.8 OPEN — **Gate 0 CLOSED / PASS; Gate 1 ACTIVE**  
+**Status:** **R2.8 COMPLETE — Gates 0–6 CLOSED / PASS; GDPR Evidence Graph reference LIVE since 2026-08-23; RGS v2 = 97.5 / 100**  
 **Opened:** 2026-08-20  
 **Branch:** `sprint-r2-gdpr-r2-8-publish-gate-open`  
 **Canonical target:** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)  
@@ -19,7 +19,7 @@
 8. No generic Commission/EDPB portfolio source nodes; pin specific instruments only when needed.
 9. **R2.6 Decision Utility** is a derived planning layer. Seeds are not verified facts.
 10. **R2.7** registration contracts are frozen inputs to R2.8 (`R2_7_REGISTRATION_DRAFT.md`).
-11. **R2.8** is OPEN; **Gate 0 is CLOSED / PASS** (Option A — Cloudflare exact-path `X-Robots-Tag: noindex`, verified live 2026-08-22) and **Gate 1 is AUTHORIZED / ACTIVE**. Gates 2–6 remain unexecuted (Gate 6 re-tests the index-control header on a live `200` response). Opening ≠ publication. No invented provenance SHAs. `routes.json` `indexable:false` is governance only.
+11. **R2.8 is COMPLETE** — Gates 0–6 all CLOSED / PASS. The GDPR Evidence Graph reference (HTML + public `claims.json`) is **live on main since 2026-08-23**; claims `published` / `active`; provenance `release_sha=b392ba5`, `merge_sha=f97a51e`, `live_on_main_since=2026-08-23`; index control = Cloudflare exact-path `X-Robots-Tag: noindex` (verified live on a `200`); **RGS v2 = 97.5 / 100**. Governed by DEC-054 (frozen sequence), DEC-055 (Gate 0), DEC-056 (closeout). `routes.json` `indexable:false` is governance only. Expansion stays gated until all Wave 1 routes ≥ 90 (DEC-047).
 
 ---
 
@@ -35,7 +35,7 @@
 | R2.5 | Branch-only Page Transformation | **CLOSED / PASS** — merge `a6b9ed0…` (PR #38) |
 | R2.6 | Decision utility layer | **CLOSED / PASS** — merge `8168415…` (PR #39) |
 | R2.7 | Citation + machine registration prep | **CLOSED / PASS** — merge `8ec08e0…` (PR #40) |
-| R2.8 | GDPR Publish Gate → RGS re-score ≥90 | **OPEN — Gate 0 CLOSED / PASS; Gate 1 ACTIVE** |
+| R2.8 | GDPR Publish Gate → RGS re-score ≥90 | **CLOSED / PASS** — live 2026-08-23; RGS v2 97.5 (Gates 0–6) |
 
 ---
 
@@ -56,6 +56,7 @@
 | `R2_8_GATE3_MACHINE_REGISTRATION.md` | **Gate 3** machine + registration package + planned diffs + consistency tests |
 | `R2_8_GATE4_PREMERGE_AUDIT.md` | **Gate 4** pre-merge Publish Gate audit (25/25 PASS) + atomic Gate-5 mutation list |
 | `R2_8_GATE5_PUBLICATION.md` | **Gate 5** publication release (Phase A cutover; Phase B provenance post-merge) |
+| `R2_8_GATE6_LIVE_VERIFICATION.md` | **Gate 6** live verification + RGS v2 re-score (97.5 / 100) |
 | `page-candidate/` | Non-live HTML candidate (R2.5/R2.6 workbench + verification record) |
 | `release-candidate/` | **Gate 2/3** release bundle candidate — `index.html` + `claims.json` (branch-only; not live) |
 | `README.md` | This status note |
@@ -72,7 +73,7 @@
 
 **Decision Utility:** `EP-DU-GDPR-001`…`009` — derived; not claims.
 
-`_meta.published=false`; live HTML mutation blocked; public `claims.json` blocked; live registration blocked; **Gate 0 CLOSED / PASS; Gate 1 ACTIVE** (Gates 2–6 unexecuted).
+**Published / live since 2026-08-23:** `_meta.published=true`; live HTML + public `claims.json` (`published` / `active`) + `routes.json` alternate + `llms.txt` line all live on main; index control via Cloudflare exact-path `X-Robots-Tag: noindex` (verified on a live `200`). **Gates 0–6 CLOSED / PASS; RGS v2 = 97.5 / 100.**
 
 ---
 
