@@ -1,6 +1,6 @@
 # R3.0 — Discovery Closeout Register
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.0 Source & Claim Discovery
-**Recommended state:** **CLOSED / PASS — R3.1 AUTHORIZED** *(recommendation only — the README status flip and the R3.1 authorization stand **pending human review**, per the R3.0 instruction)*
+**State:** **CLOSED / PASS — R3.1 AUTHORIZED** *(final — human review PASS recorded 2026-08-24 after the micro-hardening + consistency deltas; README flipped in this same commit. R3.1 is authorized but not yet executable on the program corpus until R3.0 lands on `main`.)*
 **Working branch:** `claude/r3-0-data-act-discovery-dqiida` (independent R3.0 branch off `main` after merge #50 / DEC-057)
 **Date:** 2026-08-24
 **Governed by:** DEC-057 · REFERENCE_GRADE_ROUTE_STANDARD.md v2 · EVIDENCE_GRAPH_MODEL.md · CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md · SOURCE_POLICY.md · CLAIM_POLICY.md · FRESHNESS_ENGINE.md · DISCLOSURE_BOUNDARY.md
@@ -25,7 +25,7 @@ R3.0 is discovery + source-pinning-candidate only. It mints nothing and touches 
 | `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 classes/buckets (primary binding · amending/implementing/corrigendum · specific Commission materials · not-yet-admissible · rejected) + Article 50 application-date table | Complete |
 | `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (54 rows / 46 live, no IDs) + qualification structure (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) | Complete |
 | `R3_0_DISCOVERY_CLOSEOUT.md` | This register | Complete |
-| `evidence-workbench/eu-data-act/README.md` | Workbench status note — branch reference corrected, file table added; **status left OPEN pending review** (no CLOSED flip) | Updated |
+| `evidence-workbench/eu-data-act/README.md` | Workbench status note — branch reference corrected, file table added; **status flipped to `R3.0 CLOSED / PASS — R3.1 AUTHORIZED`** on review PASS | Updated |
 
 No other file was created or modified. No file outside `evidence-workbench/eu-data-act/` was touched.
 
@@ -114,10 +114,10 @@ All corrections were made against **verbatim official text** (Arts. 1(5), 2, 7, 
 
 ---
 
-## 8. Recommendation
+## 8. Disposition (final)
 
-R3.0 meets all nine close conditions (as reworded) and every DEC-057 guardrail, with the five review corrections applied. **Recommended disposition: R3.0 CLOSED / PASS; R3.1 (Claim Map & Falsification) AUTHORIZED.**
+R3.0 meets all nine close conditions (as reworded) and every DEC-057 guardrail, with the five review corrections and the follow-up consistency reconciliation applied. **Disposition: R3.0 CLOSED / PASS; R3.1 (Claim Map & Falsification) AUTHORIZED** — human review PASS recorded 2026-08-24.
 
-Per the governing instruction, the workbench README status flip (`R3.0 OPEN` → `R3.0 CLOSED / PASS — R3.1 AUTHORIZED`) and the actual start of R3.1 are held **pending your review of this delta**. On approval, the README line is flipped, a PR for R3.0 is opened to `main` and merged so the inherited artifacts are authoritative on `main`, and only then does R3.1 begin against the fixed target above.
+Governing order now executed: the README status is flipped to `R3.0 CLOSED / PASS — R3.1 AUTHORIZED` in this same commit; a PR scoped to **R3.0 artifacts + closeout status only** is opened to `main` and merged so the discovery corpus becomes an authoritative historical input. **R3.1 does not begin until it is given its own separate start order** — authorization is not execution.
 
 *EuraPlan.com — Sprint R3.0 workbench. Discovery closeout. Not a published website page.*
