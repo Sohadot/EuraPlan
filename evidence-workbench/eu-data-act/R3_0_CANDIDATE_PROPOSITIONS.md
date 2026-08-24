@@ -173,7 +173,7 @@ Recorded explicitly per R3.0 item 6. These are **relationships noted in discover
 | Q8 | R-F1 B2G duty | R-F4 free-in-emergency vs reasonable compensation | duty + compensation carve-out |
 | Q9 | R-G4 switching charges | interim reduced-charge regime → full prohibition 12.1.2027 | default + phased carve-out |
 | Q10 | R-G5 export/interoperability on switching | IaaS functional-equivalence vs other-tier best-effort | duty + tiered qualifier |
-| Q11 | R-K2 national penalties | GDPR Art. 83 for personal-data infringements | default + cross-referenced regime |
+| Q11 | R-K2 national penalties (Art. 40(1)) | GDPR Art. 83 fines (up to Art. 83(5)) for **Chapter II/III/V** infringements, **within GDPR-SA competence** (Art. 40(4)) | default + Chapter-scoped cross-referenced regime |
 | Q12 | R-K4 general sui generis DB right (external law) | Art. 43 carve-out for connected-product data | right + carve-out |
 | Q13 | R-A1 Data Act applies | R-B6 personal-data/privacy law prevails on its layer (Art. 1(5)) | scope + boundary |
 | Q14 | R-A1 Data Act as general layer | R-K5 sectoral savings clause + research carve-out (Art. 44) | general + sector-specific carve-out |
@@ -213,7 +213,7 @@ Per R3.0 item 8: places where EuraPlan can later build a **unique analytical lay
 | **S3 — When access becomes a contract problem** | The point where a Ch. II/III access question turns into a Ch. IV unfair-terms question | Lets planning connect data architecture to contract drafting |
 | **S4 — Switching as a planning obligation, not a portability feature** | Ch. VI reframes cloud-exit as a legal entitlement + a cost that disappears in 2027 (R-G1/G4) | Turns "portability" from a nice-to-have into a procurement + budgeting input |
 | **S5 — B2B and B2G are separate rails** | Ch. II/III (private) vs Ch. V (public-sector exceptional need) must not be merged | Different triggers, different compensation, different risk profiles |
-| **S6 — Data Act ↔ GDPR interface without merging authorities** | Art. 1/44: Data Act creates no personal-data legal basis; GDPR prevails on that layer (R-B6/R-K5) | High-value clarity; a common failure mode is conflating the two regimes |
+| **S6 — Data Act ↔ GDPR interface without merging authorities** | Art. 1(5): on conflict, personal-data/privacy law prevails; Data Act creates no personal-data legal basis, and where the user ≠ data subject a GDPR basis is required (Arts. 4(12)/5(7)) — R-B6/R-B6b. (Distinct from Art. 44's sectoral/research savings clause, R-K5.) | High-value clarity; a common failure mode is conflating the two regimes |
 | **S7 — Trade secrets as a structural filter on "accessible data"** | Art. 4(6)–(8) shapes what device data is *actually* obtainable (R-C5) | Explains gaps between the headline access right and real-world availability |
 | **S8 — Non-personal-data sovereignty is its own axis** | Art. 32 third-country access safeguards sit *beside* GDPR Chapter V, not inside it (R-H1) | Distinct data-localisation-adjacent planning consideration |
 
@@ -243,9 +243,13 @@ Records what was examined, what produced candidates, and where R3.1 must dig dee
 
 ## P. Discovery tally (for the closeout — not a target)
 
-- **Candidate rows captured:** 44 (R-A1…R-K5, incl. R-B5b, R-B6b, R-B7 added in micro-hardening) — the count **rose from 39 to 44** because the Article 7 transitional grace, the Art. 7(2) anti-waiver, and the split of the Art. 1(5) boundary from the Art. 4(12)/5(7) legal-basis point are genuinely distinct propositions. **39 was never a sacred number**; counts are descriptive and R3.1 will split/merge further.
-- **Qualification pairs flagged:** 16 (Q1…Q16).
-- **Analytical seeds recorded:** 8 (S1…S8) — seeds, not claims.
-- **`EP-CLM-*` minted:** **0.** IDs assigned: **0.** Next free remains `EP-CLM-000046`.
+**Counting rule (stated explicitly to avoid ambiguity):** a *workbench row* is any `R-*` line in §A–§K. The *live candidate corpus* carried into R3.1 falsification is the subset with discovery status **`candidate` or `split-needed`**; rows marked **`defer`** or **`reject`** are parked (recorded in §M, not intake). Counts are **descriptive of the current scan**, never a target — R3.1 will split/merge/drop and the numbers will move again.
+
+- **Total workbench rows captured:** **54** (R-A1…R-K5, incl. R-B5b, R-B6b, R-B7).
+- **Live candidate corpus → R3.1 (candidate + split-needed):** **46** — of which `candidate` = **30**, `split-needed` = **16**.
+- **Parked:** `defer` = **7** (A6, D6, F5, I1, I2, I3, K3), `reject` = **1** (A7). 46 + 8 = 54.
+- **Qualification pairs flagged:** **16** (Q1…Q16).
+- **Analytical seeds recorded:** **8** (S1…S8) — seeds, not claims.
+- **`EP-CLM-*` minted:** **0.** IDs assigned: **0.** Next free remains `EP-CLM-000046`. *(An earlier tally said "44"; that was a miscount of the row set — the systematic scan holds 54 rows / 46 live. The number follows the legal text, not a design target.)*
 
 *EuraPlan.com — Sprint R3.0 workbench. Discovery artifact. Not a published website page.*

@@ -63,8 +63,8 @@ R3 is **not** a copy of the GDPR sprint. It reuses the *operating system* proven
 
 | File | Role |
 |---|---|
-| `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 tiers; authentic act + corrigendum pinned as candidates; Art. 50 application-date table; **no `EP-SRC-*` minted** |
-| `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (44 rows, **no IDs**) + qualification pairs (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) |
+| `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 classes/buckets; authentic act + corrigendum pinned as candidates; Art. 50 application-date table; **no `EP-SRC-*` minted** |
+| `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (54 rows / 46 live, **no IDs**) + qualification pairs (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) |
 | `R3_0_DISCOVERY_CLOSEOUT.md` | Closeout register — 9/9 close conditions PASS; recommends CLOSED / PASS — R3.1 AUTHORIZED, **pending review** |
 | `README.md` | This status note |
 

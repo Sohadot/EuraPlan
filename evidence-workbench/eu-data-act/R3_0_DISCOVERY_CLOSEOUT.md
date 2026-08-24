@@ -22,8 +22,8 @@ R3.0 is discovery + source-pinning-candidate only. It mints nothing and touches 
 
 | Artifact | Role | State |
 |---|---|---|
-| `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 tiers (primary binding · amending/implementing/corrigendum · specific Commission materials · not-yet-admissible · rejected) + Article 50 application-date table | Complete |
-| `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (44 rows, no IDs) + qualification structure (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) | Complete |
+| `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 classes/buckets (primary binding · amending/implementing/corrigendum · specific Commission materials · not-yet-admissible · rejected) + Article 50 application-date table | Complete |
+| `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (54 rows / 46 live, no IDs) + qualification structure (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) | Complete |
 | `R3_0_DISCOVERY_CLOSEOUT.md` | This register | Complete |
 | `evidence-workbench/eu-data-act/README.md` | Workbench status note — branch reference corrected, file table added; **status left OPEN pending review** (no CLOSED flip) | Updated |
 
@@ -39,13 +39,13 @@ R3.0 closes **only** if every condition below holds. Each is verified against th
 |---|---|---|---|
 | 1 | **Source universe bounded** | ✅ PASS | `SOURCE_DISCOVERY §6`: admissible basis = CAND-01 (authentic act) + CAND-02 (corrigendum); everything else placed below the line with a reason |
 | 2 | **Regulation scanned systematically** (not just famous articles) | ✅ PASS | `CANDIDATE_PROPOSITIONS §O` coverage matrix — all 11 chapters / Arts. 1–50 examined; thin chapters deferred *with reasons*, not skipped |
-| 3 | **Every candidate carries a provisional provision locator sufficient for literal falsification; exact paragraph/point fixation is an R3.1 exit condition** | ✅ PASS | Every row R-A1…R-K5 (44 rows) carries an Article-level locator adequate to falsify; paragraph/point precision and numeric specifics are flagged `⚠ verify` and are deliberately deferred to R3.1 — this condition no longer over-claims "exact" locators in a discovery phase that still holds `⚠ verify` flags |
+| 3 | **Every candidate carries a provisional provision locator sufficient for literal falsification; exact paragraph/point fixation is an R3.1 exit condition** | ✅ PASS | Every row R-A1…R-K5 (54 rows) carries an Article-level locator adequate to falsify; paragraph/point precision and numeric specifics are flagged `⚠ verify` and are deliberately deferred to R3.1 — this condition no longer over-claims "exact" locators in a discovery phase that still holds `⚠ verify` flags |
 | 4 | **No claim IDs minted** | ✅ PASS | 0 `EP-CLM-*` assigned; next free remains `EP-CLM-000046`; rows use non-identity workbench numbers only |
 | 5 | **Qualifiers / exceptions identified** | ✅ PASS | `CANDIDATE_PROPOSITIONS §L` — 16 default↔carve-out pairs (Q1–Q16); no default carried without its qualifier flagged |
 | 6 | **Deferred / rejected items recorded** | ✅ PASS | `CANDIDATE_PROPOSITIONS §M` register + `SOURCE_DISCOVERY §4–§5` |
 | 7 | **Analytical seeds separated from legal claims** | ✅ PASS | `CANDIDATE_PROPOSITIONS §N` — 8 seeds (S1–S8) explicitly marked "not claims, not Decision Utility" and kept in their own section |
 | 8 | **No live mutation** | ✅ PASS | No edit to `/regulation/eu-data-act/`, `routes.json`, `llms.txt`, `sitemap.xml`, or any published surface (see §5 non-mutation attestation) |
-| 9 | **Candidate corpus valid for R3.1 falsification** | ✅ PASS | 44 located candidates + 16 qualification pairs + a fixed evidentiary target (authentic text + corrigendum) give R3.1 a complete intake |
+| 9 | **Candidate corpus valid for R3.1 falsification** | ✅ PASS | 54 located rows (46 live: 30 candidate + 16 split-needed; 8 parked) + 16 qualification pairs + a fixed evidentiary target (authentic text + corrigendum) give R3.1 a complete intake |
 
 Additional DEC-057 guardrails confirmed:
 
@@ -53,7 +53,7 @@ Additional DEC-057 guardrails confirmed:
 |---|---|
 | No `EP-SRC-*` minted (source pinning is candidate-only) | ✅ 0 minted; `EP-SRC-000006` reserved, not consumed |
 | Global opaque ID scheme respected; no `DATA-CLM-*` / `DA-CLM-*` invented | ✅ no domain-prefixed IDs anywhere |
-| No generic Commission/portfolio source node | ✅ Commission material Tier-2, specific-locator-only, intentionally unminted |
+| No generic Commission/portfolio source node | ✅ Commission material is SOURCE_POLICY **Tier 1** but held to an **explanatory / non-binding** evidentiary role; specific-locator-only; intentionally unminted |
 | Claim count follows material truth, not a template/target | ✅ tally in §P labelled descriptive, never a quota |
 | Consolidated version separated from authentic act | ✅ CAND-03 reading-aid-only |
 | No Publish Gate opened; no parallel CRA/EERS/Protocol/country/sector work | ✅ none |
@@ -90,7 +90,7 @@ R3.0 produced **only** the three discovery `.md` artifacts and a README status-n
 ## 6. Handoff to R3.1 (Claim Map & Falsification) — what R3.1 inherits
 
 1. **Fixed evidentiary target:** authentic EUR-Lex text of `32023R2854` **+** corrigendum `2024/90790`. Re-pull verbatim; resolve every `⚠ verify` flag (Arts. 4, 5, 9, 13, 15, 25, 29, 30, 32, 36, 40 paragraph-level specifics and numeric terms).
-2. **Candidate corpus:** 44 rows (R-A1…R-K5) to falsify literally — split, merge, or drop; assign identity **only after** falsification, starting at `EP-CLM-000046`.
+2. **Candidate corpus:** 46 live rows (of 54; per the §P counting rule) to falsify literally — split, merge, or drop; assign identity **only after** falsification, starting at `EP-CLM-000046`.
 3. **Qualification pairs:** test Q1–Q16 — decide which become published claim **pairs** with `qualified_by`; no bare default may publish.
 4. **Defer/reject register:** revisit §M items only if falsification forces them in.
 5. **Analytical seeds (S1–S8):** remain seeds through R3.1; they inform the R3.6 Decision Utility layer, mint nothing, and are not verified facts.
@@ -100,7 +100,7 @@ R3.0 produced **only** the three discovery `.md` artifacts and a README status-n
 
 ## 7. Micro-hardening applied post-review (same branch, no rebuild)
 
-The first-pass review returned **CONDITIONAL PASS — micro-hardening required**. Five corrections were applied on this same branch (no rebuild, no branch rename); the candidate count moved 39 → 44, which is correct, not a regression.
+The first-pass review returned **CONDITIONAL PASS — micro-hardening required**. Five corrections were applied on this same branch (no rebuild, no branch rename); adding the Art. 7 transitional grace, the Art. 7(2) anti-waiver, and the Art. 1(5) ↔ Arts. 4(12)/5(7) split raised the row set — the corpus now holds **54 workbench rows / 46 live** under the §P counting rule. A second-pass review then found consistency residuals (stale Q11/S6/CAND-10/Tier-2 references and an inaccurate "44" tally); those were reconciled in a follow-up consistency commit. Numbers follow the legal text, not a target.
 
 | # | Review point | Correction |
 |---|---|---|

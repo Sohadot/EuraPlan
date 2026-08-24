@@ -13,7 +13,7 @@
 This is the **bounded legal universe** for the Data Act reference route. Its single job is to answer R3.0's first question — *what legal material may a Data Act claim rest on?* — and to fence off everything else.
 
 - It **pins candidate sources**; it does **not** mint `EP-SRC-*`. Identity is fixed in R3.2 after falsification (R3.1), not here.
-- Each instrument is placed in exactly one of five tiers. A source that is "interesting" but cannot carry a High-risk legal proposition is placed **below** the admissibility line and labelled as such.
+- Each instrument is placed in exactly one of **five source-universe classes (buckets)** — *not* five tiers: SOURCE_POLICY tiers are orthogonal, and a single tier (e.g. Tier 1) can appear across more than one bucket. A source that is "interesting" but cannot carry a High-risk legal proposition is placed **below** the admissibility line and labelled as such.
 - Per DEC-057 §7 and SOURCE_POLICY.md §2–3: **no generic Commission / portfolio / overview node** may ever become an `EP-SRC-*`. Commission material is admitted only by **specific title + official locator**, and only in an **explanatory / non-binding evidentiary role** (it is SOURCE_POLICY Tier 1, but never a substitute for the Regulation text on a direct legal proposition — see §3).
 
 ---
@@ -88,7 +88,7 @@ Real, authoritative instruments in the **data acquis** that touch the Data Act's
 
 | Candidate key | Instrument | Why relevant | Why NOT admissible into R3 claim basis |
 |---|---|---|---|
-| `DATA-SRC-CAND-10` | Regulation (EU) 2016/679 (GDPR) — CELEX `32016R0679` (already `EP-SRC-000004/000005`) | Data Act Art. 44 / recitals: Data Act is **without prejudice** to GDPR; personal-data access rests on GDPR, not the Data Act | Governs the *personal-data* interface only. The GDPR↔Data Act boundary is an **analytical seam** (see propositions file), **not** a merge of authorities. No GDPR claim is ported. |
+| `DATA-SRC-CAND-10` | Regulation (EU) 2016/679 (GDPR) — CELEX `32016R0679` (already `EP-SRC-000004/000005`) | Data Act **Art. 1(5)**: without prejudice to data-protection law; on conflict, it prevails. Legal-basis interface at **Arts. 4(12)/5(7)** (user ≠ data subject → GDPR basis required). *(Art. 44 is a separate sectoral/research savings clause, not the GDPR boundary.)* | Governs the *personal-data* interface only. The GDPR↔Data Act boundary is an **analytical seam** (see propositions file), **not** a merge of authorities. No GDPR claim is ported. |
 | `DATA-SRC-CAND-11` | Regulation (EU) 2022/868 (Data Governance Act) — CELEX `32022R0868` | Same data-strategy family; data intermediation / altruism / public-sector data reuse | Different instrument, different obligations. Not a source for Data Act propositions. Possible **future** EP-REG route. |
 | `DATA-SRC-CAND-12` | Regulation (EU) 2018/1807 (Free flow of non-personal data) — CELEX `32018R1807` | Non-personal data localisation baseline; interacts with Arts. 32 & Ch. VI | Superseded/complemented in parts by the Data Act on switching; itself not a Data Act obligation source. Context only. |
 | `DATA-SRC-CAND-13` | Regulation (EU) 2023/1543 / (EU) 2022/2065 (DSA) / (EU) 2022/1925 (DMA) | DMA "gatekeeper" definition is *used* by Data Act Art. 5(3) third-party carve-out | Only the **cross-reference** matters; pin DMA (`32022R1925`) narrowly *iff* a minted claim quotes the gatekeeper exclusion. Not a general Data Act source. |
@@ -117,7 +117,7 @@ Explicitly excluded so the graph cannot silently absorb them (SOURCE_POLICY.md �
 - **No identity fixed:** zero `EP-SRC-*` minted in R3.0. `EP-SRC-000006` remains the next free slot, reserved for a specific pinned instrument at R3.2 only if a falsified claim requires it.
 - **Consolidated ≠ authentic:** kept separate (CAND-03).
 - **Commission material fenced by role, not tier:** SOURCE_POLICY Tier 1, but *explanatory / non-binding* and insufficient alone for an operative proposition; the specific dated instruments that exist now — FAQ v1.4 (22.1.2026) and the draft MCT/SCC recommendation (19–20.11.2025) — are pinned as unminted context (CAND-07…09), not left generic.
-- **Adjacent acquis fenced out:** GDPR / DGA / FFD / DMA / Database Directive are related-not-admissible; only narrow cross-references (Art. 5(3) gatekeeper; Art. 43 sui generis; Art. 44 GDPR boundary) may pin those instruments narrowly, later.
+- **Adjacent acquis fenced out:** GDPR / DGA / FFD / DMA / Database Directive are related-not-admissible; only narrow cross-references (Art. 5(3) gatekeeper; Art. 43 sui generis; Art. 1(5) + Arts. 4(12)/5(7) GDPR boundary; Art. 44 sectoral savings) may pin those instruments narrowly, later.
 - **Ready for R3.1:** the falsification phase has a fixed, minimal evidentiary target — the authentic text + corrigendum — against which every candidate proposition is tested.
 
 *EuraPlan.com — Sprint R3.0 workbench. Discovery artifact. Not a published website page.*
