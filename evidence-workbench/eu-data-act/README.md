@@ -1,7 +1,8 @@
 # Sprint R3 — EU Data Act Evidence Graph-grade Upgrade
-**Status:** **R3.0 OPEN — source & claim discovery. No claims minted. No live mutation. Publish Gate NOT OPEN.**  
+**Status:** **R3.0 CLOSED / PASS — R3.1 AUTHORIZED.** Source & claim discovery complete; 9/9 close conditions PASS. No claims minted. No live mutation. Publish Gate NOT OPEN.  
+**Discovery deliverables (closed 2026-08-24):** `R3_0_SOURCE_DISCOVERY.md`, `R3_0_CANDIDATE_PROPOSITIONS.md`, `R3_0_DISCOVERY_CLOSEOUT.md` — 54 workbench rows / 46 live corpus; Q1–Q16 qualification pairs; S1–S8 analytical seeds. **R3.1 is authorized but not started** — it becomes executable on the program corpus only once R3.0 lands on `main`.  
 **Opened:** 2026-08-23 (DEC-057)  
-**Branch:** `claude/gdpr-freeze-development-i0zrcn`  
+**R3.0 discovery branch:** `claude/r3-0-data-act-discovery-dqiida` (off `main` after merge #50)  
 **Canonical target:** `/regulation/eu-data-act/` + (future) `/regulation/eu-data-act/claims.json` (EP-REG-003)  
 **Instrument:** Regulation (EU) 2023/2854 — EUR-Lex CELEX `32023R2854`  
 **Governed by:** REFERENCE_GRADE_ROUTE_STANDARD.md v2; EVIDENCE_GRAPH_MODEL.md; CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; SOURCE_POLICY.md; CLAIM_POLICY.md; FRESHNESS_ENGINE.md; ROUTE_GOVERNANCE.md; DISCLOSURE_BOUNDARY.md; DEC-047; DEC-048 (R2 precedent); DEC-057
@@ -46,8 +47,8 @@ R3 is **not** a copy of the GDPR sprint. It reuses the *operating system* proven
 
 | Phase | Name | State |
 |---|---|---|
-| R3.0 | Source & Claim Discovery | **OPEN** |
-| R3.1 | Claim Map & Falsification | PENDING |
+| R3.0 | Source & Claim Discovery | **CLOSED / PASS** — 9/9 close conditions; 54 rows / 46 live |
+| R3.1 | Claim Map & Falsification | **AUTHORIZED / NOT STARTED** (executable after R3.0 lands on `main`) |
 | R3.2 | Identity Fixation + Source Pinning + Draft Serialization | PENDING |
 | R3.3 | Human Literal Verification | PENDING |
 | R3.4 | Canonical Graph + Route Integration Preparation | PENDING |
@@ -55,6 +56,17 @@ R3 is **not** a copy of the GDPR sprint. It reuses the *operating system* proven
 | R3.6 | Decision Utility Layer | PENDING |
 | R3.7 | Citation + Machine Registration Preparation | PENDING |
 | R3.8 | Data Act Publish Gate → RGS re-score ≥ 90 | PENDING |
+
+---
+
+## R3.0 workbench files
+
+| File | Role |
+|---|---|
+| `R3_0_SOURCE_DISCOVERY.md` | Source Universe — 5 classes/buckets; authentic act + corrigendum pinned as candidates; Art. 50 application-date table; **no `EP-SRC-*` minted** |
+| `R3_0_CANDIDATE_PROPOSITIONS.md` | Candidate Proposition Inventory (54 rows / 46 live, **no IDs**) + qualification pairs (Q1–Q16) + defer/reject register + analytical seeds (S1–S8) + coverage matrix (Ch. I–XI) |
+| `R3_0_DISCOVERY_CLOSEOUT.md` | Closeout register — 9/9 close conditions PASS; **CLOSED / PASS — R3.1 AUTHORIZED** (review PASS 2026-08-24) |
+| `README.md` | This status note |
 
 ---
 
