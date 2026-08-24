@@ -1,5 +1,6 @@
 # Sprint R2 — GDPR Evidence Graph-grade Upgrade
 **Status:** **R2.8 COMPLETE — Gates 0–6 CLOSED / PASS; GDPR Evidence Graph reference LIVE since 2026-08-23; RGS v2 = 97.5 / 100**  
+**Development state:** **FROZEN (DEC-057, 2026-08-23).** No cosmetic edits or re-wording. EP-REG-002 changes only on a real trigger — freshness trigger (FRESHNESS_ENGINE.md) · genuine correction · supersession · clear functional need — each recorded, none advancing `last_verified_at` or provenance without the corresponding real event.  
 **Opened:** 2026-08-20  
 **Branch:** `sprint-r2-gdpr-r2-8-publish-gate-open`  
 **Canonical target:** `/regulation/gdpr/` + `/regulation/gdpr/claims.json` (EP-REG-002)  
