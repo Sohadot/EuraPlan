@@ -14,7 +14,7 @@ This is the **bounded legal universe** for the Data Act reference route. Its sin
 
 - It **pins candidate sources**; it does **not** mint `EP-SRC-*`. Identity is fixed in R3.2 after falsification (R3.1), not here.
 - Each instrument is placed in exactly one of five tiers. A source that is "interesting" but cannot carry a High-risk legal proposition is placed **below** the admissibility line and labelled as such.
-- Per DEC-057 §7 and SOURCE_POLICY.md §2–3: **no generic Commission / portfolio / overview node** may ever become an `EP-SRC-*`. Commission material is admitted only by **specific title + official locator**, and only as Tier-2 explanatory context — never in place of the Regulation text for a direct legal proposition.
+- Per DEC-057 §7 and SOURCE_POLICY.md §2–3: **no generic Commission / portfolio / overview node** may ever become an `EP-SRC-*`. Commission material is admitted only by **specific title + official locator**, and only in an **explanatory / non-binding evidentiary role** (it is SOURCE_POLICY Tier 1, but never a substitute for the Regulation text on a direct legal proposition — see §3).
 
 ---
 
@@ -70,15 +70,15 @@ Instruments that **modify or complete** the binding text. These are the only "af
 
 ---
 
-## 3. Specific Commission materials (Tier 2 — explanatory only, admitted by exact locator)
+## 3. Specific Commission materials (SOURCE_POLICY Tier 1 — but *explanatory* evidentiary role)
 
-Tier-2 context under SOURCE_POLICY.md §2. **May not** support any High-risk legal proposition in place of the Regulation. Admitted only if named specifically; **intentionally unminted** (mirrors the GDPR precedent where the Commission overview and EDPB portfolio were deliberately left without `EP-SRC-*`).
+**Tier ≠ evidentiary weight.** Under SOURCE_POLICY.md §2, "European Commission official communications and guidelines" are **Tier 1** sources — so these materials are **not** Tier-2. What limits them is not their tier but their **evidentiary role**: they are **explanatory / non-binding / interpretive**, and are **insufficient on their own to found an operative legal proposition**. A direct Data Act obligation, right, prohibition or date always rests on the Regulation text (CAND-01) + corrigendum (CAND-02); a Commission material may **corroborate or interpret**, never **substitute**. This axis-split (policy-tier vs evidentiary-role) is recorded so the artifact matches SOURCE_POLICY rather than silently re-tiering the Commission; the policy is not amended here. All items below are **intentionally unminted** in R3.0 (no `EP-SRC-*`), but — unlike the R2 GDPR precedent, which left them generic — the *specific, dated* instruments that exist **now** are pinned as context candidates rather than described as "pin when it exists."
 
-| Candidate key | Material | Locator | Discovery status |
-|---|---|---|---|
-| `DATA-SRC-CAND-07` | European Commission — Data Act explanatory page ("Data Act" / data-economy policy) | Commission `digital-strategy` official page (pin exact URL + retrieval date at use) | **INTENTIONALLY UNMINTED.** Orientation only; never the basis of a legal claim. No generic-overview `EP-SRC-*`. |
-| `DATA-SRC-CAND-08` | European Commission — Data Act FAQ / Q&A | Commission official FAQ (pin exact URL + version/date at use) | **INTENTIONALLY UNMINTED.** Interpretive aid; if a claim needs it at R3.3, pin the specific FAQ item by date. |
-| `DATA-SRC-CAND-09` | Commission model contractual terms (MCTs) & standard contractual clauses (SCCs) for data sharing / cloud switching (Art. 41 deliverable) | pin specific published instrument + date when it exists | **candidate — defer.** Becomes Tier-1/implementing (→ CAND-06) if adopted as an act; Tier-2 if a recommendation. Do not pin from a draft. |
+| Candidate key | Material (specific, dated) | Official locator | Evidentiary role | Discovery status |
+|---|---|---|---|---|
+| `DATA-SRC-CAND-07` | European Commission — **Data Act policy page** ("Data Act", Shaping Europe's digital future) | `https://digital-strategy.ec.europa.eu/en/policies/data-act` (retrieved 2026-08-24) | Tier 1 / **explanatory** — orientation + gateway to official materials | **INTENTIONALLY UNMINTED.** Never alone founds a legal claim; no generic-overview `EP-SRC-*`. |
+| `DATA-SRC-CAND-08` | European Commission — **Frequently Asked Questions on the Data Act, version 1.4 (updated 22 January 2026)** | Commission FAQ, published via the `digital-strategy.ec.europa.eu` Data Act policy/library page (pin the exact v1.4 PDF locator at use) | Tier 1 / **explanatory** — Commission interpretation of scope & obligations | **INTENTIONALLY UNMINTED.** Real, versioned, dated. If a claim needs interpretive support at R3.1/R3.3, cite the specific v1.4 FAQ item by number + date — never in place of the Article. |
+| `DATA-SRC-CAND-09` | European Commission — **Draft Recommendation on non-binding Model Contractual Terms (MCTs) for data access/use and non-binding Standard Contractual Clauses (SCCs) for cloud computing contracts** (published 19–20 November 2025; Art. 41 deliverable; EN only, translations pending) | `https://digital-strategy.ec.europa.eu/en/library/draft-recommendation-non-binding-model-contractual-terms-data-access-and-use-and-non-binding` (retrieved 2026-08-24) | Tier 1 / **explanatory & non-binding** — model terms, not law | **INTENTIONALLY UNMINTED.** It **exists** (no longer "pin when it exists") but is a **draft, non-binding recommendation** — it neither creates obligations nor supersedes Chapter IV/VI. If adopted as a formal Commission recommendation/act it may become a pinned instrument (→ CAND-06); do not treat the draft as binding. |
 
 ---
 
@@ -106,7 +106,7 @@ Explicitly excluded so the graph cannot silently absorb them (SOURCE_POLICY.md �
 | Vendor / cloud-provider "Data Act readiness" marketing | Marketing material; not a source. |
 | Undated press releases, blog posts, news explainers, Wikipedia | Rejected under SOURCE_POLICY.md §3. Wikipedia = orientation, never citation. |
 | Third-party per-article mirror sites (e.g. structured legal-text reproductions) used during discovery | Convenience mirrors for **discovery navigation only**. Every locator they suggested is re-pulled against the **authentic EUR-Lex text + corrigendum** before any claim mint. Not citable. |
-| Generic "European Commission — data" / portfolio / topic hub pages | Prohibited generic node (DEC-057 §7). Only specific, dated, titled Commission items may be Tier-2. |
+| Generic "European Commission — data" / portfolio / topic hub pages | Prohibited generic node (DEC-057 §7). Only specific, dated, titled Commission items may be admitted (as Tier-1 explanatory context, §3) — never a generic hub. |
 | Recitals treated as standalone obligation sources | Recitals inform interpretation of the operative Articles; they do **not** by themselves found a legal proposition (see defer/reject register in propositions file). |
 
 ---
@@ -116,7 +116,7 @@ Explicitly excluded so the graph cannot silently absorb them (SOURCE_POLICY.md �
 - **Bounded:** the admissible Data Act claim basis is **CAND-01 (authentic act)** read with **CAND-02 (corrigendum)**; everything in §3–§5 sits below the admissibility line with an explicit reason.
 - **No identity fixed:** zero `EP-SRC-*` minted in R3.0. `EP-SRC-000006` remains the next free slot, reserved for a specific pinned instrument at R3.2 only if a falsified claim requires it.
 - **Consolidated ≠ authentic:** kept separate (CAND-03).
-- **Commission material fenced:** Tier-2, specific-locator-only, intentionally unminted (CAND-07…09).
+- **Commission material fenced by role, not tier:** SOURCE_POLICY Tier 1, but *explanatory / non-binding* and insufficient alone for an operative proposition; the specific dated instruments that exist now — FAQ v1.4 (22.1.2026) and the draft MCT/SCC recommendation (19–20.11.2025) — are pinned as unminted context (CAND-07…09), not left generic.
 - **Adjacent acquis fenced out:** GDPR / DGA / FFD / DMA / Database Directive are related-not-admissible; only narrow cross-references (Art. 5(3) gatekeeper; Art. 43 sui generis; Art. 44 GDPR boundary) may pin those instruments narrowly, later.
 - **Ready for R3.1:** the falsification phase has a fixed, minimal evidentiary target — the authentic text + corrigendum — against which every candidate proposition is tested.
 
