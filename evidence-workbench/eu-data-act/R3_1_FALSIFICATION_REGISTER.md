@@ -94,18 +94,98 @@ Every surviving proposition carries an **exact locator** (Article + paragraph + 
 
 ---
 
+## R3.1-B — Chapters II–III (B2C/B2B data sharing + data-holder availability duties)
+
+**Live intake this unit:** 13 (C1–C7, D1–D5, D7) · **Parked carried in:** D6 (defer). *(Art. 7 rows B5/B5b/B7 were resolved in R3.1-A as scope; they are qualifier inputs here, not re-verdicted.)*
+**Locators resolved verbatim this unit (all `⚠ verify` flags for Ch. II–III now cleared):** Art. 3(1)/(2)/(3); Art. 4(1)/(6)/(7)/(8)/(12)/(13)/(14); Art. 5(1)/(3)/(7)/(9)/(10)/(11); Art. 6(1)/(2) points (a)–(h); Art. 8(1)/(3)/(4); Art. 9(1)/(2)/(4); Art. 11(1)/(2)–(5); Art. 12(1)/(2). Verified against the authentic text (CELEX `32023R2854`, corrigendum OJ L, 2024/90790).
+
+### C. Chapter II — connected-product data: user access & third-party sharing (Arts. 3–6)
+
+| Row | Verdict | Exact locator | Reason | Dependency |
+|---|---|---|---|---|
+| **R-C1** design-by-default accessibility | **KEEP** | Art. **3(1)** | Atomic design duty: connected products/related services designed and manufactured so that product data + related-service data (incl. relevant metadata) are, **by default, easily, securely, free of charge, in a comprehensive, structured, commonly used and machine-readable format** and — where relevant and technically feasible — **directly accessible to the user**. Temporal phasing (placed on market after 12.9.2026, R-A4) is a `scope/temporal` qualifier → Q1 (tested in F), not a reason to split | — |
+| **R-C2** pre-contract information | **SPLIT** | Art. 3, **(2)** / **(3)** | Row carries **two distinct pre-contract disclosure duties** — different actor, different itemised content → split: | — |
+| → **R-C2a** connected-product pre-contract info | *(KEEP, post-split)* | Art. **3(2)** | Seller/rentor/lessor discloses, before a purchase/rent/lease contract, the specified items (data type/format/estimated volume; whether generated continuously/in real time; on-device vs remote storage; how to access, retrieve, erase) | — |
+| → **R-C2b** related-service pre-contract info | *(KEEP, post-split)* | Art. **3(3)** | Prospective data holder / related-service provider discloses, before the service contract, its own (broader) itemised set (nature/volume; generation; intended data use; holder identity + contact; third-party sharing; complaint route; trade-secret/IP status; duration/termination) | — |
+| **R-C3** data-holder access duty (data not directly accessible) | **KEEP** | Art. **4(1)** | Core access right: where data is not directly accessible from the product/related service, the data holder makes **readily available data + relevant metadata** accessible to the user **without undue delay, free of charge, of the same quality** available to the holder, and — where relevant and technically feasible — **continuously and in real time**. Rendered only with its trade-secret carve-out (R-C5, Q3) and personal-data condition (R-B6b / Art. 4(12), Q16) — never bare | trade-secret (R-C5); GDPR basis (R-B6b) |
+| **R-C4** data-holder use / onward-sharing limits on non-personal data | **SPLIT** | Art. 4, **(13)** / **(14)** | R3.0 text captured only the 4(13) use-limb; **4(14) is a distinct onward-sharing prohibition** → split: | — |
+| → **R-C4a** use limited to contract + no adverse insights | *(KEEP, post-split)* | Art. **4(13)** | Data holder uses readily-available **non-personal** data only on the basis of a **contract with the user**, and shall not use it to derive insights (economic situation/assets/production methods/use) that could **undermine the user's commercial position** | — |
+| → **R-C4b** no onward provision of non-personal product data to third parties | *(KEEP, post-split)* | Art. **4(14)** | Data holder shall **not make non-personal product data available to third parties** except to fulfil its contract with the user, and shall bind any such third party against further sharing | — |
+| **R-C5** trade-secret carve-out (user-access flow) | **KEEP** | Art. 4, **(6)/(7)/(8)** | Single **graduated** carve-out qualifying R-C3: (6) preserve + agree protective measures; (7) withhold/suspend where measures unmet or confidentiality breached; (8) refuse **case-by-case** in exceptional serious-economic-damage cases. Not a blanket refusal — strict conditions. Companion to R-C3 = Q3 | trade-secret protection (Dir. (EU) 2016/943) |
+| **R-C6** user right to share data with a third party | **KEEP** | Art. **5(1)** | Atomic sharing right: on the user's (or a proxy's) request, the data holder makes readily available data + metadata available to a third party without undue delay, **free of charge to the user**, same quality, and — where relevant/technically feasible — continuously and in real time. Rendered with gatekeeper exclusion (R-C7 / 5(3)), third-party-use limits (R-D2 / Art. 6(2)), the third-party trade-secret regime (Art. 5(9)–(11), mirror of R-C5) and the personal-data condition (R-B6b / Art. 5(7)) → Q4/Q16 | third-party trade-secret (Art. 5(9)–(11)); GDPR basis (R-B6b) |
+| **R-C7** gatekeeper not an eligible third party | **KEEP** | Art. **5(3)** | A DMA-designated gatekeeper is **not an eligible Art. 5 recipient** and may not solicit/incentivise the user to route data to it, nor receive Art. 4(1) data | DMA Reg. (EU) 2022/1925 Art. 3 (external — gatekeeper designation) |
+| **R-D1** third-party purpose limitation | **KEEP** | Art. **6(1)** | A third party processes data received under Art. 5 **only for the purposes and under the conditions agreed with the user**, subject to data-protection law, and **erases** it when no longer necessary (unless otherwise agreed for non-personal data) | GDPR 2016/679 (external — personal-data limb) |
+| **R-D2** third-party prohibitions | **KEEP** | Art. **6(2)** points (a)–(h) | Itemised bans: (a) no dark-pattern/coercion; (b) no profiling beyond the service the user requested; (c) no onward sharing without a user contract + trade-secret safeguards; (d) **no provision to a gatekeeper**; (e) **no competing-product development** or competitive sharing; (f) no security-impairing use; (g) no undermining trade-secret confidentiality; (h) no blocking a **consumer's** onward sharing | DMA 2022/1925 (point (d), external) |
+
+### D. Chapter III — data-holder availability duties where obliged by law (Arts. 8–12)
+
+| Row | Verdict | Exact locator | Reason | Dependency |
+|---|---|---|---|---|
+| **R-D3** FRAND + transparent terms | **KEEP** | Art. **8(1)** | Where a data holder is **obliged** to make data available (Art. 5 or other Union/national law), it does so on **fair, reasonable and non-discriminatory terms and in a transparent manner**. Conditional on an existing availability obligation — **gated by Art. 12(1)**; not a freestanding duty to sell data | availability-obligation source (Art. 5 / sectoral law — Art. 12(1) gate) |
+| **R-D4** non-discrimination between recipients | **KEEP** | Art. **8(3)** | Data holder shall **not discriminate** between **comparable categories** of data recipients in the arrangements for making data available; objectively justified differences allowed; reasoned-request justification duty | — |
+| **R-D5** compensation | **SPLIT** | Art. 9, **(1)** / **(4)** | Default compensation rule and the SME/non-profit **cost-cap** are distinct provisions → split: | — |
+| → **R-D5a** reasonable, non-discriminatory compensation | *(KEEP, post-split)* | Art. **9(1)** | Compensation agreed in B2B for making data available shall be **non-discriminatory and reasonable and may include a margin** | — |
+| → **R-D5b** SME / not-for-profit research cost-cap | *(KEEP, post-split)* | Art. **9(4)** | Where the recipient is an SME or not-for-profit research organisation (with no non-SME partner/linked enterprise), compensation **shall not exceed the costs in Art. 9(2)(a)** (formatting, dissemination, storage) — no investment-recovery margin. Default↔cap pair = Q5 | SME classification (Rec. 2003/361/EC) |
+| **R-D7** technical protection measures + remedies | **KEEP** | Art. **11(1)** (measures + limit); **11(2)/(3)/(5)** (remedies) | Data holder may apply **appropriate TPM** (incl. encryption, smart contracts) against unauthorised access, but they **shall not discriminate** between recipients or **hinder the user's Art. 4/5 rights**; breach triggers erase / end-production / inform / compensate remedies, also available to the user | bounded by the user's Art. 4/5 rights |
+| **R-D6** dispute-settlement bodies *(parked — outside live intake)* | **DEFER** (confirmed) | Art. **10** | True remedy channel (certified dispute-settlement bodies for availability/compensation disputes); secondary to entry planning — a possible single "remedies" claim later | — |
+
+**Supporting locators confirmed this unit (attach to operative claims — not minted):** third-party-flow trade-secret regime Art. 5(9)/(10)/(11) (mirror of R-C5, attaches to R-C6); Art. 8(5)/(6) and Art. 9(2)/(3)/(5)/(7) as detail on the D-series; Art. 11(2)–(5) remedy detail on R-D7.
+
+### R3.1-B verdict tally
+
+**Live intake (13 rows) — verdicts:**
+
+| Verdict | Count | Rows |
+|---|---|---|
+| KEEP | 10 | C1, C3, C5, C6, C7, D1, D2, D3, D4, D7 |
+| SPLIT | 3 → 6 | C2 → C2a/C2b · C4 → C4a/C4b · D5 → D5a/D5b |
+| MERGE | 0 | — |
+| DROP | 0 | — |
+| DEFER | 0 | — |
+
+**Parked reconfirmed** (carried in, *outside* the 13 live intake): **D6 = DEFER.**
+
+**Net propositions surviving R3.1-B:** 10 KEEP + 6 from splits = **16 live provisions** (from 13 live intake rows; 0 DROP / 0 DEFER *within* intake). Parked, accounted separately: D6 (DEFER).
+
+### Coverage delta vs R3.0 intake (falsification finding — **no mint**; carried to R3.1-F / closeout for an intake decision)
+
+Literal reading against the authentic text surfaced **three operative Chapter II–III provisions absent from the R3.0 row set**. Recorded transparently, not minted, not counted above:
+
+- **Art. 8(4) — exclusivity ban.** A data holder shall **not make data available to a recipient on an exclusive basis** unless the user so requests under Chapter II. Operative and planning-material (blocks single-recipient data lock-in) → recommend carrying as a new Chapter III candidate.
+- **Art. 12(1) — Chapter III applicability gate.** The scope predicate ("obliged under Art. 5 or other Union/national law to make data available in B2B") that triggers the whole D3–D5/D7 series; presently embedded in row *triggers*, not its own row → recommend recording as the Chapter III scope gate (parallel to R-B4 for Ch. VI).
+- **Art. 12(2) — Chapter III anti-waiver.** A contractual term that, to a party's (or the user's) detriment, excludes, derogates from or varies Chapter III is **not binding** — the Chapter III analogue of Art. 7(2)/R-B7 → recommend carrying as a new candidate.
+
+### Qualifier edges this unit touches (full test in R3.1-F)
+
+- **Q2** B5/B5b (Art. 7 exemption + B5b's inherited Art. 7(1) qualification) ↔ **C1/C3/C6** Ch. II duties — obligation + exemption.
+- **Q3** C3 access duty ↔ C5 trade-secret carve-out (Art. 4(6)–(8)) — right + limitation.
+- **Q4** C6 sharing right ↔ C7 gatekeeper (Art. 5(3)) + D2 third-party bans (Art. 6(2)) + Art. 5(9)–(11) trade secrets — right + limitations.
+- **Q5** D5a compensation ↔ D5b SME/non-profit cost-cap (Art. 9(4)) — default + carve-out.
+- **Q15** C1/C3/C6 Ch. II rights ↔ B7 anti-waiver (Art. 7(2)) — right + non-derogation; its **Chapter III analogue is Art. 12(2)** (coverage-delta above).
+- **Q16** C3/C6/D1 ↔ B6b personal-data legal-basis condition (Art. 4(12)/5(7)) — right + personal-data condition.
+- **New edge (flag for F):** Art. 12(1) Chapter III gate ↔ D3/D4/D5/D7 — scope predicate for the entire Chapter III series.
+
+### Semantic-overreach guard (this unit)
+
+- Access/sharing duties (C3/C6) are never stated bare — each is rendered with its trade-secret carve-out and personal-data condition.
+- Chapter III duties (D3/D5) are stated as **conditional on an existing availability obligation** (Art. 12(1) gate), not as a freestanding duty to sell data.
+- The gatekeeper exclusion (C7) and third-party ban (D2 point (d)) are recorded with their **DMA dependency** (external), not restated as Data Act-internal designations.
+- The coverage-delta provisions (Art. 8(4), 12(1), 12(2)) are recorded as **observations for an intake decision**, not minted as claims.
+
+---
+
 ## Running tally (all units)
 
 | Unit | Intake (live) | KEEP | SPLIT (→net) | MERGE | DROP | DEFER | Status |
 |---|---|---|---|---|---|---|---|
-| R3.1-A Scope & temporal | 14 | 12 | 2 (→4) | 0 | 0 | 0 | **complete — awaiting review** |
-| R3.1-B Ch. II–III | — | — | — | — | — | — | pending |
+| R3.1-A Scope & temporal | 14 | 12 | 2 (→4) | 0 | 0 | 0 | **PASS (reviewed)** |
+| R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — awaiting review** |
 | R3.1-C Ch. IV–V | — | — | — | — | — | — | pending |
 | R3.1-D Ch. VI–VIII | — | — | — | — | — | — | pending |
 | R3.1-E Enforcement & boundaries | — | — | — | — | — | — | pending |
 | R3.1-F Qualification audit (Q1–Q16) | — | — | — | — | — | — | pending |
 
-> Live-intake counts only. R3.1-A parked rows (carried in, outside live intake, not counted in the columns above): **A6 = DEFER, A7 = DROP.**
+> Live-intake counts only. Parked rows (carried in, outside live intake, not counted in the columns above): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER.
 
 **Mint counter: `EP-CLM-*` = 0 · `EP-SRC-*` = 0.** Next free remains `EP-CLM-000046` / `EP-SRC-000006`.
 
