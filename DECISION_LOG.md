@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** June 2026 (Sprint 5B)
+**Last Updated:** August 2026 (Sprint 5C)
 
 ---
 
@@ -676,6 +676,21 @@ Each entry uses the following structure:
   - **Next free claim ID:** `EP-CLM-000046`
   - **Next:** execute **R3.0 — Data Act source & claim discovery** on the workbench; no live mutation, no mint before falsification, Publish Gate reserved for R3's terminal gate under a separate DEC
 
+### DEC-058
+- **Date:** 2026-08-29 (Sprint 5C — Agent Readability & Machine Trust Hardening)
+- **Status:** Active
+- **Decision:** Close **Sprint 5C — Agent Readability & Machine Trust Hardening** as **COMPLETE / PASS**. (1) Create the internal audit document **`AGENT_READABILITY_AND_MACHINE_TRUST_AUDIT.md`** (17 sections) recording EuraPlan's machine-readability and AI-agent trust posture. It is internal governance — **not** in `sitemap.xml`, **not** linked from public navigation. (2) Confirm, by review, that route ontology (`routes.json`), source confidence (`SOURCE_POLICY.md` / `/sources/`), claim risk (`CLAIM_POLICY.md`), advice boundaries (per-page "does NOT provide" blocks + mandatory disclaimers), structured data (`STRUCTURED_DATA_POLICY.md`), security runtime proof (DEC-040/DEC-041), and provenance/custody (`PROVENANCE.md`, `AUTHENTICITY_CERTIFICATE.md`, `CHAIN_OF_CUSTODY.md`, `ASSET_TRANSFER_MANIFEST.md`) are present, readable, mutually consistent, and cautious. **No defect requiring a code fix was found** in any of these areas. (3) Add one concise public section — **"How AI Agents Should Read EuraPlan"** — to the existing `governance/index.html` surface (no new public page), and advance that page's JSON-LD `dateModified` and visible "Last Updated" together (2026-06-04 → 2026-08-29) to keep them aligned per STRUCTURED_DATA_POLICY.md §6. (4) **No corpus expansion** was performed: no new regulation/country/sector/funding page, no `/matrix/`, no `/brief/`, no diagnostic functionality, no combinatorial URLs, no mass-generated pages. (5) **No** change to `sitemap.xml`, `robots.txt`, `routes.json`, `llms.txt`, security headers, Cloudflare configuration, source-tier structure, or claim-risk taxonomy — none was required. (6) **No** external scripts, trackers, forms, cookies, canvas, WebGL, or 3D were added, and no legal/tax/compliance/funding/grant-writing/incorporation/investment advice framing, endorsement, eligibility, valuation, or traffic/revenue/ranking/price claim was introduced. (7) Record two non-blocking observations for future work: the acquisition-readiness provenance layer (Sprint 4G, June 2026) predates DEC-044/045/054–058 and its corpus snapshot should be refreshed in a future pass with real commit anchors (not falsified); and external four-tier source framings do not match the governed three-tier reality (national official inside Tier 1), any change to which must go through `SOURCE_POLICY.md` and a DEC.
+- **Rationale:** After security verification (DEC-041), structured-data completion (DEC-042), the provenance layer (DEC-043), and the funding integration review (DEC-044), the binding gap was not more corpus but a consolidated, agent-facing statement of how EuraPlan should be read and what it does not claim. A trust-hardening sprint makes the asset legible to AI agents, search systems, reviewers, and buyers without adding surface area or risk. The review confirmed the governing layer was already sound, so the sprint's footprint is deliberately minimal: one internal audit, one concise public section, one decision record — additive, reversible, and expansion-free.
+- **Affected routes/files:** `AGENT_READABILITY_AND_MACHINE_TRUST_AUDIT.md` (new — internal, not in sitemap); `governance/index.html` (EP-R-008 — added "How AI Agents Should Read EuraPlan" section; `dateModified` + visible "Last Updated" advanced to 2026-08-29); `DECISION_LOG.md` (this entry; header "Last Updated" advanced). No live regulation/country/sector/funding route, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt`, `claims.json`, or security/Cloudflare change.
+- **Governance documents involved:** AGENT_READABILITY_POLICY.md; STRUCTURED_DATA_POLICY.md; SOURCE_POLICY.md; CLAIM_POLICY.md; ROUTE_GOVERNANCE.md; SECURITY_POLICY.md; PROVENANCE.md; AUTHENTICITY_CERTIFICATE.md; CHAIN_OF_CUSTODY.md; ASSET_TRANSFER_MANIFEST.md; GOVERNANCE_CHARTER.md; ACCEPTANCE_CRITERIA.md; DEC-040; DEC-041; DEC-042; DEC-043; DEC-044
+- **Reversal conditions:** A superseding DEC is required to remove or unpublish the "How AI Agents Should Read EuraPlan" section, retire the audit document, or restructure the source-tier or claim-risk taxonomy. This decision does **not** authorize corpus expansion: the DEC-047 / DEC-057 Wave 1 Depth Equalization gate (no expansion until all Wave 1 routes score ≥ 90 under RGS v2) remains in force, so Sprint 6A / 6B cannot open until that gate is cleared or explicitly amended by a later DEC.
+- **Notes:**
+  - **Sprint type:** trust hardening, not corpus expansion — additive documentation + one concise governance section
+  - **Public change:** `governance/index.html` only; no new public page created
+  - **Audit doc:** internal governance; excluded from sitemap and public navigation by design
+  - **Expansion still gated:** DEC-047 / DEC-057 no-expansion posture unchanged; next recommended step is Wave 1 equalization (Data Act → CRA → EERS → Protocol ≥ 90) before any 6A / 6B
+  - **Follow-ups:** refresh Sprint 4G provenance snapshot with real anchors in a future pass; reconcile external four-tier source framing against the governed three-tier model via SOURCE_POLICY.md if ever changed
+
 ---
 
 ## 4. Superseded / Rejected Decisions
@@ -860,4 +875,4 @@ DECISION_LOG.md is the decision register. It does not replace the governing docu
 ---
 
 *EuraPlan.com — European Regulatory Entry & Expansion Planning Intelligence*
-*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 5B — June 2026*
+*Governed by Sohadot | Established Sprint 4D — June 2026 | Updated Sprint 5C — August 2026*
