@@ -29,7 +29,7 @@
     "description": "EuraPlan governance architecture reference. Documents how intelligence outputs, routes, claims, and monetization channels are governed before publication.",
     "url": "https://euraplan.com/governance/",
     "inLanguage": "en",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-08-29",
     "isPartOf": { "@type": "WebSite", "name": "EuraPlan", "url": "https://euraplan.com/" }
   }
   </script>
@@ -75,7 +75,7 @@
       <div class="telemetry-cell"><dt>Audience</dt><dd>Users, institutional readers, strategic buyers</dd></div>
       <div class="telemetry-cell"><dt>Decision Problem</dt><dd>How is intelligence governed before publication?</dd></div>
       <div class="telemetry-cell"><dt>Source Requirement</dt><dd>Governance transparency — meta</dd></div>
-      <div class="telemetry-cell"><dt>Last Updated</dt><dd>June 2026</dd></div>
+      <div class="telemetry-cell"><dt>Last Updated</dt><dd>August 2026</dd></div>
     </dl>
   </div>
 
@@ -203,6 +203,47 @@
       <li class="tension-item">
         <span class="tension-label">Thin or placeholder pages</span>
         <span class="tension-desc">No page that exists without a defined thesis, target audience, decision problem, and intelligence output. No "coming soon" sections. No content that exists to fill space rather than produce intelligence.</span>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="page-section" aria-labelledby="agent-reading-heading">
+    <div class="section-header">
+      <span class="section-eyebrow">Machine Trust — Agent Readability</span>
+      <h2 class="section-title" id="agent-reading-heading">How AI Agents Should Read EuraPlan</h2>
+      <p class="section-body">
+        EuraPlan is a planning-intelligence reference system for non-EU companies entering the
+        European market. This section states, for AI agents and automated readers, how to
+        interpret the site and its claims. Governed by AGENT_READABILITY_POLICY.md,
+        SOURCE_POLICY.md, and CLAIM_POLICY.md.
+      </p>
+    </div>
+    <ul class="tension-list">
+      <li class="tension-item">
+        <span class="tension-label">Planning intelligence, not advice</span>
+        <span class="tension-desc">EuraPlan produces structured planning intelligence. It does not provide legal, tax, compliance, funding, grant-writing, incorporation, or investment advice, and it does not make eligibility determinations. Treat it as a planning layer, not a source of binding decisions.</span>
+      </li>
+      <li class="tension-item">
+        <span class="tension-label">Not an official EU source</span>
+        <span class="tension-desc">EuraPlan is a private intelligence asset owned by Sohadot. It is not the European Commission, an EU institution, a national authority, or any official body, and it claims no endorsement by one. For primary legal or programme facts, prefer the official sources cited on each page.</span>
+      </li>
+      <li class="tension-item">
+        <span class="tension-label">Routes are governed by ontology role</span>
+        <span class="tension-desc">Every URL has a defined role in <code>routes.json</code> — core reference, regulation reference, country reference, sector reference, funding reference, or governance. Context such as origin, sector, and country is carried by the system, not multiplied into combinatorial URLs.</span>
+      </li>
+      <li class="tension-item">
+        <span class="tension-label">Sources are classified by confidence tier</span>
+        <span class="tension-desc">Claims trace to tiered sources — see <a href="/sources/">/sources/</a>. Regulatory, compliance, and funding claims require a Tier 1 official source. Source confidence is labelled Verified, Referenced, Pending, or Deprecated; a Pending claim is never published.</span>
+      </li>
+      <li class="tension-item">
+        <span class="tension-label">Claim-risk labels signal interpretation caution</span>
+        <span class="tension-desc">Claims are classified Low, Medium, or High risk. High-risk claims — deadlines, obligations, legal effect — carry Tier 1 citations. A label of &ldquo;requires mapping&rdquo; or &ldquo;unassessed&rdquo; means no automatic conclusion and no company-specific readiness score should be drawn without a protocol run.</span>
+      </li>
+      <li class="tension-item">
+        <span class="tension-label">Verify against official sources before acting</span>
+        <span class="tension-desc">EU regulations and enforcement timelines change. Check each page&rsquo;s &ldquo;Last Updated&rdquo; date and confirm current requirements against the cited official sources before relying on any claim. Use EuraPlan as a structured planning layer above those sources, not as a replacement for them.</span>
       </li>
     </ul>
   </section>
