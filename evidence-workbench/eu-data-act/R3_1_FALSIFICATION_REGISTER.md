@@ -1,6 +1,7 @@
 # R3.1 — EU Data Act Claim Map & Falsification Register
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.1 Claim Map & Falsification
-**Status:** IN PROGRESS — falsification only. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
+**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · **R3.1-C complete — awaiting review** · R3.1-D next. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
+**Source pack (from R3.1-C onward):** `evidence-workbench/eu-data-act/source-pack/` — authentic OJ act `EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` + `EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. R3.1-C locators were read verbatim from this pack.
 **Branch:** `claude/r3-1-data-act-falsification` (fresh from `main@dd7dc866ed7855428d4bbfe2e50f3fa053d215eb`, Merge #51 — no merge/cherry-pick from the R3.0 branch)
 **Intake baseline (frozen):** R3.0 corpus on `main` — **54 workbench rows / 46 live** (30 candidate + 16 split-needed) + 8 parked (7 defer + 1 reject)
 **Primary text (authentic):** Regulation (EU) 2023/2854, CELEX `32023R2854`, read with corrigendum OJ L, 2024/90790 (`DATA-SRC-CAND-01`+`-02`)
@@ -174,18 +175,103 @@ Literal reading against the authentic text surfaced **three operative Chapter II
 
 ---
 
+## R3.1-C — Chapters IV–V (unfair terms + B2G exceptional need) + ratification of the R3.1-B Chapter III coverage-delta
+
+**Live intake this unit:** 7 (E1–E3, F1–F4) · **Parked carried in:** F5 (defer, R3.0). **Plus** a formal **intake decision** on the three Chapter III coverage-delta provisions surfaced (already verified) in R3.1-B: Art. 8(4), Art. 12(1), Art. 12(2).
+**Source basis (this unit):** the official source pack merged to `main` — `evidence-workbench/eu-data-act/source-pack/EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` (authentic OJ act, ELI `.../2023/2854/oj`, 71 pp.) read with `EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. **Every locator below was read verbatim from that pack — not from memory and not from R3.0 wording.**
+**Corrigendum effect on this unit:** **none.** The corrigendum (OJ L, 2024/90790) amends **Article 48 only** (renumbers an item in the Directive (EU) 2020/1828 annex, "68"→"(69)"); it does not touch Art. 8, 12, 13, or 14–22. Recorded so the "read with corrigendum" duty is discharged, not skipped.
+**Locators resolved verbatim this unit:** Art. 8(4); Art. 12(1)/(2); Art. 13(1)–(9) (incl. the (4) always-unfair list, the (5) presumed-unfair list + point-(g) proviso, and the (6) "unilaterally imposed" definition); Arts. 14; 15(1)(a)/(1)(b)/(2)/(3); 16(1)/(2); 17(1)/(2)/(3)/(4)/(5)/(6); 18(1)/(2)/(3)/(4)/(5); 19(1)/(2)/(3)/(4); 20(1)/(2)/(3)/(4)/(5); 21(1)–(5); 22.
+
+### C-III. Chapter III coverage-delta intake decision (from R3.1-B — Art. 8(4), 12(1), 12(2))
+
+R3.1-B read Chapter III against the authentic text and surfaced three operative provisions absent from the R3.0 row set, routing the **intake decision** forward. Per that route (and re-verified against the source pack here), all three are **ADOPTED** into the R3.1 live corpus as new Chapter III rows. Identity (`EP-CLM-*`) is still **not** minted — adoption fixes intake, not identity.
+
+| New row | Verdict | Exact locator | Verbatim-grounded proposition | Reason / correction | Dependency |
+|---|---|---|---|---|---|
+| **R-D8** (Art. 8(4)) | **ADOPT / KEEP** | Art. **8(4)** | "A data holder **shall not make data available to a data recipient, including on an exclusive basis, unless requested to do so by the user under Chapter II**." | **Correction to R3.1-B's shorthand:** this is **not** merely an "exclusivity ban." Literally it bars a data holder from making data available to a recipient **at all** — exclusivity is the *a fortiori* case ("including on an exclusive basis") — unless a **user request under Chapter II** is the origin. Anchors the whole Ch. III availability duty to a user-initiated Ch. II request. | Chapter II user request (R-C6 / Art. 5) |
+| **R-D9** (Art. 12(1)) | **ADOPT / KEEP (scope-gate)** | Art. **12(1)** | "This Chapter shall apply where, in business-to-business relations, a data holder **is obliged under Article 5 or under applicable Union law or national legislation** … to make data available to a data recipient." | The **Chapter III applicability gate** — the scope predicate that triggers the entire D-series (R-D3/D4/D5/D7). Not a freestanding duty; the gate for them. Parallel to R-B4 (Ch. VI gate). | Art. 5 / sectoral availability obligation |
+| **R-D10** (Art. 12(2)) | **ADOPT / KEEP** | Art. **12(2)** | "A contractual term in a data sharing agreement which, to the detriment of one party, or, where applicable, to the detriment of the user, **excludes the application of this Chapter, derogates from it, or varies its effect, shall not be binding** on that party." | Chapter III **anti-waiver** — the Ch. III analogue of Art. 7(2)/R-B7. Confirmed verbatim. | — |
+
+> This closes the R3.1-B open coverage-delta item ahead of R3.1-F. R3.1-F still runs the full Q-audit; these three now enter it as live rows, not as observations.
+
+### C-IV. Chapter IV — Article 13 (unfair contractual terms unilaterally imposed on another enterprise)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-E1** | **SPLIT** | Art. 13(1) / 13(2) | R3.0 conflated the operative rule with a carve-out, and mislabelled severability as "13(2)". Split: | — |
+| → **R-E1a** unenforceability of a unilaterally-imposed **unfair** term | *(KEEP, post-split)* | Art. **13(1)** | "A contractual term … which has been **unilaterally imposed** by an enterprise on another enterprise, **shall not be binding** on the latter enterprise **if it is unfair**." The operative Ch. IV rule. | scoped by R-E3 (13(6)); defined by R-E2a/b/c | 
+| → **R-E1b** mandatory-Union-law carve-out | *(KEEP, post-split)* | Art. **13(2)** | "A contractual term which **reflects mandatory provisions of Union law**, or provisions of Union law which would apply if the contractual terms did not regulate the matter, **shall not be considered to be unfair**." A distinct carve-out, not part of 13(1). | — |
+| **R-E2** | **SPLIT** | Art. 13(3) / 13(4) / 13(5) | R3.0 said "blacklist/greylist per 13(3)–(4)" — **locator error**: the general test is 13(3), the **always-unfair (black) list is 13(4)**, the **presumed-unfair (grey) list is 13(5)**. Split into three: | — |
+| → **R-E2a** general unfairness test | *(KEEP, post-split)* | Art. **13(3)** | A term is unfair if "it is of such a nature that its use **grossly deviates from good commercial practice in data access and use, contrary to good faith and fair dealing**." | — |
+| → **R-E2b** always-unfair list (blacklist) | *(KEEP, post-split)* | Art. **13(4)** points (a)–(c) | "a contractual term **shall be unfair** … if its object or effect is to": (a) exclude/limit liability for intentional acts or gross negligence; (b) exclude remedies for non-performance / liability for breach; (c) give the imposing party the exclusive right to determine data conformity or interpret any term. **Exhaustive as written.** | — |
+| → **R-E2c** presumed-unfair list (greylist) + point-(g) proviso | *(KEEP, post-split)* | Art. **13(5)** points (a)–(g) + 2nd subpara. | "shall be **presumed to be unfair** … if its object or effect is to": (a) inappropriately limit remedies/liability or extend the imposed party's liability; (b) allow access/use of the other party's data significantly detrimentally (esp. commercially sensitive / trade-secret / IP data); (c) prevent the imposed party from using its own data / adequately exploiting it; (d) prevent termination within a reasonable period; (e) prevent obtaining a copy of its data; (f) enable termination at unreasonably short notice; (g) enable substantial unilateral change to price or substantive data conditions with no valid reason and no termination right. **Proviso:** point (g) does not affect a reserved right to change an indefinite-duration contract where a valid reason is specified, reasonable notice is given, and the counterparty may terminate at no cost. | — |
+| **R-E3** unilaterally-imposed definition + burden of proof | **KEEP (locator corrected)** | Art. **13(6)** *(was "13(5)–(6)")* | "A contractual term shall be considered to be **unilaterally imposed** … if it has been **supplied by one contracting party and the other contracting party has not been able to influence its content despite an attempt to negotiate it**." **Plus:** the supplier **bears the burden** of proving the term was not unilaterally imposed, and may not itself argue the term is unfair. Scopes R-E1a. | — |
+| **R-E4** severability | **ADOPT / KEEP (new)** | Art. **13(7)** | "Where the unfair contractual term is **severable** from the remaining terms of the contract, those remaining terms **shall be binding**." R3.0 loosely folded this into E1; it is its own provision. | — |
+| **R-E5** main-subject-matter / price-adequacy exclusion | **ADOPT / KEEP (new)** | Art. **13(8)** | "This Article **does not apply** to contractual terms **defining the main subject matter of the contract or to the adequacy of the price**, as against the data supplied in exchange." A material **scope limit** absent from R3.0. | — |
+| **R-E6** Chapter IV anti-waiver | **ADOPT / KEEP (new)** | Art. **13(9)** | "The parties to a contract covered by paragraph 1 **shall not exclude the application of this Article, derogate from it, or vary its effects**." Ch. IV analogue of Art. 7(2)/12(2). | — |
+
+**Chapter IV note (semantic-overreach guard):** the black/grey distinction is preserved literally — 13(4) items are unfair *per se*; 13(5) items are *presumptions* rebuttable in principle; the two lists must never be rendered as one flat "unfair terms" list. The unenforceability rule (R-E1a) is never stated without its "unilaterally imposed" scope (R-E3) and its carve-outs (R-E1b/13(2), R-E5/13(8)).
+
+### C-V. Chapter V — Articles 14–22 (B2G data availability on exceptional need)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-F1** B2G availability duty | **KEEP (exclusion corrected & relocated)** | Art. **14** | Where a PSB / Commission / ECB / Union body **demonstrates an exceptional need (per Art. 15)** to use certain data to carry out statutory duties in the public interest, "**data holders that are legal persons, other than public sector bodies**, which hold those data **shall make them available upon a duly reasoned request**." **Correction:** Art. 14 contains **no** micro/small exclusion (R3.0's ⚠verify was wrong to attach it here); the micro/small carve-out is Art. 15(2) and is **route-specific** (see R-F2c). | Art. 15 (need); Art. 17 (request) |
+| **R-F2** exceptional need | **SPLIT** | Art. 15 | Two distinct routes + a carve-out + a detail. Split: | — |
+| → **R-F2a** public-emergency route | *(KEEP)* | Art. **15(1)(a)** | Data "**necessary to respond to a public emergency**" and the body "is **unable to obtain such data by alternative means** in a timely and effective manner under equivalent conditions." | — |
+| → **R-F2b** non-emergency route (non-personal only) | *(KEEP)* | Art. **15(1)(b)(i)–(ii)** | Only **non-personal data**; body acts on Union/national law and has identified **specific data the lack of which prevents a specific public-interest task explicitly provided by law** (e.g. official statistics / emergency mitigation), **and has exhausted all other means** incl. market purchase at market rates. Tightly limited. | — |
+| → **R-F2c** micro/small carve-out | *(KEEP)* | Art. **15(2)** | "**Paragraph 1, point (b), shall not apply to microenterprises and small enterprises.**" Carve-out applies **only to the 15(1)(b) non-emergency route** — micro/small remain within the 15(1)(a) emergency route (with compensation under Art. 20(3)). This is the corrected, relocated "micro/small exclusion." | — |
+| **R-F6** relationship / criminal-customs-tax carve-out | **ADOPT / KEEP (new)** | Art. **16(1)/(2)** | Ch. V does not affect other reporting/access obligations (16(1)); and **does not apply** to bodies carrying out prevention/investigation/detection/prosecution of criminal or administrative offences, penalty execution, or **customs/taxation administration** (16(2)). A material scope limit on when B2G bites — absent from R3.0. | — |
+| **R-F3** requests & compliance | **SPLIT** | Arts. 17 / 18 | R3.0 merged "17–18." Split by actor/function: | — |
+| → **R-F3a** request requirements | *(KEEP)* | Art. **17(1)(a)–(j), 17(2)(a)–(i), 17(3)–(6)** | The requesting body must specify data + demonstrate the Art. 15 need + purpose/use/duration + erasure timing + data-protection measures for personal data, etc. (17(1)); requests must be written, clear, specific, **proportionate**, trade-secret-respecting (17(2)); reuse limits (17(3)); delegation/onward to third parties bound by Art. 19 (17(4)); model template (17(6)). | Art. 15; Art. 19 |
+| → **R-F3b** data-holder compliance + right to decline/modify | *(KEEP; deadlines now verified)* | Art. **18(1)/(2)/(3)/(4)/(5)** | Data holder makes data available without undue delay (18(1)); may **decline or seek modification** — verified deadlines: **no later than 5 working days** for public-emergency requests, **30 working days** otherwise — on grounds (a) no control, (b) duplicate request, (c) request fails Art. 17(1)/(2) (18(2)); anonymise/pseudonymise personal data (18(4)); disputes → competent authority Art. 37 (18(5)). The R3.0 ⚠verify on the periods is **cleared**. | Art. 17; Art. 37 |
+| **R-F4** compensation | **SPLIT** | Art. 20 | Emergency-free vs compensation are distinct; plus a micro/small nuance R3.0 missed. Split: | — |
+| → **R-F4a** emergency data free | *(KEEP)* | Art. **20(1)** | "**Data holders other than microenterprises and small enterprises** shall make available data necessary to respond to a public emergency … **free of charge**." | — |
+| → **R-F4b** fair compensation (non-emergency) + micro/small entitlement | *(KEEP)* | Art. **20(2)/(3)** | For 15(1)(b) requests the data holder is entitled to **fair compensation** covering technical/organisational costs (incl. anonymisation/pseudonymisation/adaptation) **plus a reasonable margin** (20(2)); **20(3)**: this also applies where a **micro/small** enterprise claims compensation — a nuance R3.0's simplification lost. (20(4) removes compensation for official-statistics where market purchase is barred by national law.) | — |
+| **R-F5** PSB obligations & bounded onward-sharing | **SPLIT + UN-DEFER** | Arts. 19 / 21 | R3.0 parked "Arts. 19, 21" as a single **defer**. Verbatim reading shows both are operative, planning-material limits ("B2G is bounded"). Un-defer and split: | — |
+| → **R-F5a** PSB use / erasure / trade-secret obligations | *(KEEP; was defer)* | Art. **19(1)/(2)/(3)/(4)** | PSB must not use data incompatibly with purpose, must secure it, and **erase when no longer necessary** (19(1)); must **not** use it to develop a competing connected product/service or share it onward for that purpose (19(2)); trade-secret disclosure only **strictly necessary** with safeguards (19(3)); PSB responsible for security (19(4)). | — |
+| → **R-F5b** onward-sharing to research / statistics | *(KEEP; was defer)* | Art. **21(1)–(5)** | PSB may share received data with not-for-profit research/analytics or with national statistical institutes/Eurostat (21(1)), only to not-for-profit / public-interest recipients (21(2)), under the same Art. 17(3)/19 obligations (21(3)), ≤ 6-month retention (21(4)), with notice to the data holder (21(5)). Bounded onward-sharing. | — |
+| **Art. 22** mutual assistance / cross-border | **DEFER (confirmed)** | Art. **22** | Authority-to-authority cooperation and cross-border request routing (notify competent authority of the data holder's Member State, Art. 37). Not an entrant obligation; not planning-material as a claim. Confirms the R3.0 §M defer. | — |
+
+**Supporting locators confirmed this unit (attach to operative rows — not minted):** Art. 15(3) (official-statistics market-purchase exception, detail on R-F2b); Art. 17(4) third-party delegation binding under Art. 19 (detail on R-F3a/R-F5a); Art. 19(3) trade-secret safeguard (attaches to R-F5a and to the R-F3a request duty).
+
+### R3.1-C verdict tally
+
+**Chapter IV (3 live intake → 9 provisions):** KEEP 1 (E3) · SPLIT 2 (E1→2, E2→3) · **ADOPT-new 3** (E4/13(7), E5/13(8), E6/13(9)) · DROP 0 · DEFER 0.
+**Chapter V (4 live intake + 1 parked-in → 11 provisions):** KEEP 1 (F1) · SPLIT 3 (F2→3, F3→2, F4→2) · **ADOPT-new 1** (F6/Art 16) · **UN-DEFER→KEEP 2** (F5a/Art 19, F5b/Art 21, from parked F5) · DEFER 1 (Art 22).
+**Chapter III coverage-delta intake:** ADOPT 3 (R-D8/8(4), R-D9/12(1), R-D10/12(2)).
+
+**Net provisions surviving R3.1-C:** **23** (9 Ch. IV + 11 Ch. V + 3 Ch. III delta). **0 minted.** Next free remains `EP-CLM-000046`.
+
+### Qualifier edges this unit touches (full test in R3.1-F)
+
+- **Q6** R-E1a (13(1) unenforceability) ↔ R-E3 (13(6) "unilaterally imposed" scope) + R-E2a/b/c (13(3)/(4)/(5) fairness tests) + carve-outs R-E1b (13(2)) / R-E5 (13(8)) + severability R-E4 (13(7)). Refined from the R3.0 single edge.
+- **Q7** R-F1 (Art 14 duty) ↔ R-F2a/b (Art 15 narrow need) + R-F2c (15(2) micro/small carve-out, 15(1)(b) only) + R-F6 (Art 16(2) criminal/customs/tax carve-out).
+- **Q8** R-F1 ↔ R-F4a (20(1) emergency-free) vs R-F4b (20(2)/(3) compensation) — duty + compensation split.
+- **New edge (flag for F):** R-D9 (Art 12(1) Ch. III gate) ↔ R-D3/D4/D5/D7 — scope predicate for the whole Ch. III D-series; and R-D8 (Art 8(4)) ↔ R-C6 (Art 5 user request) — availability gated on a user Ch. II request.
+
+### Semantic-overreach guard (this unit)
+
+- Chapter V duties are stated as **conditional on a demonstrated Art. 15 exceptional need** and the Art. 14 "legal persons other than PSBs" actor scope — never as a general "government can demand your data" claim.
+- The micro/small carve-out is stated **route-specifically** (15(1)(b) only), not as a blanket B2G exemption.
+- Art. 13 black-list (13(4)) vs grey-list (13(5)) kept distinct; presumptions never rendered as *per se* unfairness.
+- Art. 8(4) rendered as a **user-request-gated availability limit** (its literal breadth), not narrowed to "exclusivity" as R3.1-B's shorthand had it.
+- Authority-to-authority machinery (Art. 22) and pure detail (15(3), 17 procedural minutiae) are recorded as defer/supporting, not inflated into entrant-facing claims.
+
+---
+
 ## Running tally (all units)
 
 | Unit | Intake (live) | KEEP | SPLIT (→net) | MERGE | DROP | DEFER | Status |
 |---|---|---|---|---|---|---|---|
 | R3.1-A Scope & temporal | 14 | 12 | 2 (→4) | 0 | 0 | 0 | **PASS (reviewed)** |
-| R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — awaiting review** |
-| R3.1-C Ch. IV–V | — | — | — | — | — | — | pending |
+| R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — reviewed; coverage-delta ratified in R3.1-C** |
+| R3.1-C Ch. IV–V (+Ch. III delta) | 7 (+3 delta) | 2 | 5 (→12) | 0 | 0 | 1 | **complete — awaiting review** |
 | R3.1-D Ch. VI–VIII | — | — | — | — | — | — | pending |
 | R3.1-E Enforcement & boundaries | — | — | — | — | — | — | pending |
 | R3.1-F Qualification audit (Q1–Q16) | — | — | — | — | — | — | pending |
 
-> Live-intake counts only. Parked rows (carried in, outside live intake, not counted in the columns above): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER.
+> Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. Parked rows (carried in, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER.
 
 **Mint counter: `EP-CLM-*` = 0 · `EP-SRC-*` = 0.** Next free remains `EP-CLM-000046` / `EP-SRC-000006`.
 
