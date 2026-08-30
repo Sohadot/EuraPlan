@@ -1,6 +1,6 @@
 # R3.1 — EU Data Act Claim Map & Falsification Register
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.1 Claim Map & Falsification
-**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · R3.1-C reviewed (merged PR #59) · **R3.1-D complete — awaiting review** · R3.1-E next. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
+**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · R3.1-C reviewed (merged PR #59) · R3.1-D reviewed (merged PR #60) · **R3.1-E complete — awaiting review** · **R3.1-F (Q-audit) next — closes R3.1**. All 50 articles now falsified verbatim. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
 **Source pack (from R3.1-C onward):** `evidence-workbench/eu-data-act/source-pack/` — authentic OJ act `EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` + `EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. R3.1-C locators were read verbatim from this pack.
 **Branch:** `claude/r3-1-data-act-falsification` (fresh from `main@dd7dc866ed7855428d4bbfe2e50f3fa053d215eb`, Merge #51 — no merge/cherry-pick from the R3.0 branch)
 **Intake baseline (frozen):** R3.0 corpus on `main` — **54 workbench rows / 46 live** (30 candidate + 16 split-needed) + 8 parked (7 defer + 1 reject)
@@ -351,6 +351,90 @@ R3.1-B read Chapter III against the authentic text and surfaced three operative 
 
 ---
 
+## R3.1-E — Chapters IX–XI (enforcement · sui generis carve-out · final provisions)
+
+**Live intake this unit:** 4 (K1, K2, K4, K5) · **Parked carried in:** K3 (Arts 38–39, R3.0 defer) · **plus §M register items confirmed** (Arts 41, 42, 45–46, 47–48, 49).
+**Source basis (this unit):** the official source pack on `main` — `source-pack/EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` (authentic OJ act) read with `source-pack/EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. **Every locator, date and penalty reference below was read verbatim from that pack.**
+**Corrigendum effect on this unit — precise finding: YES, one article in scope is touched.** The corrigendum (OJ L, 2024/90790) amends **Article 48** — it corrects the numbering of the point added to **Annex I of Directive (EU) 2020/1828** from "`68.`" to "`(69)`". Article 48 **is** within R3.1-E scope; however Art. 48 is an **outbound amendment** (it edits another instrument's annex, not a Data Act entrant obligation) and is **excluded/deferred for planning intelligence** (R-K9). So the corrigendum has **no substantive effect on any entrant-facing claim** in R3.1-E — but the touchpoint is recorded here precisely rather than dismissed. (Arts. 37–47, 49–50 are unaffected by the corrigendum.)
+**Locators resolved verbatim this unit:** Art. 37(1)–(16) (esp. (2) data coordinator, (3) GDPR-SA/EDPS, (5) tasks, (6)/(7) coordinator + register, (10) main-establishment jurisdiction, (11)/(12)/(13) legal representative); 38(1)–(3); 39(1)–(3); 40(1)/(2)/(3)/(4)/(5); 41; 42(a)–(c); 43; 44(1)/(2)/(3); 45(2)/(6); 46; 47; 48; 49(1)/(2); 50.
+
+### Key procedural / penalty / date values verified verbatim
+
+| Value | Verbatim | Locator |
+|---|---|---|
+| MS penalty-rules notification deadline | "Member States shall **by 12 September 2025** notify the Commission" | Art. **40(2)** |
+| GDPR-fine route scope | fines under GDPR "**Article 83** … up to the amount referred to in **Article 83(5)**" for "infringements of the obligations laid down in **Chapter II, III and V**", by GDPR supervisory authorities "**within their scope of competence**" | Art. **40(4)** |
+| EDPS-fine route (new vs R3.0) | for "infringements … in **Chapter V**", the EDPS may impose fines under "**Article 66** of Regulation (EU) 2018/1725 up to the amount referred to in **Article 66(3)**" | Art. **40(5)** |
+| Model terms status | Commission "**before 12 September 2025** … develop and recommend **non-binding** model contractual terms … and **non-binding** standard contractual clauses for cloud computing" | Art. **41** |
+| Non-EU legal-representative duty | a non-EU entity making connected products available / offering services in the Union "**shall designate a legal representative** in one of the Member States" | Art. **37(11)** |
+| Delegated-act objection period | "**within a period of three months** … extended by three months" | Art. **45(6)** |
+| Commission evaluation deadline | "**By 12 September 2028**, the Commission shall carry out an evaluation" | Art. **49(1)/(2)** |
+| Application dates (Art. 50, re-confirmed) | in force 20th day after OJ (→ 11 Jan 2024); "**It shall apply from 12 September 2025**"; Art. 3(1) after **12 Sept 2026**; Ch. IV contracts after **12 Sept 2025**, legacy from **12 Sept 2027** (indefinite / ≥ 10 y from 11 Jan 2024) | Art. **50** |
+
+### E-IX. Chapter IX — Implementation and enforcement (Arts. 37–42)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-K1** competent authorities & enforcement architecture | **SPLIT** | Art. 37 | R3.0's single "national enforcement" row hides several planning-material rules → split: | — |
+| → **R-K1a** competent authorities + data coordinator | *(KEEP)* | Art. **37(1)/(2)/(5)/(6)/(7)** | Each MS designates one+ competent authorities (new or existing); if several, a **data coordinator** as single point of contact facilitating cooperation and assisting in-scope entities; Commission maintains a **public register** of authorities. | — |
+| → **R-K1b** personal-data supervision interface | *(KEEP)* | Art. **37(3)** | GDPR **supervisory authorities** monitor this Regulation insofar as personal-data protection is concerned (GDPR Ch. VI/VII mutatis mutandis); the **EDPS** monitors as regards the Commission/ECB/Union bodies. | GDPR 2016/679; Reg. 2018/1725 |
+| → **R-K1c** non-EU legal-representative obligation | **ADOPT / KEEP (new — high entrant relevance)** | Art. **37(11)/(12)/(13)** | **A non-EU entity that makes connected products available or offers services in the Union shall designate a legal representative in a Member State**, mandated to be addressed by authorities; until designation, the entity is under the competence of **all** Member States. Directly material to EuraPlan's non-EU audience — absent from R3.0. | — |
+| → **R-K1d** jurisdiction / main-establishment rule | *(KEEP)* | Art. **37(10)** | An in-scope entity is under the competence of the MS where it is **established**; if in several, its **main establishment** (head/registered office with principal financial + operational control). | — |
+| **R-K3** complaint + effective judicial remedy | **KEEP (un-defer, bounded)** | Arts. **38(1)–(3), 39(1)–(3)** | Affected natural/legal persons may **lodge a complaint** (individually or collectively) with the competent authority of their residence/work/establishment (38); and have a **right to an effective judicial remedy** against binding authority decisions and where an authority fails to act (39). R3.0 deferred; un-deferred as a bounded counterparty-leverage / own-remedy input. Not framed as legal advice. | — |
+| **R-K2** penalties | **SPLIT** | Art. 40 | Distinct national + GDPR + EDPS fine routes → split, stated **exactly** (no generalisation): | — |
+| → **R-K2a** national penalties | *(KEEP)* | Art. **40(1)/(2)/(3)** | MS lay down **effective, proportionate, dissuasive** penalties; notify the Commission **by 12 September 2025**; a non-exhaustive criteria list (nature/gravity/duration, mitigation, prior infringements, financial benefit, Union annual turnover). | — |
+| → **R-K2b** GDPR Art. 83 fine route (Ch. II/III/V) | *(KEEP)* | Art. **40(4)** | For infringements of **Chapters II, III and V**, GDPR **supervisory authorities**, **within their competence**, may impose administrative fines under **GDPR Art. 83 up to the Art. 83(5)** amount. **Not** "any personal-data infringement" — chapter-scoped + SA-competence-scoped. | GDPR 2016/679 |
+| → **R-K2c** EDPS fine route (Ch. V) | **ADOPT / KEEP (new)** | Art. **40(5)** | For infringements of **Chapter V**, the **EDPS** may, within its competence, impose fines under **Reg. (EU) 2018/1725 Art. 66 up to Art. 66(3)**. Coverage-delta absent from R3.0. | Reg. 2018/1725 |
+| **R-K6** model contractual terms & SCCs | **DEFER (context — non-binding aid)** | Art. **41** | The Commission, **before 12 September 2025**, develops and recommends **non-binding** MCTs (data access/use, incl. reasonable compensation + trade-secret protection) and **non-binding** SCCs for cloud contracts. A drafting aid, **not** an entrant obligation and non-binding → defer/context (ties to source `DATA-SRC-CAND-09`); never render as a mandatory requirement. | — |
+| **R-K7** role of the EDIB | **DEFER (confirmed)** | Art. **42(a)–(c)** | EDIB (expert group under Reg. 2022/868 Art. 29) supports consistent application — advises the Commission on Ch. II/III/V/VII enforcement, facilitates cross-border cooperation, advises on standards/implementing/delegated acts. Governance body; not an entrant obligation. | — |
+
+### E-X. Chapter X — Sui generis right under Directive 96/9/EC (Art. 43)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-K4** sui generis DB-right exclusion | **KEEP** | Art. **43** | "The sui generis right provided for in **Article 7 of Directive 96/9/EC shall not apply** when data is **obtained from or generated by a connected product or related service** falling within the scope of this Regulation, in particular in relation to **Articles 4 and 5**." Removes an IP barrier to the Ch. II access/sharing rights. Exact boundary = connected-product/related-service data in scope. | Dir. 96/9/EC Art. 7; Arts. 4/5 |
+
+### E-XI. Chapter XI — Final provisions (Arts. 44–50)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-K5** savings clause | **SPLIT** | Art. 44 | Three distinct boundary rules → split: | — |
+| → **R-K5a** pre-existing sectoral acts unaffected | *(KEEP)* | Art. **44(1)** | Specific B2B / B2C / (exceptional) B2G data-availability obligations in Union acts **in force on or before 11 January 2024** (and their delegated/implementing acts) **remain unaffected**. | — |
+| → **R-K5b** without prejudice to further sector/data-space requirements | *(KEEP)* | Art. **44(2)** | Without prejudice to Union law specifying, for a sector / common European data space / public-interest area, **further requirements** (technical access aspects; limits on data-holder rights over user-provided data; aspects beyond access/use). The Data Act is a **general** layer under sector-specific law. | — |
+| → **R-K5c** scientific-research carve-out (except Ch. V) | *(KEEP)* | Art. **44(3)** | **With the exception of Chapter V**, without prejudice to Union/national law providing for access to and use of data for **scientific research** purposes. | — |
+| **R-K8** delegation & committee procedure | **REJECT / EXCLUDE** | Arts. **45, 46** | Delegated-act mechanics (45; objection period **3 months** +3) and comitology (46, Committee under Reg. 2022/868 / Reg. 182/2011). Legislative machinery; not an entrant obligation or planning-intelligence claim. Confirms R3.0 §M reject. | — |
+| **R-K9** outbound amendments (CPC / representative actions) | **DEFER / EXCLUDE (context)** | Arts. **47, 48** | Art. 47 adds the Data Act to the Annex of Reg. (EU) 2017/2394 (CPC); Art. 48 adds it to Annex I of Directive (EU) 2020/1828 (representative actions). **These amend *other* acts** — a remedy-architecture footnote, not a Data Act obligation. **Corrigendum touches Art. 48 only** (renumber "68"→"(69)"); no substantive effect. Confirms R3.0 §M defer. | — |
+| **R-K10** evaluation & review | **REJECT / EXCLUDE** | Art. **49(1)/(2)** | Commission evaluation **by 12 September 2028** (incl. a focused review of Arts. 23–31, 34, 35 on cloud pricing/diversity). Institutional duty on the Commission; not an entrant obligation. Confirms R3.0 A7 / §M. | — |
+| **Art. 50** entry into force & application | **MERGE → R3.1-A (dates re-confirmed)** | Art. **50** | Art. 50 is the **source** of the R3.1-A temporal rows (A1–A5); its dates are re-read verbatim here (apply 12.9.2025; Art. 3(1) 12.9.2026; Ch. III post-12.9.2025 law; Ch. IV new post-12.9.2025, legacy from 12.9.2027 with the indefinite / ≥10-y test) and **confirmed unchanged** — no re-verdict, merged into the R3.1-A rows to avoid double-counting. | R3.1-A A1–A5 |
+
+**Supporting locators confirmed this unit (attach, not minted):** Art. 37(5)(a)–(j) authority tasks/powers, 37(14)–(16) info powers + assistance + confidentiality (detail on R-K1a); Art. 37(6)(b)/(c) coordinator publishes Ch. V requests + annual refusal reporting (detail on R-K1a); Art. 45(2)–(5) delegation conditions (detail on R-K8).
+
+### R3.1-E verdict tally
+
+**Chapter IX (2 live intake + 1 parked-in → 8 live provisions + 2 defers):** SPLIT 2 (K1→4, K2→3) · KEEP 1 (K3, un-deferred) · **ADOPT-new 2** (K1c/Art 37(11), K2c/Art 40(5)) · DEFER 2 (K6/Art 41, K7/Art 42).
+**Chapter X (1 live intake → 1 provision):** KEEP 1 (K4/Art 43).
+**Chapter XI (1 live intake → 3 provisions + machinery):** SPLIT 1 (K5→3) · REJECT/EXCLUDE 2 (K8/Arts 45–46, K10/Art 49) · DEFER/EXCLUDE 1 (K9/Arts 47–48) · MERGE 1 (Art 50 → R3.1-A).
+
+**Net live provisions surviving R3.1-E:** **12** (8 Ch. IX + 1 Ch. X + 3 Ch. XI). **Deferred (context):** 3 (Art 41, Art 42, Arts 47–48). **Rejected/excluded:** Arts 45–46, Art 49. **Merged:** Art 50 → R3.1-A. **0 minted.** Next free remains `EP-CLM-000046`.
+
+### Qualifier edges this unit touches (full test in R3.1-F)
+
+- **Q11** R-K2a (Art 40(1) national penalties) ↔ R-K2b (Art 40(4) GDPR Art 83 fines for Ch. II/III/V, within GDPR-SA competence) ↔ R-K2c (Art 40(5) EDPS fines for Ch. V) — default + two chapter-scoped cross-referenced fine regimes. **Refined** to add the 40(5) EDPS route.
+- **Q12** R-K4 (Art 43 carve-out) ↔ the external sui generis DB right (Dir. 96/9/EC Art. 7) — right + carve-out.
+- **Q14** R-A1 (Data Act as general layer) ↔ R-K5a/b/c (Art 44 sectoral + research savings) — general + sector-specific carve-out.
+- **New edge (flag for F):** R-K1c (Art 37(11) legal representative) ↔ every substantive duty — the enforcement hook by which a non-EU entrant is reached at all.
+
+### Semantic-overreach guard (this unit)
+
+- Penalties are stated **exactly** by route (national 40(1)–(3); GDPR-SA fines for Ch. II/III/V only, 40(4); EDPS fines for Ch. V only, 40(5)) — never a blanket "GDPR-level fines for any Data Act breach."
+- The model contractual terms (Art. 41) are stated **non-binding** and as a Commission aid — never as a mandatory requirement.
+- The sui generis carve-out (Art. 43) is bounded to **connected-product / related-service data in scope**, not a general abolition of database rights.
+- The Art. 44 savings clause is kept **distinct** from the Art. 1(5) GDPR-prevalence boundary (R-B6) — sectoral/research savings, not the personal-data interface.
+- Institutional / legislative machinery (Arts. 42, 45, 46, 49) and outbound amendments (Arts. 47, 48) are recorded as defer/reject with reasons, not inflated into entrant-facing claims; the Art. 48 corrigendum touchpoint is recorded, not hidden.
+- Art. 50 dates are **not re-verdicted** — merged into the already-falsified R3.1-A rows to prevent double-counting, with the values re-confirmed verbatim.
+
+---
+
 ## Running tally (all units)
 
 | Unit | Intake (live) | KEEP | SPLIT (→net) | MERGE | DROP | DEFER | Status |
@@ -358,11 +442,11 @@ R3.1-B read Chapter III against the authentic text and surfaced three operative 
 | R3.1-A Scope & temporal | 14 | 12 | 2 (→4) | 0 | 0 | 0 | **PASS (reviewed)** |
 | R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — reviewed; coverage-delta ratified in R3.1-C** |
 | R3.1-C Ch. IV–V (+Ch. III delta) | 7 (+3 delta) | 2 | 5 (→12) | 0 | 0 | 1 | **complete — reviewed (merged PR #59)** |
-| R3.1-D Ch. VI–VIII | 8 (+2 parked) | 4 | 5 (→13) | 0 | 0 | 2 | **complete — awaiting review** |
-| R3.1-E Enforcement & boundaries | — | — | — | — | — | — | pending |
+| R3.1-D Ch. VI–VIII | 8 (+2 parked) | 4 | 5 (→13) | 0 | 0 | 2 | **complete — reviewed (merged PR #60)** |
+| R3.1-E Ch. IX–XI | 4 (+1 parked) | 1 | 3 (→10) | 1 | 0 | 3 | **complete — awaiting review** |
 | R3.1-F Qualification audit (Q1–Q16) | — | — | — | — | — | — | pending |
 
-> Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. **R3.1-D** additionally **adopts 4 new provisions** (R-G7/Art 27, R-G8/Art 31, R-G9/Art 24, R-I4/Art 34(2)) — net **20 live provisions** surviving R3.1-D. Parked rows (carried in, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER; **R3.1-D** — Art. 33 (I1) + Art. 35 (I2) = DEFER / SOURCE-CONSTRAINED (standards-pending).
+> Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. **R3.1-D** additionally **adopts 4 new provisions** (R-G7/Art 27, R-G8/Art 31, R-G9/Art 24, R-I4/Art 34(2)) — net **20 live provisions** surviving R3.1-D. **R3.1-E** additionally **adopts 2 new provisions** (R-K1c/Art 37(11) non-EU legal representative, R-K2c/Art 40(5) EDPS Ch. V fines), MERGEs Art 50 into R3.1-A, and REJECTs Arts 45–46 + Art 49 — net **12 live provisions** surviving R3.1-E. Parked / deferred rows (carried in or confirmed, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER; **R3.1-D** — Art. 33 (I1) + Art. 35 (I2) = DEFER / SOURCE-CONSTRAINED; **R3.1-E** — Art. 41, Art. 42, Arts. 47–48 = DEFER (context); Arts. 45–46, Art. 49 = REJECT / EXCLUDE. **With R3.1-E, all 50 articles (Chapters I–XI) have been falsified verbatim; R3.1-F (Q-audit) closes R3.1.**
 
 **Mint counter: `EP-CLM-*` = 0 · `EP-SRC-*` = 0.** Next free remains `EP-CLM-000046` / `EP-SRC-000006`.
 
