@@ -1,6 +1,6 @@
 # R3.1 — EU Data Act Claim Map & Falsification Register
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.1 Claim Map & Falsification
-**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · **R3.1-C complete — awaiting review** · R3.1-D next. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
+**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · R3.1-C reviewed (merged PR #59) · **R3.1-D complete — awaiting review** · R3.1-E next. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
 **Source pack (from R3.1-C onward):** `evidence-workbench/eu-data-act/source-pack/` — authentic OJ act `EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` + `EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. R3.1-C locators were read verbatim from this pack.
 **Branch:** `claude/r3-1-data-act-falsification` (fresh from `main@dd7dc866ed7855428d4bbfe2e50f3fa053d215eb`, Merge #51 — no merge/cherry-pick from the R3.0 branch)
 **Intake baseline (frozen):** R3.0 corpus on `main` — **54 workbench rows / 46 live** (30 candidate + 16 split-needed) + 8 parked (7 defer + 1 reject)
@@ -260,18 +260,109 @@ R3.1-B read Chapter III against the authentic text and surfaced three operative 
 
 ---
 
+## R3.1-D — Chapters VI–VIII (switching · unlawful third-country access · interoperability & smart contracts)
+
+**Live intake this unit:** 8 (G1–G6, J1, and Art. 34 via I3) · **Parked carried in:** I1 (Art 33), I2 (Art 35) — R3.0 defers.
+**Source basis (this unit):** the official source pack on `main` — `source-pack/EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` (authentic OJ act) read with `source-pack/EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. **Every locator and every numeric value below was read verbatim from that pack.**
+**Corrigendum effect on this unit:** **none (verified).** The corrigendum (OJ L, 2024/90790) amends **Article 48 only**; it does not touch Arts. 23–36. Re-checked against the corrigendum PDF for this unit.
+**Locators resolved verbatim this unit:** Art. 23(a)–(e); 24; 25(1)/(2)(a)(i)–(iv),(b)–(i)/(3)/(4)/(5); 26(a)/(b); 27; 28(1)/(2); 29(1)/(2)/(3)/(4)/(5)/(6)/(7); 30(1)/(2)/(3)/(5)/(6); 31(1)/(2)/(3); 32(1)/(2)/(3)(a)–(c)/(4)/(5); 33(1)(a)–(d)/(2)–(11); 34(1)/(2); 35(1)/(2)/(8); 36(1)(a)–(e)/(2)/(3)/(4).
+
+### Numeric / timing values verified verbatim (the R3.0 ⚠verify set — now cleared)
+
+| Value | Verbatim | Locator |
+|---|---|---|
+| Max **notice period** to initiate switching | "**shall not exceed two months**" | Art. **25(2)(d)** |
+| Mandatory **maximum transitional period** | "**not after the mandatory maximum transitional period of 30 calendar days**" | Art. **25(2)(a)** |
+| Minimum **data-retrieval period** | "**at least 30 calendar days**, starting after the termination of the transitional period" | Art. **25(2)(g)** |
+| Technical-unfeasibility notice + alternative | notify "**within 14 working days**"; alternative transitional period "**shall not exceed seven months**" | Art. **25(4)** |
+| Customer extension of transitional period | "right to extend the transitional period **once**" | Art. **25(5)** |
+| **Switching charges abolished** | "**From 12 January 2027**, providers … shall not impose any switching charges" | Art. **29(1)** |
+| **Reduced** switching charges (interim) | "**From 11 January 2024 to 12 January 2027** … may impose reduced switching charges" ≤ "**costs … directly linked to the switching process**" | Art. **29(2)/(3)** |
+| Standards-compatibility lead time | "**at least 12 months after** the references … were published in the central Union standards repository" | Art. **30(3)** |
+| Third-country-access national-body reply window | "**If the addressee has not received a reply within one month**" | Art. **32(3)** |
+| In-parallel **egress charges** | "**may impose data egress charges, but only for the purpose of passing on egress costs incurred, without exceeding such costs**" | Art. **34(2)** |
+
+### D-VI. Chapter VI — Switching between data processing services (Arts. 23–31)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-G1** remove obstacles to effective switching | **KEEP** | Art. **23(a)–(e)** | Providers shall take the measures in Arts. 25, 26, 27, 29, 30 and **not impose / shall remove** pre-commercial, commercial, technical, contractual and organisational obstacles inhibiting: (a) termination after the notice period; (b) new contract with a different provider; (c) porting exportable data + digital assets (incl. after a free tier); (d) functional equivalence (Art. 24); (e) unbundling where technically feasible. | Arts. 25/26/27/29/30 |
+| **R-G9** scope of the technical obligations | **ADOPT / KEEP (scope-limiter, new)** | Art. **24** | The responsibilities in Arts. 23, 25, 29, 30 and 34 apply **only to the source provider's** services/contracts/commercial practices. Bounds who owes the duties — absent from R3.0. | — |
+| **R-G2** contractual switching terms | **SPLIT** | Art. 25 | Multiple distinct rules incl. hard numerics → split: | — |
+| → **R-G2a** written pre-signing contract | *(KEEP)* | Art. **25(1)** | Customer rights + provider obligations on switching set out in a **written contract** made available before signing, storable/reproducible. | — |
+| → **R-G2b** mandatory contract contents (with numerics) | *(KEEP)* | Art. **25(2)(a)–(i)** | Must include: switch/port clause within the **30-calendar-day** mandatory max transitional period after the notice period, with assistance/continuity/security duties (a); exit-strategy support (b); termination clause (c); **max notice period ≤ 2 months (d)**; exhaustive exportable-data spec (e)/(f); **≥ 30-calendar-day retrieval period (g)**; full-erasure clause (h); switching charges per Art. 29 (i). | Art. 29 (charges) |
+| → **R-G2c** customer options + technical-unfeasibility route | *(KEEP)* | Art. **25(3)/(4)/(5)** | Customer may switch to another provider / to on-prem / erase (3); if the 30-day transition is technically unfeasible, provider notifies **within 14 working days**, justifies, and offers an alternative period **≤ 7 months** with continuity (4); customer may **extend once** (5). | — |
+| **R-G3** information obligation | **KEEP** | Art. **26(a)/(b)** | Provider gives the customer info on switching/porting procedures, methods, formats, known restrictions (a), and a reference to an up-to-date **online register** of data structures/formats/standards for the exportable data (b). | — |
+| **R-G7** obligation of good faith | **ADOPT / KEEP (new)** | Art. **27** | **All parties, including destination providers,** shall **cooperate in good faith** to make switching effective, enable timely data transfer, and maintain service continuity. Operative duty R3.0 folded into G1's cross-ref. | — |
+| **R-G6** contractual transparency on international access/transfer | **KEEP** | Art. **28(1)/(2)** | Providers publish on their websites, kept current: (a) the **jurisdiction** of the ICT infrastructure; (b) a general description of measures to **prevent international governmental access to / transfer of non-personal data** held in the Union where that conflicts with Union/MS law; the websites are listed in all service contracts. Companion to Art. 32 (Ch. VII). | Art. 32 |
+| **R-G4** switching-charge phase-out | **SPLIT** | Art. 29 | Distinct interim vs abolition rules → split: | — |
+| → **R-G4a** abolition | *(KEEP)* | Art. **29(1)** | **From 12 January 2027**, no switching charges. | — |
+| → **R-G4b** interim reduced charges | *(KEEP)* | Art. **29(2)/(3)** | **11 January 2024 → 12 January 2027**, reduced charges permitted, **not exceeding the costs directly linked** to the switching; plus pre-contract fee/penalty/reduced-charge transparency (29(4)–(6)). | — |
+| **R-G5** technical aspects of switching | **SPLIT** | Art. 30 | Tiered by service type → split: | — |
+| → **R-G5a** IaaS functional equivalence | *(KEEP)* | Art. **30(1)** | Providers of **infrastructural** services (scalable/elastic compute limited to infra elements, no operating services/software/apps) take all reasonable measures to help the customer **achieve functional equivalence** after switching to the same service type; source provider facilitates with capabilities/info/docs/support/tools. | — |
+| → **R-G5b** open interfaces for other services | *(KEEP)* | Art. **30(2)** | **Other** providers make **open interfaces free of charge** to all customers and destination providers, sufficient for portability/interoperability. | — |
+| → **R-G5c** standards compatibility + export fallback + limits | *(KEEP)* | Art. **30(3)/(5)/(6)** | Other providers ensure compatibility with common specs/harmonised standards **≥ 12 months after** their publication in the central Union standards repository (3); absent such standards, **export all exportable data in a structured, commonly used, machine-readable format** on request (5); **no duty to develop new tech or disclose IP/trade-secret assets** or compromise security (6). | Art. 35(8) repository |
+| **R-G8** specific-regime exemptions | **ADOPT / KEEP (scope carve-out, new)** | Art. **31(1)/(2)/(3)** | Arts. 23(d), 29 and 30(1)&(3) **do not apply** to **custom-built/bespoke** services not offered at broad commercial scale (1); the whole Chapter does not apply to **non-production test/eval** versions for a limited period (2); provider must disclose the non-applicable obligations pre-contract (3). Material scope carve-out absent from R3.0. | — |
+
+### D-VII. Chapter VII — Unlawful third-country governmental access (Art. 32)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-H1** international governmental access safeguard | **SPLIT (wording corrected)** | Art. 32 | R3.0 said "reasonable" measures — literal text is **"all adequate"**. Split into the duty + the two-tier recognition test: | — |
+| → **R-H1a** prevention duty | *(KEEP)* | Art. **32(1)** | Providers take **all adequate technical, organisational and legal measures, including contracts**, to **prevent international / third-country governmental access and transfer of non-personal data held in the Union** where that would conflict with Union or Member-State law. | — |
+| → **R-H1b** recognition only via international agreement | *(KEEP)* | Art. **32(2)** | A third-country court/tribunal/administrative-authority order to transfer/give access is **recognised or enforceable only if based on an international agreement** (e.g. an MLAT) in force between the third country and the Union or a Member State. | — |
+| → **R-H1c** absent-agreement conditions + safeguards | *(KEEP)* | Art. **32(3)(a)–(c), (4), (5)** | Absent such agreement, access/transfer only where the third-country decision is reasoned/proportionate/specific (a), the reasoned objection is court-reviewable (b), and the court can weigh Union-law-protected interests (c); with a national-body opinion mechanism (**one-month** reply window), **minimum-data** disclosure (32(4)), and a duty to **inform the customer before complying** except where law-enforcement necessity requires otherwise (32(5)). | — |
+
+### D-VIII. Chapter VIII — Interoperability & smart contracts (Arts. 33–36)
+
+| Row | Verdict | Exact locator | Reason (verbatim-grounded) | Dependency |
+|---|---|---|---|---|
+| **R-I1** data-space essential interoperability requirements | **DEFER — SOURCE-CONSTRAINED (confirmed)** | Art. **33(1)(a)–(d), 33(2)–(11)** | The essential requirements (dataset description; structures/formats; technical access means/APIs; means to enable smart-contract interoperability) bind **participants in data spaces that offer data/services**. Operative detail rests on **delegated acts, harmonised standards and common specifications not yet published** (central repository / OJ, 33(2)–(11)). Material only if the entrant joins a common data space, and the binding specifics are **standards-pending**. Confirms R3.0 defer; flagged source-constrained (freshness watch-item). | forthcoming standards/delegated acts (Reg. (EU) 1025/2012) |
+| **R-I3** in-parallel-use interoperability | **SPLIT** | Art. 34 | R3.0 deferred as one row; 34 carries an operative charge rule → split: | — |
+| → **R-I3a** switching duties applied mutatis mutandis | *(KEEP)* | Art. **34(1)** | Arts. 23, 24, 25(2)(a)(ii)/(a)(iv)/(e)/(f) and 30(2)–(5) apply **mutatis mutandis** to facilitate interoperability for **in-parallel use** of data processing services. Pointer to already-verified Ch. VI duties. | R-G1/G2b/G5 |
+| **R-I4** in-parallel egress charges | **ADOPT / KEEP (new)** | Art. **34(2)** | Where a data processing service is used in parallel with another, providers **may impose data egress charges only to pass on egress costs incurred, without exceeding such costs**. Operative now (no standards dependency); a multi-cloud cost input absent from R3.0. | — |
+| **R-I2** interoperability of data-processing-service standards | **DEFER — SOURCE-CONSTRAINED (confirmed)** | Art. **35(1)/(2)/(8)** | Art. 35 sets what open interop specs/harmonised standards **shall** achieve (interoperability, portability, functional equivalence for 30(1) services) and the cloud interop/portability aspects they must address, but the operative standards are **Commission-driven and not yet published** (central repository per 35(8)). Standards-pending watch-item. Confirms R3.0 defer; source-constrained. | forthcoming standards (Reg. (EU) 1025/2012) |
+| **R-J1** smart-contract essential requirements + conformity | **KEEP (scope-gated)** | Art. **36(1)(a)–(e), 36(2)/(3)/(4)** | A **vendor/deployer of a smart contract that executes a data-sharing agreement** shall ensure it meets five essential requirements — (a) robustness & access control; (b) safe termination/interruption; (c) data archiving & continuity (auditability); (d) rigorous access control; (e) consistency with the agreement's terms — and shall **perform a conformity assessment and issue an EU declaration of conformity** (36(2)/(3)); harmonised-standards conformity presumption (36(4)). The essential requirements + declaration duty are **operative in the Regulation text itself** (not deferred to standards), so KEEP — scope-gated to entrants that actually deploy smart contracts to execute data sharing. | (conformity presumption) forthcoming harmonised standards |
+
+**Supporting locators confirmed this unit (attach, not minted):** Art. 25(2)(f) trade-secret export exemption (detail on R-G2b); Art. 29(4)–(7) fee-transparency + Commission monitoring delegated act (detail on R-G4b); Art. 30(4) online-register update (detail on R-G5c); Art. 32(3) EDIB guidelines + national-security opinion route (detail on R-H1c).
+
+### R3.1-D verdict tally
+
+**Chapter VI (6 live intake → 14 provisions):** KEEP 3 (G1, G3, G6) · SPLIT 3 (G2→3, G4→2, G5→3) · **ADOPT-new 3** (G7/Art 27, G8/Art 31, G9/Art 24) · DROP 0 · DEFER 0.
+**Chapter VII (1 live intake → 3 provisions):** SPLIT 1 (H1→3, wording "reasonable"→"all adequate" corrected).
+**Chapter VIII (1 live intake + 2 parked-in):** KEEP 1 scope-gated (J1) · SPLIT 1 (I3→I3a + new I4/Art 34(2)) · **DEFER — SOURCE-CONSTRAINED 2** (I1/Art 33, I2/Art 35 — standards-pending).
+
+**Net live provisions surviving R3.1-D:** **20** (14 Ch. VI + 3 Ch. VII + 3 Ch. VIII). **Source-constrained/deferred:** 2 (I1, I2). **0 minted.** Next free remains `EP-CLM-000046`.
+
+### Qualifier edges this unit touches (full test in R3.1-F)
+
+- **Q9** R-G4a (29(1) abolition 12.1.2027) ↔ R-G4b (29(2)/(3) interim reduced charges) — default + phased carve-out; and ↔ R-G8 (Art 31 bespoke/test-version exemptions from Art 29).
+- **Q10** R-G5a (30(1) IaaS functional equivalence) ↔ R-G5b (30(2) other-tier open interfaces) ↔ R-G5c (30(3)/(5) standards/export) — tiered duty; and ↔ R-G8 (Art 31 exemption from 30(1)&(3)).
+- **New edge (flag for F):** R-G6 (Art 28 transparency) ↔ R-H1a (Art 32(1) prevention) — disclosure companion to the substantive non-personal-data-sovereignty duty; and R-I3a (Art 34(1)) ↔ R-G1/G2b/G5 — parallel-use reuse of the switching duties.
+
+### Semantic-overreach guard (this unit)
+
+- All Chapter VI numerics are quoted **verbatim** with their exact units (calendar days vs working days vs months) and never approximated; the "~2 months / ~30 days" R3.0 shorthands are replaced by the exact "≤ two months", "30 calendar days", "≥ 30 calendar days", "14 working days", "≤ seven months".
+- The switching-charge rule is stated as a **two-phase** rule (reduced until, then abolished on, **12 January 2027**), never as a flat "no fees" claim.
+- Functional equivalence is stated as **IaaS/infrastructural-only** (Art. 30(1)); other tiers get open-interfaces/export duties — never a blanket "functional equivalence for all cloud."
+- Art. 32 is rendered as a **non-personal-data** safeguard with a two-tier recognition test (international agreement, else conditions), distinct from GDPR Chapter V personal-data transfers (seam S8); "all adequate" not "reasonable".
+- Interoperability (Arts. 33, 35) is marked **source-constrained** — the binding specifics depend on standards/common specs **not yet published**; no present-tense obligation is asserted beyond the Regulation's own text.
+- Smart-contract requirements (Art. 36) are stated **scope-gated** to entrants deploying smart contracts to execute data sharing — not as a general obligation.
+
+---
+
 ## Running tally (all units)
 
 | Unit | Intake (live) | KEEP | SPLIT (→net) | MERGE | DROP | DEFER | Status |
 |---|---|---|---|---|---|---|---|
 | R3.1-A Scope & temporal | 14 | 12 | 2 (→4) | 0 | 0 | 0 | **PASS (reviewed)** |
 | R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — reviewed; coverage-delta ratified in R3.1-C** |
-| R3.1-C Ch. IV–V (+Ch. III delta) | 7 (+3 delta) | 2 | 5 (→12) | 0 | 0 | 1 | **complete — awaiting review** |
-| R3.1-D Ch. VI–VIII | — | — | — | — | — | — | pending |
+| R3.1-C Ch. IV–V (+Ch. III delta) | 7 (+3 delta) | 2 | 5 (→12) | 0 | 0 | 1 | **complete — reviewed (merged PR #59)** |
+| R3.1-D Ch. VI–VIII | 8 (+2 parked) | 4 | 5 (→13) | 0 | 0 | 2 | **complete — awaiting review** |
 | R3.1-E Enforcement & boundaries | — | — | — | — | — | — | pending |
 | R3.1-F Qualification audit (Q1–Q16) | — | — | — | — | — | — | pending |
 
-> Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. Parked rows (carried in, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER.
+> Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. **R3.1-D** additionally **adopts 4 new provisions** (R-G7/Art 27, R-G8/Art 31, R-G9/Art 24, R-I4/Art 34(2)) — net **20 live provisions** surviving R3.1-D. Parked rows (carried in, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER; **R3.1-D** — Art. 33 (I1) + Art. 35 (I2) = DEFER / SOURCE-CONSTRAINED (standards-pending).
 
 **Mint counter: `EP-CLM-*` = 0 · `EP-SRC-*` = 0.** Next free remains `EP-CLM-000046` / `EP-SRC-000006`.
 
