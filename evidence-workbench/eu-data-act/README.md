@@ -1,5 +1,5 @@
 # Sprint R3 — EU Data Act Evidence Graph-grade Upgrade
-**Status:** **R3.0 CLOSED / PASS · R3.1 IN PROGRESS** — R3.1-A reviewed (PASS) · R3.1-B reviewed · R3.1-C reviewed (merged PR #59) · R3.1-D reviewed (merged PR #60) · **R3.1-E (Ch. IX–XI) complete, awaiting review** · **R3.1-F (Q-audit) next — closes R3.1** (all 50 articles now falsified verbatim). No claims minted. No live mutation. Publish Gate NOT OPEN.  
+**Status:** **R3.0 CLOSED / PASS · R3.1 CLOSED / PASS** — R3.1-A..E falsification merged on `main` (Articles 1–50 falsified verbatim; C=#59, D=#60, E=#61) · **R3.1-F constraint audit COMPLETE / PASS** (Q1–Q16 + N1–N7 qualifier edges verified). **Next phase: R3.2 — Identity Fixation (first mint).** No claims minted in R3.1. No live mutation. Publish Gate NOT OPEN.  
 **Official source pack (merged to `main`, used from R3.1-C):** `source-pack/EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` (authentic OJ act) + `source-pack/EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. Falsification locators are read verbatim from this pack (corrigendum affects Art. 48 only).  
 **Discovery deliverables (closed 2026-08-24):** `R3_0_SOURCE_DISCOVERY.md`, `R3_0_CANDIDATE_PROPOSITIONS.md`, `R3_0_DISCOVERY_CLOSEOUT.md` — 54 workbench rows / 46 live corpus; Q1–Q16 qualification pairs; S1–S8 analytical seeds. **R3.1 is authorized but not started** — it becomes executable on the program corpus only once R3.0 lands on `main`.  
 **Opened:** 2026-08-23 (DEC-057)  
@@ -49,7 +49,7 @@ R3 is **not** a copy of the GDPR sprint. It reuses the *operating system* proven
 | Phase | Name | State |
 |---|---|---|
 | R3.0 | Source & Claim Discovery | **CLOSED / PASS** — 9/9 close conditions; 54 rows / 46 live |
-| R3.1 | Claim Map & Falsification | **IN PROGRESS** — R3.1-A/-B/-C/-D reviewed (merged; C=#59, D=#60) · R3.1-E (Ch. IX–XI) complete, awaiting review · R3.1-F (Q-audit) pending — closes R3.1 (all 50 articles falsified verbatim) |
+| R3.1 | Claim Map & Falsification | **CLOSED / PASS** — R3.1-A..E merged (Arts 1–50 falsified verbatim; C=#59, D=#60, E=#61) · R3.1-F constraint audit COMPLETE / PASS (Q1–Q16 + N1–N7) |
 | R3.2 | Identity Fixation + Source Pinning + Draft Serialization | PENDING |
 | R3.3 | Human Literal Verification | PENDING |
 | R3.4 | Canonical Graph + Route Integration Preparation | PENDING |
