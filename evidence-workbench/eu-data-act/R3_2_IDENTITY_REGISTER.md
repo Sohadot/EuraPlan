@@ -40,16 +40,16 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000059` | R-B6 | I | Art. 1(5) | data-protection/privacy law prevails on conflict | Q13 qualifies A1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
 | `EP-CLM-000060` | R-B6b | II | Arts. 4(12)/5(7) | personal-data legal-basis condition (user ≠ data subject) | Q16 qualifies C3/C6/D1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
 | `EP-CLM-000061` | R-B7 | II | Art. 7(2) | anti-waiver of user Ch II rights | Q15 qualifies C1/C3/C6 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
-| `EP-CLM-000062` | R-C1 | II | Art. 3(1) | design-by-default accessibility | default; Q2 exemption, A4 phasing | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000063` | R-C2a | II | Art. 3(2) | connected-product pre-contract info | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000064` | R-C2b | II | Art. 3(3) | related-service pre-contract info | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000065` | R-C3 | II | Art. 4(1) | data-holder access duty | default; Q3 trade-secret (C5), Q16 (B6b) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000066` | R-C4a | II | Art. 4(13) | holder use limited to contract + no adverse insight | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000067` | R-C4b | II | Art. 4(14) | no onward provision of non-personal product data | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000068` | R-C5 | II | Art. 4(6)/(7)/(8) | trade-secret graduated carve-out | Q3 qualifies C3 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000069` | R-C6 | II | Art. 5(1) | user right to share with a third party | default; Q4 (C7/D2), Q16 (B6b) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000070` | R-C7 | II | Art. 5(3) | gatekeeper not an eligible third party | Q4 qualifies C6 (DMA dep) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000071` | R-D1 | II | Art. 6(1) | third-party purpose limitation | — | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000062` | R-C1 | II | Art. 3(1) | design-by-default accessibility | default; Q2 exemption, A4 phasing | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000063` | R-C2a | II | Art. 3(2) | connected-product pre-contract info | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000064` | R-C2b | II | Art. 3(3) | related-service pre-contract info | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000065` | R-C3 | II | Art. 4(1) | data-holder access duty | default; Q3 trade-secret (C5), Q16 (B6b) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000066` | R-C4a | II | Art. 4(13) | holder use limited to contract + no adverse insight | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000067` | R-C4b | II | Art. 4(14) | no onward provision of non-personal product data | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000068` | R-C5 | II | Art. 4(6)/(7)/(8) | trade-secret graduated carve-out | Q3 qualifies C3 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000069` | R-C6 | II | Art. 5(1) | user right to share with a third party | default; Q4 (C7/D2), Q16 (B6b) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) · Q4/D2 fwd-dep → R3.3-D |
+| `EP-CLM-000070` | R-C7 | II | Art. 5(3) | gatekeeper not an eligible third party | Q4 qualifies C6 (DMA dep) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
+| `EP-CLM-000071` | R-D1 | II | Art. 6(1) | third-party purpose limitation | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
 | `EP-CLM-000072` | R-D2 | II | Art. 6(2)(a)-(h) | third-party prohibitions | Q4 qualifies C6 | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000073` | R-D3 | III | Art. 8(1) | FRAND + transparent terms | N1 gated by D9 (Art 12(1)) | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000074` | R-D4 | III | Art. 8(3) | non-discrimination between recipients | N1 gated by D9 | EP-SRC-000006 (+000007) | draft |
