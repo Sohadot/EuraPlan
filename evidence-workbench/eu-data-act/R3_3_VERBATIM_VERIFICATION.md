@@ -1,6 +1,6 @@
 # R3.3 — EU Data Act Human Literal (Verbatim) Verification
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.3 Human Literal Verification
-**Status:** **BLOCKS 1–3 COMPLETE / PASS** — 26/26 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10). Blocks 4–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
+**Status:** **BLOCKS 1–4 COMPLETE / PASS** — 34/34 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8). Blocks 5–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
 **Opened by:** DEC-060 (identity minting) → R3.3 verification is the real-event stage that may set `last_verified_at`.
 **Governed by:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-057; DEC-059; DEC-060
 **Method:** each `EP-CLM` located to its exact Article/paragraph in `EP-SRC-000006`, read **with** `EP-SRC-000007`, compared literally, checked for over-breadth and for carried qualifiers.
@@ -252,4 +252,89 @@ Proceed to **R3.3-D = Block 4** (*Data-holder availability, Chapter III*, `EP-CL
 
 ---
 
-*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3). Internal. Not a published website page. No public claims.json.*
+# R3.3-D — Block 4 (Data-holder availability · Chapter III + C6/Q4 seam close)
+
+**Unit status:** **COMPLETE / PASS** — 8/8 `VERIFIED_LITERAL`. **Date:** 2026-08-31. **Basis:** `EP-SRC-000006` read with `EP-SRC-000007`. Blocks 1–3 untouched. **D2 verified FIRST** to close the C6/Q4 seam carried from R3.3-C.
+
+## 25. Scope of this unit — R3.3-D (Block 4 only)
+
+Verifies **Block 4** by its **authoritative numeric range `EP-CLM-000072` … `EP-CLM-000079`** (eight identities). **First item = D2 (`EP-CLM-000072`, Art. 6(2))** — the deferred limb of C6's Q4 carve-out from R3.3-C — then the Chapter III availability duties. Rows in numeric order: **D2, D3, D4, D5a, D5b, D7, D8, D9**.
+
+**Block-boundary note (continuation of the R3.3-C §17 seam):** numeric range `…072`–`…079` = rows **D2–D9**. The draft-sequence label for Block 4 reads "D3–D10", now **superseded** by the seam correction: **D2** was pulled into this block (its natural numeric home), and **D10 = R-D10 = Art. 12(2) Chapter III anti-waiver = `EP-CLM-000080`** falls in Block 5's numeric range — **not** verified here; it begins R3.3-E. (No D6: R-D6 / Art. 10 dispute settlement was DEFER in R3.1, unminted.)
+
+## 26. Verbatim anchors used (quoted from EP-SRC-000006)
+
+**Article 6(2) — third-party prohibitions (D2):**
+> 6(2): "The third party shall not: (a) make the exercise of choices or rights under Article 5 and this Article by the user unduly difficult, including by offering choices … in a non-neutral manner, or by coercing, deceiving or manipulating the user …; (b) notwithstanding Article 22(2), points (a) and (c), of Regulation (EU) 2016/679, use the data it receives for the profiling, unless it is necessary to provide the service requested by the user; (c) make the data it receives available to another third party, unless … on the basis of a contract with the user, and provided that the other third party takes all necessary measures … to preserve the confidentiality of trade secrets; (d) make the data it receives available to an undertaking designated as a gatekeeper pursuant to Article 3 of Regulation (EU) 2022/1925; (e) use the data … to develop a product that competes with the connected product … or share the data … for that purpose; … not … derive insights about the economic situation, assets and production methods of, or use by, the data holder; (f) use the data … in a manner that has an adverse impact on the security of the connected product or related service; (g) disregard the specific measures agreed … pursuant to Article 5(9) and undermine the confidentiality of trade secrets; (h) prevent the user that is a consumer … from making the data it receives available to other parties."
+
+**Article 8 — availability conditions (D3, D4, D8):**
+> 8(1) [D3]: "Where, in business-to-business relations, a data holder is obliged to make data available to a data recipient under Article 5 or under other applicable Union law or national legislation adopted in accordance with Union law, it shall agree with a data recipient the arrangements for making the data available and shall do so under fair, reasonable and non-discriminatory terms and conditions and in a transparent manner in accordance with this Chapter and Chapter IV."
+> 8(3) [D4]: "A data holder shall not discriminate regarding the arrangements for making data available between comparable categories of data recipients, including partner enterprises or linked enterprises of the data holder … Where a data recipient considers that the conditions … are discriminatory, the data holder shall without undue delay provide … upon its reasoned request … information showing that there has been no discrimination."
+> 8(4) [D8]: "A data holder shall not make data available to a data recipient, including on an exclusive basis, unless requested to do so by the user under Chapter II."
+
+**Article 9 — compensation (D5a, D5b):**
+> 9(1) [D5a]: "Any compensation agreed upon between a data holder and a data recipient for making data available in business-to-business relations shall be non-discriminatory and reasonable and may include a margin."
+> 9(4) [D5b]: "Where the data recipient is an SME or a not-for-profit research organisation and where such a data recipient does not have partner enterprises or linked enterprises that do not qualify as SMEs, any compensation agreed shall not exceed the costs referred to in paragraph 2, point (a)."
+
+**Article 11 — technical protection measures + remedies (D7):**
+> 11(1): "A data holder may apply appropriate technical protection measures, including smart contracts and encryption, to prevent unauthorised access to data … and to ensure compliance with Articles 4, 5, 6, 8 and 9 … Such technical protection measures shall not discriminate between data recipients or hinder a user's right to obtain a copy of, retrieve, use or access data, to provide data to third parties pursuant to Article 5 … Users, third parties and data recipients shall not alter or remove such technical protection measures unless agreed by the data holder."
+> 11(2): "In the circumstances referred to in paragraph 3, the third party or data recipient shall comply, without undue delay, with the requests of the data holder … (a) to erase the data …; (b) to end the production, offering or placing on the market … and destroy any infringing goods, where there is a serious risk … significant harm …; (c) to inform the user …; (d) to compensate the party suffering from the misuse or disclosure …".
+> 11(3): "Paragraph 2 shall apply where a third party or a data recipient has: (a) … provided false information … deployed deceptive or coercive means or abused gaps …; (b) used the data … for unauthorised purposes, including the development of a competing connected product within the meaning of Article 6(2), point (e); (c) unlawfully disclosed data …; (d) not maintained the … measures agreed pursuant to Article 5(9); or (e) altered or removed technical protection measures … without the agreement of the data holder."
+> 11(5): "Where the data recipient infringes Article 6(2), point (a) or (b), users shall have the same rights as data holders under paragraph 2 of this Article."
+
+**Article 12(1) — Chapter III applicability gate (D9):**
+> 12(1): "This Chapter shall apply where, in business-to-business relations, a data holder is obliged under Article 5 or under applicable Union law or national legislation adopted in accordance with Union law, to make data available to a data recipient."
+
+## 27. Block 4 verification table (8 identities · EP-CLM-000072 … 000079)
+
+| EP-CLM | Row | Locator | Literal check vs source | Over-breadth check | Role / qualifier & dependency | Verdict | `last_verified_at` |
+|---|---|---|---|---|---|---|---|
+| `EP-CLM-000072` | R-D2 | Art. 6(2)(a)–(h) | third-party prohibitions verbatim, all eight points (a)–(h) | Not broader — all eight limbs retained incl. profiling/GDPR-22 & gatekeeper cross-refs | **Q4 companion of C6** (`…069`). **Verified FIRST.** With C7 (`…070`, R3.3-C ✓) this **closes C6's Q4 carve-out set** | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000073` | R-D3 | Art. 8(1) | FRAND + transparent terms verbatim | Not broader — "Where … obliged … under Article 5 or … Union/national law" applicability condition retained | **N1** duty, gated by **D9** (Art 12(1), this block ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000074` | R-D4 | Art. 8(3) | non-discrimination between comparable recipients + reasoned-request info verbatim | Not broader | **N1** duty, gated by **D9** (this block ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000075` | R-D5a | Art. 9(1) | compensation "non-discriminatory and reasonable and may include a margin" verbatim | Not broader — "may include a margin" retained | **Q5 default**; carve-out D5b (this block ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000076` | R-D5b | Art. 9(4) | SME/not-for-profit cost-cap verbatim (compensation ≤ Art 9(2)(a) costs), incl. no-disqualifying-partner condition | Not broader — full SME condition retained | **Q5 carve-out of D5a** (bound pair, both this block) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000077` | R-D7 | Art. 11(1)/(2)/(3)/(5) | technical protection measures + graduated remedies verbatim: (1) TPM may apply, must not hinder user Art 4/5 rights, no unilateral removal; (2) erase/end/inform/compensate; (3) trigger conditions; (5) user gets holder-rights on Art 6(2)(a)/(b) infringement | Not broader — the "shall not … hinder a user's right … to provide data to third parties pursuant to Article 5" bound retained | bounded by user Art 4/5 rights; references Art 5(9)/6(2) (this block/Block 3 ✓). Art 11(4) is a supporting locator (travels with parent) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000078` | R-D8 | Art. 8(4) | "shall not make data available to a data recipient, including on an exclusive basis, unless requested to do so by the user under Chapter II" verbatim | Not broader | **N2 gate** of the D-series → back to **C6** (user Ch II request, `…069` R3.3-C ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000079` | R-D9 | Art. 12(1) | Chapter III applicability gate verbatim ("This Chapter shall apply where … a data holder is obliged under Article 5 or … Union/national law, to make data available …") | Not broader | **N1 scope predicate** for D3/D4/D5(a/b)/D7 (all this block ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+
+## 28. Tally — R3.3-D (Block 4)
+
+- **Reviewed:** 8 (`EP-CLM-000072` … `EP-CLM-000079`, rows D2/D3/D4/D5a/D5b/D7/D8/D9).
+- **`VERIFIED_LITERAL`:** **8** — `last_verified_at = 2026-08-31` set on all eight.
+- **`NEEDS_REWRITE`:** 0 · **`NEEDS_QUALIFIER`:** 0 · **`SOURCE_CONSTRAINED`:** 0 · **`BLOCKED`:** 0.
+- **State advance:** `workflow_state: draft → verified` (internal) on the eight; **`validity_state` stays `null`, `published` stays `false`** — no publication-state advance, no Freshness/Publish Gate.
+- **Running R3.3 total:** 34/34 `VERIFIED_LITERAL` across Blocks 1–4 (`EP-CLM-000046..000079`).
+
+## 29. C6 / Q4 seam closure (the reason D2 was verified first)
+
+**CLOSED.** C6 (`EP-CLM-000069`, Art. 5(1) user third-party-sharing right) carries **Q4 = C7 + D2**. C7 (`…070`, Art. 5(3) gatekeeper exclusion) was `VERIFIED` in R3.3-C; **D2 (`…072`, Art. 6(2) prohibitions) is now `VERIFIED` in this unit.** Both limbs of C6's Q4 carve-out are therefore verified — **C6's companion prohibition set is complete.** The R3.3-C forward-dependency flag is resolved: C6 may proceed to R3.4 with C7 **and** D2 present.
+
+## 30. Corrigendum (EP-SRC-000007) effect on Block 4
+
+**NONE.** The corrigendum touches **Article 48 only**. Block 4 covers **Arts. 6(2), 8, 9, 11, 12(1)**; none is touched. Block 4 rests on `EP-SRC-000006` unmodified.
+
+## 31. Qualifier / edge check for Block 4 (N-edges now active)
+
+- **N1** (Ch III duties gated by the Art 12(1) applicability predicate): **D9** (`…079`, Art 12(1)) verified this block; the gated duties **D3/D4/D5a/D5b/D7** all verified this block. Scope predicate present for each. **PASS.**
+- **N2** (Art 8(4) gate → Chapter II request): **D8** (`…078`, Art 8(4)) verified this block; its target **C6** (user Ch II request, `…069`) verified in R3.3-C. Gate + target present. **PASS.**
+- **Q4** (C6 ↔ C7 + D2): **COMPLETE** — both limbs verified (§29). **PASS.**
+- **Q5** (D5a ↔ D5b, Art 9(1)/(4)): default + cost-cap carve-out, both this block. **PASS.**
+- **Ch III anti-waiver (D10 / Art 12(2), `…080`):** **NOT in this unit** — begins R3.3-E (Block 5). Recorded so the Ch III duties render with their anti-waiver once D10 is verified.
+- **N3–N7:** none attach to Block 4 rows (N3 companion H1a/G6 in Ch VI/VII; N4–N7 in Ch VIII–IX). **N/A this unit.**
+- **External dependencies recorded (not minted):** DMA `32022R1925` (D2/Art 6(2)(d) gatekeeper); GDPR `32016R0679` (D2/Art 6(2)(b) profiling / Art 22); EDIB Art 42 (D5a lineage via Art 9(5), deferred/context) — pinned narrowly only if a rendering quotes them (R3.4+), per `R3_2_SOURCE_FIXATION.md` §3.
+
+## 32. Guards honoured (R3.3-D)
+
+- No public `claims.json` created. No public HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt` touched.
+- Freshness Gate **not opened**; Publish Gate **not opened**.
+- No new `EP-CLM` / `EP-SRC` minted; no renumbering. No claim verified outside Block 4 (D10/`…080` explicitly deferred). Blocks 1–3 results unchanged.
+- No CRA / EERS / Protocol work. No route score ≥ 90 claimed.
+
+## 33. Recommendation — R3.3-E
+
+Proceed to **R3.3-E = Block 5** (*Unfair terms, Chapter IV*, `EP-CLM-000080` … `EP-CLM-000088`, rows **D10**, E1a–E6) on a fresh branch off `main` after this unit merges. **Begin at `EP-CLM-000080` (R-D10 = Art. 12(2) Chapter III anti-waiver)** — the deferred Ch III anti-waiver from this unit — so the Chapter III duties (D3/D4/D5/D7) gain their non-derogation boundary before Chapter IV. Then Ch IV: E1a (Art 13(1)) default unenforceability scoped by E3 (Art 13(6)), defined by the fairness tests E2a/E2b/E2c (Art 13(3)/(4)/(5)), carved by E1b (Art 13(2)) and E5 (Art 13(8)), severability E4 (Art 13(7)) — all under **Q6**.
+
+---
+
+*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4). Internal. Not a published website page. No public claims.json.*
