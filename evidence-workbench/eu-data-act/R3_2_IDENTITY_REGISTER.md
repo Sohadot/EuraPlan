@@ -50,14 +50,14 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000069` | R-C6 | II | Art. 5(1) | user right to share with a third party | default; Q4 (C7/D2), Q16 (B6b) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) · Q4/D2 fwd-dep → R3.3-D |
 | `EP-CLM-000070` | R-C7 | II | Art. 5(3) | gatekeeper not an eligible third party | Q4 qualifies C6 (DMA dep) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
 | `EP-CLM-000071` | R-D1 | II | Art. 6(1) | third-party purpose limitation | — | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-C) |
-| `EP-CLM-000072` | R-D2 | II | Art. 6(2)(a)-(h) | third-party prohibitions | Q4 qualifies C6 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000073` | R-D3 | III | Art. 8(1) | FRAND + transparent terms | N1 gated by D9 (Art 12(1)) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000074` | R-D4 | III | Art. 8(3) | non-discrimination between recipients | N1 gated by D9 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000075` | R-D5a | III | Art. 9(1) | reasonable, non-discriminatory compensation | Q5 default | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000076` | R-D5b | III | Art. 9(4) | SME/non-profit cost-cap | Q5 carve-out of D5a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000077` | R-D7 | III | Art. 11(1)/(2)/(3)/(5) | technical protection measures + remedies | bounded by user Art 4/5 rights | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000078` | R-D8 | III | Art. 8(4) | no making-available to a recipient absent user Ch II request | N2 gates D-series (→ C6) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000079` | R-D9 | III | Art. 12(1) | Chapter III applicability gate | N1 scope predicate for D3/D4/D5/D7 | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000072` | R-D2 | II | Art. 6(2)(a)-(h) | third-party prohibitions | Q4 qualifies C6 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D · closes C6/Q4 seam) |
+| `EP-CLM-000073` | R-D3 | III | Art. 8(1) | FRAND + transparent terms | N1 gated by D9 (Art 12(1)) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000074` | R-D4 | III | Art. 8(3) | non-discrimination between recipients | N1 gated by D9 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000075` | R-D5a | III | Art. 9(1) | reasonable, non-discriminatory compensation | Q5 default | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000076` | R-D5b | III | Art. 9(4) | SME/non-profit cost-cap | Q5 carve-out of D5a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000077` | R-D7 | III | Art. 11(1)/(2)/(3)/(5) | technical protection measures + remedies | bounded by user Art 4/5 rights | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000078` | R-D8 | III | Art. 8(4) | no making-available to a recipient absent user Ch II request | N2 gates D-series (→ C6) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
+| `EP-CLM-000079` | R-D9 | III | Art. 12(1) | Chapter III applicability gate | N1 scope predicate for D3/D4/D5/D7 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
 | `EP-CLM-000080` | R-D10 | III | Art. 12(2) | Chapter III anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000081` | R-E1a | IV | Art. 13(1) | unenforceability of unilaterally-imposed unfair term | Q6 default; scoped by E3, defined by E2* | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000082` | R-E1b | IV | Art. 13(2) | mandatory-Union-law carve-out | Q6 qualifies E1a | EP-SRC-000006 (+000007) | draft |
