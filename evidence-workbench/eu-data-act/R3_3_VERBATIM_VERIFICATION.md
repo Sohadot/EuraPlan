@@ -1,6 +1,6 @@
 # R3.3 — EU Data Act Human Literal (Verbatim) Verification
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.3 Human Literal Verification
-**Status:** **BLOCKS 1–2 COMPLETE / PASS** — 16/16 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10). Blocks 3–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
+**Status:** **BLOCKS 1–3 COMPLETE / PASS** — 26/26 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10). Blocks 4–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
 **Opened by:** DEC-060 (identity minting) → R3.3 verification is the real-event stage that may set `last_verified_at`.
 **Governed by:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-057; DEC-059; DEC-060
 **Method:** each `EP-CLM` located to its exact Article/paragraph in `EP-SRC-000006`, read **with** `EP-SRC-000007`, compared literally, checked for over-breadth and for carried qualifiers.
@@ -168,4 +168,88 @@ Proceed to **R3.3-C = Block 3** (*Connected-product access, Chapter II*, `EP-CLM
 
 ---
 
-*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2). Internal. Not a published website page. No public claims.json.*
+# R3.3-C — Block 3 (Connected-product access · Chapter II)
+
+**Unit status:** **COMPLETE / PASS** — 10/10 `VERIFIED_LITERAL`. **Date:** 2026-08-31. **Basis:** `EP-SRC-000006` read with `EP-SRC-000007`. Blocks 1–2 untouched.
+
+## 17. Scope of this unit — R3.3-C (Block 3 only)
+
+Verifies **Block 3** of `R3_2_DRAFT_CLAIM_SEQUENCE.md` — *Connected-product access* (Chapter II) — by its **authoritative numeric range `EP-CLM-000062` … `EP-CLM-000071`** (ten identities: rows C1, C2a, C2b, C3, C4a, C4b, C5, C6, C7, **D1**). This is the first block carrying **Chapter II defaults** (C1 design-by-default, C3 access duty, C6 third-party-sharing right); each is checked with its carve-outs.
+
+**⚠ Block-boundary seam recorded (not resolved here):** the draft sequence labels Block 3 "**C1–D2**", but the block's own numeric range `…062`–`…071` ends at **D1** (`EP-CLM-000071` = R-D1 = Art. 6(1)). **D2 = R-D2 = Art. 6(2)(a)–(h) = `EP-CLM-000072`**, which sits in Block 4's numeric range (`…072`–`…079`). The prompt's authoritative range for this unit is `…062`–`…071`, so **D2 is NOT verified here** — it is carried to R3.3-D. This matters because **D2 is one limb of C6's Q4 carve-out** (see C6 below): C6's companion prohibition set is completed only when D2 is verified in R3.3-D. Recommend R3.3-D begin at `…072` (D2).
+
+## 18. Verbatim anchors used (quoted from EP-SRC-000006)
+
+**Article 3 — "Obligation to make product data and related service data accessible to the user":**
+> 3(1): "Connected products shall be designed and manufactured, and related services shall be designed and provided, in such a manner that product data and related service data, including the relevant metadata necessary to interpret and use those data, are, by default, easily, securely, free of charge, in a comprehensive, structured, commonly used and machine-readable format, and, where relevant and technically feasible, directly accessible to the user."
+> 3(2): "Before concluding a contract for the purchase, rent or lease of a connected product, the seller, rentor or lessor, which may be the manufacturer, shall provide at least the following information to the user, in a clear and comprehensible manner: (a) the type, format and estimated volume of product data …; (b) whether … continuously and in real-time; (c) whether … store data on-device or on a remote server … duration of retention; (d) how the user may access, retrieve or … erase the data …".
+> 3(3): "Before concluding a contract for the provision of a related service, the provider … shall provide at least the following information … (a)–(i)" [nature/volume of product & related-service data; use/third-party purposes; identity & address; contact means; how to request sharing/end it; right to complain (Art 37); trade-secret holder identity; contract duration & termination].
+
+**Article 4 — user↔data-holder access:**
+> 4(1): "Where data cannot be directly accessed by the user from the connected product or related service, data holders shall make readily available data, as well as the relevant metadata necessary to interpret and use those data, accessible to the user without undue delay, of the same quality as is available to the data holder, easily, securely, free of charge, in a comprehensive, structured, commonly used and machine-readable format and, where relevant and technically feasible, continuously and in real-time. This shall be done on the basis of a simple request through electronic means where technically feasible."
+> 4(6): "Trade secrets shall be preserved and shall be disclosed only where the data holder and the user take all necessary measures prior to the disclosure to preserve their confidentiality …" [identify trade-secret data, agree proportionate technical/organisational measures].
+> 4(7): "Where there is no agreement on the necessary measures referred to in paragraph 6, or if the user fails to implement the measures … or undermines the confidentiality …, the data holder may withhold or … suspend the sharing of data identified as trade secrets. The decision … shall be duly substantiated and provided in writing … notify the competent authority …".
+> 4(8): "In exceptional circumstances, where the data holder who is a trade secret holder is able to demonstrate that it is highly likely to suffer serious economic damage from the disclosure of trade secrets, despite the … measures taken by the user …, that data holder may refuse on a case-by-case basis a request for access to the specific data in question. That demonstration shall be duly substantiated on the basis of objective elements …".
+> 4(13): "A data holder shall only use any readily available data that is non-personal data on the basis of a contract with the user. A data holder shall not use such data to derive insights about the economic situation, assets and production methods of, or the use by, the user in any other manner that could undermine the commercial position of that user …".
+> 4(14): "Data holders shall not make available non-personal product data to third parties for commercial or non-commercial purposes other than the fulfilment of their contract with the user. Where relevant, data holders shall contractually bind third parties not to further share data received from them."
+
+**Article 5 — user right to share with third parties:**
+> 5(1): "Upon request by a user, or by a party acting on behalf of a user, the data holder shall make available readily available data, as well as the relevant metadata … to a third party without undue delay, of the same quality as is available to the data holder, easily, securely, free of charge to the user, in a comprehensive, structured, commonly used and machine-readable format and, where relevant and technically feasible, continuously and in real-time. The data shall be made available by the data holder to the third party in accordance with Articles 8 and 9."
+> 5(3): "Any undertaking designated as a gatekeeper, pursuant to Article 3 of Regulation (EU) 2022/1925, shall not be an eligible third party under this Article and therefore shall not: (a) solicit or commercially incentivise a user … to make data available to one of its services …; (b) solicit or commercially incentivise a user to request the data holder to make data available to one of its services …; (c) receive data from a user that the user has obtained pursuant to a request under Article 4(1)."
+
+**Article 6(1) — third-party purpose limitation:**
+> 6(1): "A third party shall process the data made available to it pursuant to Article 5 only for the purposes and under the conditions agreed with the user and subject to Union and national law on the protection of personal data including the rights of the data subject insofar as personal data are concerned. The third party shall erase the data when they are no longer necessary for the agreed purpose, unless otherwise agreed with the user in relation to non-personal data."
+
+## 19. Block 3 verification table (10 identities · EP-CLM-000062 … 000071)
+
+| EP-CLM | Row | Locator | Literal check vs source | Over-breadth check | Role / qualifier & dependency | Verdict | `last_verified_at` |
+|---|---|---|---|---|---|---|---|
+| `EP-CLM-000062` | R-C1 | Art. 3(1) | design-by-default accessibility verbatim ("by default, easily, securely, free of charge … machine-readable … where relevant and technically feasible, directly accessible") | Not broader — "where relevant and technically feasible" limiter on direct access retained | **DEFAULT**; carve-outs **present**: Q2 (B5/B5b micro/small exemption, Block 2 — VERIFIED), A4 phasing (`EP-CLM-000049`, placed-on-market-after-12.9.2026, Block 1 — VERIFIED), Q15 (B7 anti-waiver, Block 2 — VERIFIED) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000063` | R-C2a | Art. 3(2) | connected-product pre-contract info duty verbatim, points (a)–(d) | Not broader — "at least the following" retained | information duty (no external carve-out) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000064` | R-C2b | Art. 3(3) | related-service pre-contract info duty verbatim, points (a)–(i) | Not broader | information duty (no external carve-out) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000065` | R-C3 | Art. 4(1) | data-holder access duty verbatim, incl. "Where data cannot be directly accessed …" scope condition | Not broader — scope condition + "where … technically feasible" retained | **DEFAULT**; carve-outs **present**: **Q3** trade-secret (C5 = `EP-CLM-000068`, this block — VERIFIED below), **Q16** (B6b personal-data condition, Block 2 — VERIFIED), Q15 (B7 anti-waiver, Block 2 — VERIFIED) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000066` | R-C4a | Art. 4(13) | holder use limited to contract + no adverse-insight verbatim | Not broader | limit on data holder (no external carve-out) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000067` | R-C4b | Art. 4(14) | no onward provision of non-personal product data verbatim (+ contractual bind on third parties) | Not broader | limit on data holder | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000068` | R-C5 | Art. 4(6)/(7)/(8) | trade-secret graduated carve-out verbatim: (6) preserve/measures → (7) withhold/suspend on non-agreement/undermining → (8) refuse on serious-economic-damage, case-by-case, substantiated | Not broader — all three tiers + notify-Art 37 duty retained | **Q3** carve-out **of C3** (bound pair, both this block) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000069` | R-C6 | Art. 5(1) | user right to share with third party verbatim (+ "in accordance with Articles 8 and 9" Ch III forward-ref) | Not broader | **DEFAULT**; carve-outs: **Q4** = C7 (`EP-CLM-000070`, this block — VERIFIED) **+ D2** (Art 6(2) prohibitions = `EP-CLM-000072`, **Block 4 — PENDING**, forward dependency ⚠); **Q16** (B6b, Block 2 — VERIFIED); Q15 (B7, Block 2 — VERIFIED). **C6 must not render without both C7 and D2 present** — D2 verified in R3.3-D | **VERIFIED_LITERAL** *(Q4/D2 forward-dependency flagged)* | 2026-08-31 |
+| `EP-CLM-000070` | R-C7 | Art. 5(3) | gatekeeper (Reg (EU) 2022/1925 Art 3) not an eligible third party verbatim, incl. (a)/(b)/(c) | Not broader | **Q4** carve-out of C6 (this block). DMA = external dependency, recorded not minted (SOURCE_FIXATION §3) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000071` | R-D1 | Art. 6(1) | third-party purpose limitation verbatim (+ embedded personal-data boundary + erase-when-no-longer-necessary) | Not broader | limit on third party; embeds GDPR/data-subject boundary | **VERIFIED_LITERAL** | 2026-08-31 |
+
+## 20. Tally — R3.3-C (Block 3)
+
+- **Reviewed:** 10 (`EP-CLM-000062` … `EP-CLM-000071`, rows C1/C2a/C2b/C3/C4a/C4b/C5/C6/C7/D1).
+- **`VERIFIED_LITERAL`:** **10** — `last_verified_at = 2026-08-31` set on all ten.
+- **`NEEDS_REWRITE`:** 0 · **`NEEDS_QUALIFIER`:** 0 · **`SOURCE_CONSTRAINED`:** 0 · **`BLOCKED`:** 0.
+- **State advance:** `workflow_state: draft → verified` (internal) on the ten; **`validity_state` stays `null`, `published` stays `false`** — no publication-state advance, no Freshness/Publish Gate.
+- **Running R3.3 total:** 26/26 `VERIFIED_LITERAL` across Blocks 1–3 (`EP-CLM-000046..000071`).
+
+## 21. Corrigendum (EP-SRC-000007) effect on Block 3
+
+**NONE.** The corrigendum touches **Article 48 only**. Block 3 covers **Arts. 3, 4, 5, 6(1)**; none is touched. Block 3 rests on `EP-SRC-000006` unmodified.
+
+## 22. Qualifier / edge check for Block 3
+
+- **Default-with-carve-out (the key Block 3 check):**
+  - **C1** (Art 3(1)) default → Q2 exemption (B5/B5b, Block 2 ✓), A4 phasing (`…049`, Block 1 ✓), Q15 anti-waiver (B7, Block 2 ✓). **All present. PASS.**
+  - **C3** (Art 4(1)) default → **Q3** trade-secret (C5, this block ✓), **Q16** personal-data (B6b, Block 2 ✓), Q15 (B7, Block 2 ✓). **All present. PASS.**
+  - **C6** (Art 5(1)) default → **Q4** = C7 (this block ✓) **+ D2** (Art 6(2), `…072`, **Block 4 — pending**), Q16 (B6b ✓), Q15 (B7 ✓). **One Q4 limb (D2) is a forward dependency to R3.3-D — recorded; C6 must render with both C7 and D2. PASS-with-flag.**
+- **Q3** (C5 ↔ C3, Art 4(6)/(7)/(8)): both located verbatim, bound pair both in this block. **PASS.**
+- **Q4** (C7 + D2 ↔ C6, Arts 5(3) + 6(2)): C7 located verbatim this block; D2 deferred to Block 4 (numeric-range seam §17). **PASS-with-flag.**
+- **Q2 / Q15 / Q16 / A4** (from Blocks 1–2): all already `VERIFIED`; carried onto the Block 3 defaults they qualify. **PASS.**
+- **N1–N7:** none attach to Block 3 rows (they attach to Ch. III/VI/VII/VIII/IX in Blocks 4–10). **N/A this unit.**
+- **External dependencies recorded (not minted):** DMA `32022R1925` (C7/Art 5(3)); GDPR `32016R0679` / e-Privacy `32002L0058` (D1/Art 6(1), C3/C6 personal-data via B6b) — pinned narrowly only if a rendering quotes them (R3.4+), per `R3_2_SOURCE_FIXATION.md` §3.
+
+## 23. Guards honoured (R3.3-C)
+
+- No public `claims.json` created. No public HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt` touched.
+- Freshness Gate **not opened**; Publish Gate **not opened**.
+- No new `EP-CLM` / `EP-SRC` minted; no renumbering. No claim verified outside Block 3 (D2/`…072` explicitly deferred). Blocks 1–2 results unchanged.
+- No CRA / EERS / Protocol work. No route score ≥ 90 claimed.
+
+## 24. Recommendation — R3.3-D
+
+Proceed to **R3.3-D = Block 4** (*Data-holder availability, Chapter III*, `EP-CLM-000072` … `EP-CLM-000079`, rows **D2**, D3–D10) on a fresh branch off `main` after this unit merges. **Begin at `EP-CLM-000072` (R-D2 = Art 6(2)(a)–(h) third-party prohibitions)** — it is the deferred limb of C6's Q4 carve-out (§17 seam) and must be verified first so C6's companion set is complete. Then Ch III: N1 (D3/D4 gated by D9/Art 12(1)), N2 (D8/Art 8(4) gate), Q5 (D5a/D5b compensation) — the **N-edges become active from Block 4 onward**; verify each Ch III duty with its Art 12(1) applicability gate (D9) and Art 8(4) user-request gate (D8) present.
+
+---
+
+*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3). Internal. Not a published website page. No public claims.json.*
