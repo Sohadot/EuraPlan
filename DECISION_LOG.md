@@ -4,7 +4,7 @@
 **Asset:** EuraPlan.com
 **Owner:** Sohadot
 **Created:** Sprint 4D — June 2026
-**Last Updated:** August 2026 (Sprint 5C)
+**Last Updated:** August 2026 (Sprint 5C; DEC-060 — Data Act R3.2 identity fixation)
 
 ---
 
@@ -704,6 +704,20 @@ Each entry uses the following structure:
   - **R3 state (2026-08-29):** R3.0 Source & Claim Discovery **CLOSED / PASS**; R3.1 Claim Map & Falsification **IN PROGRESS** (R3.1-A reviewed PASS; R3.1-B complete, awaiting review + intake decision on three coverage-delta provisions — Art. 8(4), 12(1), 12(2)); R3.1-C/-D/-E/-F pending; R3.2–R3.8 pending; **0 `EP-CLM-*` minted** (next free `EP-CLM-000046`); **no public `regulation/eu-data-act/claims.json`**; Publish Gate not open
   - **Next evidence-gated action:** record the R3.1-B review verdict and the coverage-delta intake decision, then execute R3.1-C (Ch. IV–V) → R3.1-D (Ch. VI–VIII) → R3.1-E (enforcement/boundaries) → R3.1-F (Q1–Q16) to close R3.1; only then does R3.2 begin minting identities
   - **Legitimate ≥ 90 requires (Data Act):** finish R3.1 falsification → R3.2 identity fixation/source pinning → R3.3 human literal verification → R3.4 canonical `claims.json` → R3.5 branch-only page transformation → R3.6 Decision Utility layer → R3.7 citation/machine registration prep → R3.8 Publish Gate (0–6) → RGS v2 re-score ≥ 90
+
+### DEC-060
+- **Date:** 2026-08-31 (Sprint R3.2 — EU Data Act identity fixation opened)
+- **Status:** Active
+- **Decision:** **Open Sprint R3.2 — Identity Fixation + Source Pinning + Draft Claim Sequencing** for the EU Data Act reference (EP-REG-003), and **authorize the first minting of claim identity** on the Data Act corpus. With **R3.0 CLOSED/PASS** and **R3.1 CLOSED/PASS** on `main` (Articles 1–50 falsified verbatim; R3.1-F constraint audit PASS; merged PRs #59/#60/#61/#62), the 87 live provisions that survived R3.1 receive permanent opaque identities **`EP-CLM-000046` … `EP-CLM-000132`** (next free `EP-CLM-000133`), and the two authentic-text instruments receive source identities **`EP-SRC-000006`** (Regulation (EU) 2023/2854, CELEX `32023R2854`) and **`EP-SRC-000007`** (its corrigendum, OJ L, 2024/90790). R3.2 is **workbench-internal only**: every claim is minted `workflow_state: draft`, `validity_state: null`, `published: false`, with **no** `last_verified_at` and **no** provenance SHA (those are set only by real events in R3.3+). The R3.1-F **Q1–Q16 + N1–N7 `qualified_by` edges are carried into identity** — no broad default is minted without its carve-out(s). **Global opaque sequence only** — never `DATA-CLM-*` / `DA-CLM-*`. **Source-constrained items (Arts. 33/35, R-I1/I2) and all deferred/rejected items receive no identity** and remain internal watch-items. This decision makes **no** public `claims.json`, **no** `routes.json` / `sitemap.xml` / `robots.txt` / `llms.txt` change, **no** public HTML change; the Freshness Gate and Publish Gate stay closed.
+- **Rationale:** R3.2 is the first identity-bearing stage of the Evidence-Graph pipeline, so — as with the R2 GDPR minting under gated DECs — it is opened by an explicit decision before any `EP-CLM`/`EP-SRC` is fixed. Minting onto the R3.1 survivors (not before falsification) with the constraint edges attached is what lets later phases render claims that can never be published as a bare default. Keeping everything `draft` and workbench-internal preserves the DEC-057/DEC-059 gating: no public surface, no ≥ 90 claim, no parallel CRA/EERS/Protocol work.
+- **Affected routes/files:** `DECISION_LOG.md` (this entry); `evidence-workbench/eu-data-act/R3_2_IDENTITY_REGISTER.md` (new — 87 `EP-CLM`), `R3_2_SOURCE_FIXATION.md` (new — `EP-SRC-000006/000007`), `R3_2_DRAFT_CLAIM_SEQUENCE.md` (new), `README.md` (status). **No** live route, HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt`, or public `claims.json` mutation.
+- **Governance documents involved:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; REFERENCE_GRADE_ROUTE_STANDARD.md v2; FRESHNESS_ENGINE.md; DISCLOSURE_BOUNDARY.md; DEC-047; DEC-057; DEC-059
+- **Reversal conditions:** A superseding DEC is required to renumber or recycle any minted `EP-CLM`/`EP-SRC`, to mint identity for a source-constrained or deferred item, or to advance any claim beyond `draft` other than through a real R3.3+ verification/publication event under its own gate. Public exposure of any Data Act `claims.json` remains gated behind the R3.8 Publish Gate under a later DEC.
+- **Notes:**
+  - **Minted:** 87 `EP-CLM` (`…046`–`…132`) + 2 `EP-SRC` (`…006` act, `…007` corrigendum); next free `EP-CLM-000133` / `EP-SRC-000008`
+  - **State:** all `draft` · `validity_state: null` · `published: false`; no public `claims.json`; Freshness Gate + Publish Gate closed
+  - **Carried forward:** R3.1 lineage + Q1–Q16 + N1–N7 edges; source-constrained Arts. 33/35 unminted (watch-only)
+  - **Next:** R3.3 — Human Literal Verification (verify each drafted block against `EP-SRC-000006`+`…007` in sequence order; real events only)
 
 ---
 
