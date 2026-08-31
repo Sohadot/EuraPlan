@@ -58,15 +58,15 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000077` | R-D7 | III | Art. 11(1)/(2)/(3)/(5) | technical protection measures + remedies | bounded by user Art 4/5 rights | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
 | `EP-CLM-000078` | R-D8 | III | Art. 8(4) | no making-available to a recipient absent user Ch II request | N2 gates D-series (→ C6) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
 | `EP-CLM-000079` | R-D9 | III | Art. 12(1) | Chapter III applicability gate | N1 scope predicate for D3/D4/D5/D7 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-D) |
-| `EP-CLM-000080` | R-D10 | III | Art. 12(2) | Chapter III anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000081` | R-E1a | IV | Art. 13(1) | unenforceability of unilaterally-imposed unfair term | Q6 default; scoped by E3, defined by E2* | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000082` | R-E1b | IV | Art. 13(2) | mandatory-Union-law carve-out | Q6 qualifies E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000083` | R-E2a | IV | Art. 13(3) | general unfairness test | Q6 defines E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000084` | R-E2b | IV | Art. 13(4) | always-unfair (black) list | Q6 defines E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000085` | R-E2c | IV | Art. 13(5) | presumed-unfair (grey) list + point-(g) proviso | Q6 defines E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000086` | R-E3 | IV | Art. 13(6) | 'unilaterally imposed' definition + burden of proof | Q6 scopes E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000087` | R-E4 | IV | Art. 13(7) | severability | Q6 qualifies E1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000088` | R-E5 | IV | Art. 13(8) | main-subject-matter / price-adequacy exclusion | Q6 scope limit on E1a | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000080` | R-D10 | III | Art. 12(2) | Chapter III anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E · closes Ch III anti-waiver) |
+| `EP-CLM-000081` | R-E1a | IV | Art. 13(1) | unenforceability of unilaterally-imposed unfair term | Q6 default; scoped by E3, defined by E2* | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) · E6/Ch IV anti-waiver fwd-dep → R3.3-F |
+| `EP-CLM-000082` | R-E1b | IV | Art. 13(2) | mandatory-Union-law carve-out | Q6 qualifies E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000083` | R-E2a | IV | Art. 13(3) | general unfairness test | Q6 defines E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000084` | R-E2b | IV | Art. 13(4) | always-unfair (black) list | Q6 defines E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000085` | R-E2c | IV | Art. 13(5) | presumed-unfair (grey) list + point-(g) proviso | Q6 defines E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000086` | R-E3 | IV | Art. 13(6) | 'unilaterally imposed' definition + burden of proof | Q6 scopes E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000087` | R-E4 | IV | Art. 13(7) | severability | Q6 qualifies E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
+| `EP-CLM-000088` | R-E5 | IV | Art. 13(8) | main-subject-matter / price-adequacy exclusion | Q6 scope limit on E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
 | `EP-CLM-000089` | R-E6 | IV | Art. 13(9) | Chapter IV anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000090` | R-F1 | V | Art. 14 | B2G availability duty (legal persons other than PSBs) | Q7 default; Q8 compensation | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000091` | R-F2a | V | Art. 15(1)(a) | public-emergency route | Q7 qualifies F1 | EP-SRC-000006 (+000007) | draft |

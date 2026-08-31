@@ -1,6 +1,6 @@
 # R3.3 — EU Data Act Human Literal (Verbatim) Verification
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.3 Human Literal Verification
-**Status:** **BLOCKS 1–4 COMPLETE / PASS** — 34/34 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8). Blocks 5–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
+**Status:** **BLOCKS 1–5 COMPLETE / PASS** — 43/43 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8, Block 5 = 9). Blocks 6–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
 **Opened by:** DEC-060 (identity minting) → R3.3 verification is the real-event stage that may set `last_verified_at`.
 **Governed by:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-057; DEC-059; DEC-060
 **Method:** each `EP-CLM` located to its exact Article/paragraph in `EP-SRC-000006`, read **with** `EP-SRC-000007`, compared literally, checked for over-breadth and for carried qualifiers.
@@ -337,4 +337,81 @@ Proceed to **R3.3-E = Block 5** (*Unfair terms, Chapter IV*, `EP-CLM-000080` …
 
 ---
 
-*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4). Internal. Not a published website page. No public claims.json.*
+# R3.3-E — Block 5 (Ch III anti-waiver close + Unfair terms · Chapter IV)
+
+**Unit status:** **COMPLETE / PASS** — 9/9 `VERIFIED_LITERAL`. **Date:** 2026-08-31. **Basis:** `EP-SRC-000006` read with `EP-SRC-000007`. Blocks 1–4 untouched. **D10 verified FIRST** to close the Chapter III non-derogation boundary over the R3.3-D duties.
+
+## 34. Scope of this unit — R3.3-E (Block 5 only)
+
+Verifies **Block 5** by its **authoritative numeric range `EP-CLM-000080` … `EP-CLM-000088`** (nine identities). **First item = D10 (`EP-CLM-000080`, Art. 12(2))** — the Chapter III anti-waiver deferred from R3.3-D — then the Chapter IV unfair-terms claims. Rows in numeric order: **D10, E1a, E1b, E2a, E2b, E2c, E3, E4, E5**.
+
+**Block-boundary seam recorded (continuation of the §17/§25 pattern):** numeric range `…080`–`…088` = rows **D10 + E1a–E5**. The draft-sequence label for Block 5 reads "E1a–E6", off on **both** ends: **D10** was pulled into this block (Ch III anti-waiver, per the R3.3-D §33 recommendation), and **E6 = R-E6 = Art. 13(9) Chapter IV anti-waiver = `EP-CLM-000089`** falls in Block 6's numeric range — **not** verified here; it begins R3.3-F. **E6 is E1a's Chapter IV non-derogation boundary** (Q15-analogue), so it is a forward dependency exactly as D10 was for Ch III (see E1a below).
+
+## 35. Verbatim anchors used (quoted from EP-SRC-000006)
+
+**Article 12(2) — Chapter III anti-waiver (D10):**
+> 12(2): "A contractual term in a data sharing agreement which, to the detriment of one party, or, where applicable, to the detriment of the user, excludes the application of this Chapter, derogates from it, or varies its effect, shall not be binding on that party."
+
+**Article 13 — "Unfair contractual terms unilaterally imposed on another enterprise":**
+> 13(1) [E1a]: "A contractual term concerning access to and the use of data or liability and remedies for the breach or the termination of data related obligations, which has been unilaterally imposed by an enterprise on another enterprise, shall not be binding on the latter enterprise if it is unfair."
+> 13(2) [E1b]: "A contractual term which reflects mandatory provisions of Union law, or provisions of Union law which would apply if the contractual terms did not regulate the matter, shall not be considered to be unfair."
+> 13(3) [E2a — general test]: "A contractual term is unfair if it is of such a nature that its use grossly deviates from good commercial practice in data access and use, contrary to good faith and fair dealing."
+> 13(4) [E2b — always-unfair / black list]: "In particular, a contractual term shall be unfair for the purposes of paragraph 3, if its object or effect is to: (a) exclude or limit the liability of the party that unilaterally imposed the term for intentional acts or gross negligence; (b) exclude the remedies available to the party upon whom the term has been unilaterally imposed in the case of non-performance … or the liability … in the case of a breach …; (c) give the party that unilaterally imposed the term the exclusive right to determine whether the data supplied are in conformity with the contract or to interpret any contractual term."
+> 13(5) [E2c — presumed-unfair / grey list + point-(g) proviso]: "A contractual term shall be presumed to be unfair for the purposes of paragraph 3 if its object or effect is to: (a) inappropriately limit remedies … or extend the liability …; (b) allow … access and use the data … in a manner that is significantly detrimental to the legitimate interests … in particular when such data contain commercially sensitive data or are protected by trade secrets or … intellectual property rights; (c) prevent … from using the data provided or generated …; (d) prevent … from terminating the agreement within a reasonable period; (e) prevent … from obtaining a copy of the data …; (f) enable … to terminate the contract at unreasonably short notice …; (g) enable … to substantially change the price … or any other substantive condition … where no valid reason and no right … to terminate … is specified …". Proviso: "Point (g) of the first subparagraph shall not affect terms by which the party that unilaterally imposed the term reserves the right to unilaterally change the terms of a contract of an indeterminate duration, provided that the contract specified a valid reason …, reasonable notice …, and that the other contracting party is free to terminate the contract at no cost …".
+> 13(6) [E3 — 'unilaterally imposed' definition + burden of proof]: "A contractual term shall be considered to be unilaterally imposed within the meaning of this Article if it has been supplied by one contracting party and the other contracting party has not been able to influence its content despite an attempt to negotiate it. The contracting party that supplied the contractual term bears the burden of proving that that term has not been unilaterally imposed. The contracting party that supplied the contested contractual term may not argue that the term is an unfair contractual term."
+> 13(7) [E4 — severability]: "Where the unfair contractual term is severable from the remaining terms of the contract, those remaining terms shall be binding."
+> 13(8) [E5 — main-subject / price-adequacy exclusion]: "This Article does not apply to contractual terms defining the main subject matter of the contract or to the adequacy of the price, as against the data supplied in exchange."
+> 13(9) [E6 — Chapter IV anti-waiver, `…089`, **NOT this unit**]: "The parties to a contract covered by paragraph 1 shall not exclude the application of this Article, derogate from it, or vary its effects." *(quoted for the forward-dependency record only)*
+
+## 36. Block 5 verification table (9 identities · EP-CLM-000080 … 000088)
+
+| EP-CLM | Row | Locator | Literal check vs source | Over-breadth check | Role / qualifier & dependency | Verdict | `last_verified_at` |
+|---|---|---|---|---|---|---|---|
+| `EP-CLM-000080` | R-D10 | Art. 12(2) | Chapter III anti-waiver verbatim ("excludes the application of this Chapter, derogates from it, or varies its effect, shall not be binding") | Not broader — scoped to a data-sharing-agreement term, "to the detriment of one party / the user" | **Q15-analogue**; **Verified FIRST.** Closes Ch III non-derogation over D3/D4/D5a/D5b/D7/D8/D9 (all R3.3-D ✓) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000081` | R-E1a | Art. 13(1) | unenforceability default verbatim, carrying **all four boundaries**: B2B ("by an enterprise on another enterprise"), data-access/use scope ("concerning access to and the use of data or liability and remedies …"), unilateral imposition ("unilaterally imposed"), unfairness ("if it is unfair") | **Not broader** — no bare "unfair terms are invalid"; all four boundaries retained | **Q6 DEFAULT**; scoped by E3 (13(6)), defined by E2a/E2b/E2c (13(3)/(4)/(5)), carved by E1b (13(2)) + E5 (13(8)), severability E4 (13(7)) — all this block ✓; **Ch IV anti-waiver E6 (13(9), `…089`) = forward dependency → R3.3-F ⚠** | **VERIFIED_LITERAL** *(E6/Ch IV anti-waiver forward-dependency flagged)* | 2026-08-31 |
+| `EP-CLM-000082` | R-E1b | Art. 13(2) | mandatory-Union-law carve-out verbatim ("reflects mandatory provisions of Union law … shall not be considered to be unfair") | Not broader | **Q6 carve-out of E1a** (this block) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000083` | R-E2a | Art. 13(3) | **general unfairness test** verbatim ("grossly deviates from good commercial practice … contrary to good faith and fair dealing") | Not broader | **Q6 defines E1a** — the general standard | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000084` | R-E2b | Art. 13(4) | **always-unfair (black) list** verbatim, "shall be unfair", points (a)–(c) | Not broader — kept distinct from the grey list (E2c); "shall be" (not "presumed") | **Q6 defines E1a** — conclusive category | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000085` | R-E2c | Art. 13(5) | **presumed-unfair (grey) list** verbatim, "presumed to be unfair", points (a)–(g) **+ point-(g) proviso** subpara | Not broader — kept distinct from black list (E2b); "presumed"; proviso retained | **Q6 defines E1a** — rebuttable category | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000086` | R-E3 | Art. 13(6) | 'unilaterally imposed' definition + **burden of proof on supplier** + no-self-challenge verbatim | Not broader | **Q6 scopes E1a** (defines the trigger) | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000087` | R-E4 | Art. 13(7) | **severability** verbatim ("remaining terms shall be binding") | Not broader | **Q6 qualifies E1a** | **VERIFIED_LITERAL** | 2026-08-31 |
+| `EP-CLM-000088` | R-E5 | Art. 13(8) | **main-subject-matter / price-adequacy exclusion** verbatim ("does not apply to contractual terms defining the main subject matter … or to the adequacy of the price, as against the data supplied in exchange") | Not broader | **Q6 scope limit on E1a** | **VERIFIED_LITERAL** | 2026-08-31 |
+
+## 37. Tally — R3.3-E (Block 5)
+
+- **Reviewed:** 9 (`EP-CLM-000080` … `EP-CLM-000088`, rows D10/E1a/E1b/E2a/E2b/E2c/E3/E4/E5).
+- **`VERIFIED_LITERAL`:** **9** — `last_verified_at = 2026-08-31` set on all nine.
+- **`NEEDS_REWRITE`:** 0 · **`NEEDS_QUALIFIER`:** 0 · **`SOURCE_CONSTRAINED`:** 0 · **`BLOCKED`:** 0.
+- **State advance:** `workflow_state: draft → verified` (internal) on the nine; **`validity_state` stays `null`, `published` stays `false`** — no publication-state advance, no Freshness/Publish Gate.
+- **Running R3.3 total:** 43/43 `VERIFIED_LITERAL` across Blocks 1–5 (`EP-CLM-000046..000088`).
+
+## 38. Chapter III anti-waiver closure (the reason D10 was verified first)
+
+**CLOSED.** D10 (`EP-CLM-000080`, Art. 12(2)) is now `VERIFIED`. The Chapter III availability duties verified in R3.3-D — **D3, D4, D5a, D5b, D7, D8, D9** — now carry their **non-derogation boundary**: a data-sharing-agreement term that excludes/derogates/varies Chapter III is not binding. The R3.3-D deferral is resolved; Chapter III duties may proceed to R3.4 with their anti-waiver present.
+
+## 39. Corrigendum (EP-SRC-000007) effect on Block 5
+
+**NONE.** The corrigendum touches **Article 48 only**. Block 5 covers **Arts. 12(2), 13(1)–(8)**; none is touched. Block 5 rests on `EP-SRC-000006` unmodified.
+
+## 40. Qualifier / edge check for Block 5 (Q6 the key check)
+
+- **Q6** (E1a default ↔ its scope/definition/carve-outs): E1a (Art 13(1)) rendered with **E3** (13(6) unilateral-imposition definition + burden ✓), **E2a/E2b/E2c** (13(3)/(4)/(5) general/black/grey tests ✓, three-way distinction preserved), **E1b** (13(2) mandatory-law carve-out ✓), **E5** (13(8) main-subject/price exclusion ✓), **E4** (13(7) severability ✓) — all this block. **The only outstanding limb is the Chapter IV anti-waiver E6 (13(9), `…089`), deferred to R3.3-F** — E1a must render with E6 present. **PASS-with-flag.**
+- **Ch III anti-waiver (D10 / Art 12(2)):** verified this block; closes the R3.3-D boundary (§38). **PASS.**
+- **Q15 analogues:** B7 (Ch II, Block 2 ✓), D10 (Ch III, this block ✓), E6 (Ch IV, `…089`, R3.3-F). Ch II & Ch III closed; Ch IV pending E6.
+- **N1–N7:** none attach to Block 5 rows (D10 is a Ch III anti-waiver, not an N-edge; the E-series is Ch IV). **N/A this unit.**
+- **No unfair-terms default rendered bare:** E1a carries B2B + data-access/use + unilateral-imposition + unfairness boundaries and its Q6 carve-out set (E1b/E2*/E3/E4/E5 in-block; E6 flagged forward). **No broad "unfair terms are invalid" wording verified.**
+
+## 41. Guards honoured (R3.3-E)
+
+- No public `claims.json` created. No public HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt` touched.
+- Freshness Gate **not opened**; Publish Gate **not opened**.
+- No new `EP-CLM` / `EP-SRC` minted; no renumbering. No claim verified outside Block 5 (E6/`…089` explicitly deferred). Blocks 1–4 results unchanged.
+- No CRA / EERS / Protocol work. No route score ≥ 90 claimed.
+
+## 42. Recommendation — R3.3-F
+
+Proceed to **R3.3-F = Block 6** (*B2G exceptional need, Chapter V*, `EP-CLM-000089` … `EP-CLM-000099`, rows **E6**, F1–F6) on a fresh branch off `main` after this unit merges. **Begin at `EP-CLM-000089` (R-E6 = Art. 13(9) Chapter IV anti-waiver)** — the deferred Ch IV non-derogation boundary from this unit — so E1a (and the Chapter IV unfair-terms regime) gains its anti-waiver before Chapter V. Then Ch V under **Q7** (F1 B2G availability default ↔ F2a/F2b/F2c exceptional-need routes + micro/small carve-out) and **Q8** (F4a/F4b compensation split): verify the B2G duty with its exceptional-need routes, PSB limits (F5a/F5b), and criminal/customs/tax carve-out (F6) present.
+
+---
+
+*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4 + R3.3-E Block 5). Internal. Not a published website page. No public claims.json.*
