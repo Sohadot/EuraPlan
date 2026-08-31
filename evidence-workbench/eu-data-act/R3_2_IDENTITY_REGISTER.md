@@ -30,16 +30,16 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000049` | R-A4 | II | Art. 50 + Art. 3(1) | Art 3(1) design duty from 12 Sep 2026 | Q1 phasing of C1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
 | `EP-CLM-000050` | R-A5a | IV | Art. 50 | Ch IV new contracts after 12 Sep 2025 | Q1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
 | `EP-CLM-000051` | R-A5b | IV | Art. 50 | Ch IV legacy from 12 Sep 2027 (indefinite / ≥10y) | Q1; anchored on A2 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
-| `EP-CLM-000052` | R-B1 | I | Art. 2(5) | 'connected product' definition (with primary-function limiter) | scope-gate | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000053` | R-B2 | I | Art. 2(6) | 'related service' definition (incl. later-connected) | scope-gate | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000054` | R-B3a | I | Art. 2(12) | 'user' definition | scope-gate (seam S2) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000055` | R-B3b | I | Art. 2(13) | 'data holder' definition | scope-gate (seam S2) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000056` | R-B4 | I | Art. 2(8) | 'data processing service' definition | scope-gate to Ch VI | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000057` | R-B5 | II | Art. 7(1) | micro/small exemption from Ch II | Q2 qualifies C1/C3/C6 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000058` | R-B5b | II | Art. 7(1) subpara | medium-<1yr + 1-yr product grace (inherited 7(1) qualifier) | Q2 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000059` | R-B6 | I | Art. 1(5) | data-protection/privacy law prevails on conflict | Q13 qualifies A1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000060` | R-B6b | II | Arts. 4(12)/5(7) | personal-data legal-basis condition (user ≠ data subject) | Q16 qualifies C3/C6/D1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000061` | R-B7 | II | Art. 7(2) | anti-waiver of user Ch II rights | Q15 qualifies C1/C3/C6 | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000052` | R-B1 | I | Art. 2(5) | 'connected product' definition (with primary-function limiter) | scope-gate | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000053` | R-B2 | I | Art. 2(6) | 'related service' definition (incl. later-connected) | scope-gate | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000054` | R-B3a | I | Art. 2(12) | 'user' definition | scope-gate (seam S2) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000055` | R-B3b | I | Art. 2(13) | 'data holder' definition | scope-gate (seam S2) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000056` | R-B4 | I | Art. 2(8) | 'data processing service' definition | scope-gate to Ch VI | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000057` | R-B5 | II | Art. 7(1) | micro/small exemption from Ch II | Q2 qualifies C1/C3/C6 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000058` | R-B5b | II | Art. 7(1) subpara | medium-<1yr + 1-yr product grace (inherited 7(1) qualifier) | Q2 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000059` | R-B6 | I | Art. 1(5) | data-protection/privacy law prevails on conflict | Q13 qualifies A1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000060` | R-B6b | II | Arts. 4(12)/5(7) | personal-data legal-basis condition (user ≠ data subject) | Q16 qualifies C3/C6/D1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
+| `EP-CLM-000061` | R-B7 | II | Art. 7(2) | anti-waiver of user Ch II rights | Q15 qualifies C1/C3/C6 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-B) |
 | `EP-CLM-000062` | R-C1 | II | Art. 3(1) | design-by-default accessibility | default; Q2 exemption, A4 phasing | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000063` | R-C2a | II | Art. 3(2) | connected-product pre-contract info | — | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000064` | R-C2b | II | Art. 3(3) | related-service pre-contract info | — | EP-SRC-000006 (+000007) | draft |
