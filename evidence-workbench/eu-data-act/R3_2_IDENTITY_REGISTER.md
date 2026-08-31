@@ -24,12 +24,12 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 
 | EP-CLM ID | R3.1 row | Ch | Provision locator | Draft proposition (short) | qualified_by / edge | Source | State |
 |---|---|---|---|---|---|---|---|
-| `EP-CLM-000046` | R-A1 | I | Title; Art. 1(1); Art. 50 | instrument identity + direct applicability | —; qualified by Q13 (Art 1(5)) & Q14 (Art 44) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000047` | R-A2 | XI | Art. 50 (1st para) | entry into force 11 Jan 2024 (derived) | anchors A5b legacy test | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000048` | R-A3 | XI | Art. 50 (2nd para) | general application 12 Sep 2025 | Q1 default → A4/A5a/A5b/A6 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000049` | R-A4 | II | Art. 50 + Art. 3(1) | Art 3(1) design duty from 12 Sep 2026 | Q1 phasing of C1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000050` | R-A5a | IV | Art. 50 | Ch IV new contracts after 12 Sep 2025 | Q1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000051` | R-A5b | IV | Art. 50 | Ch IV legacy from 12 Sep 2027 (indefinite / ≥10y) | Q1; anchored on A2 | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000046` | R-A1 | I | Title; Art. 1(1); Art. 50 | instrument identity + direct applicability | —; qualified by Q13 (Art 1(5)) & Q14 (Art 44) | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
+| `EP-CLM-000047` | R-A2 | XI | Art. 50 (1st para) | entry into force 11 Jan 2024 (derived) | anchors A5b legacy test | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
+| `EP-CLM-000048` | R-A3 | XI | Art. 50 (2nd para) | general application 12 Sep 2025 | Q1 default → A4/A5a/A5b/A6 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
+| `EP-CLM-000049` | R-A4 | II | Art. 50 + Art. 3(1) | Art 3(1) design duty from 12 Sep 2026 | Q1 phasing of C1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
+| `EP-CLM-000050` | R-A5a | IV | Art. 50 | Ch IV new contracts after 12 Sep 2025 | Q1 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
+| `EP-CLM-000051` | R-A5b | IV | Art. 50 | Ch IV legacy from 12 Sep 2027 (indefinite / ≥10y) | Q1; anchored on A2 | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-A) |
 | `EP-CLM-000052` | R-B1 | I | Art. 2(5) | 'connected product' definition (with primary-function limiter) | scope-gate | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000053` | R-B2 | I | Art. 2(6) | 'related service' definition (incl. later-connected) | scope-gate | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000054` | R-B3a | I | Art. 2(12) | 'user' definition | scope-gate (seam S2) | EP-SRC-000006 (+000007) | draft |
