@@ -1,6 +1,6 @@
 # R3.1 — EU Data Act Claim Map & Falsification Register
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.1 Claim Map & Falsification
-**Status:** IN PROGRESS — falsification only. R3.1-A reviewed (PASS) · R3.1-B reviewed · R3.1-C reviewed (merged PR #59) · R3.1-D reviewed (merged PR #60) · **R3.1-E complete — awaiting review** · **R3.1-F (Q-audit) next — closes R3.1**. All 50 articles now falsified verbatim. **NO `EP-CLM-*` / `EP-SRC-*` minted. No IDs. No live mutation.**
+**Status:** **R3.1 CLOSED / PASS.** R3.1-A..E falsification merged on `main` (Articles 1–50 falsified verbatim) · **R3.1-F constraint audit COMPLETE / PASS** (Q1–Q16 + N1–N7 edges verified; every default carries its qualifier). Next phase: **R3.2 — Identity Fixation** (first mint). **NO `EP-CLM-*` / `EP-SRC-*` minted in R3.1. No public claims.json. Freshness Gate + Publish Gate closed.**
 **Source pack (from R3.1-C onward):** `evidence-workbench/eu-data-act/source-pack/` — authentic OJ act `EU_Data_Act_Regulation_2023_2854_official_text_EN.pdf` + `EU_Data_Act_Corrigendum_2024_12_09_official_text_EN.pdf`. R3.1-C locators were read verbatim from this pack.
 **Branch:** `claude/r3-1-data-act-falsification` (fresh from `main@dd7dc866ed7855428d4bbfe2e50f3fa053d215eb`, Merge #51 — no merge/cherry-pick from the R3.0 branch)
 **Intake baseline (frozen):** R3.0 corpus on `main` — **54 workbench rows / 46 live** (30 candidate + 16 split-needed) + 8 parked (7 defer + 1 reject)
@@ -435,6 +435,77 @@ R3.1-B read Chapter III against the authentic text and surfaced three operative 
 
 ---
 
+## R3.1-F — Constraint audit & R3.1 closure
+
+**Status: COMPLETE / PASS — R3.1 CLOSED.** This is **not** a new article-reading unit and **not** R3.2. It audits the constraint integrity of the whole R3.1 register (A–E) so that **no candidate can later become a public claim without its required qualifiers travelling with it**. No new source reading was required; all edges below are already grounded in the verbatim locators established in R3.1-A..E.
+
+### Coverage statement
+- **Articles 1–50 confirmed falsified verbatim** across merged units: R3.1-A (Ch. I temporal/scope, Art. 50 dates) · R3.1-B (Ch. II–III) · R3.1-C (Ch. IV–V + Ch. III coverage-delta) · R3.1-D (Ch. VI–VIII) · R3.1-E (Ch. IX–XI). All five are present on `main`.
+- **Live provisions across R3.1:** A ≈ 16 · B ≈ 16 · C = 23 · D = 20 · E = 12 (Art. 50 merged back into A). Parked/deferred and rejected items are recorded with reasons in each unit and in the running tally.
+- **Mint state unchanged:** `EP-CLM-*` = 0 (next `EP-CLM-000046`); no public `claims.json`; Freshness Gate and Publish Gate closed.
+
+### Q-numbering authority (difference from the R3.1-F brief — reported, not silently reconciled)
+The **canonical Q1–Q16** are the ones defined in `R3_0_CANDIDATE_PROPOSITIONS.md` §L and carried through R3.1-A..E. **This audit follows those definitions.** The R3.1-F task brief proposed a *different* Q11–Q16 labelling (Q12 = international access, Q13 = interoperability, Q14 = smart contracts, Q15 = sui generis, Q16 = final provisions). Those areas are **all audited here**, but under the canonical structure: the brief's areas map to canonical **Q11** (penalties, incl. 40(4)/40(5)), the **Art. 32** duty-cluster (R-H1 — a standalone duty, not a canonical Q-pair), the **source-constrained** I1/I2 interoperability edges, **R-J1** (Art. 36 smart contracts), canonical **Q12** (sui generis), and canonical **Q14** (Art. 44 savings). No renumbering was applied; the mapping is stated so nothing is lost.
+
+### Q1–Q16 constraint audit (canonical) — every default carries its qualifier
+
+| Q | Default (may never render bare) | `qualified_by` → carve-out / limit | Locators | Verdict |
+|---|---|---|---|---|
+| **Q1** | R-A3 general application (12.9.2025) | R-A4 (Art 3(1) 12.9.2026) · R-A5a/A5b (Ch. IV new/legacy 12.9.2025 / 12.9.2027) · R-A6 (Ch. III future-law) | Art. 50 | **PASS** — temporal-scope edges present |
+| **Q2** | R-C1/R-C3/R-C6 Ch. II duties | R-B5 + R-B5b micro/small + medium-<1yr exemption (with Art. 7(1) partner/linked/subcontract qualifier) | Art. 7(1) | **PASS** |
+| **Q3** | R-C3 data-holder access duty | R-C5 trade-secret carve-out (preserve → withhold/suspend → refuse case-by-case) | Art. 4(6)/(7)/(8) | **PASS** |
+| **Q4** | R-C6 user sharing right | R-C7 gatekeeper exclusion (5(3)) + R-D2 third-party bans (6(2)(a)–(h)) + Art. 5(9)–(11) third-party trade-secret | Art. 5(3), 6(2), 5(9)–(11) | **PASS** |
+| **Q5** | R-D5a reasonable compensation | R-D5b SME / not-for-profit cost-cap | Art. 9(1) / 9(4) | **PASS** |
+| **Q6** | R-E1a unfair-term unenforceability | R-E3 "unilaterally imposed" (13(6)) + R-E2a/b/c tests (13(3)/(4)/(5)) + R-E1b mandatory-law (13(2)) + R-E5 subject-matter/price (13(8)) + R-E4 severability (13(7)) | Art. 13 | **PASS** — expanded in R3.1-C |
+| **Q7** | R-F1 B2G availability duty | R-F2a/b exceptional need (15(1)(a)/(b)) + R-F2c micro/small (15(2), route-specific) + R-F6 criminal/customs/tax carve-out (16(2)) | Arts. 14/15/16 | **PASS** — expanded in R3.1-C |
+| **Q8** | R-F1 B2G duty | R-F4a emergency free (20(1)) vs R-F4b fair compensation incl. micro/small (20(2)/(3)) | Art. 20 | **PASS** |
+| **Q9** | R-G4a switching-charge abolition (12.1.2027) | R-G4b interim reduced ≤ cost (29(2)/(3)) + R-G8 bespoke/test-version exemption (31) | Arts. 29 / 31 | **PASS** — R3.1-D |
+| **Q10** | R-G5a IaaS functional equivalence (30(1)) | R-G5b other-tier open interfaces (30(2)) + R-G5c standards/export (30(3)/(5)) + R-G8 exemption (31(1)) | Arts. 30 / 31 | **PASS** — R3.1-D |
+| **Q11** | R-K2a national penalties (40(1)) | R-K2b GDPR Art. 83 fines for Ch. II/III/V, within GDPR-SA competence (40(4)) + R-K2c EDPS fines for Ch. V (40(5)) | Art. 40 | **PASS** — 40(5) added in R3.1-E |
+| **Q12** | external sui generis DB right (Dir. 96/9 Art. 7) | R-K4 carve-out for connected-product/related-service data (Arts. 4/5) | Art. 43 | **PASS** |
+| **Q13** | R-A1 Data Act applies | R-B6 personal-data/privacy law prevails on conflict | Art. 1(5) | **PASS** |
+| **Q14** | R-A1 Data Act as general layer | R-K5a pre-2024 acts unaffected (44(1)) + R-K5b sector/data-space further requirements (44(2)) + R-K5c research carve-out except Ch. V (44(3)) | Art. 44 | **PASS** — expanded in R3.1-E |
+| **Q15** | R-C1/R-C3/R-C6 user Ch. II rights | R-B7 anti-waiver (7(2)); Ch. III analogue R-D10 (12(2)); Ch. IV analogue R-E6 (13(9)) | Arts. 7(2)/12(2)/13(9) | **PASS** — analogues added in C/E |
+| **Q16** | R-C3/R-C6/R-D1 access/sharing/third-party use | R-B6b personal-data legal-basis condition where user ≠ data subject | Arts. 4(12)/5(7) | **PASS** |
+
+### Constraint edges added in R3.1-A..E beyond the original 16 (verified present)
+
+| Edge | Default | `qualified_by` / gate | Locator | Verdict |
+|---|---|---|---|---|
+| **N1** | Ch. III D-series (R-D3/D4/D5/D7) | R-D9 Chapter III applicability gate (only where obliged under Art. 5 / other law) | Art. 12(1) | **PASS** |
+| **N2** | any making-available to a recipient | R-D8 must originate in a user Chapter II request (incl. exclusive basis) | Art. 8(4) | **PASS** |
+| **N3** | R-H1a Art. 32(1) non-personal-data prevention duty | R-G6 Art. 28 contractual transparency (disclosure companion) | Arts. 28 / 32 | **PASS** |
+| **N4** | R-I3a in-parallel-use interoperability | reuses R-G1/G2b/G5 switching duties mutatis mutandis; R-I4 egress charges ≤ cost | Arts. 34(1)/(2) | **PASS** |
+| **N5** | every substantive Data Act duty on a non-EU entrant | R-K1c legal-representative designation is the enforcement hook (until then, competence of all MS) | Art. 37(11)/(13) | **PASS** |
+| **N6 (int'l access)** | R-H1a prevention duty | R-H1b recognition only via international agreement (32(2)) + R-H1c absent-agreement conditions (32(3)–(5)) | Art. 32 | **PASS** |
+| **N7 (smart contracts)** | R-J1 five essential requirements | scope-gated to entrants deploying smart contracts + EU declaration of conformity (36(2)/(3)) | Art. 36 | **PASS (scope-gated)** |
+
+### Default→carve-out pairs (summary)
+All broad defaults are bound: application dates → phasing (Q1); Ch. II/III duties → SME/micro exemptions (Q2, Q5) and trade-secret limits (Q3); sharing rights → gatekeeper/third-party bans (Q4) and personal-data basis (Q16); unfair-term rule → scope + fairness + severability + subject-matter carve-outs (Q6); B2G duty → exceptional-need + micro/small + criminal-tax carve-outs (Q7) and emergency-free/compensation split (Q8); switching duties → charge phase-out + bespoke exemptions (Q9) and service-tier limits (Q10); penalties → chapter-scoped GDPR/EDPS fine routes (Q11); Data Act → GDPR-prevalence (Q13) and sectoral/research savings (Q14) and non-waiver analogues (Q15); sui generis carve-out bounded (Q12); plus the seven cross-chapter edges N1–N7.
+
+### Unresolved / source-constrained constraints
+- **No unresolved *blocking* constraint.** Every live default has its qualifier(s) recorded.
+- **Source-constrained (non-blocking, standards-pending):** **R-I1 (Art. 33)** and **R-I2 (Art. 35)** interoperability essential-requirements — their operative specifics rest on Commission delegated acts / harmonised standards **not yet published**. These are correctly held as **DEFER / SOURCE-CONSTRAINED** watch-items; they cannot be minted into public claims until the standards exist and are pinned. This is a *deliberate* constraint, not a gap.
+- **Deferred (context, not entrant obligations):** Art. 41 (non-binding MCT/SCC), Art. 42 (EDIB), Arts. 47–48 (outbound amendments). **Rejected/excluded:** Arts. 45–46 (delegation/comitology), Art. 49 (evaluation). Recorded with reasons; none is a suppressed obligation.
+
+### R3.1 closure decision
+
+R3.1 is marked **CLOSED / PASS**. All closure conditions are met:
+
+- [x] Articles 1–50 coverage confirmed (R3.1-A..E merged on `main`)
+- [x] Q1–Q16 audited (canonical workbench definitions; brief's alternate labelling reconciled, not silently renumbered)
+- [x] Required `qualified_by` edges present — every default carries its carve-out(s); 7 cross-chapter edges (N1–N7) added
+- [x] No unresolved *blocking* constraint (I1/I2 held as source-constrained watch-items by design)
+- [x] No public `claims.json` exists
+- [x] No `EP-CLM-*` anchors minted (next free `EP-CLM-000046`)
+- [x] Freshness Gate closed · Publish Gate closed
+- [x] No public HTML modified · no `routes.json`/`sitemap.xml`/`robots.txt`/`llms.txt` change
+- [x] No CRA / EERS / Protocol work performed · no ≥ 90 score claimed
+
+**Next phase:** R3.2 — Identity Fixation + Source Pinning + Draft Serialization. R3.2 is the first phase that **mints** identity (`EP-CLM-000046`+) onto the R3.1 survivors and pins `EP-SRC-*`; it is a significant governance step and is the natural point for the next `DECISION_LOG.md` entry (as R2 minted under gated DECs). R3.1-F itself is a workbench closure and does **not** require a DEC.
+
+---
+
 ## Running tally (all units)
 
 | Unit | Intake (live) | KEEP | SPLIT (→net) | MERGE | DROP | DEFER | Status |
@@ -443,8 +514,8 @@ R3.1-B read Chapter III against the authentic text and surfaced three operative 
 | R3.1-B Ch. II–III | 13 | 10 | 3 (→6) | 0 | 0 | 0 | **complete — reviewed; coverage-delta ratified in R3.1-C** |
 | R3.1-C Ch. IV–V (+Ch. III delta) | 7 (+3 delta) | 2 | 5 (→12) | 0 | 0 | 1 | **complete — reviewed (merged PR #59)** |
 | R3.1-D Ch. VI–VIII | 8 (+2 parked) | 4 | 5 (→13) | 0 | 0 | 2 | **complete — reviewed (merged PR #60)** |
-| R3.1-E Ch. IX–XI | 4 (+1 parked) | 1 | 3 (→10) | 1 | 0 | 3 | **complete — awaiting review** |
-| R3.1-F Qualification audit (Q1–Q16) | — | — | — | — | — | — | pending |
+| R3.1-E Ch. IX–XI | 4 (+1 parked) | 1 | 3 (→10) | 1 | 0 | 3 | **complete — reviewed (merged PR #61)** |
+| R3.1-F Qualification audit (Q1–Q16) | — (audit) | — | — | — | — | — | **COMPLETE / PASS — R3.1 CLOSED** |
 
 > Live-intake counts only. **R3.1-C** additionally **adopts 9 new provisions** not in the R3.0 live-intake columns: 3 Chapter III coverage-delta (R-D8/8(4), R-D9/12(1), R-D10/12(2)), 3 within-Article-13 (R-E4/13(7), R-E5/13(8), R-E6/13(9)), 2 un-deferred Chapter V (R-F5a/Art 19, R-F5b/Art 21), and 1 new Chapter V scope carve-out (R-F6/Art 16) — net **23 provisions** surviving R3.1-C. **R3.1-D** additionally **adopts 4 new provisions** (R-G7/Art 27, R-G8/Art 31, R-G9/Art 24, R-I4/Art 34(2)) — net **20 live provisions** surviving R3.1-D. **R3.1-E** additionally **adopts 2 new provisions** (R-K1c/Art 37(11) non-EU legal representative, R-K2c/Art 40(5) EDPS Ch. V fines), MERGEs Art 50 into R3.1-A, and REJECTs Arts 45–46 + Art 49 — net **12 live provisions** surviving R3.1-E. Parked / deferred rows (carried in or confirmed, outside live intake): **R3.1-A** — A6 = DEFER, A7 = DROP; **R3.1-B** — D6 = DEFER; **R3.1-C** — Art. 22 = DEFER; **R3.1-D** — Art. 33 (I1) + Art. 35 (I2) = DEFER / SOURCE-CONSTRAINED; **R3.1-E** — Art. 41, Art. 42, Arts. 47–48 = DEFER (context); Arts. 45–46, Art. 49 = REJECT / EXCLUDE. **With R3.1-E, all 50 articles (Chapters I–XI) have been falsified verbatim; R3.1-F (Q-audit) closes R3.1.**
 
