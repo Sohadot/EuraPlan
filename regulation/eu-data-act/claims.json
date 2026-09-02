@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "batch": "EU Data Act - canonical claim graph (Data Act v1; published / active - live on main)",
+    "batch": "EU Data Act - canonical claim graph (Data Act v1; published / active)",
     "status": "published / active - canonical claim graph for the EU Data Act reference route (EP-REG-003). 87/87 claims workflow_state=published; validity_state=active; verified against the pinned Official Journal source (EP-SRC-000006) read with its corrigendum. No claim text, ID, source edge, qualified_by, related_claims, co_render_blocking_pairs, EERS mapping, claim_risk or last_verified_at changed at publication.",
     "location_note": "regulation/eu-data-act/claims.json - canonical machine-readable claim graph for the EU Data Act reference route (EP-REG-003). Mirrors the visible Verified Claim Register on /regulation/eu-data-act/.",
     "published": true,
@@ -50,7 +50,7 @@
       "claim_risk per CLAIM_POLICY v1.1: Low only for bibliographic instrument identity; all legal applicability/scope, compliance, right/restriction, exemption-with-effect and deadline claims are High (Tier-1 basis EP-SRC-000006).",
       "EERS dimensions per EERS_1.0 (multiple allowed): DIM-01 identification/scope/actor; DIM-02 timing; DIM-04 entity/representation/establishment; DIM-06 concrete product/service requirements; DIM-07 enforcement/penalty exposure.",
       "Index control: exact-path X-Robots-Tag: noindex on /regulation/eu-data-act/claims.json (CDN index-control doctrine). routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
-      "Provenance (release_sha, merge_sha, live_on_main_since) is finalized post-merge from the real git events; it is not set pre-merge.",
+      "Publication provenance (the release commit SHA, the merge commit SHA, and the publication date) is finalized post-merge from the real git events; it is not set pre-merge.",
       "I1/I2 (Arts 33/35 interoperability essential requirements) carry no EP-CLM identity (source-constrained) and are excluded from the graph."
     ],
     "generated": "2026-09-02",

@@ -29,7 +29,7 @@ for c in rc_claims:
     pub_claims.append(p)
 
 pub_meta = {
-    "batch": "EU Data Act - canonical claim graph (Data Act v1; published / active - live on main)",
+    "batch": "EU Data Act - canonical claim graph (Data Act v1; published / active)",
     "status": ("published / active - canonical claim graph for the EU Data Act reference route (EP-REG-003). "
                "87/87 claims workflow_state=published; validity_state=active; verified against the pinned Official "
                "Journal source (EP-SRC-000006) read with its corrigendum. No claim text, ID, source edge, "
@@ -62,7 +62,7 @@ pub_meta = {
         "entity/representation/establishment; DIM-06 concrete product/service requirements; DIM-07 enforcement/penalty exposure.",
         "Index control: exact-path X-Robots-Tag: noindex on /regulation/eu-data-act/claims.json (CDN index-control doctrine). "
         "routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
-        "Provenance (release_sha, merge_sha, live_on_main_since) is finalized post-merge from the real git events; it is not set pre-merge.",
+        "Publication provenance (the release commit SHA, the merge commit SHA, and the publication date) is finalized post-merge from the real git events; it is not set pre-merge.",
         "I1/I2 (Arts 33/35 interoperability essential requirements) carry no EP-CLM identity (source-constrained) and are excluded from the graph.",
     ],
     "generated": rc["_meta"]["generated"],
@@ -72,6 +72,11 @@ pub_meta = {
 pub = {"_meta": pub_meta, "claims": pub_claims}
 os.makedirs(LIVE, exist_ok=True)
 json.dump(pub, open(os.path.join(LIVE, "claims.json"), "w"), indent=2, ensure_ascii=False)
+
+# release assertion: the pre-merge public graph must not assert live-state or invent provenance
+_pub_blob = json.dumps(pub)
+for _bad in ["live on main", "release_sha", "merge_sha", "live_on_main_since"]:
+    assert _bad not in _pub_blob, f"public graph must not contain premature/provenance token: {_bad!r}"
 
 # ---------- 2. live index.html ----------
 html = open(os.path.join(HERE, "index.html")).read()
