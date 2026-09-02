@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "asset": "EuraPlan.com",
-  "last_updated": "2026-08-23",
+  "last_updated": "2026-09-02",
   "governing_document": "ROUTE_GOVERNANCE.md",
   "doctrine": "No combinatorial URLs. Context is carried by the system, not multiplied into the URL tree.",
   "routes": [
@@ -205,7 +205,17 @@
       "required_internal_links": ["/", "/enter/", "/clock/", "/regulation/eu-ai-act/", "/regulation/gdpr/", "/regulation/cyber-resilience-act/", "/standard/eers/", "/protocol/", "/sources/", "/governance/"],
       "source_requirement": "Tier 1 official — EUR-Lex Data Act text, European Commission Data Act and data economy materials",
       "content_status": "complete",
-      "publication_status": "published"
+      "publication_status": "published",
+      "alternate_representations": [
+        {
+          "path": "/regulation/eu-data-act/claims.json",
+          "media_type": "application/json",
+          "role": "canonical_claim_graph",
+          "canonical_parent": "/regulation/eu-data-act/",
+          "indexable": false,
+          "sitemap": false
+        }
+      ]
     },
     {
       "route_id": "EP-REG-004",

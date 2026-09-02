@@ -1,0 +1,2845 @@
+{
+  "_meta": {
+    "batch": "EU Data Act - canonical claim graph (Data Act v1; published / active - live on main)",
+    "status": "published / active - canonical claim graph for the EU Data Act reference route (EP-REG-003). 87/87 claims workflow_state=published; validity_state=active; verified against the pinned Official Journal source (EP-SRC-000006) read with its corrigendum. No claim text, ID, source edge, qualified_by, related_claims, co_render_blocking_pairs, EERS mapping, claim_risk or last_verified_at changed at publication.",
+    "location_note": "regulation/eu-data-act/claims.json - canonical machine-readable claim graph for the EU Data Act reference route (EP-REG-003). Mirrors the visible Verified Claim Register on /regulation/eu-data-act/.",
+    "published": true,
+    "route_id": "EP-REG-003",
+    "schema_version": "EVIDENCE_GRAPH_MODEL.md v1.4",
+    "claim_count": 87,
+    "id_range": "EP-CLM-000046..EP-CLM-000132",
+    "co_render_blocking_pairs": [
+      "EP-CLM-000046 + EP-CLM-000059",
+      "EP-CLM-000062 + EP-CLM-000061",
+      "EP-CLM-000065 + EP-CLM-000061",
+      "EP-CLM-000069 + EP-CLM-000061",
+      "EP-CLM-000073 + EP-CLM-000079",
+      "EP-CLM-000073 + EP-CLM-000080",
+      "EP-CLM-000075 + EP-CLM-000080",
+      "EP-CLM-000081 + EP-CLM-000089",
+      "EP-CLM-000090 + EP-CLM-000100",
+      "EP-CLM-000101 + EP-CLM-000114",
+      "EP-CLM-000109 + EP-CLM-000114",
+      "EP-CLM-000111 + EP-CLM-000114",
+      "EP-CLM-000108 + EP-CLM-000115"
+    ],
+    "excluded_source_constrained": [
+      "R-I1 (Art. 33)",
+      "R-I2 (Art. 35)"
+    ],
+    "embedded_unminted_qualifiers": [
+      "EP-CLM-000069 embeds the Article 5(9)-(11) third-party trade-secret boundary (no separate EP-CLM identity)."
+    ],
+    "governed_by": [
+      "EVIDENCE_GRAPH_MODEL.md",
+      "CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md",
+      "SOURCE_POLICY.md",
+      "CLAIM_POLICY.md",
+      "ROUTE_GOVERNANCE.md",
+      "DISCLOSURE_BOUNDARY.md",
+      "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "EERS_1.0_CANDIDATE_SPECIFICATION.md",
+      "DEC-057",
+      "DEC-059",
+      "DEC-060"
+    ],
+    "notes": [
+      "Assembled from the EU Data Act human-literal verification (87/87 human-verified against the primary source) and the R3.1-F Q1-Q16/N1-N7 constraint audit. Claim prose is EuraPlan's plain-language proposition (not a verbatim quotation of the act); provision_locator is the exact Article/paragraph.",
+      "Source edges use only supports/amends/clarifies. The corrigendum EP-SRC-000007 affects Article 48 only and amends/clarifies none of these 87 claims, so it carries no per-claim edge; it is retained in source_registry as the corrigendum read with the authentic act, with no effect on any claim.",
+      "Claim->Claim relations: qualified_by only for a claim that narrows/excepts/conditions another; structural adjacency is related_claims; anti-waiver and applicability boundaries that accompany a right without narrowing its truth are co_render_blocking_pairs.",
+      "claim_risk per CLAIM_POLICY v1.1: Low only for bibliographic instrument identity; all legal applicability/scope, compliance, right/restriction, exemption-with-effect and deadline claims are High (Tier-1 basis EP-SRC-000006).",
+      "EERS dimensions per EERS_1.0 (multiple allowed): DIM-01 identification/scope/actor; DIM-02 timing; DIM-04 entity/representation/establishment; DIM-06 concrete product/service requirements; DIM-07 enforcement/penalty exposure.",
+      "Index control: exact-path X-Robots-Tag: noindex on /regulation/eu-data-act/claims.json (CDN index-control doctrine). routes.json indexable:false is governance metadata only; this file is never listed in the sitemap.",
+      "Provenance (release_sha, merge_sha, live_on_main_since) is finalized post-merge from the real git events; it is not set pre-merge.",
+      "I1/I2 (Arts 33/35 interoperability essential requirements) carry no EP-CLM identity (source-constrained) and are excluded from the graph."
+    ],
+    "generated": "2026-09-02",
+    "source_registry": {
+      "EP-SRC-000006": {
+        "instrument_id": "EU-2023-2854",
+        "official_title": "Regulation (EU) 2023/2854 of the European Parliament and of the Council of 13 December 2023 on harmonised rules on fair access to and use of data and amending Regulation (EU) 2017/2394 and Directive (EU) 2020/1828 (Data Act)",
+        "celex": "32023R2854",
+        "eli": "http://data.europa.eu/eli/reg/2023/2854/oj",
+        "oj_reference": "OJ L, 2023/2854, 22.12.2023",
+        "source_version_date": "2023-12-22",
+        "retrieved_at": "2026-08-31",
+        "source_tier": 1,
+        "role": "authentic Official Journal act - evidentiary basis (supports every claim)"
+      },
+      "EP-SRC-000007": {
+        "instrument_id": "EU-2023-2854-CORRIGENDUM-20241209",
+        "official_title": "Corrigendum to Regulation (EU) 2023/2854 (Data Act)",
+        "eli": "http://data.europa.eu/eli/reg/2023/2854/corrigendum/2024-12-09/oj",
+        "oj_reference": "OJ L, 2024/90790, 9.12.2024",
+        "source_version_date": "2024-12-09",
+        "retrieved_at": "2026-08-31",
+        "source_tier": 1,
+        "role": "corrigendum read with EP-SRC-000006; affects Article 48 only; no effect on any of these 87 claims, hence no per-claim edge"
+      }
+    }
+  },
+  "claims": [
+    {
+      "id": "EP-CLM-000046",
+      "display_label": "Data Act / A1 / Ch I / Title; Art. 1(1); Art. 50",
+      "claim": "The EU Data Act is Regulation (EU) 2023/2854 of the European Parliament and of the Council of 13 December 2023 (CELEX 32023R2854), a regulation directly applicable in all Member States.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Title; Art. 1(1); Art. 50",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000059",
+        "EP-CLM-000130",
+        "EP-CLM-000131",
+        "EP-CLM-000132"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "Low",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000047",
+      "display_label": "Data Act / A2 / Ch XI / Art. 50 (1st para)",
+      "claim": "The EU Data Act entered into force on 11 January 2024, the twentieth day following its publication in the Official Journal on 22 December 2023.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2024-01-11",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 50 (1st para)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000048",
+      "display_label": "Data Act / A3 / Ch XI / Art. 50 (2nd para)",
+      "claim": "The EU Data Act applies in general from 12 September 2025 (Article 50).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2025-09-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 50 (2nd para)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000049",
+        "EP-CLM-000050",
+        "EP-CLM-000051"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000049",
+      "display_label": "Data Act / A4 / Ch II / Art. 50 + Art. 3(1)",
+      "claim": "The Article 3(1) access-by-design obligation applies to connected products and related services placed on the market after 12 September 2026.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2026-09-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 50 + Art. 3(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000050",
+      "display_label": "Data Act / A5a / Ch IV / Art. 50",
+      "claim": "Chapter IV (unfair contractual terms) applies to contracts concluded after 12 September 2025.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2025-09-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 50",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000051",
+      "display_label": "Data Act / A5b / Ch IV / Art. 50",
+      "claim": "Chapter IV applies from 12 September 2027 to contracts concluded on or before 12 September 2025 that are of indefinite duration or expire at least 10 years from 11 January 2024.",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2027-09-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 50",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000052",
+      "display_label": "Data Act / B1 / Ch I / Art. 2(5)",
+      "claim": "A 'connected product' is an item that obtains, generates or collects data concerning its use or environment and is able to communicate product data via an electronic communications service, physical connection or on-device access, and whose primary function is not the storing, processing or transmission of data on behalf of any party other than the user (Article 2(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000053",
+      "display_label": "Data Act / B2 / Ch I / Art. 2(6)",
+      "claim": "A 'related service' is a digital service, other than an electronic communications service, including software, connected with the product at or after purchase, rent or lease such that its absence would prevent the product from performing one or more of its functions, or subsequently connected to add, update or adapt functions (Article 2(6)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(6)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000054",
+      "display_label": "Data Act / B3a / Ch I / Art. 2(12)",
+      "claim": "A 'user' is a natural or legal person that owns a connected product, to whom temporary rights to use it have been contractually transferred, or that receives related services (Article 2(12)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(12)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000055",
+      "display_label": "Data Act / B3b / Ch I / Art. 2(13)",
+      "claim": "A 'data holder' is a natural or legal person that has the right or obligation, in accordance with this Regulation, applicable Union law or national law adopted in accordance with Union law, to use and make available data, including, where contractually agreed, product data or related-service data it has retrieved or generated during the provision of a related service (Article 2(13)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(13)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000056",
+      "display_label": "Data Act / B4 / Ch I / Art. 2(8)",
+      "claim": "A 'data processing service' is a digital service provided to a customer that enables ubiquitous and on-demand network access to a shared pool of configurable, scalable and elastic computing resources of a centralised, distributed or highly distributed nature that can be rapidly provisioned and released with minimal management effort or service-provider interaction (Article 2(8)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000057",
+      "display_label": "Data Act / B5 / Ch II / Art. 7(1)",
+      "claim": "The Chapter II obligations do not apply to data generated through the use of connected products manufactured or designed, or related services provided, by a microenterprise or small enterprise, provided that enterprise has no partner or linked enterprise (within Article 3 of the Annex to Recommendation 2003/361/EC) that is not itself a micro or small enterprise, and is not subcontracted to manufacture or design the product or provide the service (Article 7(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 7(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000058",
+      "display_label": "Data Act / B5b / Ch II / Art. 7(1) subpara",
+      "claim": "The same Article 7(1) exemption applies to an enterprise that has qualified as a medium-sized enterprise for less than one year, and to connected products for one year after they are placed on the market by such an enterprise, carrying the same Article 7(1) conditions rather than as an unconditional exemption (Article 7(1), second subparagraph).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 7(1) subpara",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000059",
+      "display_label": "Data Act / B6 / Ch I / Art. 1(5)",
+      "claim": "Where the Data Act conflicts with Union law on the protection of personal data or privacy, or with national implementing law, the data-protection or privacy law prevails (Article 1(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 1(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000060",
+      "display_label": "Data Act / B6b / Ch II / Arts. 4(12)/5(7)",
+      "claim": "Where the user is not the data subject, personal data generated by the use of a connected product or related service may be made available (to the user or to a third party) only where there is a valid legal basis for processing under Article 6 GDPR and, where relevant, the conditions of Article 9 GDPR and of Article 5(3) of Directive 2002/58/EC (ePrivacy) are fulfilled (Articles 4(12)/5(7)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Arts. 4(12)/5(7)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000061",
+      "display_label": "Data Act / B7 / Ch II / Art. 7(2)",
+      "claim": "Any contractual term that, to the detriment of the user, excludes the application of, derogates from or varies the effect of the user's rights under Chapter II is not binding on the user (Article 7(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 7(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000062",
+      "display_label": "Data Act / C1 / Ch II / Art. 3(1)",
+      "claim": "Connected products and related services must be designed and provided so that product data and related-service data, including the relevant metadata, are by default easily, securely, free of charge, in a comprehensive, structured, commonly used and machine-readable format and, where relevant and technically feasible, directly accessible to the user (Article 3(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 3(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000049",
+        "EP-CLM-000057",
+        "EP-CLM-000058"
+      ],
+      "related_claims": [
+        "EP-CLM-000063",
+        "EP-CLM-000064"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000063",
+      "display_label": "Data Act / C2a / Ch II / Art. 3(2)",
+      "claim": "Before concluding a connected-product contract, the seller, renter or lessor must provide the specified pre-contractual information about the data the product generates and how the user can access it (Article 3(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 3(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000064",
+      "display_label": "Data Act / C2b / Ch II / Art. 3(3)",
+      "claim": "Before concluding a related-service contract, the prospective service provider must provide the specified pre-contractual information about the data generated and access to it (Article 3(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 3(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000065",
+      "display_label": "Data Act / C3 / Ch II / Art. 4(1)",
+      "claim": "Where data cannot be directly accessed by the user, the data holder must make readily available product and related-service data, and the relevant metadata, available to the user without undue delay, easily, securely, free of charge, in a comprehensive, structured, commonly used and machine-readable format and, where relevant and technically feasible, continuously and in real time (Article 4(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 4(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000068",
+        "EP-CLM-000060",
+        "EP-CLM-000057",
+        "EP-CLM-000058"
+      ],
+      "related_claims": [
+        "EP-CLM-000066",
+        "EP-CLM-000067"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000066",
+      "display_label": "Data Act / C4a / Ch II / Art. 4(13)",
+      "claim": "A data holder may use readily available non-personal product data only on the basis of a contract with the user, and may not use such data to derive insights about the user's economic situation, assets or production methods that could undermine the user's commercial position (Article 4(13)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 4(13)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000067",
+      "display_label": "Data Act / C4b / Ch II / Art. 4(14)",
+      "claim": "A data holder may not make non-personal product data available to third parties for commercial or non-commercial purposes other than to fulfil its contract with the user (Article 4(14)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 4(14)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000068",
+      "display_label": "Data Act / C5 / Ch II / Art. 4(6)/(7)/(8)",
+      "claim": "Trade secrets need be disclosed only where the data holder and user have agreed the measures necessary to preserve confidentiality; where such measures are not agreed or implemented, or the user fails to observe them, the data holder may withhold or suspend sharing of the identified data under the graduated conditions of Article 4(6)/(7)/(8).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 4(6)/(7)/(8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000069",
+      "display_label": "Data Act / C6 / Ch II / Art. 5(1)",
+      "claim": "At the user's request, the data holder must make product and related-service data available to a third party without undue delay, of the same quality as available to the data holder and, where relevant and technically feasible, continuously and in real time; trade secrets are preserved and disclosed to the third party only as strictly necessary for the agreed purpose, and where the necessary confidentiality measures are not agreed or are breached the data holder may withhold or suspend, or in exceptional cases refuse, sharing of the identified data (Article 5(1), read with the trade-secret boundary in Article 5(9)-(11)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Article 5(1); third-party trade-secret boundary Article 5(9)-(11)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000070",
+        "EP-CLM-000072",
+        "EP-CLM-000060",
+        "EP-CLM-000057",
+        "EP-CLM-000058"
+      ],
+      "related_claims": [
+        "EP-CLM-000071",
+        "EP-CLM-000078"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000070",
+      "display_label": "Data Act / C7 / Ch II / Art. 5(3)",
+      "claim": "An undertaking designated as a gatekeeper under Article 3 of Regulation (EU) 2022/1925 (DMA) is not an eligible third party and may not solicit or commercially incentivise a user to make data available to it (Article 5(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 5(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000071",
+      "display_label": "Data Act / D1 / Ch II / Art. 6(1)",
+      "claim": "A third party may process the data made available only for the purposes and under the conditions agreed with the user and subject to Union data-protection law, and must erase the data when no longer necessary (Article 6(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 6(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000072",
+      "display_label": "Data Act / D2 / Ch II / Art. 6(2)(a)-(h)",
+      "claim": "A third party receiving data must not, among other things, use it to develop a competing connected product, coerce or deceive the user, profile the user unless necessary, make the data available to a gatekeeper, or use it outside the agreed purposes (Article 6(2), points (a)-(h)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 6(2)(a)-(h)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000073",
+      "display_label": "Data Act / D3 / Ch III / Art. 8(1)",
+      "claim": "Where, in business-to-business relations, a data holder is obliged to make data available to a data recipient under Chapter III, it must do so under fair, reasonable and non-discriminatory terms and in a transparent manner (Article 8(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 8(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000079"
+      ],
+      "related_claims": [
+        "EP-CLM-000074",
+        "EP-CLM-000078"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000074",
+      "display_label": "Data Act / D4 / Ch III / Art. 8(3)",
+      "claim": "A data holder must not discriminate between comparable categories of data recipients when making data available, and must, on request, demonstrate the absence of discrimination (Article 8(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 8(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000079"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000075",
+      "display_label": "Data Act / D5a / Ch III / Art. 9(1)",
+      "claim": "Any compensation agreed between a data holder and a data recipient for making data available under Chapter III must be non-discriminatory and reasonable, and may include a margin (Article 9(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 9(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000076",
+        "EP-CLM-000079"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000076",
+      "display_label": "Data Act / D5b / Ch III / Art. 9(4)",
+      "claim": "Where the data recipient is an SME or a not-for-profit research organisation, compensation must not exceed the costs directly related to making the data available and attributable to the request (Article 9(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 9(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000077",
+      "display_label": "Data Act / D7 / Ch III / Art. 11(1)/(2)/(3)/(5)",
+      "claim": "A data holder may apply appropriate technical protection measures to prevent unauthorised access and ensure compliance, provided they do not hinder the user's or recipient's exercise of Article 4/5 rights, with the remedies of Article 11(2)/(3)/(5) available against misuse (Article 11(1)/(2)/(3)/(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 11(1)/(2)/(3)/(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000079"
+      ],
+      "related_claims": [
+        "EP-CLM-000065",
+        "EP-CLM-000069"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000078",
+      "display_label": "Data Act / D8 / Ch III / Art. 8(4)",
+      "claim": "A data holder must not make product or related-service data available to a data recipient absent a user request under Chapter II (Article 8(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 8(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000079",
+      "display_label": "Data Act / D9 / Ch III / Art. 12(1)",
+      "claim": "The Chapter III obligations on data holders apply where they are obliged by Article 5, or by other Union law or national implementing law, to make data available to a data recipient (Article 12(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 12(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000080",
+      "display_label": "Data Act / D10 / Ch III / Art. 12(2)",
+      "claim": "A contractual term in a data-sharing agreement that, to the detriment of one party or the user, excludes, derogates from or varies the application of Chapter III is not binding on that party (Article 12(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 12(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000081",
+      "display_label": "Data Act / E1a / Ch IV / Art. 13(1)",
+      "claim": "A contractual term concerning access to and use of data, or liability and remedies for breach or termination of data-related obligations, that has been unilaterally imposed by one enterprise on another is not binding on the latter if it is unfair (Article 13(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000082",
+        "EP-CLM-000083",
+        "EP-CLM-000084",
+        "EP-CLM-000085",
+        "EP-CLM-000086",
+        "EP-CLM-000087",
+        "EP-CLM-000088"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000082",
+      "display_label": "Data Act / E1b / Ch IV / Art. 13(2)",
+      "claim": "A contractual term that reflects mandatory provisions of Union law, or provisions that would apply if the term did not regulate the matter, is not to be considered unfair (Article 13(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000083",
+      "display_label": "Data Act / E2a / Ch IV / Art. 13(3)",
+      "claim": "A contractual term is unfair if its use grossly deviates from good commercial practice in data access and use, contrary to good faith and fair dealing (Article 13(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000084",
+      "display_label": "Data Act / E2b / Ch IV / Art. 13(4)",
+      "claim": "A contractual term is always unfair where its object or effect is one of those listed in Article 13(4) (for example, excluding liability for intentional acts or gross negligence) (Article 13(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000085",
+      "display_label": "Data Act / E2c / Ch IV / Art. 13(5)",
+      "claim": "A contractual term is presumed unfair where its object or effect is one of those listed in Article 13(5), subject to the point-(g) proviso on indefinite-duration contracts (Article 13(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000086",
+      "display_label": "Data Act / E3 / Ch IV / Art. 13(6)",
+      "claim": "A term is unilaterally imposed where supplied by one party and the other could not influence its content despite attempting to negotiate; the supplier bears the burden of proving it was not unilaterally imposed and may not argue that its own term is unfair (Article 13(6)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(6)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000087",
+      "display_label": "Data Act / E4 / Ch IV / Art. 13(7)",
+      "claim": "Where an unfair contractual term is severable from the remaining terms of the contract, those remaining terms remain binding (Article 13(7)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(7)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000088",
+      "display_label": "Data Act / E5 / Ch IV / Art. 13(8)",
+      "claim": "The Article 13 unfairness regime does not apply to terms defining the main subject matter of the contract or to the adequacy of the price as against the data supplied in exchange (Article 13(8)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000089",
+      "display_label": "Data Act / E6 / Ch IV / Art. 13(9)",
+      "claim": "Parties to a contract covered by Article 13(1) may not exclude the application of Article 13, derogate from it or vary its effects (Article 13(9)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 13(9)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000090",
+      "display_label": "Data Act / F1 / Ch V / Art. 14",
+      "claim": "Where a public sector body, the Commission, the ECB or a Union body demonstrates an exceptional need under Article 15 to use data to carry out statutory duties in the public interest, data holders that are legal persons (other than public sector bodies) must make that data available on a duly reasoned request (Article 14).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 14",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000091",
+        "EP-CLM-000092",
+        "EP-CLM-000093",
+        "EP-CLM-000100"
+      ],
+      "related_claims": [
+        "EP-CLM-000094",
+        "EP-CLM-000095",
+        "EP-CLM-000096",
+        "EP-CLM-000097",
+        "EP-CLM-000098",
+        "EP-CLM-000099"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000091",
+      "display_label": "Data Act / F2a / Ch V / Art. 15(1)(a)",
+      "claim": "An exceptional need exists where the data requested is necessary to respond to a public emergency and the body cannot obtain it by alternative means in a timely and effective manner under equivalent conditions (Article 15(1)(a)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 15(1)(a)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000092",
+      "display_label": "Data Act / F2b / Ch V / Art. 15(1)(b)",
+      "claim": "Outside a public emergency, and only for non-personal data, an exceptional need exists where a body acting under Union or national law has identified specific data whose lack prevents a specific public-interest task and has exhausted all other means to obtain it (Article 15(1)(b)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 15(1)(b)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000093",
+      "display_label": "Data Act / F2c / Ch V / Art. 15(2)",
+      "claim": "The Article 15(1)(b) non-emergency route does not apply to microenterprises and small enterprises (Article 15(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 15(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000094",
+      "display_label": "Data Act / F3a / Ch V / Art. 17(1)/(2)/(3)-(6)",
+      "claim": "A B2G request for data must specify the data and demonstrate the exceptional need, state the purpose, legal basis and erasure expectations, and meet the form and proportionality requirements of Article 17(1)/(2), subject to the reuse, delegation, complaint and model-template rules of Article 17(3)-(6).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 17(1)/(2)/(3)-(6)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000095",
+      "display_label": "Data Act / F3b / Ch V / Art. 18(1)-(5)",
+      "claim": "A data holder must make requested data available without undue delay, and may decline or seek modification of a request within 5 working days (public emergency) or 30 working days (other exceptional need) on the grounds set out in Article 18(2), subject to Article 18(1)-(5).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 18(1)-(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000096",
+      "display_label": "Data Act / F4a / Ch V / Art. 20(1)",
+      "claim": "Data holders other than micro and small enterprises must make data necessary to respond to a public emergency (Article 15(1)(a)) available free of charge (Article 20(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 20(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000097",
+      "display_label": "Data Act / F4b / Ch V / Art. 20(2)/(3)",
+      "claim": "For data made available under the Article 15(1)(b) route, the data holder is entitled to fair compensation covering technical and organisational costs plus a reasonable margin, and this entitlement also applies where a micro or small enterprise claims compensation (Article 20(2)/(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 20(2)/(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000098",
+      "display_label": "Data Act / F5a / Ch V / Art. 19(1)-(4)",
+      "claim": "A public sector body, the Commission, the ECB or a Union body receiving data must not use it incompatibly with the stated purpose, must implement confidentiality and security measures, must erase it when no longer necessary, must not use it to develop a competing product or share it for that purpose, and must observe trade-secret and security obligations (Article 19(1)-(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 19(1)-(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000099",
+      "display_label": "Data Act / F5b / Ch V / Art. 21(1)-(5)",
+      "claim": "A recipient body may share data received under Chapter V only with individuals or organisations for scientific research or analytics, or with national statistical institutes and Eurostat, subject to not-for-profit conditions, the Article 17(3)/19 obligations, a six-month retention limit and data-holder notification (Article 21(1)-(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 21(1)-(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000100",
+      "display_label": "Data Act / F6 / Ch V / Art. 16(1)/(2)",
+      "claim": "Chapter V does not affect other reporting, access or compliance obligations and does not apply to activities for the prevention, investigation, detection or prosecution of criminal or administrative offences, the execution of criminal penalties, or customs or taxation administration (Article 16).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 16(1)/(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000101",
+      "display_label": "Data Act / G1 / Ch VI / Art. 23(a)-(e)",
+      "claim": "Providers of data processing services must take the measures in Articles 25, 26, 27, 29 and 30 to enable customers to switch to another provider of the same service type or to on-premises ICT infrastructure, and must not impose and must remove obstacles to switching (Article 23).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 23(a)-(e)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000102",
+        "EP-CLM-000114"
+      ],
+      "related_claims": [
+        "EP-CLM-000103",
+        "EP-CLM-000104",
+        "EP-CLM-000105",
+        "EP-CLM-000106",
+        "EP-CLM-000107",
+        "EP-CLM-000108",
+        "EP-CLM-000109",
+        "EP-CLM-000111"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000102",
+      "display_label": "Data Act / G9 / Ch VI / Art. 24",
+      "claim": "The switching responsibilities in Articles 23, 25, 29, 30 and 34 apply only to the services, contracts or commercial practices provided by the source provider of data processing services (Article 24).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 24",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000103",
+      "display_label": "Data Act / G2a / Ch VI / Art. 25(1)",
+      "claim": "The customer's rights and the provider's switching obligations must be set out in a written contract made available before signing in a form the customer can store and reproduce (Article 25(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 25(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000104",
+      "display_label": "Data Act / G2b / Ch VI / Art. 25(2)(a)-(i)",
+      "claim": "The switching contract must include the mandatory terms of Article 25(2), including a maximum 30-calendar-day transitional period, a maximum notice period not exceeding two months, and a data-retrieval period of at least 30 calendar days (Article 25(2), points (a)-(i)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 25(2)(a)-(i)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000105",
+      "display_label": "Data Act / G2c / Ch VI / Art. 25(3)/(4)/(5)",
+      "claim": "The contract must let the customer elect to switch to another provider, switch to on-premises infrastructure or erase its data; where the maximum transitional period is technically unfeasible the provider must notify within 14 working days and set an alternative period not exceeding seven months, and the customer may extend the transitional period once (Article 25(3)/(4)/(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 25(3)/(4)/(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000106",
+      "display_label": "Data Act / G3 / Ch VI / Art. 26(a)/(b)",
+      "claim": "The provider must give the customer information on switching and porting procedures, methods, formats and known limitations, and a reference to an up-to-date online register of data structures, formats, standards and open interoperability specifications (Article 26).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 26(a)/(b)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000107",
+      "display_label": "Data Act / G7 / Ch VI / Art. 27",
+      "claim": "All parties involved, including destination providers, must cooperate in good faith to make the switching process effective, enable timely data transfer and maintain service continuity (Article 27).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 27",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000108",
+      "display_label": "Data Act / G6 / Ch VI / Art. 28(1)/(2)",
+      "claim": "Providers must publish and keep up to date, on their websites, the jurisdiction of the ICT infrastructure used and a general description of measures preventing international governmental access to or transfer of non-personal data held in the Union that would conflict with Union or Member-State law, and must list those websites in their contracts (Article 28(1)/(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 28(1)/(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": [
+        "EP-CLM-000115"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000109",
+      "display_label": "Data Act / G4a / Ch VI / Art. 29(1)",
+      "claim": "From 12 January 2027, providers of data processing services may not impose any switching charges on customers for the switching process (Article 29(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2027-01-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 29(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000110",
+        "EP-CLM-000114"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000110",
+      "display_label": "Data Act / G4b / Ch VI / Art. 29(2)/(3)",
+      "claim": "From 11 January 2024 until 12 January 2027, providers may impose reduced switching charges not exceeding the costs directly linked to the switching process (Article 29(2)/(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 29(2)/(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-02",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000111",
+      "display_label": "Data Act / G5a / Ch VI / Art. 30(1)",
+      "claim": "Providers of data processing services that concern scalable and elastic computing resources limited to infrastructural elements (such as servers, networks and the virtual resources necessary to operate the infrastructure) and that do not provide access to the operating services, software and applications stored, processed or deployed on those elements must take all reasonable measures in their power to help the customer achieve functional equivalence after switching to a service of the same service type (Article 30(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 30(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000114"
+      ],
+      "related_claims": [
+        "EP-CLM-000112",
+        "EP-CLM-000113"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000112",
+      "display_label": "Data Act / G5b / Ch VI / Art. 30(2)",
+      "claim": "Providers other than those in Article 30(1) must make open interfaces available to all customers and concerned destination providers free of charge to facilitate switching (Article 30(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 30(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000113",
+      "display_label": "Data Act / G5c / Ch VI / Art. 30(3)/(5)/(6)",
+      "claim": "Providers other than those in Article 30(1) must ensure compatibility with common specifications or harmonised standards at least 12 months after their reference is published, export exportable data in a machine-readable format where none are published, and are not required to develop new technologies, disclose IP or trade secrets, or compromise security (Article 30(3)/(5)/(6)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 30(3)/(5)/(6)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000114",
+      "display_label": "Data Act / G8 / Ch VI / Art. 31(1)/(2)/(3)",
+      "claim": "The Article 23(d), 29 and 30(1)/(3) obligations do not apply to bespoke or custom-built services not offered at broad commercial scale (Article 31(1)); the whole of Chapter VI does not apply to non-production services provided for testing and evaluation for a limited period (Article 31(2)); and the provider must disclose which Chapter VI obligations do not apply (Article 31(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 31(1)/(2)/(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000115",
+      "display_label": "Data Act / H1a / Ch VII / Art. 32(1)",
+      "claim": "Providers of data processing services must take all adequate technical, organisational and legal measures to prevent international and third-country governmental access to, or transfer of, non-personal data held in the Union where such access or transfer would conflict with Union or Member-State law (Article 32(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 32(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000116",
+        "EP-CLM-000117"
+      ],
+      "related_claims": [
+        "EP-CLM-000108"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000116",
+      "display_label": "Data Act / H1b / Ch VII / Art. 32(2)",
+      "claim": "A third-country court or administrative decision requiring transfer of or access to non-personal data held in the Union is recognisable or enforceable only if based on an international agreement, such as a mutual legal assistance treaty, in force between the requesting third country and the Union or a Member State (Article 32(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 32(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000117",
+      "display_label": "Data Act / H1c / Ch VII / Art. 32(3)-(5)",
+      "claim": "Absent such an international agreement, transfer or access may take place only where the Article 32(3) conditions on reasoned, proportionate and reviewable third-country decisions are met, with the provider disclosing only the minimum data permissible (Article 32(4)) and informing the customer before complying save for law-enforcement purposes (Article 32(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 32(3)-(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000118",
+      "display_label": "Data Act / I3a / Ch VIII / Art. 34(1)",
+      "claim": "The requirements in Articles 23, 24, 25(2) points (a)(ii), (a)(iv), (e) and (f) and 30(2)-(5) apply mutatis mutandis to facilitate interoperability for the in-parallel use of data processing services (Article 34(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 34(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": [
+        "EP-CLM-000119",
+        "EP-CLM-000101",
+        "EP-CLM-000104",
+        "EP-CLM-000111",
+        "EP-CLM-000112",
+        "EP-CLM-000113"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000119",
+      "display_label": "Data Act / I4 / Ch VIII / Art. 34(2)",
+      "claim": "Where a data processing service is used in parallel with another, providers may impose data egress charges only to pass on the egress costs incurred, without exceeding them (Article 34(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 34(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000120",
+      "display_label": "Data Act / J1 / Ch VIII / Art. 36(1)-(4)",
+      "claim": "A vendor or deployer of smart contracts for executing data-sharing agreements must ensure they meet the essential requirements of robustness and access control, safe termination and interruption, data archiving and continuity, access control and consistency, perform a conformity assessment and issue an EU declaration of conformity (Article 36(1)-(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 36(1)-(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000121",
+      "display_label": "Data Act / K1a / Ch IX / Art. 37(1)/(2)/(5)/(6)/(7)",
+      "claim": "Each Member State must designate one or more competent authorities to enforce this Regulation, designate a data coordinator where there is more than one, and define their tasks and powers (including penalties, switching-charge withdrawal and examining Chapter V requests); the Commission maintains a public register of those authorities (Article 37(1)/(2)/(5)/(6)/(7)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 37(1)/(2)/(5)/(6)/(7)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": [
+        "EP-CLM-000122",
+        "EP-CLM-000123",
+        "EP-CLM-000124",
+        "EP-CLM-000125"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-07"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000122",
+      "display_label": "Data Act / K1b / Ch IX / Art. 37(3)",
+      "claim": "The GDPR supervisory authorities monitor application of this Regulation as regards the protection of personal data, and the European Data Protection Supervisor does so as regards the Commission, the ECB and Union bodies (Article 37(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 37(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-07"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000123",
+      "display_label": "Data Act / K1c / Ch IX / Art. 37(11)/(12)/(13)",
+      "claim": "An entity within scope that makes connected products available or offers services in the Union but is not established in the Union must designate a legal representative in a Member State; until it does, it is under the competence of all Member States for enforcement (Article 37(11)/(12)/(13)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 37(11)/(12)/(13)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-04",
+        "DIM-07"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000124",
+      "display_label": "Data Act / K1d / Ch IX / Art. 37(10)",
+      "claim": "An entity within scope is under the competence of the Member State where it is established, or, where established in more than one, of the Member State of its main establishment (the head or registered office exercising principal financial and operational control) (Article 37(10)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 37(10)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": [
+        "EP-CLM-000123"
+      ],
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-04",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000125",
+      "display_label": "Data Act / K3 / Ch IX / Arts. 38(1)-(3), 39(1)-(3)",
+      "claim": "Natural and legal persons have the right to lodge a complaint with the competent authority if they consider their rights under this Regulation infringed, and any affected person has the right to an effective judicial remedy against binding decisions of competent authorities (Articles 38(1)-(3), 39(1)-(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Arts. 38(1)-(3), 39(1)-(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-07",
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000126",
+      "display_label": "Data Act / K2a / Ch IX / Art. 40(1)/(2)/(3)",
+      "claim": "Member States must lay down effective, proportionate and dissuasive penalties for infringements, notify them to the Commission by 12 September 2025, and take account of the Article 40(3) criteria (Article 40(1)/(2)/(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": "2025-09-12",
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 40(1)/(2)/(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": [
+        "EP-CLM-000127",
+        "EP-CLM-000128"
+      ],
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-07",
+        "DIM-02"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000127",
+      "display_label": "Data Act / K2b / Ch IX / Art. 40(4)",
+      "claim": "For infringements of Chapters II, III and V, the GDPR supervisory authorities may, within their competence, impose administrative fines under Article 83 GDPR up to the Article 83(5) amounts (Article 40(4)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 40(4)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-07"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000128",
+      "display_label": "Data Act / K2c / Ch IX / Art. 40(5)",
+      "claim": "For infringements of Chapter V, the European Data Protection Supervisor may, within its competence, impose administrative fines under Article 66 of Regulation (EU) 2018/1725 up to the Article 66(3) amounts (Article 40(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 40(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-07"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000129",
+      "display_label": "Data Act / K4 / Ch X / Art. 43",
+      "claim": "The sui generis database right in Article 7 of Directive 96/9/EC does not apply to data obtained from or generated by a connected product or related service within the scope of this Regulation, in particular in relation to Articles 4 and 5 (Article 43).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 43",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000130",
+      "display_label": "Data Act / K5a / Ch XI / Art. 44(1)",
+      "claim": "Specific data-availability obligations in Union legal acts that entered into force on or before 11 January 2024, and their delegated or implementing acts, remain unaffected by this Regulation (Article 44(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 44(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000131",
+      "display_label": "Data Act / K5b / Ch XI / Art. 44(2)",
+      "claim": "This Regulation is without prejudice to Union law laying down, for a sector, a common European data space or an area of public interest, further requirements on data access and use (Article 44(2)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 44(2)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000132",
+      "display_label": "Data Act / K5c / Ch XI / Art. 44(3)",
+      "claim": "This Regulation, with the exception of Chapter V, is without prejudice to Union and national law providing for access to and use of data for scientific research purposes (Article 44(3)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 44(3)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "published",
+      "validity_state": "active",
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-09-02",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    }
+  ]
+}

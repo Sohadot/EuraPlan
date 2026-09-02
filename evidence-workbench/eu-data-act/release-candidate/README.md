@@ -1,15 +1,16 @@
 # EU Data Act — production release-candidate (R3.4 → R3.5 staging)
 
-**Status:** Staging artifacts present — machine graph built; page transform in progress.
-**Live route:** `/regulation/eu-data-act/` must **not** be overwritten by this folder until the **R3.8 Publish Gate** publication sequence, which is a separate, explicitly-authorised production PR.
+**Status:** Machine graph and page transform **COMPLETE / review-approved**. Both staging artifacts are reviewed; the Publish Gate production release (live-path cutover + registration) runs from these reviewed candidates.
+**Live route:** `/regulation/eu-data-act/` is written from the reviewed candidate only at the Publish Gate production release.
 
 ## Contents
 
 | File | Role |
 |---|---|
 | `claims.json` | R3.4 canonical claim-graph machine package candidate for the public path `/regulation/eu-data-act/claims.json` — assembled from the R3.3 verification (87/87 `VERIFIED_LITERAL`). `workflow_state=publishable`, `validity_state=null`, `published=false`. **Not the live file.** |
-| `index.html` | R3.5 release-sanitized Evidence Graph page candidate (transform of the current thin `/regulation/eu-data-act/` page) — *pending in this staging pass.* |
+| `index.html` | R3.5 release-sanitized Evidence Graph page candidate (transform of the thin `/regulation/eu-data-act/` page) — **COMPLETE / review-approved**. `robots: noindex, nofollow` in the candidate; flips to `index, follow` only at the production release. |
 | `build_claims.py` | Deterministic generator for `claims.json` (reads `../R3_2_IDENTITY_REGISTER.md`; claim prose is the verified-literal proposition). Re-runnable; byte-stable. |
+| `build_page.py` | Deterministic generator for `index.html` (reads `claims.json`). Re-runnable. |
 | `README.md` | This note. |
 
 ## What this is
@@ -27,6 +28,6 @@ The staged, review-ready production candidate for the EU Data Act reference rout
 ## Excluded by design
 
 - **I1 (Art. 33)** and **I2 (Art. 35)** interoperability essential requirements carry no `EP-CLM` identity (source-constrained / standards-pending) and are **not** in the graph.
-- The corrigendum (`EP-SRC-000007`) affects **Article 48 only** and has no effect on any claim; recorded per-claim as `read_with`.
+- The corrigendum (`EP-SRC-000007`) affects **Article 48 only** and has no effect on any claim. It is retained in the package `source_registry` / metadata as the corrigendum read with the authentic act, but carries **no per-claim source edge** (the graph model permits only `supports` / `amends` / `clarifies`, and the corrigendum does none of these for these 87 claims).
 
 See `../R3_3_VERBATIM_VERIFICATION.md` (87/87), `../R3_2_IDENTITY_REGISTER.md`, `../../gdpr/release-candidate/` (the proven GDPR staging precedent), `CLAIM_POLICY.md`, and `DISCLOSURE_BOUNDARY.md`.
