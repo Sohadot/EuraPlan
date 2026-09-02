@@ -1,6 +1,6 @@
 # R3.3 — EU Data Act Human Literal (Verbatim) Verification
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.3 Human Literal Verification
-**Status:** **BLOCKS 1–7 COMPLETE / PASS** — 68/68 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8, Block 5 = 9, Block 6 = 11, Block 7 = 14). Blocks 8–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
+**Status:** **R3.3 COMPLETE / PASS — ALL BLOCKS 1–10** — 87/87 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8, Block 5 = 9, Block 6 = 11, Block 7 = 14, Terminal Closeout Blocks 8–10 = 19). Every `EP-CLM-000046..000132` verified; every Q1–Q16 + N1–N7 edge closed. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
 **Opened by:** DEC-060 (identity minting) → R3.3 verification is the real-event stage that may set `last_verified_at`.
 **Governed by:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-057; DEC-059; DEC-060
 **Method:** each `EP-CLM` located to its exact Article/paragraph in `EP-SRC-000006`, read **with** `EP-SRC-000007`, compared literally, checked for over-breadth and for carried qualifiers.
@@ -646,4 +646,120 @@ Proceed to **R3.3-H = Block 8** (*Unlawful international governmental access, Ch
 
 ---
 
-*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4 + R3.3-E Block 5 + R3.3-F Block 6 + R3.3-G Block 7). Internal. Not a published website page. No public claims.json.*
+# R3.3-H (Terminal Closeout) — Blocks 8–10 (Ch VI exemption close + Int'l access · Ch VII, Interop & smart contracts · Ch VIII, Enforcement & final · Ch IX–XI)
+
+**Unit status:** **COMPLETE / PASS** — 19/19 `VERIFIED_LITERAL`. **Date:** 2026-09-02. **Basis:** `EP-SRC-000006` read with `EP-SRC-000007`. Blocks 1–7 untouched. **G8 verified FIRST** to close the Chapter VI Art. 31 exemption (both layers) over the R3.3-G switching regime. **This is the terminal R3.3 unit: it consolidates the remaining Blocks 8, 9 and 10 into one closeout and finishes Human Literal Verification at 87/87.**
+
+## 61. Scope of this unit — Terminal Closeout (Blocks 8–10)
+
+Verifies the **entire remaining numeric range `EP-CLM-000114` … `EP-CLM-000132`** (nineteen identities) in one consolidated closeout, preserving internal seam order. **First item = G8 (`EP-CLM-000114`, Art. 31)** — the Chapter VI exemption deferred from R3.3-G — then Chapters VII → VIII → IX–XI in numeric order: **G8, H1a, H1b, H1c, I3a, I4, J1, K1a, K1b, K1c, K1d, K3, K2a, K2b, K2c, K4, K5a, K5b, K5c**.
+
+**Consolidation rationale:** the remaining three draft-sequence blocks (Block 8 `…114–…116`, Block 9 `…117–…119`, Block 10 `…120–…132`) are verified together as the terminal unit. The recurring "label vs numeric range" seam is now internal to this closeout and carries no trailing forward dependency — **`EP-CLM-000132` is the last minted identity** (next free is `…133`; nothing beyond is minted), so no boundary item is deferred past this unit. Internal seam markers preserved: **G8/`…114`** opens by closing Ch VI; the old Block 8/9 boundary (**H1c/`…117`**) and Block 9/10 boundary (**J1/`…120`**) are verified in numeric position, not as separate units.
+
+**Excluded by design (not in range, not verified, correctly so):** **I1 (Art. 33)** and **I2 (Art. 35)** interoperability essential requirements carry **no `EP-CLM` identity** — source-constrained / standards-pending (R3.2 §4); they cannot enter R3.3 until Commission delegated acts / harmonised standards publish. **Arts. 41, 42, 45–49** (model terms, EDIB, delegation/comitology, amendments, evaluation) mint nothing and are not verified. **Art. 48** — the only corrigendum-touched article — is unminted, so the corrigendum remains no-effect on every verified claim.
+
+## 62. Verbatim anchors used (quoted from EP-SRC-000006)
+
+**Article 31 — Specific regime for certain data processing services (G8, Ch VI exemption; both layers):**
+> 31(1) [G8 — limited bespoke]: "The obligations laid down in Article 23, point (d), Article 29 and Article 30(1) and (3) shall not apply to data processing services of which the majority of main features has been custom-built to accommodate the specific needs of an individual customer or where all components have been developed for the purposes of an individual customer, and where those data processing services are not offered at broad commercial scale via the service catalogue of the provider …"
+> 31(2) [G8 — whole-of-Chapter-VI]: "The obligations laid down in this Chapter shall not apply to data processing services provided as a non-production version for testing and evaluation purposes and for a limited period of time."
+> 31(3) [G8 — disclosure]: "Prior to the conclusion of a contract …, the provider … shall inform the prospective customer of the obligations of this Chapter that do not apply."
+
+**Article 32 — International governmental access and transfer (H1a/H1b/H1c):**
+> 32(1) [H1a]: "Providers of data processing services shall take all adequate technical, organisational and legal measures, including contracts, in order to prevent international and third-country governmental access and transfer of non-personal data held in the Union where such transfer or access would create a conflict with Union law or with the national law of the relevant Member State, without prejudice to paragraph 2 or 3."
+> 32(2) [H1b]: "Any decision or judgment of a third-country court or tribunal and any decision of a third-country administrative authority requiring a provider … to transfer or give access to non-personal data … held in the Union shall be recognised or enforceable in any manner only if based on an international agreement, such as a mutual legal assistance treaty, in force between the requesting third country and the Union, or … a Member State."
+> 32(3) [H1c]: "In the absence of an international agreement …, transfer to or access to such data by that third-country authority shall take place only where: (a) the third-country system requires the reasons and proportionality … to be set out and … specific in character …; (b) the reasoned objection of the addressee is subject to a review by a competent third-country court or tribunal; and (c) the competent third-country court or tribunal … is empowered … to take duly into account the relevant legal interests of the provider … protected by Union law …" · 32(4) [H1c]: minimum-data-permissible limb · 32(5) [H1c]: "shall inform the customer about the existence of a request … before complying …, except where the request serves law enforcement purposes …"
+
+**Article 34 — Interoperability for in-parallel use (I3a/I4):**
+> 34(1) [I3a]: "The requirements laid down in Article 23, Article 24, Article 25(2), points (a)(ii), (a)(iv), (e) and (f) and Article 30(2) to (5) shall also apply mutatis mutandis to providers of data processing services to facilitate interoperability for the purposes of in-parallel use of data processing services."
+> 34(2) [I4]: "Where a data processing service is being used in parallel with another data processing service, the providers … may impose data egress charges, but only for the purpose of passing on egress costs incurred, without exceeding such costs."
+
+**Article 36 — Essential requirements regarding smart contracts (J1):**
+> 36(1) [J1]: "The vendor of an application using smart contracts or, in the absence thereof, the person whose … profession involves the deployment of smart contracts for others … to make data available shall ensure that those smart contracts comply with the following essential requirements of: (a) robustness and access control …; (b) safe termination and interruption …; (c) data archiving and continuity … (auditability); (d) access control …; and (e) consistency … with the terms of the data sharing agreement that the smart contract executes."
+> 36(2)/(3) [J1]: "… shall perform a conformity assessment … and, on the fulfilment of those requirements, issue an EU declaration of conformity." + responsibility for compliance. (36(4) harmonised-standard conformity presumption.)
+
+**Article 37 — Competent authorities and data coordinators (K1a/K1b/K1c/K1d):**
+> 37(1)/(2) [K1a]: "Each Member State shall designate one or more competent authorities …"; "… it shall designate a data coordinator from among them to facilitate cooperation …" · 37(5) tasks/powers (a)-(j) incl. "(d) imposing effective, proportionate and dissuasive financial penalties …", "(i) ensuring that switching charges are withdrawn in accordance with Article 29", "(j) examining the requests for data made pursuant to Chapter V" · 37(6) data-coordinator single-point-of-contact · 37(7) "The Commission shall maintain a public register of those authorities."
+> 37(3) [K1b]: "The supervisory authorities responsible for monitoring the application of Regulation (EU) 2016/679 shall be responsible for monitoring the application of this Regulation insofar as the protection of personal data is concerned … The European Data Protection Supervisor shall be responsible … insofar as it concerns the Commission, the European Central Bank or Union bodies …"
+> 37(10) [K1d]: "Entities falling within the scope of this Regulation shall be subject to the competence of the Member State where the entity is established. Where the entity is established in more than one Member State, it shall be considered to be under the competence of the Member State in which it has its main establishment …"
+> 37(11)/(12)/(13) [K1c]: "Any entity … that makes connected products available or offers services in the Union, and which is not established in the Union, shall designate a legal representative in one of the Member States." + mandate (12) + "Until such time as an entity designates a legal representative …, it shall be under the competence of all Member States … Any competent authority may exercise its competence, including by imposing effective, proportionate and dissuasive penalties …" (13)
+
+**Articles 38 & 39 — Complaint + effective judicial remedy (K3):**
+> 38(1) [K3]: "… natural and legal persons shall have the right to lodge a complaint, individually or, where relevant, collectively, with the relevant competent authority … if they consider that their rights under this Regulation have been infringed." (38(2)/(3) information + cooperation.)
+> 39(1) [K3]: "… any affected natural and legal person shall have the right to an effective judicial remedy with regard to legally binding decisions taken by competent authorities." (39(2) failure-to-act remedy; 39(3) forum.)
+
+**Article 40 — Penalties (K2a/K2b/K2c):**
+> 40(1) [K2a]: "Member States shall lay down the rules on penalties … The penalties provided for shall be effective, proportionate and dissuasive." · 40(2) [K2a]: "Member States shall by 12 September 2025 notify the Commission …" · 40(3) [K2a]: non-exhaustive criteria (a)-(f).
+> 40(4) [K2b]: "For infringements of the obligations laid down in Chapter II, III and V …, the supervisory authorities responsible for monitoring the application of Regulation (EU) 2016/679 may … impose administrative fines in accordance with Article 83 of Regulation (EU) 2016/679 and up to the amount referred to in Article 83(5) …"
+> 40(5) [K2c]: "For infringements of the obligations laid down in Chapter V …, the European Data Protection Supervisor may impose … administrative fines in accordance with Article 66 of Regulation (EU) 2018/1725 up to the amount referred to in Article 66(3) …"
+
+**Article 43 — Sui generis right (K4):**
+> 43 [K4]: "The sui generis right provided for in Article 7 of Directive 96/9/EC shall not apply when data is obtained from or generated by a connected product or related service falling within the scope of this Regulation, in particular in relation to Articles 4 and 5 thereof."
+
+**Article 44 — Other Union legal acts / savings (K5a/K5b/K5c):**
+> 44(1) [K5a]: "The specific obligations for the making available of data … in Union legal acts that entered into force on or before 11 January 2024, and delegated or implementing acts pursuant thereto, shall remain unaffected."
+> 44(2) [K5b]: "This Regulation is without prejudice to Union law specifying, in light of the needs of a sector, a common European data space, or an area of public interest, further requirements …"
+> 44(3) [K5c]: "This Regulation, with the exception of Chapter V, is without prejudice to Union and national law providing for access to and authorising the use of data for scientific research purposes."
+
+## 63. Terminal Closeout verification table (19 identities · EP-CLM-000114 … 000132)
+
+| EP-CLM | Row | Locator | Literal check vs source | Over-breadth check | Role / edge & dependency | Verdict | `last_verified_at` |
+|---|---|---|---|---|---|---|---|
+| `EP-CLM-000114` | R-G8 | Art. 31(1)/(2)/(3) | both layers verbatim: 31(1) limited bespoke (only Art 23(d)/29/30(1)/(3)); 31(2) whole-of-Ch-VI for non-production test/eval; 31(3) pre-contract disclosure | Not broader — 31(1) enumerates the exact disapplied provisions; 31(2) is limited to non-production "for a limited period" | **Q9/Q10 exemption via 31(1) + Ch-VI-wide scope exemption via 31(2)**; **Verified FIRST.** Closes the R3.3-G G1/G4a/G4b/G5a/G5c forward dependency (§65) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000115` | R-H1a | Art. 32(1) | prevention duty verbatim ("all adequate technical, organisational and legal measures … to prevent international and third-country governmental access and transfer of non-personal data … conflict with Union law …") | Not broader — **non-personal data only**; "without prejudice to paragraph 2 or 3" | **N6 DEFAULT**; **N3 companion to G6** (Art 28, R3.3-G ✓) — N3 now CLOSED | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000116` | R-H1b | Art. 32(2) | recognition-only-via-agreement verbatim ("recognised or enforceable in any manner only if based on an international agreement, such as a mutual legal assistance treaty …") | Not broader — bounded to third-country decisions re non-personal data in the Union | **N6 qualifies H1a** | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000117` | R-H1c | Art. 32(3)-(5) | absent-agreement conditions (a)/(b)/(c) verbatim + minimum-data 32(4) + customer-notification 32(5) (with law-enforcement exception) | Not broader — cumulative (a)-(c) conditions retained; notification carve-out kept | **N6 qualifies H1a** (old Block 8/9 numeric boundary — verified in position) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000118` | R-I3a | Art. 34(1) | in-parallel-use interoperability verbatim ("requirements laid down in Article 23, Article 24, Article 25(2), points (a)(ii), (a)(iv), (e) and (f) and Article 30(2) to (5) shall also apply mutatis mutandis …") | Not broader — exact cross-referenced sub-provisions; "mutatis mutandis" scope | **N4** — reuses G1/G9/G2b/G5b/G5c (all R3.3-G ✓) mutatis mutandis; N4 CLOSED with I4 | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000119` | R-I4 | Art. 34(2) | in-parallel egress-charge cap verbatim ("may impose data egress charges, but only for the purpose of passing on egress costs incurred, without exceeding such costs") | Not broader — cost-pass-through only | **N4 companion to I3a** | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000120` | R-J1 | Art. 36(1)-(4) | five essential requirements (a)-(e) verbatim + conformity assessment + **EU declaration of conformity** 36(2)/(3) + harmonised-standard presumption 36(4) | Not broader — the five requirements are exhaustive; duty falls on the vendor/deployer | **N7 scope-gated** — only entrants deploying smart contracts to make data available; N7 CLOSED (old Block 9/10 numeric boundary — verified in position) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000121` | R-K1a | Art. 37(1)/(2)/(5)/(6)/(7) | competent-authority designation + data coordinator + tasks/powers (a)-(j) incl. penalties (d), switching-charge withdrawal (i), Ch V request examination (j) + public register 37(7) | Not broader | **Enforcement architecture** (hosts K1b/K1c/K1d/K3/K2*) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000122` | R-K1b | Art. 37(3) | GDPR-SA personal-data supervision + EDPS for Commission/ECB/Union bodies verbatim (Ch VI/VII GDPR mutatis mutandis) | Not broader — supervision confined to personal-data processing | **Interface to GDPR/EUDPR** (companion to K2b/K2c) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000123` | R-K1c | Art. 37(11)/(12)/(13) | non-EU entity **must designate a legal representative**; mandate; "until … designates … under the competence of all Member States … effective, proportionate and dissuasive penalties" | Not broader — the entrant enforcement hook, verbatim | **N5 enforcement hook** — the non-EU-entrant handle for every substantive duty; N5 CLOSED | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000124` | R-K1d | Art. 37(10) | jurisdiction / main-establishment rule verbatim ("competence of the Member State where the entity is established … main establishment … head office or registered office …") | Not broader | **Jurisdiction rule** on K1a | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000125` | R-K3 | Arts. 38(1)-(3), 39(1)-(3) | right to lodge complaint (individually/collectively) 38 + right to effective judicial remedy over binding decisions 39, incl. failure-to-act (39(2)) and forum (39(3)) | Not broader — bounded remedy (rights-under-this-Regulation) | **Bounded remedy** on K1a | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000126` | R-K2a | Art. 40(1)/(2)/(3) | national penalties "effective, proportionate and dissuasive"; **notify by 12 September 2025**; non-exhaustive criteria (a)-(f) | Not broader — criteria expressly non-exhaustive | **Q11 DEFAULT** | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000127` | R-K2b | Art. 40(4) | GDPR Art. 83 fines for **Ch II/III/V** infringements, GDPR-SA competence, up to Art. 83(5) amount — verbatim | Not broader — chapter-scoped to II/III/V and to GDPR-SA competence | **Q11 qualifies K2a** (GDPR-SA fine route) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000128` | R-K2c | Art. 40(5) | EDPS fines for **Ch V** infringements per Reg (EU) 2018/1725 Art. 66, up to Art. 66(3) — verbatim | Not broader — scoped to Ch V and EDPS competence | **Q11 qualifies K2a** (EDPS fine route) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000129` | R-K4 | Art. 43 | sui generis DB-right exclusion verbatim ("shall not apply when data is obtained from or generated by a connected product or related service … in particular in relation to Articles 4 and 5") | Not broader — carve-out tied to connected-product/related-service data | **Q12 carve-out** of the external Dir. 96/9/EC Art. 7 right; Q12 CLOSED | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000130` | R-K5a | Art. 44(1) | pre-2024 sectoral acts unaffected verbatim ("Union legal acts that entered into force on or before 11 January 2024 … shall remain unaffected") | Not broader | **Q14 qualifies A1** (general-layer savings) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000131` | R-K5b | Art. 44(2) | without-prejudice-to-further-sector/data-space-requirements verbatim (technical access / holder-right limits / beyond-access aspects) | Not broader | **Q14 qualifies A1** | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000132` | R-K5c | Art. 44(3) | scientific-research carve-out verbatim ("with the exception of Chapter V, is without prejudice to Union and national law providing for access to and authorising the use of data for scientific research purposes") | Not broader — **Ch V expressly excepted** from the research carve-out | **Q14 qualifies A1**; **LAST minted identity** (`…132`) — no trailing forward dependency | **VERIFIED_LITERAL** | 2026-09-02 |
+
+## 64. Tally — Terminal Closeout + R3.3 GRAND TOTAL
+
+- **Reviewed this unit:** 19 (`EP-CLM-000114` … `EP-CLM-000132`).
+- **`VERIFIED_LITERAL` this unit:** **19** — `last_verified_at = 2026-09-02` on all nineteen. 0 NEEDS_REWRITE / NEEDS_QUALIFIER / SOURCE_CONSTRAINED / BLOCKED.
+- **State advance:** `workflow_state: draft → verified` (internal) on the nineteen; **`validity_state` stays `null`, `published` stays `false`.**
+- **R3.3 GRAND TOTAL:** **87/87 `VERIFIED_LITERAL`** across Blocks 1–10 (`EP-CLM-000046..000132`). **Human Literal Verification COMPLETE.** 0 remaining `draft` verification identities (I1/I2 excluded — unminted, source-constrained).
+
+## 65. Forward-dependency & edge closures (all edges now closed)
+
+- **G8 / Art. 31 (both layers) — CLOSED:** 31(1) limited bespoke and 31(2) whole-of-Chapter-VI non-production exemptions verified; the R3.3-G forward dependency on G1/G4a/G4b/G5a/G5c is resolved (mirrors the F6/E6/D10 openings). No exemption limb outstanding.
+- **N3 (G6 ↔ H1a) — CLOSED:** the Art. 28 transparency companion (G6, R3.3-G ✓) now sits with the Art. 32(1) prevention duty (H1a ✓).
+- **N4 (I3a/I4 reuse G1/G2b/G5) — CLOSED:** the in-parallel-use regime reuses the R3.3-G switching duties mutatis mutandis; both I-rows verified.
+- **N5 (legal-representative hook) — CLOSED:** K1c (Art. 37(11)/(13)) is the non-EU-entrant enforcement hook for every substantive Data Act duty verified in Blocks 1–10.
+- **N6 (H1a ↔ H1b/H1c) — CLOSED:** the two-tier recognition/absent-agreement test is fully present.
+- **N7 (J1 scope-gated) — CLOSED:** smart-contract essential requirements + EU declaration, gated to entrants deploying smart contracts.
+- **Q11 (K2a ↔ K2b/K2c) — CLOSED:** national penalties default with both chapter-scoped fine routes (GDPR-SA for Ch II/III/V; EDPS for Ch V).
+- **Q12 (K4) — CLOSED:** sui generis carve-out bounds the external Dir. 96/9/EC right.
+- **Q14 (A1 ↔ K5a/b/c) — CLOSED:** general-layer savings (pre-2024 acts, sector/data-space, research-except-Ch-V).
+- **Full constraint ledger:** Q1–Q16 and N1–N7 are now **all closed** across R3.3 (Q1 A-phasing ✓ R3.3-A; Q2/Q13/Q15/Q16 ✓ R3.3-B; Q3/Q4 ✓ R3.3-C/D; Q5/N1/N2 ✓ R3.3-D; Q6/Q15-Ch-IV ✓ R3.3-E/F; Q7/Q8 ✓ R3.3-F; Q9/Q10 ✓ R3.3-G; N3/N4/N5/N6/N7/Q11/Q12/Q14 ✓ this unit). **No orphan default remains.**
+
+## 66. Corrigendum (EP-SRC-000007) effect on Blocks 8–10
+
+**NONE.** The corrigendum touches **Article 48 only** — which mints no identity and is not verified. Blocks 8–10 cover Arts. 31, 32, 34, 36, 37, 38, 39, 40, 43, 44; none is touched. The whole of R3.3 rests on `EP-SRC-000006` unmodified.
+
+## 67. Guards honoured (Terminal Closeout)
+
+- No public `claims.json` created. No public HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt` touched.
+- Freshness Gate **not opened**; Publish Gate **not opened**. `validity_state` null, `published` false throughout.
+- No new `EP-CLM` / `EP-SRC` minted; no renumbering. I1/I2 (Arts 33/35) remain **unminted / source-constrained** and are **not** verified. Blocks 1–7 results unchanged.
+- No CRA / EERS / Protocol work. No route score ≥ 90 claimed (RGS re-score is R3.8, behind the Publish Gate).
+
+## 68. R3.3 COMPLETE — handoff to production staging
+
+**R3.3 Human Literal Verification is COMPLETE / PASS at 87/87.** Every minted `EP-CLM` (`…046..132`) is `VERIFIED_LITERAL` against `EP-SRC-000006` (read with `…007`); every Q1–Q16 + N1–N7 edge is closed; all state stays internal (`validity_state` null, `published` false). **The next stage is production staging (R3.4 canonical graph → R3.5 page transformation), built as a `release-candidate` work-product with `published: false` — NOT a gate-opening step.** The public Publish Gate (R3.8: live `/regulation/eu-data-act/` swap + `claims.json` registration in `routes.json`/`sitemap.xml`/`llms.txt` + RGS re-score ≥ 90) remains **closed** and is deferred to a separate, explicitly-authorised production PR after human review of the release-candidate.
+
+---
+
+*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4 + R3.3-E Block 5 + R3.3-F Block 6 + R3.3-G Block 7 + R3.3-H Terminal Closeout Blocks 8–10). **R3.3 COMPLETE — 87/87 VERIFIED_LITERAL.** Internal. Not a published website page. No public claims.json.*
