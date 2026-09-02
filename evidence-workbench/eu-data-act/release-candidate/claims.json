@@ -9,18 +9,26 @@
     "claim_count": 87,
     "id_range": "EP-CLM-000046..EP-CLM-000132",
     "co_render_blocking_pairs": [
+      "EP-CLM-000046 + EP-CLM-000059",
+      "EP-CLM-000062 + EP-CLM-000061",
+      "EP-CLM-000065 + EP-CLM-000061",
+      "EP-CLM-000069 + EP-CLM-000061",
+      "EP-CLM-000073 + EP-CLM-000079",
+      "EP-CLM-000073 + EP-CLM-000080",
+      "EP-CLM-000075 + EP-CLM-000080",
       "EP-CLM-000081 + EP-CLM-000089",
       "EP-CLM-000090 + EP-CLM-000100",
       "EP-CLM-000101 + EP-CLM-000114",
       "EP-CLM-000109 + EP-CLM-000114",
       "EP-CLM-000111 + EP-CLM-000114",
-      "EP-CLM-000108 + EP-CLM-000115",
-      "EP-CLM-000073 + EP-CLM-000079",
-      "EP-CLM-000046 + EP-CLM-000059"
+      "EP-CLM-000108 + EP-CLM-000115"
     ],
     "excluded_source_constrained": [
       "R-I1 (Art. 33)",
       "R-I2 (Art. 35)"
+    ],
+    "embedded_unminted_qualifiers": [
+      "EP-CLM-000069 embeds the Article 5(9)-(11) third-party trade-secret boundary (no separate EP-CLM identity)."
     ],
     "governed_by": [
       "EVIDENCE_GRAPH_MODEL.md",
@@ -30,17 +38,20 @@
       "ROUTE_GOVERNANCE.md",
       "DISCLOSURE_BOUNDARY.md",
       "REFERENCE_GRADE_ROUTE_STANDARD.md",
+      "EERS_1.0_CANDIDATE_SPECIFICATION.md",
       "DEC-057",
       "DEC-059",
       "DEC-060"
     ],
     "notes": [
-      "Assembled from R3_3_VERBATIM_VERIFICATION.md (Blocks 1-10, 87/87 VERIFIED_LITERAL) and the qualified_by/edge column of R3_2_IDENTITY_REGISTER.md. Claim prose is the verified-literal proposition; provision_locator is the exact Article/paragraph.",
-      "All 87 claims workflow_state=publishable (draft->publishable at graph assembly); validity_state=null; published=false. Publication is reserved for the R3.8 Publish Gate.",
-      "Not live: no file under regulation/eu-data-act/**; no routes.json / llms.txt / sitemap / robots mutation here.",
-      "I1/I2 (Arts 33/35 interoperability essential requirements) carry no EP-CLM identity (source-constrained / standards-pending) and are excluded from the graph.",
-      "Corrigendum EP-SRC-000007 affects Article 48 only and has no effect on any claim; it is recorded on each claim as read_with.",
-      "Provenance SHAs (release_sha, merge_sha, live_on_main_since) are not invented here; they are set only at the Publish Gate."
+      "Assembled from R3_3_VERBATIM_VERIFICATION.md (Blocks 1-10, 87/87 VERIFIED_LITERAL) and the R3.1-F Q1-Q16/N1-N7 constraint audit. Claim prose is the verified-literal proposition; provision_locator is the exact Article/paragraph.",
+      "Source edges use only supports/amends/clarifies (EVIDENCE_GRAPH_MODEL v1.4). The corrigendum EP-SRC-000007 affects Article 48 only and amends/clarifies none of these 87 claims, so it carries NO per-claim edge; it is retained here in source_registry as the corrigendum read with the authentic act, with no effect on any claim.",
+      "Claim->Claim relations follow the R3.1-F audit: qualified_by only for a claim that narrows/excepts/conditions another (Q/N carve-outs, exemptions, applicability gates); structural adjacency (implementation duties, enforcement architecture, procedure) is related_claims; anti-waiver and applicability boundaries that accompany a right without narrowing its truth are co_render_blocking_pairs.",
+      "claim_risk per CLAIM_POLICY v1.1, calibrated to the live GDPR graph: Low only for bibliographic instrument identity (A1) and entry-into-force orientation (A2); all legal applicability/scope, compliance, right/restriction, exemption-with-effect and deadline claims are High (Tier-1 basis EP-SRC-000006).",
+      "EERS dimensions per EERS_1.0 semantics (multiple allowed): DIM-01 identification/scope/actor; DIM-02 timing; DIM-04 entity/representation/establishment; DIM-06 concrete product/service requirements; DIM-07 enforcement/penalty exposure. DIM-03/05/08 not asserted without direct support.",
+      "All 87 claims workflow_state=publishable; validity_state=null; published=false. Publication is reserved for the R3.8 Publish Gate.",
+      "Not live: no file under regulation/eu-data-act/**; no routes.json / llms.txt / sitemap / robots mutation here. Provenance SHAs are set only at the Publish Gate.",
+      "I1/I2 (Arts 33/35 interoperability essential requirements) carry no EP-CLM identity (source-constrained / standards-pending) and are excluded from the graph."
     ],
     "generated": "2026-09-02",
     "target_public_path": "/regulation/eu-data-act/claims.json",
@@ -55,7 +66,7 @@
         "source_version_date": "2023-12-22",
         "retrieved_at": "2026-08-31",
         "source_tier": 1,
-        "role": "authentic Official Journal act - evidentiary basis"
+        "role": "authentic Official Journal act - evidentiary basis (supports every claim)"
       },
       "EP-SRC-000007": {
         "instrument_id": "EU-2023-2854-CORRIGENDUM-20241209",
@@ -65,7 +76,7 @@
         "source_version_date": "2024-12-09",
         "retrieved_at": "2026-08-31",
         "source_tier": 1,
-        "role": "corrigendum - read with EP-SRC-000006; affects Article 48 only"
+        "role": "corrigendum read with EP-SRC-000006; affects Article 48 only; no effect on any of these 87 claims, hence no per-claim edge"
       }
     }
   },
@@ -73,7 +84,7 @@
     {
       "id": "EP-CLM-000046",
       "display_label": "Data Act / A1 / Ch I / Title; Art. 1(1); Art. 50",
-      "claim": "The EU Data Act is Regulation (EU) 2023/2854 of the European Parliament and of the Council of 13 December 2023 (CELEX 32023R2854), directly applicable in all Member States.",
+      "claim": "The EU Data Act is Regulation (EU) 2023/2854 of the European Parliament and of the Council of 13 December 2023 (CELEX 32023R2854), a regulation directly applicable in all Member States.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -82,11 +93,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Title; Art. 1(1); Art. 50",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -113,7 +119,7 @@
     {
       "id": "EP-CLM-000047",
       "display_label": "Data Act / A2 / Ch XI / Art. 50 (1st para)",
-      "claim": "The EU Data Act entered into force on 11 January 2024 (twenty days after its 22 December 2023 OJ publication).",
+      "claim": "The EU Data Act entered into force on 11 January 2024, the twentieth day following its publication in the Official Journal on 22 December 2023.",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": "2024-01-11",
@@ -122,11 +128,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 50 (1st para)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -157,11 +158,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 50 (2nd para)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -175,7 +171,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-02"
+        "DIM-02",
+        "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -196,11 +193,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 50 + Art. 3(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -210,7 +202,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-02"
+        "DIM-02",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -231,11 +224,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 50",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -266,11 +254,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 50",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -292,7 +275,7 @@
     {
       "id": "EP-CLM-000052",
       "display_label": "Data Act / B1 / Ch I / Art. 2(5)",
-      "claim": "A 'connected product' is an item that obtains, generates or collects data concerning its use or environment and can communicate product data, and whose primary function is not the storing, processing or transmission of data (Article 2(5)).",
+      "claim": "A 'connected product' is an item that obtains, generates or collects data concerning its use or environment and is able to communicate product data via an electronic communications service, physical connection or on-device access, and whose primary function is not the storing, processing or transmission of data on behalf of any party other than the user (Article 2(5)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -301,291 +284,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 2(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000053",
-      "display_label": "Data Act / B2 / Ch I / Art. 2(6)",
-      "claim": "A 'related service' is a digital service, other than an electronic communications service, connected with the product at or after purchase/rent/lease, without which the product could not perform one or more of its functions, or which is subsequently connected to add, update or adapt functions (Article 2(6)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 2(6)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000054",
-      "display_label": "Data Act / B3a / Ch I / Art. 2(12)",
-      "claim": "A 'user' is a natural or legal person that owns a connected product or to whom temporary rights to use it have been contractually transferred, or that receives related services (Article 2(12)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 2(12)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000055",
-      "display_label": "Data Act / B3b / Ch I / Art. 2(13)",
-      "claim": "A 'data holder' is a natural or legal person that has the right or obligation, under this Regulation, applicable Union law or national implementing law, to use and make available data, including product data or related-service data (Article 2(13)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 2(13)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000056",
-      "display_label": "Data Act / B4 / Ch I / Art. 2(8)",
-      "claim": "A 'data processing service' is a digital service enabling on-demand administration and broad remote access to a scalable and elastic pool of shareable computing resources (Article 2(8)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 2(8)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000057",
-      "display_label": "Data Act / B5 / Ch II / Art. 7(1)",
-      "claim": "Chapter II obligations do not apply to data generated by connected products manufactured or related services provided by a micro or small enterprise, provided it is not a subcontractor or partner of a larger enterprise (Article 7(1)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 7(1)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000058",
-      "display_label": "Data Act / B5b / Ch II / Art. 7(1) subpara",
-      "claim": "The Article 7(1) micro/small exemption extends to an enterprise that qualified as medium-sized for less than one year, and to connected products for one year after they are placed on the market by such an enterprise (Article 7(1), subparagraph).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 7(1) subpara",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000059",
-      "display_label": "Data Act / B6 / Ch I / Art. 1(5)",
-      "claim": "Where the Data Act conflicts with Union law on the protection of personal data or privacy, or with national implementing law, the data-protection/privacy law prevails (Article 1(5)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 1(5)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
-        }
-      ],
-      "qualified_by": null,
-      "related_claims": null,
-      "workflow_state": "publishable",
-      "validity_state": null,
-      "confidence": "Verified",
-      "claim_risk": "Low",
-      "affected_eers_dimensions": [
-        "DIM-01"
-      ],
-      "last_verified_at": "2026-08-31",
-      "supersedes": null,
-      "superseded_by": null,
-      "corrects": null,
-      "corrected_by": null,
-      "change_type": null
-    },
-    {
-      "id": "EP-CLM-000060",
-      "display_label": "Data Act / B6b / Ch II / Arts. 4(12)/5(7)",
-      "claim": "Where the user is not the data subject, personal data may be made available only where there is a valid legal basis under Article 6 GDPR and, where relevant, the conditions of Article 9 GDPR are met (Articles 4(12)/5(7)).",
-      "jurisdiction": "EU",
-      "actor": null,
-      "effective_date": null,
-      "sources": [
-        {
-          "source_id": "EP-SRC-000006",
-          "provision_locator": "Arts. 4(12)/5(7)",
-          "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -605,9 +303,252 @@
       "change_type": null
     },
     {
+      "id": "EP-CLM-000053",
+      "display_label": "Data Act / B2 / Ch I / Art. 2(6)",
+      "claim": "A 'related service' is a digital service, other than an electronic communications service, including software, connected with the product at or after purchase, rent or lease such that its absence would prevent the product from performing one or more of its functions, or subsequently connected to add, update or adapt functions (Article 2(6)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(6)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000054",
+      "display_label": "Data Act / B3a / Ch I / Art. 2(12)",
+      "claim": "A 'user' is a natural or legal person that owns a connected product, to whom temporary rights to use it have been contractually transferred, or that receives related services (Article 2(12)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(12)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000055",
+      "display_label": "Data Act / B3b / Ch I / Art. 2(13)",
+      "claim": "A 'data holder' is a natural or legal person that has the right or obligation, in accordance with this Regulation, applicable Union law or national law adopted in accordance with Union law, to use and make available data, including, where contractually agreed, product data or related-service data it has retrieved or generated during the provision of a related service (Article 2(13)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(13)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000056",
+      "display_label": "Data Act / B4 / Ch I / Art. 2(8)",
+      "claim": "A 'data processing service' is a digital service provided to a customer that enables ubiquitous and on-demand network access to a shared pool of configurable, scalable and elastic computing resources of a centralised, distributed or highly distributed nature that can be rapidly provisioned and released with minimal management effort or service-provider interaction (Article 2(8)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 2(8)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000057",
+      "display_label": "Data Act / B5 / Ch II / Art. 7(1)",
+      "claim": "The Chapter II obligations do not apply to data generated through the use of connected products manufactured or designed, or related services provided, by a microenterprise or small enterprise, provided that enterprise has no partner or linked enterprise (within Article 3 of the Annex to Recommendation 2003/361/EC) that is not itself a micro or small enterprise, and is not subcontracted to manufacture or design the product or provide the service (Article 7(1)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 7(1)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-04"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000058",
+      "display_label": "Data Act / B5b / Ch II / Art. 7(1) subpara",
+      "claim": "The same Article 7(1) exemption applies to an enterprise that has qualified as a medium-sized enterprise for less than one year, and to connected products for one year after they are placed on the market by such an enterprise, carrying the same Article 7(1) conditions rather than as an unconditional exemption (Article 7(1), second subparagraph).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 7(1) subpara",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-04"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000059",
+      "display_label": "Data Act / B6 / Ch I / Art. 1(5)",
+      "claim": "Where the Data Act conflicts with Union law on the protection of personal data or privacy, or with national implementing law, the data-protection or privacy law prevails (Article 1(5)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Art. 1(5)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
+      "id": "EP-CLM-000060",
+      "display_label": "Data Act / B6b / Ch II / Arts. 4(12)/5(7)",
+      "claim": "Where the user is not the data subject, personal data generated by the use of a connected product or related service may be made available (to the user or to a third party) only where there is a valid legal basis for processing under Article 6 GDPR and, where relevant, the conditions of Article 9 GDPR and of Article 5(3) of Directive 2002/58/EC (ePrivacy) are fulfilled (Articles 4(12)/5(7)).",
+      "jurisdiction": "EU",
+      "actor": null,
+      "effective_date": null,
+      "sources": [
+        {
+          "source_id": "EP-SRC-000006",
+          "provision_locator": "Arts. 4(12)/5(7)",
+          "relationship": "supports"
+        }
+      ],
+      "qualified_by": null,
+      "related_claims": null,
+      "workflow_state": "publishable",
+      "validity_state": null,
+      "confidence": "Verified",
+      "claim_risk": "High",
+      "affected_eers_dimensions": [
+        "DIM-01",
+        "DIM-06"
+      ],
+      "last_verified_at": "2026-08-31",
+      "supersedes": null,
+      "superseded_by": null,
+      "corrects": null,
+      "corrected_by": null,
+      "change_type": null
+    },
+    {
       "id": "EP-CLM-000061",
       "display_label": "Data Act / B7 / Ch II / Art. 7(2)",
-      "claim": "The user's rights under Chapter II may not be unilaterally excluded, derogated from or varied by a contractual term to the user's detriment (Article 7(2)).",
+      "claim": "Any contractual term that, to the detriment of the user, excludes the application of, derogates from or varies the effect of the user's rights under Chapter II is not binding on the user (Article 7(2)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -616,11 +557,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 7(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -628,7 +564,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -651,11 +587,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 3(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -663,12 +594,16 @@
         "EP-CLM-000057",
         "EP-CLM-000058"
       ],
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000063",
+        "EP-CLM-000064"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -690,11 +625,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 3(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -702,9 +632,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -725,11 +655,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 3(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -737,9 +662,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -760,11 +685,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 4(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -773,12 +693,16 @@
         "EP-CLM-000057",
         "EP-CLM-000058"
       ],
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000066",
+        "EP-CLM-000067"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -800,11 +724,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 4(13)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -814,7 +733,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -826,7 +745,7 @@
     {
       "id": "EP-CLM-000067",
       "display_label": "Data Act / C4b / Ch II / Art. 4(14)",
-      "claim": "A data holder may not make non-personal product data available to third parties except to fulfil its contract with the user (Article 4(14)).",
+      "claim": "A data holder may not make non-personal product data available to third parties for commercial or non-commercial purposes other than to fulfil its contract with the user (Article 4(14)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -835,11 +754,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 4(14)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -849,7 +763,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -870,11 +784,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 4(6)/(7)/(8)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -884,6 +793,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -896,33 +806,34 @@
     {
       "id": "EP-CLM-000069",
       "display_label": "Data Act / C6 / Ch II / Art. 5(1)",
-      "claim": "At the user's request, the data holder must make product and related-service data available to a third party without undue delay, of the same quality as available to the data holder and, where relevant and technically feasible, continuously and in real time (Article 5(1)).",
+      "claim": "At the user's request, the data holder must make product and related-service data available to a third party without undue delay, of the same quality as available to the data holder and, where relevant and technically feasible, continuously and in real time; trade secrets are preserved and disclosed to the third party only as strictly necessary for the agreed purpose, and where the necessary confidentiality measures are not agreed or are breached the data holder may withhold or suspend, or in exceptional cases refuse, sharing of the identified data (Article 5(1), read with the trade-secret boundary in Article 5(9)-(11)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
       "sources": [
         {
           "source_id": "EP-SRC-000006",
-          "provision_locator": "Art. 5(1)",
+          "provision_locator": "Article 5(1); third-party trade-secret boundary Article 5(9)-(11)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
         "EP-CLM-000070",
         "EP-CLM-000072",
-        "EP-CLM-000060"
+        "EP-CLM-000060",
+        "EP-CLM-000057",
+        "EP-CLM-000058"
       ],
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000071",
+        "EP-CLM-000078"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -944,11 +855,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 5(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -958,7 +864,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -979,11 +886,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 6(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -993,7 +895,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1005,7 +907,7 @@
     {
       "id": "EP-CLM-000072",
       "display_label": "Data Act / D2 / Ch II / Art. 6(2)(a)-(h)",
-      "claim": "A third party receiving data must not, among other things, use it to develop a competing connected product, coerce or deceive the user, use the data to profile unless necessary, make it available to a gatekeeper, or use it outside the agreed purposes (Article 6(2), points (a)-(h)).",
+      "claim": "A third party receiving data must not, among other things, use it to develop a competing connected product, coerce or deceive the user, profile the user unless necessary, make the data available to a gatekeeper, or use it outside the agreed purposes (Article 6(2), points (a)-(h)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -1014,11 +916,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 6(2)(a)-(h)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1028,7 +925,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1040,7 +937,7 @@
     {
       "id": "EP-CLM-000073",
       "display_label": "Data Act / D3 / Ch III / Art. 8(1)",
-      "claim": "Where a data holder is obliged to make data available to a data recipient under Chapter III, it must do so under fair, reasonable and non-discriminatory terms and in a transparent manner (Article 8(1)).",
+      "claim": "Where, in business-to-business relations, a data holder is obliged to make data available to a data recipient under Chapter III, it must do so under fair, reasonable and non-discriminatory terms and in a transparent manner (Article 8(1)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -1049,22 +946,21 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 8(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
         "EP-CLM-000079"
       ],
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000074",
+        "EP-CLM-000078"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -1086,11 +982,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 8(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -1102,6 +993,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -1123,15 +1015,11 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 9(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
-        "EP-CLM-000076"
+        "EP-CLM-000076",
+        "EP-CLM-000079"
       ],
       "related_claims": null,
       "workflow_state": "publishable",
@@ -1139,6 +1027,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -1160,11 +1049,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 9(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1172,8 +1056,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -1195,21 +1080,21 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 11(1)/(2)/(3)/(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
-      "qualified_by": null,
-      "related_claims": null,
+      "qualified_by": [
+        "EP-CLM-000079"
+      ],
+      "related_claims": [
+        "EP-CLM-000065",
+        "EP-CLM-000069"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1230,11 +1115,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 8(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1244,6 +1124,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
@@ -1265,11 +1146,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 12(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1277,7 +1153,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1300,11 +1176,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 12(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1312,7 +1183,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1335,11 +1206,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -1349,8 +1215,7 @@
         "EP-CLM-000085",
         "EP-CLM-000086",
         "EP-CLM-000087",
-        "EP-CLM-000088",
-        "EP-CLM-000089"
+        "EP-CLM-000088"
       ],
       "related_claims": null,
       "workflow_state": "publishable",
@@ -1358,7 +1223,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1379,11 +1245,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1391,7 +1252,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1414,11 +1275,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1428,7 +1284,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1449,11 +1306,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1463,7 +1315,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1484,11 +1337,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1498,7 +1346,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1519,11 +1368,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(6)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1531,7 +1375,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1554,11 +1398,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(7)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1566,7 +1405,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1589,11 +1428,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(8)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1601,7 +1435,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1624,11 +1458,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 13(9)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1636,7 +1465,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -1659,29 +1488,28 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 14",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
         "EP-CLM-000091",
         "EP-CLM-000092",
         "EP-CLM-000093",
+        "EP-CLM-000100"
+      ],
+      "related_claims": [
+        "EP-CLM-000094",
+        "EP-CLM-000095",
         "EP-CLM-000096",
         "EP-CLM-000097",
         "EP-CLM-000098",
-        "EP-CLM-000099",
-        "EP-CLM-000100"
+        "EP-CLM-000099"
       ],
-      "related_claims": null,
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -1703,11 +1531,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 15(1)(a)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1717,6 +1540,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -1738,11 +1562,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 15(1)(b)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1752,6 +1571,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -1773,11 +1593,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 15(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1785,9 +1600,10 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-04"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1808,11 +1624,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 17(1)/(2)/(3)-(6)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1822,7 +1633,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1843,11 +1654,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 18(1)-(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1857,7 +1663,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06",
+        "DIM-02"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1878,11 +1685,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 20(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1892,7 +1694,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1913,11 +1715,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 20(2)/(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1925,9 +1722,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1948,11 +1745,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 19(1)-(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1962,7 +1754,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -1983,11 +1775,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 21(1)-(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -1995,8 +1782,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2018,11 +1806,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 16(1)/(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2030,7 +1813,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -2053,30 +1836,28 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 23(a)-(e)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
         "EP-CLM-000102",
+        "EP-CLM-000114"
+      ],
+      "related_claims": [
         "EP-CLM-000103",
         "EP-CLM-000104",
         "EP-CLM-000105",
         "EP-CLM-000106",
         "EP-CLM-000107",
+        "EP-CLM-000108",
         "EP-CLM-000109",
-        "EP-CLM-000111",
-        "EP-CLM-000114"
+        "EP-CLM-000111"
       ],
-      "related_claims": null,
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2098,11 +1879,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 24",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2110,7 +1886,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -2133,11 +1909,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 25(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2145,9 +1916,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2168,11 +1939,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 25(2)(a)-(i)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2182,7 +1948,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06",
+        "DIM-02"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2203,11 +1970,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 25(3)/(4)/(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2217,7 +1979,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06",
+        "DIM-02"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2238,11 +2001,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 26(a)/(b)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2250,9 +2008,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2273,11 +2031,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 27",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2285,9 +2038,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2308,11 +2061,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 28(1)/(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2322,8 +2070,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2345,11 +2094,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 29(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -2362,7 +2106,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-02"
+        "DIM-02",
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2383,11 +2128,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 29(2)/(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2395,9 +2135,10 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-02"
+        "DIM-02",
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2409,7 +2150,7 @@
     {
       "id": "EP-CLM-000111",
       "display_label": "Data Act / G5a / Ch VI / Art. 30(1)",
-      "claim": "Providers of infrastructural (IaaS-type) data processing services must take all reasonable measures in their power to help the customer achieve functional equivalence after switching to a service of the same service type (Article 30(1)).",
+      "claim": "Providers of data processing services that concern scalable and elastic computing resources limited to infrastructural elements (such as servers, networks and the virtual resources necessary to operate the infrastructure) and that do not provide access to the operating services, software and applications stored, processed or deployed on those elements must take all reasonable measures in their power to help the customer achieve functional equivalence after switching to a service of the same service type (Article 30(1)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -2418,24 +2159,21 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 30(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
-        "EP-CLM-000112",
-        "EP-CLM-000113",
         "EP-CLM-000114"
       ],
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000112",
+        "EP-CLM-000113"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2457,11 +2195,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 30(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2471,7 +2204,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2492,11 +2225,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 30(3)/(5)/(6)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2506,7 +2234,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06",
+        "DIM-02"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2518,7 +2247,7 @@
     {
       "id": "EP-CLM-000114",
       "display_label": "Data Act / G8 / Ch VI / Art. 31(1)/(2)/(3)",
-      "claim": "The Article 23(d), 29 and 30(1)/(3) obligations do not apply to bespoke/custom-built services not offered at broad commercial scale (Article 31(1)); the whole of Chapter VI does not apply to non-production test/evaluation services provided for a limited period (Article 31(2)); and the provider must disclose which Chapter VI obligations do not apply (Article 31(3)).",
+      "claim": "The Article 23(d), 29 and 30(1)/(3) obligations do not apply to bespoke or custom-built services not offered at broad commercial scale (Article 31(1)); the whole of Chapter VI does not apply to non-production services provided for testing and evaluation for a limited period (Article 31(2)); and the provider must disclose which Chapter VI obligations do not apply (Article 31(3)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -2527,11 +2256,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 31(1)/(2)/(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2539,9 +2263,10 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2562,11 +2287,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 32(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -2581,6 +2301,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2602,11 +2323,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 32(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2616,6 +2332,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2637,11 +2354,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 32(3)-(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2651,6 +2363,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-06",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2672,23 +2385,23 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 34(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
-      "qualified_by": [
-        "EP-CLM-000119"
+      "qualified_by": null,
+      "related_claims": [
+        "EP-CLM-000119",
+        "EP-CLM-000101",
+        "EP-CLM-000104",
+        "EP-CLM-000111",
+        "EP-CLM-000112",
+        "EP-CLM-000113"
       ],
-      "related_claims": null,
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2709,11 +2422,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 34(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2721,9 +2429,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2735,7 +2443,7 @@
     {
       "id": "EP-CLM-000120",
       "display_label": "Data Act / J1 / Ch VIII / Art. 36(1)-(4)",
-      "claim": "A vendor or deployer of smart contracts for executing data-sharing agreements must ensure they meet the essential requirements of robustness/access control, safe termination, data archiving/continuity, access control and consistency, perform a conformity assessment and issue an EU declaration of conformity (Article 36(1)-(4)).",
+      "claim": "A vendor or deployer of smart contracts for executing data-sharing agreements must ensure they meet the essential requirements of robustness and access control, safe termination and interruption, data archiving and continuity, access control and consistency, perform a conformity assessment and issue an EU declaration of conformity (Article 36(1)-(4)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -2744,11 +2452,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 36(1)-(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2758,7 +2461,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-06"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2770,7 +2473,7 @@
     {
       "id": "EP-CLM-000121",
       "display_label": "Data Act / K1a / Ch IX / Art. 37(1)/(2)/(5)/(6)/(7)",
-      "claim": "Each Member State must designate one or more competent authorities to enforce this Regulation, designate a data coordinator where there is more than one, define their tasks and powers (including penalties, switching-charge withdrawal and examining Chapter V requests), and the Commission must maintain a public register of those authorities (Article 37(1)/(2)/(5)/(6)/(7)).",
+      "claim": "Each Member State must designate one or more competent authorities to enforce this Regulation, designate a data coordinator where there is more than one, and define their tasks and powers (including penalties, switching-charge withdrawal and examining Chapter V requests); the Commission maintains a public register of those authorities (Article 37(1)/(2)/(5)/(6)/(7)).",
       "jurisdiction": "EU",
       "actor": null,
       "effective_date": null,
@@ -2779,25 +2482,22 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 37(1)/(2)/(5)/(6)/(7)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
-      "qualified_by": [
+      "qualified_by": null,
+      "related_claims": [
         "EP-CLM-000122",
         "EP-CLM-000123",
-        "EP-CLM-000124"
+        "EP-CLM-000124",
+        "EP-CLM-000125"
       ],
-      "related_claims": null,
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-07"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2818,11 +2518,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 37(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2830,9 +2525,10 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-01",
+        "DIM-07"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2853,11 +2549,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 37(11)/(12)/(13)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2867,7 +2558,8 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-04"
+        "DIM-04",
+        "DIM-07"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -2888,20 +2580,18 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 37(10)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
-      "related_claims": null,
+      "related_claims": [
+        "EP-CLM-000123"
+      ],
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-04",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2923,11 +2613,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Arts. 38(1)-(3), 39(1)-(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -2935,8 +2620,9 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-07",
         "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
@@ -2958,11 +2644,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 40(1)/(2)/(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": [
@@ -2975,6 +2656,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
+        "DIM-07",
         "DIM-02"
       ],
       "last_verified_at": "2026-09-02",
@@ -2996,11 +2678,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 40(4)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3010,7 +2687,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-07"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -3031,11 +2708,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 40(5)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3045,7 +2717,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01"
+        "DIM-07"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
@@ -3066,11 +2738,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 43",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3078,7 +2745,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -3101,11 +2768,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 44(1)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3113,7 +2775,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -3136,11 +2798,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 44(2)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3148,7 +2805,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
@@ -3171,11 +2828,6 @@
           "source_id": "EP-SRC-000006",
           "provision_locator": "Art. 44(3)",
           "relationship": "supports"
-        },
-        {
-          "source_id": "EP-SRC-000007",
-          "provision_locator": "Corrigendum (OJ L, 2024/90790) - Article 48 only; no effect on this claim",
-          "relationship": "read_with"
         }
       ],
       "qualified_by": null,
@@ -3183,7 +2835,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-01"
       ],
