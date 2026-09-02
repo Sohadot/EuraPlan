@@ -147,7 +147,7 @@ def card(c):
     return f'''<article class="clock-reg-item" id="ep-clm-{num(c["id"])}">
  <div>
  <div class="clock-reg-name">{esc(c["display_label"])}</div>
- <div class="clock-reg-id">{c["id"]} &middot; risk: {c["claim_risk"]} &middot; EERS: {", ".join(c["affected_eers_dimensions"])}{eff}</div>
+ <div class="clock-reg-id">{c["id"]} &middot; Verified &middot; Tier 1 source &middot; EERS: {", ".join(c["affected_eers_dimensions"])}{eff}</div>
  </div>
  <div class="clock-reg-dates">
  <p style="margin:0 0 8px;">{esc(c["claim"])}</p>
@@ -237,7 +237,7 @@ page = f'''<!DOCTYPE html>
  <span class="control-room-hero-label">EP-REG-003 — EU Data Act Evidence Graph reference</span>
  <h1 class="control-room-hero-title" id="reg-heading">EU Data Act — Evidence Graph Reference</h1>
  <p class="control-room-hero-thesis">
- Regulation (EU) 2023/2854 as a citable planning graph for non-EU entry: the applicability clock, connected-product data access and sharing, data-holder availability, unfair-term limits, B2G exceptional need, cloud switching, international access, interoperability, and enforcement &mdash; each truth proposition pinned to a permanent claim ID, verified verbatim against the Official Journal act.
+ Regulation (EU) 2023/2854 as a citable planning graph for non-EU entry: the applicability clock, connected-product data access and sharing, data-holder availability, unfair-term limits, B2G exceptional need, cloud switching, international access, interoperability, and enforcement &mdash; each truth proposition pinned to a permanent claim ID and human-verified against the Official Journal text.
  </p>
  <div class="badge-row">
  <span class="source-confidence-badge source-confidence-badge--tier1">Source: Tier 1 official</span>
@@ -245,7 +245,7 @@ page = f'''<!DOCTYPE html>
  <span class="source-confidence-badge source-confidence-badge--verified">Workflow: publishable</span>
  </div>
  <p style="font-size: 0.72rem; color: var(--grey-mid); max-width: 640px; margin-top: 12px; line-height: 1.6;">
- EuraPlan produces planning intelligence. This reference is not legal advice. 87/87 propositions VERIFIED_LITERAL against Regulation (EU) 2023/2854 read with its corrigendum (Art. 48 only).
+ EuraPlan produces planning intelligence. This reference is not legal advice. 87/87 propositions human-verified against the primary source &mdash; Regulation (EU) 2023/2854 read with its corrigendum (Art. 48 only). Displayed claim text is EuraPlan's plain-language proposition, not a verbatim quotation of the act.
  </p>
  <div class="control-room-hero-actions">
  <a href="#claim-register" class="btn btn-primary">Verified Claim Register</a>
@@ -286,5 +286,9 @@ for c in claims:
 assert '<meta name="robots" content="noindex, nofollow">' in page, "must be noindex"
 assert "Release candidate &mdash; not published" in page, "staging banner"
 assert "workflow: publishable" in page and "published: false" in page.lower()
+# locked public-wording corrections (must not regress)
+assert "VERIFIED_LITERAL" not in page, "public page must not contain VERIFIED_LITERAL"
+assert "verified verbatim" not in page.lower(), "public page must not imply verbatim quotation"
+assert "risk: High" not in page and "risk: Low" not in page, "no user-facing risk: High/Low card label"
 # no live-path leakage: canonical points at target but this file is under release-candidate/
 print("index.html written:", len(page), "bytes | 87 cards | noindex | staged")

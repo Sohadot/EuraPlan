@@ -135,7 +135,7 @@
       "workflow_state": "publishable",
       "validity_state": null,
       "confidence": "Verified",
-      "claim_risk": "Low",
+      "claim_risk": "High",
       "affected_eers_dimensions": [
         "DIM-02"
       ],
@@ -443,8 +443,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01",
-        "DIM-04"
+        "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -474,8 +473,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01",
-        "DIM-04"
+        "DIM-01"
       ],
       "last_verified_at": "2026-08-31",
       "supersedes": null,
@@ -1602,8 +1600,7 @@
       "confidence": "Verified",
       "claim_risk": "High",
       "affected_eers_dimensions": [
-        "DIM-01",
-        "DIM-04"
+        "DIM-01"
       ],
       "last_verified_at": "2026-09-02",
       "supersedes": null,
