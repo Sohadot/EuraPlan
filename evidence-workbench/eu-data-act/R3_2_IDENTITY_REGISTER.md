@@ -67,17 +67,17 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000086` | R-E3 | IV | Art. 13(6) | 'unilaterally imposed' definition + burden of proof | Q6 scopes E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
 | `EP-CLM-000087` | R-E4 | IV | Art. 13(7) | severability | Q6 qualifies E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
 | `EP-CLM-000088` | R-E5 | IV | Art. 13(8) | main-subject-matter / price-adequacy exclusion | Q6 scope limit on E1a | EP-SRC-000006 (+000007) | **verified·2026-08-31** (R3.3-E) |
-| `EP-CLM-000089` | R-E6 | IV | Art. 13(9) | Chapter IV anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000090` | R-F1 | V | Art. 14 | B2G availability duty (legal persons other than PSBs) | Q7 default; Q8 compensation | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000091` | R-F2a | V | Art. 15(1)(a) | public-emergency route | Q7 qualifies F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000092` | R-F2b | V | Art. 15(1)(b) | non-emergency route (non-personal only) | Q7 qualifies F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000093` | R-F2c | V | Art. 15(2) | micro/small carve-out (15(1)(b) only) | Q7 qualifies F1 route-specifically | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000094` | R-F3a | V | Art. 17(1)/(2)/(3)-(6) | B2G request requirements | procedure on F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000095` | R-F3b | V | Art. 18(1)-(5) | data-holder compliance + decline/modify (5/30 wd) | procedure on F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000096` | R-F4a | V | Art. 20(1) | emergency data free (non micro/small) | Q8 qualifies F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000097` | R-F4b | V | Art. 20(2)/(3) | fair compensation incl. micro/small entitlement | Q8 qualifies F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000098` | R-F5a | V | Art. 19(1)-(4) | PSB use/erasure/trade-secret obligations | bounds B2G (limit on PSB) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000099` | R-F5b | V | Art. 21(1)-(5) | bounded onward-sharing to research/statistics | bounds B2G | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000089` | R-E6 | IV | Art. 13(9) | Chapter IV anti-waiver | Q15 analogue | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F · closes Ch IV anti-waiver; completes Q15 triad) |
+| `EP-CLM-000090` | R-F1 | V | Art. 14 | B2G availability duty (legal persons other than PSBs) | Q7 default; Q8 compensation | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) · F6/Art 16 carve-out fwd-dep → R3.3-G |
+| `EP-CLM-000091` | R-F2a | V | Art. 15(1)(a) | public-emergency route | Q7 qualifies F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000092` | R-F2b | V | Art. 15(1)(b) | non-emergency route (non-personal only) | Q7 qualifies F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000093` | R-F2c | V | Art. 15(2) | micro/small carve-out (15(1)(b) only) | Q7 qualifies F1 route-specifically | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000094` | R-F3a | V | Art. 17(1)/(2)/(3)-(6) | B2G request requirements | procedure on F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000095` | R-F3b | V | Art. 18(1)-(5) | data-holder compliance + decline/modify (5/30 wd) | procedure on F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000096` | R-F4a | V | Art. 20(1) | emergency data free (non micro/small) | Q8 qualifies F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000097` | R-F4b | V | Art. 20(2)/(3) | fair compensation incl. micro/small entitlement | Q8 qualifies F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000098` | R-F5a | V | Art. 19(1)-(4) | PSB use/erasure/trade-secret obligations | bounds B2G (limit on PSB) | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
+| `EP-CLM-000099` | R-F5b | V | Art. 21(1)-(5) | bounded onward-sharing to research/statistics | bounds B2G | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
 | `EP-CLM-000100` | R-F6 | V | Art. 16(1)/(2) | relationship + criminal/customs/tax carve-out | Q7 scope limit on F1 | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000101` | R-G1 | VI | Art. 23(a)-(e) | remove obstacles to effective switching | default; Q9/Q10; G8 exemption | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000102` | R-G9 | VI | Art. 24 | scope of technical obligations (source provider only) | scope-limiter | EP-SRC-000006 (+000007) | draft |

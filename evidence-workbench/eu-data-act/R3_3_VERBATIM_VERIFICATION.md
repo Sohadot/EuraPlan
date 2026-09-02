@@ -1,6 +1,6 @@
 # R3.3 — EU Data Act Human Literal (Verbatim) Verification
 **Sprint:** R3 — EU Data Act (EP-REG-003) · **Phase:** R3.3 Human Literal Verification
-**Status:** **BLOCKS 1–5 COMPLETE / PASS** — 43/43 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8, Block 5 = 9). Blocks 6–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
+**Status:** **BLOCKS 1–6 COMPLETE / PASS** — 54/54 `VERIFIED_LITERAL` (Block 1 = 6, Block 2 = 10, Block 3 = 10, Block 4 = 8, Block 5 = 9, Block 6 = 11). Blocks 7–10 NOT started. **Internal workbench only — no public claims.json, no live surface, no publication-state advance.**
 **Opened by:** DEC-060 (identity minting) → R3.3 verification is the real-event stage that may set `last_verified_at`.
 **Governed by:** CLAIM_IDENTITY_AND_LIFECYCLE_SPECIFICATION.md; EVIDENCE_GRAPH_MODEL.md; SOURCE_POLICY.md; CLAIM_POLICY.md; DEC-047; DEC-057; DEC-059; DEC-060
 **Method:** each `EP-CLM` located to its exact Article/paragraph in `EP-SRC-000006`, read **with** `EP-SRC-000007`, compared literally, checked for over-breadth and for carried qualifiers.
@@ -414,4 +414,117 @@ Proceed to **R3.3-F = Block 6** (*B2G exceptional need, Chapter V*, `EP-CLM-0000
 
 ---
 
-*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4 + R3.3-E Block 5). Internal. Not a published website page. No public claims.json.*
+# R3.3-F — Block 6 (Ch IV anti-waiver close + B2G exceptional need · Chapter V)
+
+**Unit status:** **COMPLETE / PASS** — 11/11 `VERIFIED_LITERAL`. **Date:** 2026-09-02. **Basis:** `EP-SRC-000006` read with `EP-SRC-000007`. Blocks 1–5 untouched. **E6 verified FIRST** to close the Chapter IV non-derogation boundary over the R3.3-E unfair-terms regime.
+
+## 43. Scope of this unit — R3.3-F (Block 6 only)
+
+Verifies **Block 6** by its **authoritative numeric range `EP-CLM-000089` … `EP-CLM-000099`** (eleven identities). **First item = E6 (`EP-CLM-000089`, Art. 13(9))** — the Chapter IV anti-waiver deferred from R3.3-E — then the Chapter V B2G exceptional-need claims. Rows in numeric order: **E6, F1, F2a, F2b, F2c, F3a, F3b, F4a, F4b, F5a, F5b**.
+
+**Block-boundary seam recorded (continuation of the §17/§25/§34 pattern):** numeric range `…089`–`…099` = rows **E6 + F1–F5b**. The draft-sequence label for Block 6 reads "F1–F6", off on **both** ends: **E6** was pulled into this block (Ch IV anti-waiver, per the R3.3-E §42 recommendation), and **F6 = R-F6 = Art. 16 (relationship + criminal/customs/tax carve-out) = `EP-CLM-000100`** falls in Block 7's numeric range — **not** verified here; it begins R3.3-G. **F6 is F1's Chapter V scope-limit (Q7 carve-out limb)**, so it is a forward dependency exactly as E6 was for Ch IV and D10 was for Ch III (see F1 below).
+
+## 44. Verbatim anchors used (quoted from EP-SRC-000006)
+
+**Article 13(9) — Chapter IV anti-waiver (E6):**
+> 13(9) [E6]: "The parties to a contract covered by paragraph 1 shall not exclude the application of this Article, derogate from it, or vary its effects."
+
+**CHAPTER V heading:** "MAKING DATA AVAILABLE TO PUBLIC SECTOR BODIES, THE COMMISSION, THE EUROPEAN CENTRAL BANK AND UNION BODIES ON THE BASIS OF AN EXCEPTIONAL NEED".
+
+**Article 14 — Obligation to make data available on the basis of an exceptional need (F1):**
+> 14 [F1]: "Where a public sector body, the Commission, the European Central Bank or a Union body demonstrates an exceptional need, as set out in Article 15, to use certain data, including the relevant metadata necessary to interpret and use those data, to carry out its statutory duties in the public interest, data holders that are legal persons, other than public sectors bodies, which hold those data shall make them available upon a duly reasoned request." *(quoted verbatim, incl. the OJ text's "public sectors bodies")*
+
+**Article 15 — Exceptional need to use data (F2a/F2b/F2c):**
+> 15(1) chapeau: "An exceptional need to use certain data within the meaning of this Chapter shall be limited in time and scope and shall be considered to exist only in any of the following circumstances:"
+> 15(1)(a) [F2a — public-emergency route]: "where the data requested is necessary to respond to a public emergency and the public sector body, the Commission, the European Central Bank or the Union body is unable to obtain such data by alternative means in a timely and effective manner under equivalent conditions;"
+> 15(1)(b) [F2b — non-emergency route, **non-personal only**]: "in circumstances not covered by point (a) and only insofar as non-personal data is concerned, where: (i) a public sector body … is acting on the basis of Union or national law and has identified specific data, the lack of which prevents it from fulfilling a specific task carried out in the public interest, that has been explicitly provided for by law, such as the production of official statistics or the mitigation of or recovery from a public emergency; and (ii) the public sector body … has exhausted all other means at its disposal to obtain such data, including purchase of non-personal data on the market by offering market rates, or by relying on existing obligations to make data available or the adoption of new legislative measures which could guarantee the timely availability of the data."
+> 15(2) [F2c — micro/small carve-out, 15(1)(b) only]: "Paragraph 1, point (b), shall not apply to microenterprises and small enterprises."
+> 15(3) [supporting, travels with F2b/F2c]: "The obligation to demonstrate that the public sector body was unable to obtain non-personal data by purchasing them on the market shall not apply where the specific task carried out in the public interest is the production of official statistics and where the purchase of such data is not allowed by national law."
+
+**Article 17 — Requests for data to be made available (F3a):**
+> 17(1) [F3a]: "When requesting data pursuant to Article 14, a public sector body … shall: (a) specify the data required …; (b) demonstrate that the conditions necessary for the existence of an exceptional need as referred to in Article 15 … are met; (c) explain the purpose of the request, the intended use of the data requested …; (d) specify, if possible, when the data are expected to be erased …; (e) justify the choice of data holder to which the request is addressed; (f) specify any other public sector bodies … and the third parties with which the data requested is expected to be shared with; (g) where personal data are requested, specify any technical and organisational measures necessary and proportionate …; (h) state the legal provision allocating … the specific task carried out in the public interest …; (i) specify the deadline by which the data are to be made available and the deadline referred to in Article 18(2) …; (j) make its best efforts to avoid compliance with the data request resulting in the data holders' liability …"
+> 17(2): "A request … shall: (a) be made in writing and expressed in clear, concise and plain language …; (b) be specific regarding the type of data requested …; (c) be proportionate to the exceptional need and duly justified …; (d) respect the legitimate aims of the data holder, committing to ensuring the protection of trade secrets in accordance with Article 19(3) …; (e) concern non-personal data, and only if this is demonstrated to be insufficient … request personal data in pseudonymised form …" [routing/notification points (f)–(i)].
+> 17(3): "A public sector body … shall not make data obtained pursuant to this Chapter available for reuse …" · 17(4) [exchange with another public body / delegation to a third party, with the Art. 19 safeguards extended to that third party] · 17(5) [complaint] · 17(6): "The Commission shall develop a model template for requests pursuant to this Article."
+
+**Article 18 — Compliance with requests for data (F3b):**
+> 18(1) [F3b]: "A data holder receiving a request to make data available under this Chapter shall make the data available … without undue delay, taking into account necessary technical, organisational and legal measures."
+> 18(2): "… a data holder may decline or seek the modification of a request … without undue delay and, in any event, no later than **five working days** after the receipt of a request for the data necessary to respond to a public emergency and without undue delay and, in any event, no later than **30 working days** after the receipt of such a request in other cases of an exceptional need, on any of the following grounds: (a) the data holder does not have control over the data requested; (b) a similar request for the same purpose has been previously submitted …; (c) the request does not meet the conditions laid down in Article 17(1) and (2)."
+> 18(3) [prior-requester identity] · 18(4): "Where the data requested includes personal data, the data holder shall properly anonymise the data, unless … requires the disclosure of personal data. In such cases, the data holder shall pseudonymise the data." · 18(5) [challenge referred to the competent authority under Art. 37].
+
+**Article 19 — Obligations of public sector bodies … (F5a):**
+> 19(1) [F5a]: "A public sector body … receiving data pursuant to a request made under Article 14 shall: (a) not use the data in a manner incompatible with the purpose for which they were requested; (b) have implemented technical and organisational measures that preserve the confidentiality and integrity of the requested data …; (c) erase the data as soon as they are no longer necessary for the stated purpose and inform the data holder and individuals or organisations that received the data pursuant to Article 21(1) … unless archiving of the data is required …"
+> 19(2): "… shall not: (a) use the data or insights … to develop or enhance a connected product or related service that competes with the connected product or related service of the data holder; (b) share the data with another third party for any of the purposes referred to in point (a)."
+> 19(3): "Disclosure of trade secrets … shall be required only to the extent that it is strictly necessary to achieve the purpose of a request under Article 15. …"
+> 19(4): "A public sector body … shall be responsible for the security of the data it receives."
+
+**Article 20 — Compensation in cases of an exceptional need (F4a/F4b):**
+> 20(1) [F4a — emergency free, non micro/small]: "Data holders other than microenterprises and small enterprises shall make available data necessary to respond to a public emergency pursuant to Article 15(1), point (a), free of charge. …"
+> 20(2) [F4b — fair compensation, 15(1)(b) route]: "The data holder shall be entitled to fair compensation for making data available in compliance with a request made pursuant to Article 15(1), point (b). Such compensation shall cover the technical and organisational costs incurred to comply with the request including, where applicable, the costs of anonymisation, pseudonymisation, aggregation and of technical adaptation, and a reasonable margin. …"
+> 20(3) [F4b — micro/small entitlement]: "Paragraph 2 shall also apply where a microenterprise and small enterprise claims compensation for making data available." *(20(4) official-statistics no-compensation proviso + 20(5) complaint travel with F4b as supporting detail.)*
+
+**Article 21 — Sharing of data obtained in the context of an exceptional need with research organisations or statistical bodies (F5b):**
+> 21(1) [F5b]: "A public sector body … shall be entitled to share data received under this Chapter: (a) with individuals or organisations in view of carrying out scientific research or analytics compatible with the purpose for which the data was requested; or (b) with national statistical institutes and Eurostat for the production of official statistics."
+> 21(2): "Individuals or organisations receiving the data … shall act on a not-for-profit basis or in the context of a public-interest mission recognised in Union or national law. They shall not include organisations upon which commercial undertakings have a significant influence which is likely to result in preferential access to the results of the research."
+> 21(3): "… shall comply with the same obligations that are applicable to the public sector bodies … pursuant to Article 17(3) and Article 19." · 21(4): "Notwithstanding Article 19(1), point (c), individuals or organisations … may keep the data received … for up to **six months** following erasure …" · 21(5) [notification to data holder + complaint].
+
+**Article 16 — Relationship with other obligations … (F6, `…100`, **NOT this unit**):**
+> 16(1) [F6]: "This Chapter shall not affect the obligations laid down in Union or national law for the purposes of reporting, complying with requests for access to information or demonstrating or verifying compliance with legal obligations."
+> 16(2) [F6]: "This Chapter shall not apply to public sector bodies … carrying out activities for the prevention, investigation, detection or prosecution of criminal or administrative offences or the execution of criminal penalties, or to customs or taxation administration. …" *(quoted for the forward-dependency record only)*
+
+## 45. Block 6 verification table (11 identities · EP-CLM-000089 … 000099)
+
+| EP-CLM | Row | Locator | Literal check vs source | Over-breadth check | Role / qualifier & dependency | Verdict | `last_verified_at` |
+|---|---|---|---|---|---|---|---|
+| `EP-CLM-000089` | R-E6 | Art. 13(9) | Chapter IV anti-waiver verbatim ("shall not exclude the application of this Article, derogate from it, or vary its effects") | Not broader — scoped to "parties to a contract covered by paragraph 1" (the 13(1) unilateral-imposition regime) | **Q15-analogue**; **Verified FIRST.** Closes Ch IV non-derogation over E1a + E1b/E2a/E2b/E2c/E3/E4/E5 (all R3.3-E ✓); completes the Q15 anti-waiver triad (Ch II B7 ✓ / Ch III D10 ✓ / Ch IV E6) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000090` | R-F1 | Art. 14 | B2G availability duty verbatim, carrying **all four boundaries**: requester set (PSB/Commission/ECB/Union body), **demonstrated exceptional need "as set out in Article 15"**, statutory-duty-in-the-public-interest purpose, duty-holder limit ("legal persons, other than public sectors bodies"), "duly reasoned request" | **Not broader** — no bare "data holders must give data to the state"; the Art. 15 exceptional-need gate and the legal-person/non-PSB limiter are retained | **Q7 DEFAULT**; routed by F2a/F2b (13(1)(a)/(b)), micro/small-carved by F2c (15(2)), procedure F3a/F3b (17/18), compensation split F4a/F4b (20) under **Q8**, PSB limits F5a/F5b (19/21) — all this block ✓; **Ch V scope-limit / criminal-customs-tax carve-out F6 (Art 16, `…100`) = forward dependency → R3.3-G ⚠** | **VERIFIED_LITERAL** *(F6/Art 16 forward-dependency flagged)* | 2026-09-02 |
+| `EP-CLM-000091` | R-F2a | Art. 15(1)(a) | **public-emergency route** verbatim ("necessary to respond to a public emergency … unable to obtain such data by alternative means in a timely and effective manner under equivalent conditions") | Not broader — kept distinct from the 15(1)(b) route; carries the "limited in time and scope" chapeau | **Q7 qualifies F1** — emergency route (personal data reachable, per 17(2)(e)) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000092` | R-F2b | Art. 15(1)(b) | **non-emergency route** verbatim, "**only insofar as non-personal data is concerned**", two-limb test (i) specific-task-provided-by-law + (ii) exhausted-all-other-means incl. market purchase | Not broader — non-personal-only limiter and both cumulative limbs retained; kept distinct from 15(1)(a) | **Q7 qualifies F1** — non-emergency route | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000093` | R-F2c | Art. 15(2) | **micro/small carve-out** verbatim ("Paragraph 1, point (b), shall not apply to microenterprises and small enterprises") | Not broader — carve-out is **route-specific to 15(1)(b) only**; does not touch the 15(1)(a) emergency route | **Q7 qualifies F1 route-specifically**; 15(3) official-statistics proviso travels with it | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000094` | R-F3a | Art. 17(1)/(2)/(3)-(6) | **B2G request requirements** verbatim: content list 17(1)(a)-(j), form list 17(2)(a)-(i), no-reuse 17(3), exchange/delegation-with-Art-19-safeguards 17(4), complaint 17(5), model template 17(6) | Not broader — a request is bounded by the (a)-(j)/(a)-(i) requirements; no free-form state demand | **Procedure on F1** (defines a valid request) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000095` | R-F3b | Art. 18(1)-(5) | **data-holder compliance** verbatim: make available without undue delay 18(1); **decline/modify no later than 5 wd (public emergency) / 30 wd (other exceptional need)** on grounds (a)-(c) 18(2); prior-requester identity 18(3); anonymise-else-pseudonymise 18(4); challenge referral 18(5) | Not broader — the two numeric deadlines (5 wd / 30 wd) and the closed ground-set (a)-(c) retained; personal-data anonymisation default kept | **Procedure on F1** (defines compliance + refusal) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000096` | R-F4a | Art. 20(1) | **emergency data free** verbatim ("Data holders other than microenterprises and small enterprises shall make available data necessary to respond to a public emergency pursuant to Article 15(1), point (a), free of charge") | Not broader — free-of-charge is scoped to the **15(1)(a) emergency route** and excludes micro/small holders | **Q8 qualifies F1** — no-compensation limb (emergency) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000097` | R-F4b | Art. 20(2)/(3) | **fair compensation** verbatim ("entitled to fair compensation … pursuant to Article 15(1), point (b) … technical and organisational costs … and a reasonable margin"); **micro/small entitlement** 20(3) ("Paragraph 2 shall also apply where a microenterprise and small enterprise claims compensation") | Not broader — compensation is scoped to the **15(1)(b) route**; kept distinct from the 15(1)(a) free-of-charge rule; 20(4) statistics no-comp proviso retained | **Q8 qualifies F1** — compensation limb (non-emergency) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000098` | R-F5a | Art. 19(1)-(4) | **PSB use/erasure/trade-secret** verbatim: purpose-compatible use + confidentiality measures + erase-when-done 19(1)(a)-(c); no competing product / no onward share 19(2); trade-secret strict-necessity disclosure 19(3); security responsibility 19(4) | Not broader — the received data is bounded by the purpose, the erasure duty, and the anti-competitive-use ban | **Bounds B2G** (limit on the requesting PSB) | **VERIFIED_LITERAL** | 2026-09-02 |
+| `EP-CLM-000099` | R-F5b | Art. 21(1)-(5) | **bounded onward-sharing to research/statistics** verbatim: entitled to share with (a) scientific research/analytics + (b) national statistical institutes/Eurostat 21(1); not-for-profit / no significant commercial influence 21(2); same Art 17(3)/19 obligations 21(3); **six-month** retention 21(4); data-holder notification + complaint 21(5) | Not broader — onward sharing is confined to the two named recipient classes under the not-for-profit + purpose-compatibility limits | **Bounds B2G** (confines onward re-use) | **VERIFIED_LITERAL** | 2026-09-02 |
+
+## 46. Tally — R3.3-F (Block 6)
+
+- **Reviewed:** 11 (`EP-CLM-000089` … `EP-CLM-000099`, rows E6/F1/F2a/F2b/F2c/F3a/F3b/F4a/F4b/F5a/F5b).
+- **`VERIFIED_LITERAL`:** **11** — `last_verified_at = 2026-09-02` set on all eleven.
+- **`NEEDS_REWRITE`:** 0 · **`NEEDS_QUALIFIER`:** 0 · **`SOURCE_CONSTRAINED`:** 0 · **`BLOCKED`:** 0.
+- **State advance:** `workflow_state: draft → verified` (internal) on the eleven; **`validity_state` stays `null`, `published` stays `false`** — no publication-state advance, no Freshness/Publish Gate.
+- **Running R3.3 total:** 54/54 `VERIFIED_LITERAL` across Blocks 1–6 (`EP-CLM-000046..000099`).
+
+## 47. Chapter IV anti-waiver closure (the reason E6 was verified first) — and Q15 triad completion
+
+**CLOSED.** E6 (`EP-CLM-000089`, Art. 13(9)) is now `VERIFIED`. The Chapter IV unfair-terms regime verified in R3.3-E — **E1a, E1b, E2a, E2b, E2c, E3, E4, E5** — now carries its **non-derogation boundary**: parties to a contract covered by Art. 13(1) may not exclude/derogate/vary Article 13. The R3.3-E forward dependency flagged on E1a is resolved; the Chapter IV regime may proceed to R3.4 with its anti-waiver present.
+
+**Q15 anti-waiver triad now COMPLETE:** the three chapter-scoped non-derogation analogues are all verified — **Ch II = B7 (Art. 7(2), R3.3-B ✓)**, **Ch III = D10 (Art. 12(2), R3.3-E ✓)**, **Ch IV = E6 (Art. 13(9), this unit ✓)**. No further Q15 analogue is outstanding (Chapter V carries no user-right anti-waiver of this form; its guardrails are the PSB obligations F5a/F5b and the Art. 16 scope-limit F6).
+
+## 48. Corrigendum (EP-SRC-000007) effect on Block 6
+
+**NONE.** The corrigendum touches **Article 48 only**. Block 6 covers **Arts. 13(9), 14, 15, 17, 18, 19, 20, 21**; none is touched. Block 6 rests on `EP-SRC-000006` unmodified.
+
+## 49. Qualifier / edge check for Block 6 (Q7 + Q8 the key checks)
+
+- **Q7** (F1 B2G availability default ↔ its routes / carve-outs / scope-limit): F1 (Art 14) rendered with **F2a/F2b** (15(1)(a)/(b) emergency vs non-emergency-non-personal routes ✓, kept distinct), **F2c** (15(2) micro/small carve-out, route-specific to 15(1)(b) ✓), the request/compliance procedure **F3a/F3b** (Arts 17/18 ✓) and PSB limits **F5a/F5b** (Arts 19/21 ✓) — all this block. **The only outstanding limb is the Chapter V scope-limit / criminal-customs-tax carve-out F6 (Art 16, `…100`), deferred to R3.3-G** — F1 must render with F6 present. **PASS-with-flag.**
+- **Q8** (F1 ↔ compensation split): F4a (20(1) emergency free, non micro/small) vs F4b (20(2)/(3) fair compensation incl. micro/small entitlement) — both this block, kept route-distinct (15(1)(a) free vs 15(1)(b) compensated). **PASS.**
+- **Ch IV anti-waiver (E6 / Art 13(9)):** verified this block; closes the R3.3-E boundary and completes the Q15 triad (§47). **PASS.**
+- **Q15 analogues:** B7 (Ch II, Block 2 ✓), D10 (Ch III, Block 5 ✓), E6 (Ch IV, this block ✓). **All three CLOSED.**
+- **N1–N7:** none attach to Block 6 rows (E6 is a Ch IV anti-waiver; the F-series is the Ch V B2G regime, self-contained — F5a/F5b bound it internally). **N/A this unit.**
+- **No B2G duty rendered bare:** F1 carries the requester-set + Art. 15 exceptional-need gate + legal-person/non-PSB limiter + duly-reasoned-request boundaries and its Q7/Q8 route/carve-out/compensation set (F2a/F2b/F2c/F3a/F3b/F4a/F4b/F5a/F5b in-block; F6 flagged forward). **No broad "the state can demand data" wording verified.**
+
+## 50. Guards honoured (R3.3-F)
+
+- No public `claims.json` created. No public HTML, `routes.json`, `sitemap.xml`, `robots.txt`, `llms.txt` touched.
+- Freshness Gate **not opened**; Publish Gate **not opened**.
+- No new `EP-CLM` / `EP-SRC` minted; no renumbering. No claim verified outside Block 6 (F6/`…100` explicitly deferred). Blocks 1–5 results unchanged.
+- No CRA / EERS / Protocol work. No route score ≥ 90 claimed.
+
+## 51. Recommendation — R3.3-G
+
+Proceed to **R3.3-G = Block 7** (*Switching between data processing services, Chapter VI*, `EP-CLM-000100` … `EP-CLM-000113`, rows **F6**, G1–G8/G9) on a fresh branch off `main` after this unit merges. **Begin at `EP-CLM-000100` (R-F6 = Art. 16 relationship + criminal/customs/tax carve-out)** — the deferred Chapter V scope-limit from this unit — so F1 (and the whole Chapter V B2G regime) gains its Art. 16 carve-out before Chapter VI, exactly as this unit opened with E6 and R3.3-E opened with D10. Then Ch VI under **Q9** (G4a/G4b switching-charge phase-out) and **Q10** (G5a/G5b/G5c functional-equivalence / open-interface / standards limits) with the **G8** bespoke/non-production exemption: verify the switching-obstacle-removal duty (G1) with its numeric contract terms (G2b: notice ≤2m, transition 30d, retrieval ≥30d), the Art. 24 scope-limiter (G9), and the charge and service-tier carve-outs present.
+
+---
+
+*EuraPlan.com — Sprint R3.3 workbench verification record (R3.3-A Block 1 + R3.3-B Block 2 + R3.3-C Block 3 + R3.3-D Block 4 + R3.3-E Block 5 + R3.3-F Block 6). Internal. Not a published website page. No public claims.json.*
