@@ -78,20 +78,20 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000097` | R-F4b | V | Art. 20(2)/(3) | fair compensation incl. micro/small entitlement | Q8 qualifies F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
 | `EP-CLM-000098` | R-F5a | V | Art. 19(1)-(4) | PSB use/erasure/trade-secret obligations | bounds B2G (limit on PSB) | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
 | `EP-CLM-000099` | R-F5b | V | Art. 21(1)-(5) | bounded onward-sharing to research/statistics | bounds B2G | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-F) |
-| `EP-CLM-000100` | R-F6 | V | Art. 16(1)/(2) | relationship + criminal/customs/tax carve-out | Q7 scope limit on F1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000101` | R-G1 | VI | Art. 23(a)-(e) | remove obstacles to effective switching | default; Q9/Q10; G8 exemption | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000102` | R-G9 | VI | Art. 24 | scope of technical obligations (source provider only) | scope-limiter | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000103` | R-G2a | VI | Art. 25(1) | written pre-signing switching contract | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000104` | R-G2b | VI | Art. 25(2)(a)-(i) | mandatory contract terms (notice ≤2m; transition 30d; retrieval ≥30d) | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000105` | R-G2c | VI | Art. 25(3)/(4)/(5) | customer options + unfeasibility (14wd / ≤7m) | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000106` | R-G3 | VI | Art. 26(a)/(b) | information + online register | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000107` | R-G7 | VI | Art. 27 | obligation of good faith | cooperation duty | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000108` | R-G6 | VI | Art. 28(1)/(2) | contractual transparency on int'l access/transfer | N3 companion to H1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000109` | R-G4a | VI | Art. 29(1) | switching charges abolished 12 Jan 2027 | Q9 default | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000110` | R-G4b | VI | Art. 29(2)/(3) | interim reduced charges ≤ cost | Q9 qualifies G4a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000111` | R-G5a | VI | Art. 30(1) | IaaS functional equivalence | Q10 default; G8 exemption | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000112` | R-G5b | VI | Art. 30(2) | open interfaces for other services | Q10 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000113` | R-G5c | VI | Art. 30(3)/(5)/(6) | standards compatibility (≥12m) + export + limits | Q10 | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000100` | R-F6 | V | Art. 16(1)/(2) | relationship + criminal/customs/tax carve-out | Q7 scope limit on F1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G · closes F1/Q7 Ch V scope-limit) |
+| `EP-CLM-000101` | R-G1 | VI | Art. 23(a)-(e) | remove obstacles to effective switching | default; Q9/Q10; G8 exemption | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) · G8/Art 31 exemption fwd-dep → R3.3-H |
+| `EP-CLM-000102` | R-G9 | VI | Art. 24 | scope of technical obligations (source provider only) | scope-limiter | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000103` | R-G2a | VI | Art. 25(1) | written pre-signing switching contract | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000104` | R-G2b | VI | Art. 25(2)(a)-(i) | mandatory contract terms (notice ≤2m; transition 30d; retrieval ≥30d) | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000105` | R-G2c | VI | Art. 25(3)/(4)/(5) | customer options + unfeasibility (14wd / ≤7m) | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000106` | R-G3 | VI | Art. 26(a)/(b) | information + online register | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000107` | R-G7 | VI | Art. 27 | obligation of good faith | cooperation duty | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000108` | R-G6 | VI | Art. 28(1)/(2) | contractual transparency on int'l access/transfer | N3 companion to H1a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) · N3→H1a cross-ch ref (Block 8) |
+| `EP-CLM-000109` | R-G4a | VI | Art. 29(1) | switching charges abolished 12 Jan 2027 | Q9 default | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) · G8/Art 31 exemption fwd-dep → R3.3-H |
+| `EP-CLM-000110` | R-G4b | VI | Art. 29(2)/(3) | interim reduced charges ≤ cost | Q9 qualifies G4a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000111` | R-G5a | VI | Art. 30(1) | IaaS functional equivalence | Q10 default; G8 exemption | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) · G8/Art 31 exemption fwd-dep → R3.3-H |
+| `EP-CLM-000112` | R-G5b | VI | Art. 30(2) | open interfaces for other services | Q10 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
+| `EP-CLM-000113` | R-G5c | VI | Art. 30(3)/(5)/(6) | standards compatibility (≥12m) + export + limits | Q10 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
 | `EP-CLM-000114` | R-G8 | VI | Art. 31(1)/(2)/(3) | bespoke + non-production exemptions | Q9/Q10 carve-out | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000115` | R-H1a | VII | Art. 32(1) | prevent third-country gov access to non-personal data | N6 default; N3 (G6) | EP-SRC-000006 (+000007) | draft |
 | `EP-CLM-000116` | R-H1b | VII | Art. 32(2) | recognition only via international agreement | N6 qualifies H1a | EP-SRC-000006 (+000007) | draft |
