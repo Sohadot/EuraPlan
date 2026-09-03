@@ -92,25 +92,25 @@ R3.2 assigns a **permanent opaque identity** (`EP-CLM-*`) to each of the **87 li
 | `EP-CLM-000111` | R-G5a | VI | Art. 30(1) | IaaS functional equivalence | Q10 default; G8 exemption | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) · G8/Art 31 exemption fwd-dep → R3.3-H |
 | `EP-CLM-000112` | R-G5b | VI | Art. 30(2) | open interfaces for other services | Q10 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
 | `EP-CLM-000113` | R-G5c | VI | Art. 30(3)/(5)/(6) | standards compatibility (≥12m) + export + limits | Q10 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-G) |
-| `EP-CLM-000114` | R-G8 | VI | Art. 31(1)/(2)/(3) | bespoke + non-production exemptions | Q9/Q10 carve-out | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000115` | R-H1a | VII | Art. 32(1) | prevent third-country gov access to non-personal data | N6 default; N3 (G6) | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000116` | R-H1b | VII | Art. 32(2) | recognition only via international agreement | N6 qualifies H1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000117` | R-H1c | VII | Art. 32(3)-(5) | absent-agreement conditions + safeguards | N6 qualifies H1a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000118` | R-I3a | VIII | Art. 34(1) | in-parallel-use interoperability (mutatis mutandis) | N4 reuses G1/G2b/G5 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000119` | R-I4 | VIII | Art. 34(2) | in-parallel egress charges ≤ cost | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000120` | R-J1 | VIII | Art. 36(1)-(4) | smart-contract essential requirements + EU declaration | N7 scope-gated | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000121` | R-K1a | IX | Art. 37(1)/(2)/(5)/(6)/(7) | competent authorities + data coordinator | enforcement architecture | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000122` | R-K1b | IX | Art. 37(3) | GDPR-SA / EDPS personal-data supervision | interface | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000123` | R-K1c | IX | Art. 37(11)/(12)/(13) | non-EU legal-representative obligation | N5 enforcement hook | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000124` | R-K1d | IX | Art. 37(10) | jurisdiction / main-establishment rule | — | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000125` | R-K3 | IX | Arts. 38(1)-(3), 39(1)-(3) | complaint + effective judicial remedy | bounded remedy | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000126` | R-K2a | IX | Art. 40(1)/(2)/(3) | national penalties (notify 12 Sep 2025) | Q11 default | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000127` | R-K2b | IX | Art. 40(4) | GDPR Art 83 fines for Ch II/III/V (SA competence) | Q11 qualifies K2a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000128` | R-K2c | IX | Art. 40(5) | EDPS fines for Ch V (Reg 2018/1725 Art 66) | Q11 qualifies K2a | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000129` | R-K4 | X | Art. 43 | sui generis DB-right exclusion (connected-product data) | Q12 carve-out | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000130` | R-K5a | XI | Art. 44(1) | pre-2024 sectoral acts unaffected | Q14 qualifies A1 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000131` | R-K5b | XI | Art. 44(2) | without prejudice to further sector/data-space requirements | Q14 | EP-SRC-000006 (+000007) | draft |
-| `EP-CLM-000132` | R-K5c | XI | Art. 44(3) | scientific-research carve-out (except Ch V) | Q14 | EP-SRC-000006 (+000007) | draft |
+| `EP-CLM-000114` | R-G8 | VI | Art. 31(1)/(2)/(3) | bespoke + non-production exemptions | Q9/Q10 carve-out | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · closes Ch VI Art 31 exemption (both layers) |
+| `EP-CLM-000115` | R-H1a | VII | Art. 32(1) | prevent third-country gov access to non-personal data | N6 default; N3 (G6) | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · N3→G6 CLOSED |
+| `EP-CLM-000116` | R-H1b | VII | Art. 32(2) | recognition only via international agreement | N6 qualifies H1a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000117` | R-H1c | VII | Art. 32(3)-(5) | absent-agreement conditions + safeguards | N6 qualifies H1a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000118` | R-I3a | VIII | Art. 34(1) | in-parallel-use interoperability (mutatis mutandis) | N4 reuses G1/G2b/G5 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · N4 reuses G1/G2b/G5 |
+| `EP-CLM-000119` | R-I4 | VIII | Art. 34(2) | in-parallel egress charges ≤ cost | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000120` | R-J1 | VIII | Art. 36(1)-(4) | smart-contract essential requirements + EU declaration | N7 scope-gated | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · N7 scope-gated |
+| `EP-CLM-000121` | R-K1a | IX | Art. 37(1)/(2)/(5)/(6)/(7) | competent authorities + data coordinator | enforcement architecture | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000122` | R-K1b | IX | Art. 37(3) | GDPR-SA / EDPS personal-data supervision | interface | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000123` | R-K1c | IX | Art. 37(11)/(12)/(13) | non-EU legal-representative obligation | N5 enforcement hook | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · N5 legal-rep hook CLOSED |
+| `EP-CLM-000124` | R-K1d | IX | Art. 37(10) | jurisdiction / main-establishment rule | — | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000125` | R-K3 | IX | Arts. 38(1)-(3), 39(1)-(3) | complaint + effective judicial remedy | bounded remedy | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000126` | R-K2a | IX | Art. 40(1)/(2)/(3) | national penalties (notify 12 Sep 2025) | Q11 default | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000127` | R-K2b | IX | Art. 40(4) | GDPR Art 83 fines for Ch II/III/V (SA competence) | Q11 qualifies K2a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000128` | R-K2c | IX | Art. 40(5) | EDPS fines for Ch V (Reg 2018/1725 Art 66) | Q11 qualifies K2a | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000129` | R-K4 | X | Art. 43 | sui generis DB-right exclusion (connected-product data) | Q12 carve-out | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · Q12 CLOSED |
+| `EP-CLM-000130` | R-K5a | XI | Art. 44(1) | pre-2024 sectoral acts unaffected | Q14 qualifies A1 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000131` | R-K5b | XI | Art. 44(2) | without prejudice to further sector/data-space requirements | Q14 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) |
+| `EP-CLM-000132` | R-K5c | XI | Art. 44(3) | scientific-research carve-out (except Ch V) | Q14 | EP-SRC-000006 (+000007) | **verified·2026-09-02** (R3.3-H closeout) · LAST identity — R3.3 COMPLETE 87/87 |
 
 ---
 
