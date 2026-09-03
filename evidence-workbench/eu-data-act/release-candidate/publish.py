@@ -12,7 +12,7 @@ No provenance SHAs (release_sha/merge_sha/live_on_main_since) are invented pre-m
 """
 import json, re, copy, os
 
-PUB_DATE = "2026-09-02"  # publication dateModified / sitemap lastmod (update at merge if the date moves)
+PUB_DATE = "2026-09-03"  # publication dateModified / sitemap lastmod (update at merge if the date moves)
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIVE = os.path.normpath(os.path.join(HERE, "..", "..", "..", "regulation", "eu-data-act"))
 
@@ -100,8 +100,9 @@ html = html.replace(
     "Every claim <code>workflow_state: published</code>, <code>validity_state: active</code>.", 1)
 # f) register cards: workflow: publishable -> published (87)
 html = html.replace("workflow: publishable", "workflow: published")
-# g) dateModified already PUB_DATE in the candidate; enforce it
-assert f'"dateModified": "{PUB_DATE}"' in html, "dateModified must equal PUB_DATE"
+# g) set Article dateModified to the publication date (candidate carries its own build date)
+html, _nd = re.subn(r'"dateModified": "\d{4}-\d{2}-\d{2}"', f'"dateModified": "{PUB_DATE}"', html)
+assert _nd == 1, f"dateModified must be set exactly once (got {_nd})"
 
 open(os.path.join(LIVE, "index.html"), "w").write(html)
 print("wrote", os.path.join(LIVE, "claims.json"))

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "asset": "EuraPlan.com",
-  "last_updated": "2026-09-02",
+  "last_updated": "2026-09-03",
   "governing_document": "ROUTE_GOVERNANCE.md",
   "doctrine": "No combinatorial URLs. Context is carried by the system, not multiplied into the URL tree.",
   "routes": [
