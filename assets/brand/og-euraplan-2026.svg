@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="EuraPlan — Europe rewards planning, European Entry Control Room">
+<defs>
+ <linearGradient id="bg" x2="1" y2="0"><stop stop-color="#03111d"/><stop offset=".55" stop-color="#071a2c"/><stop offset="1" stop-color="#142d40"/></linearGradient>
+ <linearGradient id="stone" x2="1" y2=".2"><stop stop-color="#233647"/><stop offset=".17" stop-color="#758492"/><stop offset=".35" stop-color="#283b4e"/><stop offset=".6" stop-color="#9e9a8e"/><stop offset=".83" stop-color="#263a48"/><stop offset="1" stop-color="#102334"/></linearGradient>
+ <linearGradient id="gold" x2=".8" y2="1"><stop stop-color="#f7df9c"/><stop offset=".5" stop-color="#c9a84c"/><stop offset="1" stop-color="#846529"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#d3a74a" stop-opacity=".34"/><stop offset="1" stop-color="#d3a74a" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#b8c4ca" stroke-width=".6" opacity=".14"/></pattern>
+ <filter id="blur"><feGaussianBlur stdDeviation="14"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect x="480" width="720" height="630" fill="url(#grid)"/>
+<circle cx="925" cy="315" r="440" fill="url(#halo)"/>
+<path d="M570 0V630M0 608H1200" stroke="#c9a84c" stroke-width="1" opacity=".27"/>
+<!-- A strategic clock: signal, timing and controlled entry -->
+<g transform="translate(905 280)" fill="none" stroke="url(#gold)">
+ <circle r="250" stroke-width="3" opacity=".83"/><circle r="207" stroke-width="1" opacity=".5"/>
+ <circle r="167" stroke-width="2" opacity=".37"/><circle r="105" stroke-width="1" opacity=".3"/>
+ <path d="M0 -250V-225 M250 0H226 M0 250V225 M-250 0H-226" stroke-width="6"/>
+ <path d="M-150 -200L-130 -173 M150 -200L130 -173 M-200 -150L-173 -130 M200 -150L173 -130" opacity=".7"/>
+ <path d="M0 0L87 -134 M0 0L-57 86" stroke-width="5"/><circle r="10" fill="#c9a84c"/>
+ <path d="M-300 135L-170 22L-20 80L110 -35L260 -155" opacity=".5" stroke-width="1.4" stroke-dasharray="4 7"/>
+</g>
+<!-- Institutional columns and a decision threshold -->
+<g opacity=".98">
+ <path d="M774 148L1198 58V110L786 205Z" fill="#a69b84" opacity=".65"/>
+ <path d="M780 173L1199 82V120L781 214Z" fill="url(#stone)"/>
+ <path d="M780 202L1200 120" stroke="#c9a84c" stroke-width="4" opacity=".8"/>
+ <g stroke="#bcc5c5" stroke-width=".8">
+  <g transform="translate(821 0)"><path d="M-29 228H29L23 247H-23Z" fill="url(#stone)"/><rect x="-18" y="246" width="36" height="260" fill="url(#stone)"/><path d="M-18 247V505M-10 247V505M8 247V505M17 247V505" opacity=".3"/><path d="M-31 506H31L44 529H-44Z" fill="url(#stone)"/></g>
+  <g transform="translate(941 0)"><path d="M-35 196H35L28 222H-28Z" fill="url(#stone)"/><rect x="-23" y="222" width="46" height="305" fill="url(#stone)"/><path d="M-16 224V528M-5 224V528M8 224V528M18 224V528" opacity=".3"/><path d="M-36 526H36L47 549H-47Z" fill="url(#stone)"/></g>
+  <g transform="translate(1081 0)"><path d="M-42 160H42L36 191H-36Z" fill="url(#stone)"/><rect x="-29" y="190" width="58" height="358" fill="url(#stone)"/><path d="M-20 190V550M-7 190V550M9 190V550M22 190V550" opacity=".3"/><path d="M-48 547H48L60 573H-60Z" fill="url(#stone)"/></g>
+ </g>
+ <path d="M768 573H1200V630H704Z" fill="#1a2f3d" stroke="#c9a84c" stroke-opacity=".4"/>
+</g>
+<!-- Controlled progression markers -->
+<path d="M615 568C706 513 795 542 860 488S995 421 1093 385" fill="none" stroke="#f0be54" stroke-width="4" opacity=".26" filter="url(#blur)"/>
+<path d="M615 568C706 513 795 542 860 488S995 421 1093 385" fill="none" stroke="#d5ac53" stroke-width="2" opacity=".88"/>
+<g fill="#d5ac53"><circle cx="675" cy="538" r="5"/><circle cx="802" cy="525" r="5"/><circle cx="915" cy="464" r="5"/><circle cx="1038" cy="407" r="5"/></g>
+<!-- Brand mark: clock and four gates -->
+<g transform="translate(106 91)" stroke="#c9a84c" fill="none">
+ <circle r="44" stroke-width="2.7"/><circle r="23" stroke-width="1.8"/>
+ <path d="M0 -42V-24 M42 0H24 M0 42V24 M-42 0H-24" stroke-width="2"/>
+ <rect x="-5" y="-50" width="10" height="16" fill="#c9a84c"/><rect x="34" y="-5" width="16" height="10" fill="#c9a84c"/>
+ <rect x="-5" y="34" width="10" height="16" fill="#c9a84c"/><rect x="-50" y="-5" width="16" height="10" fill="#c9a84c"/>
+ <path d="M0 0V-24M0 0H24M0 0V24M0 0H-24" stroke-width="1.5"/><circle r="5" fill="#c9a84c"/>
+</g>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+ <text x="176" y="106" fill="#f4f5f6" font-size="47" font-weight="700" letter-spacing="-1">EuraPlan</text>
+ <text x="179" y="136" fill="#c9a84c" font-size="15" letter-spacing="1.1">EUROPEAN ENTRY CONTROL ROOM</text>
+ <path d="M70 180H530" stroke="#c9a84c" stroke-width="2"/>
+ <text x="70" y="270" fill="#f4f5f6" font-size="58" font-weight="700" letter-spacing="1">EUROPE</text>
+ <text x="70" y="340" fill="#f4f5f6" font-size="58" font-weight="700" letter-spacing="1">REWARDS</text>
+ <text x="70" y="410" fill="#d2aa51" font-size="58" font-weight="700" letter-spacing="1">PLANNING</text>
+ <path d="M72 438H268" stroke="#c9a84c" stroke-width="2"/>
+ <text x="72" y="483" fill="#e0e5e9" font-size="17" letter-spacing=".7">REGULATORY ENTRY &amp; EXPANSION</text>
+ <text x="72" y="512" fill="#a6b8c7" font-size="17" letter-spacing=".7">PLANNING INTELLIGENCE</text>
+ <text x="72" y="583" fill="#c9a84c" font-size="16" letter-spacing="1">EURAPLAN.COM</text>
+</g>
+</svg>
